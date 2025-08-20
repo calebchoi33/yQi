@@ -1,0 +1,23 @@
+# Virtual Environment
+evaluation/venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# macOS specific files
+.DS_Store
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Streamlit specific
+.streamlit/
