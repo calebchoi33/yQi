@@ -7,7 +7,7 @@ from ui import UIComponents, TabManager
 # Configure page
 st.set_page_config(
     page_title="CM AGI Evaluation Platform",
-    page_icon="🏥",
+    page_icon="⚕️",
     layout="wide"
 )
  
@@ -28,7 +28,7 @@ def main():
     tab_manager = TabManager(config, service_manager)
     
     # Page setup
-    st.title("🏥 yQi Evaluation Platform")
+    st.title("yQi Evaluation Platform")
     st.markdown("Evaluate Traditional Chinese Medicine AI capabilities with async processing and file-based rating system.")
     
     # Sidebar configuration

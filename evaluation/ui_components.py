@@ -59,7 +59,7 @@ def display_responses(responses_data: Dict):
                 st.error(f"Error: Response data is missing required information. Missing key: '{key}'")
                 return
         
-        st.header("📊 ChatGPT API Responses")
+        st.header("ChatGPT API Responses")
         
         # Summary metrics
         try:
@@ -139,7 +139,7 @@ def render_download_button():
             try:
                 with open(latest_file, 'r') as f:
                     st.download_button(
-                        label="📥 Download Latest Responses JSON",
+                        label="Download Latest Responses JSON",
                         data=f.read(),
                         file_name=latest_filename,
                         mime="application/json"

@@ -24,7 +24,7 @@ class UIComponents:
                 help="Enter your OpenAI API key"
             )
         else:
-            st.sidebar.success("✅ API Key loaded from environment")
+            st.sidebar.success("API Key loaded from environment")
         
         st.sidebar.divider()
         
@@ -66,7 +66,7 @@ For each medical case presented, please provide:
 Please respond in a structured, professional manner that would be appropriate for clinical practice."""
         
         # System Prompt Configuration
-        st.subheader("🎯 System Prompt")
+        st.subheader("System Prompt")
         st.write("This prompt provides context to the AI for all subsequent medical case prompts:")
         
         system_prompt = st.text_area(
@@ -81,7 +81,7 @@ Please respond in a structured, professional manner that would be appropriate fo
         st.divider()
         
         # Medical Case Prompts Configuration
-        st.subheader("🏥 Medical Case Prompts")
+        st.subheader("Medical Case Prompts")
         
         # Configuration options
         col1, col2, col3 = st.columns([2, 1, 1])
@@ -94,12 +94,12 @@ Please respond in a structured, professional manner that would be appropriate fo
             )
         
         with col2:
-            if st.button("🔄 Reset to Defaults"):
+            if st.button("Reset to Defaults"):
                 st.session_state.editable_prompts = DEFAULT_PROMPTS.copy()
                 st.rerun()
         
         with col3:
-            if st.button("➕ Add New Prompt"):
+            if st.button("Add New Prompt"):
                 st.session_state.editable_prompts.append("")
                 st.rerun()
         
@@ -123,7 +123,7 @@ Please respond in a structured, professional manner that would be appropriate fo
                 with col2:
                     st.write("")  # Spacing
                     st.write("")  # Spacing
-                    if st.button("🗑️", key=f"delete_{i}", help=f"Delete prompt {i+1}"):
+                    if st.button("Delete", key=f"delete_{i}", help=f"Delete prompt {i+1}"):
                         if len(st.session_state.editable_prompts) > 1:
                             st.session_state.editable_prompts.pop(i)
                             st.rerun()
@@ -144,9 +144,9 @@ Please respond in a structured, professional manner that would be appropriate fo
         
         # Show prompt count
         if prompts:
-            st.success(f"✅ {len(prompts)} medical case prompts configured")
+            st.success(f"{len(prompts)} medical case prompts configured")
         else:
-            st.warning("⚠️ No medical case prompts configured")
+            st.warning("No medical case prompts configured")
         
         return system_prompt, prompts
     
@@ -162,16 +162,16 @@ Please respond in a structured, professional manner that would be appropriate fo
     def render_generation_results(self, responses_file: str, benchmark_file: str, 
                                 benchmark_data: Dict[str, Any], evaluation_id: Optional[str] = None):
         """Render generation results section."""
-        st.success("✅ Responses generated and saved successfully!")
+        st.success("Responses generated and saved successfully!")
         
         col1, col2 = st.columns(2)
         with col1:
-            st.info(f"📄 Responses: {responses_file}")
-            st.info(f"📊 Benchmarks: {benchmark_file}")
+            st.info(f"Responses: {responses_file}")
+            st.info(f"Benchmarks: {benchmark_file}")
         
         with col2:
             if evaluation_id:
-                st.info(f"🗄️ Database ID: {evaluation_id}")
+                st.info(f"Database ID: {evaluation_id}")
             
             # Key metrics
             if benchmark_data:
@@ -183,13 +183,13 @@ Please respond in a structured, professional manner that would be appropriate fo
     def render_error_state(self, error_type: str, message: str):
         """Render error state with appropriate styling."""
         if error_type == "api_key":
-            st.error("🔑 Please provide your OpenAI API key.")
+            st.error("Please provide your OpenAI API key.")
         elif error_type == "no_prompts":
-            st.error("📝 Please provide at least one prompt.")
+            st.error("Please provide at least one prompt.")
         elif error_type == "database":
-            st.warning(f"🗄️ Database error: {message}")
+            st.warning(f"Database error: {message}")
         else:
-            st.error(f"❌ Error: {message}")
+            st.error(f"Error: {message}")
     
     def render_loading_state(self, message: str = "Processing..."):
         """Render loading state with spinner."""

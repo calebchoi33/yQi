@@ -5,27 +5,27 @@ A streamlined Streamlit application for evaluating Traditional Chinese Medicine 
 ## Features
 
 ### Core Evaluation
-- 🏥 Comprehensive TCM medical case evaluation prompts
-- 🤖 Uses GPT-4o model for enhanced diagnostic reasoning
-- ⚡ **Async batch processing** for improved performance
-- 📊 Real-time progress tracking during API calls
-- 💾 Organized file storage in separate `responses/` and `benchmarks/` folders
-- 📈 Comprehensive benchmarking with performance metrics
+- Comprehensive TCM medical case evaluation prompts
+- Uses GPT-4o model for enhanced diagnostic reasoning
+- **Async batch processing** for improved performance
+- Real-time progress tracking during API calls
+- Organized file storage in separate `responses/` and `benchmarks/` folders
+- Comprehensive benchmarking with performance metrics
 
 ### Rating System
-- ⭐ **Advanced rating interface** with multiple criteria
-- 📊 **Statistics and analytics** for rating data
-- 👥 Multi-rater support with attribution
-- 💾 **JSON file storage** for ratings and responses
-- 🔍 Response filtering and navigation capabilities
+- **Advanced rating interface** with multiple criteria
+- **Statistics and analytics** for rating data
+- Multi-rater support with attribution
+- **JSON file storage** for ratings and responses
+- Response filtering and navigation capabilities
 
 ### Technical Features
-- 📋 Beautiful, organized display of responses with TCM analysis
-- 📥 Download responses and benchmark data as JSON files
-- 🔒 Secure API key handling (environment variable or secure input)
-- ⏱️ Detailed timing and token usage analytics
-- 🔄 Robust retry logic for handling API rate limits and connection errors
-- 📝 Detailed logging for troubleshooting and debugging
+- Beautiful, organized display of responses with TCM analysis
+- Download responses and benchmark data as JSON files
+- Secure API key handling (environment variable or secure input)
+- Detailed timing and token usage analytics
+- Robust retry logic for handling API rate limits and connection errors
+- Detailed logging for troubleshooting and debugging
 
 ## Installation
 

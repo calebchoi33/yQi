@@ -17,7 +17,7 @@ class ServiceManager:
     
     def show_status(self):
         """Show application status in Streamlit sidebar."""
-        st.sidebar.success("✅ File-based storage active")
+        st.sidebar.success("File-based storage active")
         st.sidebar.info("All data stored locally in JSON files")
     
     def get_tab_configuration(self) -> Tuple[list, bool]:

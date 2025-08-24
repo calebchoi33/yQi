@@ -61,7 +61,6 @@ class TabManager:
                     responses_file, benchmark_file, benchmark_data
                 )
                 display_benchmark_summary(benchmark_data)
-                st.balloons()
                 
             except Exception as e:
                 self.ui.render_error_state("generation", str(e))

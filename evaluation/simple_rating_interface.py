@@ -21,7 +21,7 @@ class SimpleRatingInterface:
     
     def render_rating_interface(self):
         """Render the main rating interface."""
-        st.title("🔍 Response Rating Interface")
+        st.title("Response Rating Interface")
         
         # Sidebar for navigation and settings
         with st.sidebar:
@@ -129,15 +129,15 @@ class SimpleRatingInterface:
         st.header(f"Response {current_response['prompt_number']}")
         
         # Show prompt
-        with st.expander("📝 Prompt", expanded=True):
+        with st.expander("Prompt", expanded=True):
             st.write(current_response['prompt'])
         
         # Show response
-        with st.expander("🤖 AI Response", expanded=True):
+        with st.expander("AI Response", expanded=True):
             st.write(current_response['response'])
         
         # Show response metadata
-        with st.expander("📊 Response Metadata"):
+        with st.expander("Response Metadata"):
             col1, col2, col3 = st.columns(3)
             with col1:
                 st.metric("Tokens Used", current_response.get('tokens_used', 0))
@@ -152,13 +152,13 @@ class SimpleRatingInterface:
         prompt_ratings = [r for r in existing_ratings if r['prompt_number'] == current_response['prompt_number']]
         
         if prompt_ratings:
-            st.subheader("📈 Existing Ratings")
+            st.subheader("Existing Ratings")
             for i, rating in enumerate(prompt_ratings):
                 with st.expander(f"Rating by {rating.get('rater_name', 'Anonymous')} - Overall: {rating.get('overall_rating', 'N/A')}/5"):
                     self._display_rating(rating)
         
         # Rating form
-        st.subheader("⭐ Add Your Rating")
+        st.subheader("Add Your Rating")
         self._render_rating_form(current_response)
     
     def _render_rating_form(self, response: Dict[str, Any]):
@@ -267,7 +267,7 @@ class SimpleRatingInterface:
     
     def render_statistics_view(self):
         """Render rating statistics and analytics."""
-        st.title("📊 Rating Statistics")
+        st.title("Rating Statistics")
         
         # Run selection for statistics
         runs = self.rating_manager.get_available_runs()
