@@ -10,7 +10,13 @@ import os
 import logging
 from datetime import datetime
 from typing import Dict, Optional
-from config import RESPONSES_DIR, BENCHMARKS_DIR
+from core.config import AppConfig
+
+# Initialize config for backward compatibility
+_config = AppConfig()
+RESPONSES_DIR = _config.storage.responses_dir
+BENCHMARKS_DIR = _config.storage.benchmarks_dir
+RESPONSES_FILE = _config.storage.responses_file
 
 # Configure logging
 logging.basicConfig(

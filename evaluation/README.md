@@ -1,14 +1,25 @@
-# CM AGI Evaluation Platform
+# yQi Evaluation Platform
 
-A Streamlit application designed for evaluating Traditional Chinese Medicine (TCM) AI capabilities using ChatGPT-4o. The platform sends medical case prompts to the API, collects diagnostic responses with herbal prescriptions, and provides comprehensive benchmarking data.
+A streamlined Streamlit application for evaluating Traditional Chinese Medicine (TCM) AI capabilities using ChatGPT-4o. The platform features async batch processing, local JSON file storage, and a comprehensive rating system for systematic evaluation of AI responses.
 
 ## Features
 
-- 🏥 20 default Chinese medical case prompts for CM AGI evaluation
+### Core Evaluation
+- 🏥 Comprehensive TCM medical case evaluation prompts
 - 🤖 Uses GPT-4o model for enhanced diagnostic reasoning
+- ⚡ **Async batch processing** for improved performance
 - 📊 Real-time progress tracking during API calls
 - 💾 Organized file storage in separate `responses/` and `benchmarks/` folders
 - 📈 Comprehensive benchmarking with performance metrics
+
+### Rating System
+- ⭐ **Advanced rating interface** with multiple criteria
+- 📊 **Statistics and analytics** for rating data
+- 👥 Multi-rater support with attribution
+- 💾 **JSON file storage** for ratings and responses
+- 🔍 Response filtering and navigation capabilities
+
+### Technical Features
 - 📋 Beautiful, organized display of responses with TCM analysis
 - 📥 Download responses and benchmark data as JSON files
 - 🔒 Secure API key handling (environment variable or secure input)
@@ -37,7 +48,8 @@ You need an OpenAI API key to use this application. You can obtain one from [Ope
 
 **Option 1: Environment Variable (Recommended)**
 ```bash
-export OPENAI_API_KEY="your-api-key-here"
+# Add to your .env file
+OPENAI_API_KEY="your-api-key-here"
 ```
 
 **Option 2: Enter in the App**
@@ -56,12 +68,32 @@ The app will prompt you to enter your API key in the sidebar if it's not found i
    - Choose to use default prompts or enter custom ones
    - Enter your OpenAI API key if not set as environment variable
    - Click "Generate Responses" to send prompts to ChatGPT
-   - Watch the progress bar as responses are collected
+   - Watch the progress bar as responses are collected with async batch processing
+   - Data is automatically saved to JSON files
 
 4. **View Responses Tab:**
    - View all saved responses in an organized format
    - See summary metrics (total prompts, tokens used, generation date)
    - Download the JSON file with all responses
+
+5. **Rate Responses Tab:**
+   - Select an evaluation run to rate
+   - Navigate through responses using Previous/Next buttons
+   - Rate responses on multiple criteria (1-5 scale):
+     - Overall Quality
+     - Medical Accuracy
+     - Completeness
+     - Clarity
+     - Clinical Relevance
+     - Safety
+   - Add optional comments for detailed feedback
+   - Track rating progress with visual indicators
+
+6. **Statistics Tab:**
+   - View rating statistics and analytics
+   - See average ratings by criteria
+   - Analyze rating distributions
+   - Compare performance across evaluation runs
 
 ## Default Medical Cases
 
@@ -84,11 +116,22 @@ Each prompt requests:
 
 The application has been refactored into a modular structure for better maintainability and separation of concerns:
 
-- **app.py** - Main Streamlit application entry point
-- **config.py** - Configuration constants and default prompts
-- **api_client.py** - OpenAI API interaction with retry logic
+### Core Application
+- **app.py** - Main Streamlit application entry point with 4-tab interface
+- **api_client.py** - Async OpenAI API interaction with batch processing
 - **file_manager.py** - File operations for saving/loading responses and benchmarks
-- **ui_components.py** - Streamlit UI components and display functions
+- **rating_manager.py** - File-based rating system for response evaluation
+- **simple_rating_interface.py** - Streamlined rating interface
+- **prompts.py** - Default TCM evaluation prompts
+
+### Core Modules
+- **core/config.py** - Centralized configuration management
+- **core/services.py** - Service factory and management
+- **core/exceptions.py** - Custom exception classes
+
+### UI Components
+- **ui/components.py** - Reusable Streamlit UI components
+- **ui/tabs.py** - Tab management and rendering
 
 ## File Storage
 
@@ -130,44 +173,60 @@ Stores performance metrics in timestamped files: `benchmark_YYYYMMDD_HHMMSS.json
 
 ## Requirements
 
-- Python 3.7+
+### System Requirements
+- Python 3.8+
+- Valid OpenAI API key with GPT-4o access
+
+### Python Dependencies
 - Streamlit 1.32.0
 - OpenAI Python library 1.6.1
 - python-dotenv 1.0.0
-- Valid OpenAI API key with GPT-4o access
+- pandas 2.1.4
 
-## Cost Considerations
+## File Storage Structure
 
-This app uses the **GPT-4o model** with a maximum of 500 tokens per response. GPT-4o is more expensive than GPT-3.5-turbo but provides superior reasoning capabilities for complex medical analysis.
+The application uses JSON files for all data storage:
 
-Cost factors:
-- **20 default prompts** per evaluation run
-- **Complex medical prompts** requiring detailed TCM analysis
-- **GPT-4o pricing** (higher than GPT-3.5-turbo)
-- **Benchmark data** tracks exact token usage for cost monitoring
+- **responses/** - Individual AI responses with metadata
+- **benchmarks/** - Performance metrics for each evaluation run
+- **ratings/** - User ratings organized by evaluation run
+- All files are timestamped for easy organization and retrieval
 
-Always monitor your OpenAI usage dashboard to track costs. The benchmarking feature provides detailed token usage analytics for cost analysis.
+## Performance Improvements
+
+### Async Batch Processing
+The platform now uses async batch processing to significantly improve performance:
+
+- **Before (Sequential)**: ~201.89 seconds for 20 prompts (10.09s avg)
+- **After (Async Batches)**: ~178.88 seconds for 20 prompts (8.94s avg)
+- **Improvement**: ~11.4% faster processing time
+
+### Benefits
+- Concurrent API calls within batches
+- Better resource utilization
+- Improved error handling and retry logic
+- Real-time progress tracking
 
 ## Troubleshooting
 
-**API Key Issues:**
-- Ensure your API key is valid and has sufficient credits
-- Check that the key is properly set in environment variables or entered in the app
+### File Permission Issues
+```bash
+# Ensure proper permissions for data directories
+chmod 755 responses/ benchmarks/ ratings/
+```
 
-**Connection Issues:**
-- Verify your internet connection
-- Check if OpenAI services are operational
-- The application includes retry logic for API rate limits and connection errors
-- Check the log files (`api_client.log`, `file_manager.log`, `ui_components.log`) for detailed error information
+### Performance Issues
+- Adjust batch size in core configuration for optimal performance
+- Monitor API rate limits in the logs
+- Use smaller prompt sets for testing
 
-**Rate Limit Handling:**
-- The application will automatically retry API calls when rate limits are encountered
-- Default retry settings can be adjusted in `config.py` (MAX_RETRIES and RETRY_DELAY)
+### Storage Issues
+- Check available disk space for JSON file storage
+- Clean up old evaluation runs if needed
 
-**Installation Issues:**
-- Make sure you're using Python 3.7 or higher
-- Try upgrading pip: `pip install --upgrade pip`
-- Ensure all dependencies are installed with the correct versions: `pip install -r requirements.txt`
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
