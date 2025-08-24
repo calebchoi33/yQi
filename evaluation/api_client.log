@@ -697,3 +697,215 @@
 2025-08-24 04:24:42,882 - root - INFO - Latest responses file: responses/responses_20250824_042442.json
 2025-08-24 04:24:42,883 - root - INFO - Latest responses filename: responses_20250824_042442.json
 2025-08-24 04:24:42,884 - root - INFO - Download button rendered for responses_20250824_042442.json
+2025-08-24 19:07:09,481 - root - INFO - Loading responses from responses/responses_20250824_042442.json
+2025-08-24 19:07:09,482 - root - INFO - Successfully loaded responses from responses/responses_20250824_042442.json
+2025-08-24 19:07:09,492 - root - INFO - Latest responses file: responses/responses_20250824_042442.json
+2025-08-24 19:07:09,492 - root - INFO - Latest responses filename: responses_20250824_042442.json
+2025-08-24 19:07:09,493 - root - INFO - Download button rendered for responses_20250824_042442.json
+2025-08-24 19:07:13,687 - root - INFO - Starting batch 1/4 with 5 prompts
+2025-08-24 19:07:20,256 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:20,266 - root - INFO - Successfully processed prompt 5/5
+2025-08-24 19:07:21,307 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:21,310 - root - INFO - Successfully processed prompt 4/4
+2025-08-24 19:07:22,114 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:22,116 - root - INFO - Successfully processed prompt 2/2
+2025-08-24 19:07:22,570 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:22,572 - root - INFO - Successfully processed prompt 1/1
+2025-08-24 19:07:22,666 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:22,671 - root - INFO - Successfully processed prompt 3/3
+2025-08-24 19:07:22,673 - root - INFO - Starting batch 2/4 with 5 prompts
+2025-08-24 19:07:29,104 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:29,112 - root - INFO - Successfully processed prompt 8/8
+2025-08-24 19:07:29,285 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:29,289 - root - INFO - Successfully processed prompt 10/10
+2025-08-24 19:07:32,517 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:32,518 - root - INFO - Successfully processed prompt 6/6
+2025-08-24 19:07:33,912 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:33,916 - root - INFO - Successfully processed prompt 9/9
+2025-08-24 19:07:35,071 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:35,081 - root - INFO - Successfully processed prompt 7/7
+2025-08-24 19:07:35,088 - root - INFO - Starting batch 3/4 with 5 prompts
+2025-08-24 19:07:41,082 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:41,084 - root - INFO - Successfully processed prompt 13/13
+2025-08-24 19:07:42,343 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:42,344 - root - INFO - Successfully processed prompt 14/14
+2025-08-24 19:07:44,295 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:44,297 - root - INFO - Successfully processed prompt 11/11
+2025-08-24 19:07:44,935 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:44,950 - root - INFO - Successfully processed prompt 15/15
+2025-08-24 19:07:45,145 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:45,156 - root - INFO - Successfully processed prompt 12/12
+2025-08-24 19:07:45,157 - root - INFO - Starting batch 4/4 with 5 prompts
+2025-08-24 19:07:51,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:51,578 - root - INFO - Successfully processed prompt 16/16
+2025-08-24 19:07:51,881 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:51,885 - root - INFO - Successfully processed prompt 18/18
+2025-08-24 19:07:52,123 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:52,126 - root - INFO - Successfully processed prompt 17/17
+2025-08-24 19:07:52,143 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:52,150 - root - INFO - Successfully processed prompt 19/19
+2025-08-24 19:07:52,285 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:07:52,291 - root - INFO - Successfully processed prompt 20/20
+2025-08-24 19:07:52,294 - root - INFO - Saving responses to responses/responses_20250824_190752.json
+2025-08-24 19:07:52,296 - root - INFO - Successfully saved responses to responses/responses_20250824_190752.json
+2025-08-24 19:07:52,296 - root - INFO - Saving benchmark data to benchmarks/benchmark_20250824_190713.json
+2025-08-24 19:07:52,297 - root - INFO - Successfully saved benchmark data to benchmarks/benchmark_20250824_190713.json
+2025-08-24 19:07:52,302 - root - INFO - Loading responses from responses/responses_20250824_190752.json
+2025-08-24 19:07:52,303 - root - INFO - Successfully loaded responses from responses/responses_20250824_190752.json
+2025-08-24 19:07:52,322 - root - INFO - Latest responses file: responses/responses_20250824_190752.json
+2025-08-24 19:07:52,323 - root - INFO - Latest responses filename: responses_20250824_190752.json
+2025-08-24 19:07:52,324 - root - INFO - Download button rendered for responses_20250824_190752.json
+2025-08-24 19:08:08,069 - root - INFO - Loading responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:08,071 - root - INFO - Successfully loaded responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:08,088 - root - INFO - Latest responses file: responses/responses_20250824_190752.json
+2025-08-24 19:08:08,089 - root - INFO - Latest responses filename: responses_20250824_190752.json
+2025-08-24 19:08:08,090 - root - INFO - Download button rendered for responses_20250824_190752.json
+2025-08-24 19:08:08,248 - root - INFO - Loading responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:08,249 - root - INFO - Successfully loaded responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:08,265 - root - INFO - Latest responses file: responses/responses_20250824_190752.json
+2025-08-24 19:08:08,265 - root - INFO - Latest responses filename: responses_20250824_190752.json
+2025-08-24 19:08:08,266 - root - INFO - Download button rendered for responses_20250824_190752.json
+2025-08-24 19:08:41,217 - root - INFO - Loading responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:41,220 - root - INFO - Successfully loaded responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:41,242 - root - INFO - Latest responses file: responses/responses_20250824_190752.json
+2025-08-24 19:08:41,242 - root - INFO - Latest responses filename: responses_20250824_190752.json
+2025-08-24 19:08:41,243 - root - INFO - Download button rendered for responses_20250824_190752.json
+2025-08-24 19:08:43,083 - root - INFO - Loading responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:43,084 - root - INFO - Successfully loaded responses from responses/responses_20250824_190752.json
+2025-08-24 19:08:43,098 - root - INFO - Latest responses file: responses/responses_20250824_190752.json
+2025-08-24 19:08:43,098 - root - INFO - Latest responses filename: responses_20250824_190752.json
+2025-08-24 19:08:43,099 - root - INFO - Download button rendered for responses_20250824_190752.json
+2025-08-24 19:14:28,341 - root - INFO - Loading responses from responses/responses_20250824_190752.json
+2025-08-24 19:14:28,342 - root - INFO - Successfully loaded responses from responses/responses_20250824_190752.json
+2025-08-24 19:14:28,354 - root - INFO - Latest responses file: responses/responses_20250824_190752.json
+2025-08-24 19:14:28,354 - root - INFO - Latest responses filename: responses_20250824_190752.json
+2025-08-24 19:14:28,354 - root - INFO - Download button rendered for responses_20250824_190752.json
+2025-08-24 19:14:31,930 - root - INFO - Starting batch 1/4 with 5 prompts
+2025-08-24 19:14:38,067 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:38,075 - root - INFO - Successfully processed prompt 4/4
+2025-08-24 19:14:38,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:38,576 - root - INFO - Successfully processed prompt 1/1
+2025-08-24 19:14:38,757 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:38,764 - root - INFO - Successfully processed prompt 3/3
+2025-08-24 19:14:38,958 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:38,962 - root - INFO - Successfully processed prompt 2/2
+2025-08-24 19:14:40,373 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:40,375 - root - INFO - Successfully processed prompt 5/5
+2025-08-24 19:14:40,379 - root - INFO - Starting batch 2/4 with 5 prompts
+2025-08-24 19:14:45,836 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:45,837 - root - INFO - Successfully processed prompt 7/7
+2025-08-24 19:14:46,082 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:46,084 - root - INFO - Successfully processed prompt 8/8
+2025-08-24 19:14:46,940 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:46,943 - root - INFO - Successfully processed prompt 10/10
+2025-08-24 19:14:47,058 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:47,063 - root - INFO - Successfully processed prompt 6/6
+2025-08-24 19:14:49,708 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:49,711 - root - INFO - Successfully processed prompt 9/9
+2025-08-24 19:14:49,711 - root - INFO - Starting batch 3/4 with 5 prompts
+2025-08-24 19:14:55,055 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:55,064 - root - INFO - Successfully processed prompt 13/13
+2025-08-24 19:14:55,639 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:55,642 - root - INFO - Successfully processed prompt 11/11
+2025-08-24 19:14:56,113 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:56,120 - root - INFO - Successfully processed prompt 12/12
+2025-08-24 19:14:56,202 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:56,208 - root - INFO - Successfully processed prompt 15/15
+2025-08-24 19:14:56,892 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:14:56,893 - root - INFO - Successfully processed prompt 14/14
+2025-08-24 19:14:56,894 - root - INFO - Starting batch 4/4 with 5 prompts
+2025-08-24 19:15:02,380 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:15:02,382 - root - INFO - Successfully processed prompt 17/17
+2025-08-24 19:15:02,763 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:15:02,765 - root - INFO - Successfully processed prompt 16/16
+2025-08-24 19:15:02,980 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:15:02,982 - root - INFO - Successfully processed prompt 20/20
+2025-08-24 19:15:03,089 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:15:03,091 - root - INFO - Successfully processed prompt 19/19
+2025-08-24 19:15:03,338 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:15:03,342 - root - INFO - Successfully processed prompt 18/18
+2025-08-24 19:15:03,347 - root - INFO - Saving responses to responses/responses_20250824_191503.json
+2025-08-24 19:15:03,349 - root - INFO - Successfully saved responses to responses/responses_20250824_191503.json
+2025-08-24 19:15:03,349 - root - INFO - Saving benchmark data to benchmarks/benchmark_20250824_191431.json
+2025-08-24 19:15:03,350 - root - INFO - Successfully saved benchmark data to benchmarks/benchmark_20250824_191431.json
+2025-08-24 19:15:03,355 - root - INFO - Loading responses from responses/responses_20250824_191503.json
+2025-08-24 19:15:03,355 - root - INFO - Successfully loaded responses from responses/responses_20250824_191503.json
+2025-08-24 19:15:03,374 - root - INFO - Latest responses file: responses/responses_20250824_191503.json
+2025-08-24 19:15:03,375 - root - INFO - Latest responses filename: responses_20250824_191503.json
+2025-08-24 19:15:03,376 - root - INFO - Download button rendered for responses_20250824_191503.json
+2025-08-24 19:15:55,114 - root - INFO - Loading responses from responses/responses_20250824_191503.json
+2025-08-24 19:15:55,116 - root - INFO - Successfully loaded responses from responses/responses_20250824_191503.json
+2025-08-24 19:15:55,136 - root - INFO - Latest responses file: responses/responses_20250824_191503.json
+2025-08-24 19:15:55,138 - root - INFO - Latest responses filename: responses_20250824_191503.json
+2025-08-24 19:15:55,139 - root - INFO - Download button rendered for responses_20250824_191503.json
+2025-08-24 19:16:00,492 - root - INFO - Loading responses from responses/responses_20250824_191503.json
+2025-08-24 19:16:00,493 - root - INFO - Successfully loaded responses from responses/responses_20250824_191503.json
+2025-08-24 19:16:00,504 - root - INFO - Latest responses file: responses/responses_20250824_191503.json
+2025-08-24 19:16:00,504 - root - INFO - Latest responses filename: responses_20250824_191503.json
+2025-08-24 19:16:00,505 - root - INFO - Download button rendered for responses_20250824_191503.json
+2025-08-24 19:16:07,914 - root - INFO - Loading responses from responses/responses_20250824_191503.json
+2025-08-24 19:16:07,915 - root - INFO - Successfully loaded responses from responses/responses_20250824_191503.json
+2025-08-24 19:16:07,929 - root - INFO - Latest responses file: responses/responses_20250824_191503.json
+2025-08-24 19:16:07,929 - root - INFO - Latest responses filename: responses_20250824_191503.json
+2025-08-24 19:16:07,930 - root - INFO - Download button rendered for responses_20250824_191503.json
+2025-08-24 19:16:12,564 - root - INFO - Loading responses from responses/responses_20250824_191503.json
+2025-08-24 19:16:12,565 - root - INFO - Successfully loaded responses from responses/responses_20250824_191503.json
+2025-08-24 19:16:12,579 - root - INFO - Latest responses file: responses/responses_20250824_191503.json
+2025-08-24 19:16:12,580 - root - INFO - Latest responses filename: responses_20250824_191503.json
+2025-08-24 19:16:12,580 - root - INFO - Download button rendered for responses_20250824_191503.json
+2025-08-24 19:16:13,431 - root - INFO - Starting batch 1/5 with 5 prompts
+2025-08-24 19:16:20,027 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:20,035 - root - INFO - Successfully processed prompt 5/5
+2025-08-24 19:16:20,357 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:20,359 - root - INFO - Successfully processed prompt 2/2
+2025-08-24 19:16:20,446 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:20,450 - root - INFO - Successfully processed prompt 4/4
+2025-08-24 19:16:21,174 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:21,175 - root - INFO - Successfully processed prompt 3/3
+2025-08-24 19:16:21,217 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:21,218 - root - INFO - Successfully processed prompt 1/1
+2025-08-24 19:16:21,219 - root - INFO - Starting batch 2/5 with 5 prompts
+2025-08-24 19:16:27,218 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:27,220 - root - INFO - Successfully processed prompt 6/6
+2025-08-24 19:16:27,336 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:27,342 - root - INFO - Successfully processed prompt 7/7
+2025-08-24 19:16:28,122 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:28,128 - root - INFO - Successfully processed prompt 10/10
+2025-08-24 19:16:28,436 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:28,437 - root - INFO - Successfully processed prompt 8/8
+2025-08-24 19:16:31,254 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:31,269 - root - INFO - Successfully processed prompt 9/9
+2025-08-24 19:16:31,270 - root - INFO - Starting batch 3/5 with 5 prompts
+2025-08-24 19:16:37,294 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:37,298 - root - INFO - Successfully processed prompt 11/11
+2025-08-24 19:16:38,016 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:38,021 - root - INFO - Successfully processed prompt 13/13
+2025-08-24 19:16:38,302 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:38,304 - root - INFO - Successfully processed prompt 12/12
+2025-08-24 19:16:38,835 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:38,836 - root - INFO - Successfully processed prompt 14/14
+2025-08-24 19:16:39,476 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:39,479 - root - INFO - Successfully processed prompt 15/15
+2025-08-24 19:16:39,479 - root - INFO - Starting batch 4/5 with 5 prompts
+2025-08-24 19:16:45,159 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:45,164 - root - INFO - Successfully processed prompt 20/20
+2025-08-24 19:16:46,561 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:46,564 - root - INFO - Successfully processed prompt 17/17
+2025-08-24 19:16:46,874 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:46,876 - root - INFO - Successfully processed prompt 19/19
+2025-08-24 19:16:46,955 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:46,960 - root - INFO - Successfully processed prompt 18/18
+2025-08-24 19:16:47,217 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:47,224 - root - INFO - Successfully processed prompt 16/16
+2025-08-24 19:16:47,225 - root - INFO - Starting batch 5/5 with 1 prompts
+2025-08-24 19:16:53,986 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-24 19:16:53,991 - root - INFO - Successfully processed prompt 21/21
+2025-08-24 19:16:53,992 - root - INFO - Saving responses to responses/responses_20250824_191653.json
+2025-08-24 19:16:53,992 - root - INFO - Successfully saved responses to responses/responses_20250824_191653.json
+2025-08-24 19:16:53,992 - root - INFO - Saving benchmark data to benchmarks/benchmark_20250824_191613.json
+2025-08-24 19:16:53,993 - root - INFO - Successfully saved benchmark data to benchmarks/benchmark_20250824_191613.json
+2025-08-24 19:16:53,994 - root - INFO - Loading responses from responses/responses_20250824_191653.json
+2025-08-24 19:16:53,994 - root - INFO - Successfully loaded responses from responses/responses_20250824_191653.json
+2025-08-24 19:16:54,004 - root - INFO - Latest responses file: responses/responses_20250824_191653.json
+2025-08-24 19:16:54,004 - root - INFO - Latest responses filename: responses_20250824_191653.json
+2025-08-24 19:16:54,005 - root - INFO - Download button rendered for responses_20250824_191653.json

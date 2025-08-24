@@ -184,7 +184,12 @@ def send_prompts_to_chatgpt(prompts: List[str], api_key: str, system_prompt: str
     """
     # Define the async main function that will be run by the event loop
     async def async_main():
-        async_client = AsyncOpenAI(api_key=api_key)
+        # Initialize AsyncOpenAI client with explicit parameters
+        async_client = AsyncOpenAI(
+            api_key=api_key,
+            timeout=60.0,
+            max_retries=0  # We handle retries manually
+        )
         
         # Initialize benchmarking timestamps and metrics
         start_time = time.time()
