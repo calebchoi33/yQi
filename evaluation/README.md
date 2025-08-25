@@ -4,24 +4,39 @@ A comprehensive AI evaluation platform for testing and rating LLM responses with
 
 ## Quick Start
 
-1. **Install dependencies:**
+1. **Clone the Project**
    ```bash
-   cd evaluation
-   pip install -r requirements.txt
+   git clone git@github.com:calebchoi33/yQi.git
+   cd yQi
    ```
 
-2. **Set up OpenAI API key:**
+2. **Install dependencies:**
    ```bash
+   cd evaluation
+   python -m venv myenv
+   pip install -r requirements.txt
+   ```
+   To run your virtual environment (venv) in the future
+   ```bash
+   source myenv/bin/activate
+   ```
+
+4. **Set up OpenAI API key:**
+   ```bash
+   nano .env
    # Add to .env file or enter in app sidebar
    OPENAI_API_KEY="your-api-key-here"
    ```
-
-3. **Run the app:**
+   If one does not exist
+   ```bash
+   touch .env
+   ```
+6. **Run the app:**
    ```bash
    streamlit run app.py
    ```
 
-4. **Open browser:** Navigate to `http://localhost:8501`
+7. **Open browser:** Navigate to `http://localhost:8501`
 
 ## How to Use
 
@@ -32,13 +47,12 @@ A comprehensive AI evaluation platform for testing and rating LLM responses with
 
 2. **Configure Settings:**
    - Enter system prompt or use defaults
-   - Select model (GPT-4o-mini recommended for batch)
-   - Adjust temperature and max tokens
+   - More to choose from with the usage of additional models
 
 3. **Submit Prompts:**
    - Use default prompts or upload custom ones
    - Real-time: Results appear immediately
-   - Batch: Monitor job status and download when complete
+   - Batch: Monitor job status and download when complete (takes a very long time, but is cheap)
 
 ### Rate Responses
 1. **Select Run:** Choose from completed evaluation runs
