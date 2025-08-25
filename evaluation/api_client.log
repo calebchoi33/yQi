@@ -2898,3 +2898,317 @@
 2025-08-25 16:26:49,916 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
 2025-08-25 16:26:49,917 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
 2025-08-25 16:26:49,918 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:44:46,620 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:44:46,621 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:44:46,634 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:44:46,634 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:44:46,635 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:44:47,034 - numexpr.utils - INFO - NumExpr defaulting to 10 threads.
+2025-08-25 17:45:16,945 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:45:16,946 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:45:16,958 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:45:16,958 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:45:16,958 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:52:09,174 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:52:09,175 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:52:09,191 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:52:09,192 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:52:09,192 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:52:13,234 - root - INFO - Starting batch 1/4 with 5 prompts
+2025-08-25 17:52:24,209 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:24,220 - root - INFO - Successfully processed prompt 3/3
+2025-08-25 17:52:24,776 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:24,783 - root - INFO - Successfully processed prompt 2/2
+2025-08-25 17:52:24,928 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:24,931 - root - INFO - Successfully processed prompt 5/5
+2025-08-25 17:52:25,323 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:25,327 - root - INFO - Successfully processed prompt 1/1
+2025-08-25 17:52:26,845 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:26,847 - root - INFO - Successfully processed prompt 4/4
+2025-08-25 17:52:26,848 - root - INFO - Starting batch 2/4 with 5 prompts
+2025-08-25 17:52:36,657 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:36,659 - root - INFO - Successfully processed prompt 7/7
+2025-08-25 17:52:36,659 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:36,660 - root - INFO - Successfully processed prompt 9/9
+2025-08-25 17:52:37,704 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:37,705 - root - INFO - Successfully processed prompt 10/10
+2025-08-25 17:52:40,324 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:40,326 - root - INFO - Successfully processed prompt 8/8
+2025-08-25 17:52:43,147 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:43,149 - root - INFO - Successfully processed prompt 6/6
+2025-08-25 17:52:43,151 - root - INFO - Starting batch 3/4 with 5 prompts
+2025-08-25 17:52:50,895 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:50,898 - root - INFO - Successfully processed prompt 13/13
+2025-08-25 17:52:51,842 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:51,844 - root - INFO - Successfully processed prompt 12/12
+2025-08-25 17:52:53,323 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:53,325 - root - INFO - Successfully processed prompt 15/15
+2025-08-25 17:52:57,032 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:57,040 - root - INFO - Successfully processed prompt 11/11
+2025-08-25 17:52:57,724 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:52:57,725 - root - INFO - Successfully processed prompt 14/14
+2025-08-25 17:52:57,725 - root - INFO - Starting batch 4/4 with 5 prompts
+2025-08-25 17:53:05,298 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:53:05,300 - root - INFO - Successfully processed prompt 20/20
+2025-08-25 17:53:06,881 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:53:06,883 - root - INFO - Successfully processed prompt 17/17
+2025-08-25 17:53:07,694 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:53:07,702 - root - INFO - Successfully processed prompt 16/16
+2025-08-25 17:53:08,581 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:53:08,583 - root - INFO - Successfully processed prompt 18/18
+2025-08-25 17:53:11,377 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 17:53:11,382 - root - INFO - Successfully processed prompt 19/19
+2025-08-25 17:53:11,384 - root - INFO - Saving responses to responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 17:53:11,387 - root - INFO - Successfully saved responses to responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 17:53:11,387 - root - INFO - Saving benchmark data to benchmarks/2025-08-25/benchmark_20250825_175213.json
+2025-08-25 17:53:11,388 - root - INFO - Successfully saved benchmark data to benchmarks/2025-08-25/benchmark_20250825_175213.json
+2025-08-25 17:53:11,402 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:53:11,403 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:53:11,422 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:53:11,422 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:53:11,423 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:27,317 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:27,318 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:27,330 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:27,331 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:27,332 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:32,392 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:32,392 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:32,407 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:32,408 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:32,408 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:32,471 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:32,472 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:32,484 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:32,485 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:32,486 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:34,235 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:34,236 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:34,251 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:34,252 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:34,252 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:34,308 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:34,309 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:34,320 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:34,320 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:34,321 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:36,901 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:36,902 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:36,917 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:36,917 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:36,918 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:36,971 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:36,972 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:36,985 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:36,985 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:36,985 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:38,366 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:38,366 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:38,378 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:38,379 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:38,380 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:40,005 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:40,006 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:40,021 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:40,021 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:40,022 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:41,456 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:41,456 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:41,471 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:41,471 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:41,472 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:41,522 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:41,524 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:41,534 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:41,535 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:41,535 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:42,504 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:42,505 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:42,522 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:42,525 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:42,526 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:45,970 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:45,971 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:45,987 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:45,988 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:45,988 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:46,047 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:46,048 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:46,059 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:46,060 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:46,060 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:58:47,285 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:47,286 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:47,301 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:58:47,301 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:58:47,303 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:59:02,685 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:02,687 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:02,701 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:02,702 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:59:02,702 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:59:04,556 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:04,557 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:04,571 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:04,572 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:59:04,573 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:59:04,622 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:04,624 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:04,635 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:04,635 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:59:04,636 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:59:06,142 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:06,143 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:06,157 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:06,159 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:59:06,160 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:59:06,219 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:06,220 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:06,230 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:06,231 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:59:06,232 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 17:59:08,512 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:08,514 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:08,529 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 17:59:08,529 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 17:59:08,530 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 18:02:29,042 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:29,043 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:29,057 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:29,057 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 18:02:29,057 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 18:02:33,251 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:33,252 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:33,269 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:33,270 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 18:02:33,271 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 18:02:33,326 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:33,327 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:33,339 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:33,339 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 18:02:33,339 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 18:02:34,685 - root - INFO - Loading responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:34,686 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:34,701 - root - INFO - Latest responses file: responses/2025-08-25/responses_batch_20250825_142302.json
+2025-08-25 18:02:34,701 - root - INFO - Latest responses filename: responses_batch_20250825_142302.json
+2025-08-25 18:02:34,702 - root - INFO - Download button rendered for responses_batch_20250825_142302.json
+2025-08-25 18:02:34,759 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:34,759 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:34,771 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:34,772 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:34,772 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:02:38,596 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:38,597 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:38,613 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:38,613 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:38,613 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:02:38,674 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:38,674 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:38,686 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:38,687 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:38,688 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:02:41,774 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:41,775 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:41,790 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:41,790 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:41,791 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:02:43,292 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:43,292 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:43,308 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:43,309 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:43,310 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:02:43,369 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:43,370 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:43,381 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:43,381 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:43,382 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:02:44,674 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:44,675 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:44,691 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:44,692 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:44,693 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:02:44,751 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:44,752 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:44,762 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:02:44,762 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:02:44,762 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:05:41,239 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:41,241 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:41,256 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:41,256 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:05:41,257 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:05:41,336 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:41,337 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:41,348 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:41,348 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:05:41,349 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:05:43,073 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:43,074 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:43,088 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:43,089 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:05:43,089 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:05:43,146 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:43,147 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:43,158 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:43,159 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:05:43,160 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:05:44,214 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:44,216 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:44,230 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_175311.json
+2025-08-25 18:05:44,231 - root - INFO - Latest responses filename: responses_20250825_175311.json
+2025-08-25 18:05:44,232 - root - INFO - Download button rendered for responses_20250825_175311.json
+2025-08-25 18:05:44,284 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:44,285 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:44,299 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:44,300 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:44,300 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:45,996 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:45,997 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,012 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,012 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:46,013 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:46,057 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,058 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,068 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,069 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:46,070 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:46,794 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,795 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,809 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,810 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:46,810 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:46,864 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,865 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,874 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:46,874 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:46,875 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:52,517 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:52,518 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:52,532 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:52,533 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:52,533 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:52,594 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:52,595 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:52,606 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:52,606 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:52,607 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:54,649 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:54,649 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:54,660 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:54,660 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:54,661 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:05:54,738 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:54,739 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:54,751 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:05:54,752 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:05:54,752 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:07:59,449 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:07:59,464 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:07:59,476 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:07:59,476 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:07:59,477 - root - INFO - Download button rendered for responses_20250825_141631.json
+2025-08-25 18:07:59,593 - root - INFO - Loading responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:07:59,594 - root - INFO - Successfully loaded responses from responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:07:59,606 - root - INFO - Latest responses file: responses/2025-08-25/responses_20250825_141631.json
+2025-08-25 18:07:59,609 - root - INFO - Latest responses filename: responses_20250825_141631.json
+2025-08-25 18:07:59,613 - root - INFO - Download button rendered for responses_20250825_141631.json

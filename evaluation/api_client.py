@@ -372,23 +372,14 @@ def save_batch_file(batch_requests: List[Dict], run_id: str) -> str:
     Returns:
         Path to the created JSONL file
     """
-    import os
-    from datetime import datetime
+    from core.directory_manager import directory_manager
     
-    # Create batch directory if it doesn't exist
-    batch_dir = os.path.join(os.path.dirname(__file__), "batches")
-    if not os.path.exists(batch_dir):
-        os.makedirs(batch_dir)
-    
-    # Create date-based subdirectory
-    date_folder = datetime.now().strftime("%Y-%m-%d")
-    date_dir = os.path.join(batch_dir, date_folder)
-    if not os.path.exists(date_dir):
-        os.makedirs(date_dir)
+    # Get date-organized batch directory
+    batch_dir = directory_manager.get_batches_directory()
     
     # Create JSONL file
     filename = f"batch_{run_id}.jsonl"
-    filepath = os.path.join(date_dir, filename)
+    filepath = os.path.join(batch_dir, filename)
     
     with open(filepath, 'w', encoding='utf-8') as f:
         for request in batch_requests:
@@ -461,8 +452,7 @@ def retrieve_batch_results(client, batch_job_id: str, run_id: str) -> str:
     Returns:
         Path to the saved results file
     """
-    import os
-    from datetime import datetime
+    from core.directory_manager import directory_manager
     
     # Get batch job info
     batch_job = client.batches.retrieve(batch_job_id)
@@ -471,22 +461,15 @@ def retrieve_batch_results(client, batch_job_id: str, run_id: str) -> str:
         raise ValueError(f"Batch job not completed. Status: {batch_job.status}")
     
     # Download results
-    result_content = client.files.content(batch_job.output_file_id).content
+    result_file_id = batch_job.output_file_id
+    result_content = client.files.content(result_file_id).content
     
-    # Create results directory
-    results_dir = os.path.join(os.path.dirname(__file__), "batch_results")
-    if not os.path.exists(results_dir):
-        os.makedirs(results_dir)
-    
-    # Create date-based subdirectory
-    date_folder = datetime.now().strftime("%Y-%m-%d")
-    date_dir = os.path.join(results_dir, date_folder)
-    if not os.path.exists(date_dir):
-        os.makedirs(date_dir)
+    # Get date-organized results directory
+    results_dir = directory_manager.get_batch_results_directory()
     
     # Save results file
     filename = f"batch_results_{run_id}.jsonl"
-    filepath = os.path.join(date_dir, filename)
+    filepath = os.path.join(results_dir, filename)
     
     with open(filepath, 'wb') as f:
         f.write(result_content)
@@ -508,8 +491,6 @@ def process_batch_results(results_file_path: str, original_prompts: List[str],
     Returns:
         Tuple of (responses_data, benchmark_data) in yQi format
     """
-    import json
-    from datetime import datetime
     
     # Load results
     results = []

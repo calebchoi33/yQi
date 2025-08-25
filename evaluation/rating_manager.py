@@ -224,19 +224,31 @@ class RatingManager:
                         os.remove(filepath)
                         deleted_items.append(f"rating file: {filename}")
             
-            # Delete responses file
+            # Delete response files (search in date-organized folders)
             responses_dir = self.config.storage.responses_dir
-            responses_file = os.path.join(responses_dir, f"responses_{run_id}.json")
-            if os.path.exists(responses_file):
-                os.remove(responses_file)
-                deleted_items.append(f"responses file: responses_{run_id}.json")
+            if os.path.exists(responses_dir):
+                for date_folder in os.listdir(responses_dir):
+                    date_path = os.path.join(responses_dir, date_folder)
+                    if os.path.isdir(date_path):
+                        for filename in os.listdir(date_path):
+                            if (filename.startswith(f'responses_{run_id}') or 
+                                filename.startswith(f'responses_batch_') and run_id in filename) and filename.endswith('.json'):
+                                filepath = os.path.join(date_path, filename)
+                                os.remove(filepath)
+                                deleted_items.append(f"response file: {date_folder}/{filename}")
             
-            # Delete benchmark file
+            # Delete benchmark files (search in date-organized folders)
             benchmarks_dir = self.config.storage.benchmarks_dir
-            benchmark_file = os.path.join(benchmarks_dir, f"benchmark_{run_id}.json")
-            if os.path.exists(benchmark_file):
-                os.remove(benchmark_file)
-                deleted_items.append(f"benchmark file: benchmark_{run_id}.json")
+            if os.path.exists(benchmarks_dir):
+                for date_folder in os.listdir(benchmarks_dir):
+                    date_path = os.path.join(benchmarks_dir, date_folder)
+                    if os.path.isdir(date_path):
+                        for filename in os.listdir(date_path):
+                            if (filename.startswith(f'benchmark_{run_id}') or 
+                                filename.startswith(f'benchmark_batch_') and run_id in filename) and filename.endswith('.json'):
+                                filepath = os.path.join(date_path, filename)
+                                os.remove(filepath)
+                                deleted_items.append(f"benchmark file: {date_folder}/{filename}")
             
             if deleted_items:
                 print(f"Successfully deleted run {run_id}:")

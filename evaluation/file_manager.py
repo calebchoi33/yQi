@@ -9,7 +9,7 @@ import json
 import os
 import logging
 from datetime import datetime
-from typing import Dict, Optional
+from typing import Dict, List, Optional, Any
 from core.config import AppConfig
 
 # Initialize config for backward compatibility
@@ -29,59 +29,41 @@ logging.basicConfig(
 )
 
 
-def save_responses_to_json(responses_data: Dict) -> str:
-    """Save responses to a timestamped JSON file in the responses directory.
-    
-    Creates the responses directory if it doesn't exist and generates a timestamped
-    filename to prevent overwriting previous response files.
+def save_responses_to_json(responses_data: Dict[str, Any], run_id: str = None) -> str:
+    """Save responses data to JSON file with date-organized folder structure.
     
     Args:
-        responses_data: Dictionary containing the response data to save
+        responses_data: Dictionary containing the responses data
+        run_id: Optional run ID for custom filename
         
     Returns:
-        str: Path to the saved JSON file
-        
-    Raises:
-        IOError: If there's an issue creating the directory or writing the file
-        TypeError: If the responses_data cannot be serialized to JSON
+        str: Path to the saved file
     """
-    try:
-        # Create responses directory if it doesn't exist
-        if not os.path.exists(RESPONSES_DIR):
-            logging.info(f"Creating responses directory: {RESPONSES_DIR}")
-            os.makedirs(RESPONSES_DIR)
-        
-        # Create date-based directory structure
-        now = datetime.now()
-        date_folder = now.strftime("%Y-%m-%d")
-        date_dir = os.path.join(RESPONSES_DIR, date_folder)
-        
-        # Create date directory if it doesn't exist
-        if not os.path.exists(date_dir):
-            logging.info(f"Creating date directory: {date_dir}")
-            os.makedirs(date_dir)
-        
-        # Create timestamped filename with processing mode indicator
-        timestamp = now.strftime("%Y%m%d_%H%M%S")
-        processing_mode = responses_data.get("processing_mode", "realtime")
-        if processing_mode == "batch":
+    from core.directory_manager import directory_manager
+    
+    # Get date-organized responses directory
+    responses_dir = directory_manager.get_responses_directory()
+    
+    # Generate filename
+    if run_id:
+        # For batch processing, include batch indicator and timestamp
+        if responses_data.get('batch_processing', False):
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"responses_batch_{timestamp}.json"
         else:
-            filename = f"responses_{timestamp}.json"
-        filepath = os.path.join(date_dir, filename)
-        
-        logging.info(f"Saving responses to {filepath}")
-        with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(responses_data, f, indent=2, ensure_ascii=False)
-        
-        logging.info(f"Successfully saved responses to {filepath}")
-        return filepath
-    except IOError as e:
-        logging.error(f"IO error saving responses: {str(e)}")
-        raise
-    except TypeError as e:
-        logging.error(f"Type error when serializing responses to JSON: {str(e)}")
-        raise
+            filename = f"responses_{run_id}.json"
+    else:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"responses_{timestamp}.json"
+    
+    filepath = os.path.join(responses_dir, filename)
+    
+    # Save with proper Unicode encoding
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(responses_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"Responses saved to {filepath}")
+    return filepath
 
 
 def save_benchmark_data(benchmark_data: Dict) -> str:
