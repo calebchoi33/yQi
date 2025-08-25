@@ -1,0 +1,14 @@
+{
+  "id": "batch_20250825_142302_3_20250825_144429",
+  "run_id": "batch_20250825_142302",
+  "prompt_number": 3,
+  "timestamp": "2025-08-25T14:44:29.725770",
+  "rater_name": "caleb",
+  "overall_rating": 3,
+  "accuracy_rating": 3,
+  "completeness_rating": 3,
+  "clarity_rating": 3,
+  "clinical_relevance_rating": 3,
+  "safety_rating": 3,
+  "comments": null
+}

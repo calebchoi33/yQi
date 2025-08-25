@@ -51,14 +51,28 @@ def save_responses_to_json(responses_data: Dict) -> str:
             logging.info(f"Creating responses directory: {RESPONSES_DIR}")
             os.makedirs(RESPONSES_DIR)
         
-        # Create timestamped filename
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"responses_{timestamp}.json"
-        filepath = os.path.join(RESPONSES_DIR, filename)
+        # Create date-based directory structure
+        now = datetime.now()
+        date_folder = now.strftime("%Y-%m-%d")
+        date_dir = os.path.join(RESPONSES_DIR, date_folder)
+        
+        # Create date directory if it doesn't exist
+        if not os.path.exists(date_dir):
+            logging.info(f"Creating date directory: {date_dir}")
+            os.makedirs(date_dir)
+        
+        # Create timestamped filename with processing mode indicator
+        timestamp = now.strftime("%Y%m%d_%H%M%S")
+        processing_mode = responses_data.get("processing_mode", "realtime")
+        if processing_mode == "batch":
+            filename = f"responses_batch_{timestamp}.json"
+        else:
+            filename = f"responses_{timestamp}.json"
+        filepath = os.path.join(date_dir, filename)
         
         logging.info(f"Saving responses to {filepath}")
-        with open(filepath, 'w') as f:
-            json.dump(responses_data, f, indent=2)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(responses_data, f, indent=2, ensure_ascii=False)
         
         logging.info(f"Successfully saved responses to {filepath}")
         return filepath
@@ -98,13 +112,27 @@ def save_benchmark_data(benchmark_data: Dict) -> str:
             logging.info(f"Creating benchmarks directory: {BENCHMARKS_DIR}")
             os.makedirs(BENCHMARKS_DIR)
         
-        # Create filename with timestamp
-        filename = f"benchmark_{benchmark_data['run_id']}.json"
-        filepath = os.path.join(BENCHMARKS_DIR, filename)
+        # Create date-based directory structure
+        now = datetime.now()
+        date_folder = now.strftime("%Y-%m-%d")
+        date_dir = os.path.join(BENCHMARKS_DIR, date_folder)
+        
+        # Create date directory if it doesn't exist
+        if not os.path.exists(date_dir):
+            logging.info(f"Creating date directory: {date_dir}")
+            os.makedirs(date_dir)
+        
+        # Create filename with timestamp and processing mode indicator
+        processing_mode = benchmark_data.get("processing_mode", "realtime")
+        if processing_mode == "batch":
+            filename = f"benchmark_batch_{benchmark_data['run_id']}.json"
+        else:
+            filename = f"benchmark_{benchmark_data['run_id']}.json"
+        filepath = os.path.join(date_dir, filename)
         
         logging.info(f"Saving benchmark data to {filepath}")
-        with open(filepath, 'w') as f:
-            json.dump(benchmark_data, f, indent=2)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(benchmark_data, f, indent=2, ensure_ascii=False)
         
         logging.info(f"Successfully saved benchmark data to {filepath}")
         return filepath
@@ -134,18 +162,32 @@ def load_responses_from_json() -> Optional[Dict]:
             logging.info(f"Responses directory {RESPONSES_DIR} does not exist")
             return None
         
-        # Get all response files and find the most recent one
-        response_files = [f for f in os.listdir(RESPONSES_DIR) if f.startswith('responses_') and f.endswith('.json')]
+        # Get all response files from both flat structure and date-organized structure
+        response_files = []
+        
+        # Check flat structure (legacy)
+        for f in os.listdir(RESPONSES_DIR):
+            if f.startswith('responses_') and f.endswith('.json'):
+                response_files.append((os.path.join(RESPONSES_DIR, f), f))
+        
+        # Check date-organized structure (new)
+        for item in os.listdir(RESPONSES_DIR):
+            item_path = os.path.join(RESPONSES_DIR, item)
+            if os.path.isdir(item_path):
+                for f in os.listdir(item_path):
+                    if f.startswith('responses_') and f.endswith('.json'):
+                        response_files.append((os.path.join(item_path, f), f))
+        
         if not response_files:
             logging.info("No response files found in directory")
             return None
         
         # Sort by filename (which includes timestamp) to get most recent
-        response_files.sort(reverse=True)
-        latest_file = os.path.join(RESPONSES_DIR, response_files[0])
+        response_files.sort(key=lambda x: x[1], reverse=True)
+        latest_file = response_files[0][0]
         
         logging.info(f"Loading responses from {latest_file}")
-        with open(latest_file, 'r') as f:
+        with open(latest_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             logging.info(f"Successfully loaded responses from {latest_file}")
             return data
@@ -171,13 +213,28 @@ def get_latest_responses_file() -> Optional[str]:
             logging.info(f"Responses directory {RESPONSES_DIR} does not exist")
             return None
         
-        response_files = [f for f in os.listdir(RESPONSES_DIR) if f.startswith('responses_') and f.endswith('.json')]
+        # Get all response files from both flat and date-organized structures
+        response_files = []
+        
+        # Check flat structure (legacy)
+        for f in os.listdir(RESPONSES_DIR):
+            if f.startswith('responses_') and f.endswith('.json'):
+                response_files.append((os.path.join(RESPONSES_DIR, f), f))
+        
+        # Check date-organized structure (new)
+        for item in os.listdir(RESPONSES_DIR):
+            item_path = os.path.join(RESPONSES_DIR, item)
+            if os.path.isdir(item_path):
+                for f in os.listdir(item_path):
+                    if f.startswith('responses_') and f.endswith('.json'):
+                        response_files.append((os.path.join(item_path, f), f))
+        
         if not response_files:
             logging.info("No response files found in directory")
             return None
         
-        response_files.sort(reverse=True)
-        latest_file = os.path.join(RESPONSES_DIR, response_files[0])
+        response_files.sort(key=lambda x: x[1], reverse=True)
+        latest_file = response_files[0][0]
         logging.info(f"Latest responses file: {latest_file}")
         return latest_file
     except IOError as e:
@@ -199,7 +256,22 @@ def get_latest_responses_filename() -> Optional[str]:
             logging.info(f"Responses directory {RESPONSES_DIR} does not exist")
             return None
         
-        response_files = [f for f in os.listdir(RESPONSES_DIR) if f.startswith('responses_') and f.endswith('.json')]
+        # Get all response files from both flat and date-organized structures
+        response_files = []
+        
+        # Check flat structure (legacy)
+        for f in os.listdir(RESPONSES_DIR):
+            if f.startswith('responses_') and f.endswith('.json'):
+                response_files.append(f)
+        
+        # Check date-organized structure (new)
+        for item in os.listdir(RESPONSES_DIR):
+            item_path = os.path.join(RESPONSES_DIR, item)
+            if os.path.isdir(item_path):
+                for f in os.listdir(item_path):
+                    if f.startswith('responses_') and f.endswith('.json'):
+                        response_files.append(f)
+        
         if not response_files:
             logging.info("No response files found in directory")
             return None
@@ -211,3 +283,53 @@ def get_latest_responses_filename() -> Optional[str]:
     except IOError as e:
         logging.error(f"IO error accessing responses directory: {str(e)}")
         raise
+
+
+def convert_existing_files_to_readable():
+    """Convert existing JSON files with Unicode escape sequences to readable format."""
+    import glob
+    
+    # Convert response files
+    response_pattern = os.path.join(RESPONSES_DIR, "responses_*.json")
+    response_files = glob.glob(response_pattern)
+    
+    for filepath in response_files:
+        try:
+            # Read the file with default encoding
+            with open(filepath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Write it back with proper Unicode handling
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            
+            print(f"Converted {os.path.basename(filepath)} to readable format")
+            
+        except Exception as e:
+            print(f"Error converting {filepath}: {e}")
+    
+    # Convert benchmark files
+    benchmark_pattern = os.path.join(BENCHMARKS_DIR, "benchmark_*.json")
+    benchmark_files = glob.glob(benchmark_pattern)
+    
+    for filepath in benchmark_files:
+        try:
+            # Read the file with default encoding
+            with open(filepath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Write it back with proper Unicode handling
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            
+            print(f"Converted {os.path.basename(filepath)} to readable format")
+            
+        except Exception as e:
+            print(f"Error converting {filepath}: {e}")
+    
+    print("File conversion completed!")
+
+
+if __name__ == "__main__":
+    # Allow running this script directly to convert existing files
+    convert_existing_files_to_readable()

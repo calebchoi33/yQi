@@ -1,7 +1,9 @@
 """Reusable UI components for yQi evaluation platform."""
 
 import streamlit as st
-from typing import Optional, Dict, Any
+from typing import Dict, Any, List, Optional
+import json
+from datetime import datetime
 from core.config import AppConfig
 
 
@@ -84,12 +86,12 @@ Please respond in a structured, professional manner that would be appropriate fo
         st.subheader("Medical Case Prompts")
         
         # Configuration options
-        col1, col2, col3 = st.columns([2, 1, 1])
+        col1, col2, col3, col4 = st.columns([2, 1, 1, 1])
         
         with col1:
             prompt_mode = st.radio(
                 "Prompt Configuration",
-                ["Edit Default Prompts", "Use Custom Prompts"],
+                ["Edit Default Prompts", "Use Custom Prompts", "Upload JSON File"],
                 horizontal=True
             )
         
@@ -101,6 +103,11 @@ Please respond in a structured, professional manner that would be appropriate fo
         with col3:
             if st.button("Add New Prompt"):
                 st.session_state.editable_prompts.append("")
+                st.rerun()
+        
+        with col4:
+            if st.button("Export JSON"):
+                self._export_prompts_json()
                 st.rerun()
         
         if prompt_mode == "Edit Default Prompts":
@@ -133,7 +140,7 @@ Please respond in a structured, professional manner that would be appropriate fo
             # Filter out empty prompts
             prompts = [p.strip() for p in st.session_state.editable_prompts if p.strip()]
             
-        else:  # Custom prompts mode
+        elif prompt_mode == "Use Custom Prompts":
             st.write("**Enter your custom prompts (one per line):**")
             custom_prompts = st.text_area(
                 "Custom Prompts", 
@@ -141,6 +148,60 @@ Please respond in a structured, professional manner that would be appropriate fo
                 help="Enter each prompt on a separate line"
             )
             prompts = [p.strip() for p in custom_prompts.split('\n') if p.strip()]
+        
+        elif prompt_mode == "Upload JSON File":
+            # JSON file upload mode
+            st.write("**Upload a JSON file with system prompt and prompts:**")
+            
+            # Show expected format
+            with st.expander("Expected JSON Format", expanded=False):
+                st.code('''
+{
+  "system_prompt": "Your system prompt here...",
+  "prompts": [
+    "First medical case prompt...",
+    "Second medical case prompt...",
+    "Third medical case prompt..."
+  ]
+}
+                ''', language="json")
+            
+            uploaded_file = st.file_uploader(
+                "Choose JSON file",
+                type="json",
+                help="Upload a JSON file containing system_prompt and prompts array"
+            )
+            
+            if uploaded_file is not None:
+                try:
+                    import json
+                    content = json.load(uploaded_file)
+                    
+                    # Validate JSON structure
+                    if "system_prompt" in content and "prompts" in content:
+                        # Update session state with uploaded data
+                        st.session_state.system_prompt = content["system_prompt"]
+                        st.session_state.editable_prompts = content["prompts"]
+                        
+                        st.success(f"Successfully loaded {len(content['prompts'])} prompts from file!")
+                        st.info("System prompt and prompts have been updated. You can switch to 'Edit Default Prompts' to modify them.")
+                        
+                        # Use the uploaded prompts
+                        prompts = content["prompts"]
+                        system_prompt = content["system_prompt"]
+                        
+                    else:
+                        st.error("Invalid JSON format. Please ensure your file contains 'system_prompt' and 'prompts' fields.")
+                        prompts = []
+                        
+                except json.JSONDecodeError as e:
+                    st.error(f"Invalid JSON file: {e}")
+                    prompts = []
+                except Exception as e:
+                    st.error(f"Error reading file: {e}")
+                    prompts = []
+            else:
+                prompts = []
         
         # Show prompt count
         if prompts:
@@ -191,6 +252,34 @@ Please respond in a structured, professional manner that would be appropriate fo
         else:
             st.error(f"Error: {message}")
     
+    def _export_prompts_json(self):
+        """Export current system prompt and prompts as JSON for download."""
+        import json
+        from datetime import datetime
+        
+        # Prepare export data
+        export_data = {
+            "system_prompt": st.session_state.get('system_prompt', ''),
+            "prompts": st.session_state.get('editable_prompts', []),
+            "exported_at": datetime.now().isoformat(),
+            "total_prompts": len(st.session_state.get('editable_prompts', []))
+        }
+        
+        # Convert to JSON string
+        json_str = json.dumps(export_data, indent=2, ensure_ascii=False)
+        
+        # Create download button
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"yqi_prompts_{timestamp}.json"
+        
+        st.download_button(
+            label="Download JSON File",
+            data=json_str,
+            file_name=filename,
+            mime="application/json",
+            help="Download current system prompt and prompts as JSON file"
+        )
+    
     def render_loading_state(self, message: str = "Processing..."):
         """Render loading state with spinner."""
         return st.spinner(message)
@@ -201,3 +290,59 @@ Please respond in a structured, professional manner that would be appropriate fo
         for i, (label, value) in enumerate(metrics.items()):
             with cols[i]:
                 st.metric(label, value)
+    
+    def render_processing_mode_selector(self):
+        """Render processing mode selector (Real-time vs Batch)."""
+        st.subheader("Processing Mode")
+        
+        mode = st.radio(
+            "Choose processing mode:",
+            options=["Real-time", "Batch"],
+            help="Real-time: Get responses immediately (higher cost). Batch: Process asynchronously within 24h (50% cost savings)."
+        )
+        
+        if mode == "Batch":
+            st.info("Batch processing offers 50% cost savings and higher rate limits. Results will be available within 24 hours.")
+        
+        return mode
+    
+    def render_batch_job_monitor(self, batch_jobs: List[Dict]):
+        """Render batch job monitoring interface."""
+        if not batch_jobs:
+            st.info("No active batch jobs.")
+            return
+        
+        st.subheader("Active Batch Jobs")
+        
+        for job in batch_jobs:
+            with st.expander(f"Job {job['batch_job_id'][:8]}... - {job['status'].title()}", expanded=False):
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.write(f"**Run ID:** {job['run_id']}")
+                    st.write(f"**Model:** {job['model']}")
+                    st.write(f"**Prompts:** {len(job['prompts'])}")
+                    st.write(f"**Submitted:** {job['submitted_at'][:19]}")
+                
+                with col2:
+                    st.write(f"**Status:** {job['status']}")
+                    if job.get('completed_at'):
+                        completed_at = job['completed_at']
+                        if isinstance(completed_at, (int, float)):
+                            # Convert timestamp to readable format
+                            from datetime import datetime
+                            completed_str = datetime.fromtimestamp(completed_at).strftime('%Y-%m-%d %H:%M:%S')
+                        else:
+                            # Already a string, just truncate
+                            completed_str = str(completed_at)[:19]
+                        st.write(f"**Completed:** {completed_str}")
+                    
+                    # Action buttons
+                    if job['status'] == 'completed':
+                        if st.button(f"Download Results", key=f"download_{job['batch_job_id']}"):
+                            return {'action': 'download', 'job': job}
+                    elif job['status'] in ['submitted', 'in_progress', 'validating']:
+                        if st.button(f"Check Status", key=f"check_{job['batch_job_id']}"):
+                            return {'action': 'check_status', 'job': job}
+        
+        return None

@@ -1,43 +1,89 @@
-## Installation
+# yQi AI Evaluation Platform
 
-1. Clone or download this project
-2. Navigate to the project directory:
+A comprehensive AI evaluation platform for testing and rating LLM responses with both real-time and batch processing capabilities.
+
+## Quick Start
+
+1. **Install dependencies:**
    ```bash
    cd evaluation
-   ```
-
-3. Install the required dependencies:
-   ```bash
    pip install -r requirements.txt
    ```
 
-## Setup
+2. **Set up OpenAI API key:**
+   ```bash
+   # Add to .env file or enter in app sidebar
+   OPENAI_API_KEY="your-api-key-here"
+   ```
 
-### OpenAI API Key
-
-You need an OpenAI API key to use this application. You can obtain one from [OpenAI's website](https://platform.openai.com/api-keys).
-
-**Option 1: Environment Variable (Recommended)**
-```bash
-# Add to your .env file
-OPENAI_API_KEY="your-api-key-here"
-```
-
-## Usage
-
-1. Run the Streamlit app:
+3. **Run the app:**
    ```bash
    streamlit run app.py
    ```
 
-2. Open your browser and navigate to the provided URL (usually `http://localhost:8501`)
+4. **Open browser:** Navigate to `http://localhost:8501`
+
+## How to Use
+
+### Generate Responses
+1. **Choose Processing Mode:**
+   - **Real-time**: Immediate responses (5 prompts at a time)
+   - **Batch**: Cost-effective bulk processing (up to 50,000 prompts)
+
+2. **Configure Settings:**
+   - Enter system prompt or use defaults
+   - Select model (GPT-4o-mini recommended for batch)
+   - Adjust temperature and max tokens
+
+3. **Submit Prompts:**
+   - Use default prompts or upload custom ones
+   - Real-time: Results appear immediately
+   - Batch: Monitor job status and download when complete
+
+### Rate Responses
+1. **Select Run:** Choose from completed evaluation runs
+2. **Rate Each Response:** Use 1-5 scale with comments
+3. **Track Progress:** See completion status and statistics
+
+### View Results
+- **Responses Tab:** Browse all generated responses
+- **Statistics Tab:** View performance metrics and ratings
+- **Files:** All data saved in `responses/` and `benchmarks/` folders
+
+## Key Features
+
+- **Dual Processing Modes:** Real-time for quick tests, batch for large-scale evaluations
+- **Cost Optimization:** Batch processing offers 50% cost savings
+- **Persistent Storage:** All data saved locally in organized date folders
+- **Rating System:** Comprehensive evaluation with statistics tracking
+- **Job Management:** Monitor long-running batch jobs across app restarts
+
+## Architecture
+
+```
+evaluation/
+├── app.py                 # Main Streamlit application
+├── api_client.py          # OpenAI API integration
+├── batch_manager.py       # Batch job lifecycle management
+├── file_manager.py        # Data storage and retrieval
+├── rating_manager.py      # Rating system and statistics
+├── ui/                    # User interface components
+├── responses/             # Generated responses (by date)
+├── benchmarks/            # Performance metrics (by date)
+├── batches/               # Batch job files (by date)
+└── ratings/               # User ratings (by run)
+```
 
 ## Requirements
 
-### System Requirements
 - Python 3.8+
-- Valid OpenAI API key with GPT-4o access
+- OpenAI API key with GPT-4o access
+- Internet connection for API calls
 
-## License
+## Data Storage
 
-This project is open source and available under the MIT License.
+All data is stored locally:
+- **Responses:** `responses/YYYY-MM-DD/responses_*.json`
+- **Benchmarks:** `benchmarks/YYYY-MM-DD/benchmark_*.json`
+- **Ratings:** `ratings/run_id/rating_*.json`
+- **Batch Jobs:** `batch_jobs.json` (persistent tracking)

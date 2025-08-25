@@ -49,6 +49,14 @@ class SimpleRatingInterface:
         # Navigation
         if 'responses_to_rate' in st.session_state:
             st.header("Navigation")
+            
+            # Exit button
+            if st.button("← Exit Rating", type="secondary"):
+                self._exit_rating_session()
+                st.rerun()
+            
+            st.divider()
+            
             responses = st.session_state.responses_to_rate
             
             col1, col2 = st.columns(2)
@@ -72,6 +80,14 @@ class SimpleRatingInterface:
             existing_ratings = self.rating_manager.get_ratings_for_run(run_id)
             rated_count = len(existing_ratings)
             st.metric("Rated Responses", f"{rated_count}/{len(responses)}")
+            
+            # Check if all responses are rated
+            if rated_count >= len(responses):
+                st.success("All responses rated!")
+                if st.button("Complete Rating Session", type="primary"):
+                    self._exit_rating_session()
+                    st.success("Rating session completed successfully!")
+                    st.rerun()
     
     def _render_run_selection(self):
         """Render the evaluation run selection interface."""
@@ -87,7 +103,7 @@ class SimpleRatingInterface:
         # Display runs in a table format
         for run in runs:
             with st.container():
-                col1, col2, col3, col4 = st.columns([3, 2, 2, 1])
+                col1, col2, col3, col4, col5 = st.columns([3, 2, 2, 1, 1])
                 
                 with col1:
                     st.write(f"**Run ID:** {run['run_id']}")
@@ -100,7 +116,7 @@ class SimpleRatingInterface:
                 with col3:
                     st.write(f"**Rated:** {run['rated_count']}/{run['total_prompts']}")
                     if run['total_prompts'] > 0:
-                        completion = run['rated_count'] / run['total_prompts']
+                        completion = min(1.0, run['rated_count'] / run['total_prompts'])
                         st.progress(completion)
                 
                 with col4:
@@ -109,6 +125,34 @@ class SimpleRatingInterface:
                         st.session_state.responses_to_rate = run['responses']
                         st.session_state.current_response_index = 0
                         st.rerun()
+                
+                with col5:
+                    if st.button("🗑️", key=f"delete_{run['run_id']}", help="Delete this run", type="secondary"):
+                        # Show confirmation dialog
+                        st.session_state[f"confirm_delete_{run['run_id']}"] = True
+                        st.rerun()
+                
+                # Handle delete confirmation
+                if st.session_state.get(f"confirm_delete_{run['run_id']}", False):
+                    st.warning(f"⚠️ Are you sure you want to delete run **{run['run_id']}**?")
+                    st.caption("This will permanently delete all responses, ratings, and benchmark data for this run.")
+                    
+                    col_confirm, col_cancel = st.columns(2)
+                    with col_confirm:
+                        if st.button("Yes, Delete", key=f"confirm_yes_{run['run_id']}", type="primary"):
+                            if self.rating_manager.delete_run(run['run_id']):
+                                st.success(f"Successfully deleted run {run['run_id']}")
+                                # Clear confirmation state
+                                del st.session_state[f"confirm_delete_{run['run_id']}"]
+                                st.rerun()
+                            else:
+                                st.error(f"Failed to delete run {run['run_id']}")
+                    
+                    with col_cancel:
+                        if st.button("Cancel", key=f"confirm_no_{run['run_id']}", type="secondary"):
+                            # Clear confirmation state
+                            del st.session_state[f"confirm_delete_{run['run_id']}"]
+                            st.rerun()
                 
                 st.divider()
     
@@ -146,9 +190,33 @@ class SimpleRatingInterface:
             with col3:
                 st.metric("Prompt Number", current_response['prompt_number'])
         
-        # Show existing ratings
+        # Check if all responses are rated and auto-close
         run_id = st.session_state.selected_run['run_id']
         existing_ratings = self.rating_manager.get_ratings_for_run(run_id)
+        total_responses = len(responses)
+        rated_count = len(existing_ratings)
+        
+        # Auto-close if all responses are rated
+        if rated_count >= total_responses:
+            st.success("🎉 All responses have been rated!")
+            st.info("Rating session completed.")
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("View Statistics", type="primary"):
+                    # Switch to statistics view
+                    st.session_state.show_statistics = True
+                    self._exit_rating_session()
+                    st.rerun()
+            
+            with col2:
+                if st.button("Return to Menu", type="secondary"):
+                    self._exit_rating_session()
+                    st.rerun()
+            
+            return
+        
+        # Show existing ratings for current response
         prompt_ratings = [r for r in existing_ratings if r['prompt_number'] == current_response['prompt_number']]
         
         if prompt_ratings:
@@ -237,14 +305,35 @@ class SimpleRatingInterface:
                     
                     st.success("Rating saved successfully!")
                     
-                    # Auto-advance to next response
-                    if st.session_state.current_response_index < len(st.session_state.responses_to_rate) - 1:
-                        st.session_state.current_response_index += 1
+                    # Check if all responses are now rated
+                    run_id = st.session_state.selected_run['run_id']
+                    updated_ratings = self.rating_manager.get_ratings_for_run(run_id)
+                    total_responses = len(st.session_state.responses_to_rate)
+                    
+                    if len(updated_ratings) >= total_responses:
+                        # All responses rated - show completion message
+                        st.success("🎉 All responses have been rated! Rating session complete.")
+                        st.balloons()
+                        # Will auto-close on next render
+                    else:
+                        # Auto-advance to next response
+                        if st.session_state.current_response_index < len(st.session_state.responses_to_rate) - 1:
+                            st.session_state.current_response_index += 1
                     
                     st.rerun()
                     
                 except Exception as e:
                     st.error(f"Error saving rating: {e}")
+    
+    def _exit_rating_session(self):
+        """Clean up rating session and return to menu."""
+        # Clear rating session state
+        if 'selected_run' in st.session_state:
+            del st.session_state.selected_run
+        if 'responses_to_rate' in st.session_state:
+            del st.session_state.responses_to_rate
+        if 'current_response_index' in st.session_state:
+            st.session_state.current_response_index = 0
     
     def _display_rating(self, rating: Dict[str, Any]):
         """Display an existing rating."""
