@@ -170,7 +170,8 @@ class SimpleRatingInterface:
         current_response = responses[st.session_state.current_response_index]
         
         # Display response content
-        st.header(f"Response {current_response['prompt_number']}")
+        prompt_number = current_response.get('prompt_number', st.session_state.current_response_index + 1)
+        st.header(f"Response {prompt_number}")
         
         # Show prompt
         with st.expander("Prompt", expanded=True):
@@ -188,7 +189,8 @@ class SimpleRatingInterface:
             with col2:
                 st.metric("Timestamp", current_response.get('timestamp', 'N/A')[:16])
             with col3:
-                st.metric("Prompt Number", current_response['prompt_number'])
+                prompt_number = current_response.get('prompt_number', st.session_state.current_response_index + 1)
+                st.metric("Prompt Number", prompt_number)
         
         # Check if all responses are rated and auto-close
         run_id = st.session_state.selected_run['run_id']

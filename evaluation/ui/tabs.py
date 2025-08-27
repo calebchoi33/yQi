@@ -31,26 +31,45 @@ class TabManager:
         """Render the Generate Responses tab."""
         st.header("📝 Generate New Responses")
         
+        # Model selection
+        model_type = st.selectbox(
+            "Select AI Model",
+            ["ChatGPT-4o", "RAG (Local Documents)"],
+            help="Choose between OpenAI's ChatGPT or local RAG system using TCM documents"
+        )
+        
         # Prompt configuration
         system_prompt, prompts = self.ui.render_prompt_configuration()
         self.ui.render_prompt_preview(prompts)
         
-        # Processing mode selector
-        processing_mode = self.ui.render_processing_mode_selector()
+        # Processing mode selector (only for ChatGPT)
+        if model_type == "ChatGPT-4o":
+            processing_mode = self.ui.render_processing_mode_selector()
+        else:
+            processing_mode = "Real-time"  # RAG only supports real-time
+            st.info("📚 RAG mode uses local TCM documents for knowledge-based responses")
         
         # Generate button
-        button_text = "🚀 Generate Responses" if processing_mode == "Real-time" else "📦 Submit Batch Job"
+        if model_type == "ChatGPT-4o":
+            button_text = "🚀 Generate Responses" if processing_mode == "Real-time" else "📦 Submit Batch Job"
+        else:
+            button_text = "🧠 Generate RAG Responses"
+            
         if st.button(button_text, type="primary"):
-            if processing_mode == "Real-time":
-                self._handle_generation(api_key, system_prompt, prompts)
+            if model_type == "ChatGPT-4o":
+                if processing_mode == "Real-time":
+                    self._handle_generation(api_key, system_prompt, prompts)
+                else:
+                    self._handle_batch_submission(api_key, system_prompt, prompts)
             else:
-                self._handle_batch_submission(api_key, system_prompt, prompts)
+                self._handle_rag_generation(system_prompt, prompts, api_key)
         
-        # Batch job monitoring (always show if there are any jobs)
-        all_jobs = batch_manager.get_all_jobs()
-        if processing_mode == "Batch" or all_jobs:
-            st.divider()
-            self._render_batch_monitoring(api_key)
+        # Batch job monitoring (only for ChatGPT mode)
+        if model_type == "ChatGPT-4o":
+            all_jobs = batch_manager.get_all_jobs()
+            if processing_mode == "Batch" or all_jobs:
+                st.divider()
+                self._render_batch_monitoring(api_key)
     
     def _handle_generation(self, api_key: str, system_prompt: str, prompts: list):
         """Handle the response generation process."""
@@ -78,6 +97,196 @@ class TabManager:
                 
             except Exception as e:
                 self.ui.render_error_state("generation", str(e))
+    
+    def _handle_rag_generation(self, system_prompt: str, prompts: list, api_key: str = None):
+        """Handle RAG response generation process."""
+        # Validation
+        if not prompts:
+            self.ui.render_error_state("no_prompts", "")
+            return
+        
+        if not api_key:
+            self.ui.render_error_state("api_key", "")
+            return
+        
+        # Import RAG system
+        try:
+            import sys
+            import os
+            # Get the yQi root directory (parent of evaluation)
+            evaluation_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            yqi_root = os.path.dirname(evaluation_dir)
+            models_path = os.path.join(yqi_root, 'models')
+            
+            if models_path not in sys.path:
+                sys.path.insert(0, models_path)
+            
+            from rag_system import RAGSystem
+            from document_processor import DocumentProcessor
+        except ImportError as e:
+            st.error(f"RAG system not available: {e}")
+            st.info("Please ensure the models folder is properly set up with RAG dependencies.")
+            return
+        
+        # Initialize RAG system
+        with st.spinner("Initializing RAG system..."):
+            try:
+                rag_system = RAGSystem(api_key=api_key)
+                doc_processor = DocumentProcessor()
+                
+                # Check if vector database exists, if not build it
+                if not rag_system.load_database():
+                    st.info("Building knowledge base from documents...")
+                    with st.spinner("Processing documents and building vector database..."):
+                        try:
+                            st.info(f"Processing documents from: {doc_processor.docs_directory}")
+                            available_docs = doc_processor.get_available_documents()
+                            st.info(f"Found documents: {available_docs}")
+                            
+                            chunks = doc_processor.process_documents()
+                            st.info(f"Document processing completed. Found {len(chunks)} chunks.")
+                            
+                            # Show sample of what was processed
+                            if chunks:
+                                sample_sources = list(set([chunk['source'] for chunk in chunks[:10]]))
+                                st.info(f"Successfully processed: {sample_sources}")
+                            
+                        except Exception as e:
+                            st.error(f"Error during document processing: {e}")
+                            import traceback
+                            st.error(f"Full error: {traceback.format_exc()}")
+                            return
+                        
+                        if not chunks:
+                            st.error("No text chunks extracted from documents.")
+                            st.info(f"Looking in: {doc_processor.docs_directory}")
+                            available_docs = doc_processor.get_available_documents()
+                            st.info(f"Available documents: {available_docs}")
+                            return
+                        
+                        added_count = rag_system.build_database_from_chunks(chunks)
+                        if added_count == 0:
+                            st.error("Failed to build vector database. Check OpenAI API key and connection.")
+                            return
+                        
+                        rag_system.save_database()
+                        st.success(f"Built knowledge base with {added_count} document chunks")
+                
+                # Show database info
+                db_info = rag_system.get_database_info()
+                st.info(f"Knowledge base: {db_info['num_chunks']} chunks from {len(db_info['sources'])} documents")
+                
+            except Exception as e:
+                st.error(f"Error initializing RAG system: {e}")
+                return
+        
+        # Generate responses
+        responses_data = []
+        benchmark_data = {
+            'run_id': f"rag_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+            'model': 'RAG_Local',
+            'system_prompt': system_prompt or "Default TCM RAG system prompt",
+            'total_prompts': len(prompts),
+            'total_tokens': 0,
+            'total_cost': 0.0,
+            'responses': []
+        }
+        
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+        
+        for i, prompt in enumerate(prompts):
+            status_text.text(f"Processing prompt {i+1}/{len(prompts)}: {prompt[:50]}...")
+            progress_bar.progress((i + 1) / len(prompts))
+            
+            try:
+                # Query RAG system
+                result = rag_system.query(prompt, top_n=3, system_prompt=system_prompt)
+                
+                response_data = {
+                    'prompt': prompt,
+                    'response': result['response'],
+                    'model': 'RAG_Local',
+                    'timestamp': datetime.now().isoformat(),
+                    'prompt_number': i + 1,  # Add prompt_number for rating compatibility
+                    'retrieved_chunks': result['retrieved_chunks'],
+                    'num_chunks_used': result['num_chunks_used']
+                }
+                
+                responses_data.append(response_data)
+                benchmark_data['responses'].append(response_data)
+                
+            except Exception as e:
+                st.error(f"Error processing prompt {i+1}: {e}")
+                response_data = {
+                    'prompt': prompt,
+                    'response': f"Error: {e}",
+                    'model': 'RAG_Local',
+                    'timestamp': datetime.now().isoformat(),
+                    'prompt_number': i + 1,  # Add prompt_number for rating compatibility
+                    'error': str(e)
+                }
+                responses_data.append(response_data)
+                benchmark_data['responses'].append(response_data)
+        
+        progress_bar.progress(1.0)
+        status_text.text("Generation complete!")
+        
+        # Save results using the same format as ChatGPT responses
+        try:
+            from file_manager import save_responses_to_json, save_benchmark_data
+            
+            # Format responses_data as a dictionary like ChatGPT responses
+            formatted_responses = {
+                'run_id': benchmark_data['run_id'],
+                'model': 'RAG_Local',
+                'system_prompt': benchmark_data['system_prompt'],
+                'timestamp': datetime.now().isoformat(),
+                'total_prompts': len(responses_data),
+                'responses': responses_data
+            }
+            
+            responses_file = save_responses_to_json(formatted_responses, run_id=benchmark_data['run_id'])
+            benchmark_file = save_benchmark_data(benchmark_data)
+            
+            # Display results
+            self.ui.render_generation_results(
+                responses_file, benchmark_file, benchmark_data
+            )
+            
+            # Show RAG-specific summary
+            st.subheader("📚 RAG Generation Summary")
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.metric("Responses Generated", len(responses_data))
+            with col2:
+                st.metric("Knowledge Sources", len(db_info['sources']))
+            with col3:
+                st.metric("Document Chunks", db_info['num_chunks'])
+            
+            # Show sample retrieved context
+            if responses_data and 'retrieved_chunks' in responses_data[0]:
+                with st.expander("Sample Retrieved Context", expanded=False):
+                    sample_chunks = responses_data[0]['retrieved_chunks'][:2]
+                    for i, chunk in enumerate(sample_chunks):
+                        # Ensure chunk is a dictionary with expected structure
+                        if isinstance(chunk, dict):
+                            metadata = chunk.get('metadata', {})
+                            source = metadata.get('source', 'Unknown') if isinstance(metadata, dict) else 'Unknown'
+                            similarity = chunk.get('similarity', 0.0)
+                            text = chunk.get('text', '')
+                            
+                            st.write(f"**Source {i+1}:** {source}")
+                            st.write(f"**Similarity:** {similarity:.3f}")
+                            st.write(f"**Content:** {text[:200]}...")
+                            st.divider()
+                        else:
+                            st.write(f"**Chunk {i+1}:** {str(chunk)[:200]}...")
+                            st.divider()
+            
+        except Exception as e:
+            st.error(f"Error saving results: {e}")
+            st.json(responses_data)  # Show data even if saving fails
     
     def render_view_tab(self):
         """Render the View Responses tab."""
