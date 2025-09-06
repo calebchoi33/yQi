@@ -3948,3 +3948,425 @@
 2025-08-27 16:24:40,212 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
 2025-08-27 16:24:40,212 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
 2025-08-27 16:24:40,213 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:33:52,341 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:52,342 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:52,363 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:52,363 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:33:52,364 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:33:52,818 - numexpr.utils - INFO - NumExpr defaulting to 10 threads.
+2025-08-27 23:33:56,934 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:56,936 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:56,951 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:56,951 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:33:56,952 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:33:57,015 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:57,015 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:57,028 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:33:57,029 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:33:57,030 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:02,982 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:02,983 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:02,999 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:02,999 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:03,000 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:03,051 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:03,052 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:03,063 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:03,063 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:03,064 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:05,440 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:05,442 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:05,457 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:05,457 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:05,458 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:05,507 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:05,508 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:05,520 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:05,521 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:05,521 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:07,562 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:07,563 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:07,577 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:07,578 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:07,578 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:07,625 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:07,626 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:07,637 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:07,638 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:07,638 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:08,379 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:08,381 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:08,395 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:08,396 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:08,397 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:08,464 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:08,465 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:08,478 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:08,478 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:08,480 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:10,946 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:10,948 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:10,962 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:10,963 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:10,964 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:34:11,016 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:11,016 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:11,029 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:34:11,032 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:34:11,033 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:35:02,082 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:02,084 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:02,104 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:02,104 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:35:02,106 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:35:07,859 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:07,861 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:07,876 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:07,877 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:35:07,878 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:35:07,955 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:07,955 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:07,969 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:07,970 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:35:07,970 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:35:48,026 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:48,029 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:48,044 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:48,045 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:35:48,046 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:35:48,107 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:48,108 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:48,122 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:35:48,123 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:35:48,123 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:36:43,871 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:36:43,873 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:36:43,887 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:36:43,887 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:36:43,888 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-27 23:36:43,953 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:36:43,954 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:36:43,967 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-27 23:36:43,967 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-27 23:36:43,968 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-28 00:40:30,597 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-28 00:40:30,600 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-28 00:40:30,618 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-28 00:40:30,619 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-28 00:40:30,620 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-08-28 04:19:55,789 - root - INFO - Loading responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-28 04:19:55,791 - root - INFO - Successfully loaded responses from responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-28 04:19:55,803 - root - INFO - Latest responses file: responses/2025-08-27/responses_rag_20250827_161722.json
+2025-08-28 04:19:55,803 - root - INFO - Latest responses filename: responses_rag_20250827_161722.json
+2025-08-28 04:19:55,804 - root - INFO - Download button rendered for responses_rag_20250827_161722.json
+2025-09-05 14:55:14,818 - root - INFO - Loading responses from responses/2025-09-05/responses_rag_20250905_143718.json
+2025-09-05 14:55:14,818 - root - INFO - Successfully loaded responses from responses/2025-09-05/responses_rag_20250905_143718.json
+2025-09-05 14:55:14,822 - root - INFO - Latest responses file: responses/2025-09-05/responses_rag_20250905_143718.json
+2025-09-05 14:55:14,822 - root - INFO - Latest responses filename: responses_rag_20250905_143718.json
+2025-09-05 14:55:14,823 - root - INFO - Download button rendered for responses_rag_20250905_143718.json
+2025-09-05 14:55:16,460 - numexpr.utils - INFO - NumExpr defaulting to 10 threads.
+2025-09-05 14:55:19,770 - root - INFO - Starting batch 1/4 with 5 prompts
+2025-09-05 14:55:25,480 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:55:25,492 - root - INFO - Successfully processed prompt 5/5
+2025-09-05 14:55:27,053 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:55:27,063 - root - INFO - Successfully processed prompt 2/2
+2025-09-05 14:55:27,228 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:55:27,231 - root - INFO - Successfully processed prompt 3/3
+2025-09-05 14:55:28,183 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:55:28,188 - root - INFO - Successfully processed prompt 1/1
+2025-09-05 14:55:57,281 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 520 "
+2025-09-05 14:55:57,288 - root - ERROR - Error processing prompt 4: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+
+<title>api.openai.com | 520: Web server is returning an unknown error</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+
+
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+              <span class="inline-block">Web server is returning an unknown error</span>
+              <span class="code-label">Error code 520</span>
+            </h1>
+            <div>
+               Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-09-05 21:55:57 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                  
+<div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+    
+    Browser
+    
+  </h3>
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+</div>
+
+<div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">San Jose</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+    </a>
+  </h3>
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+</div>
+
+<div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">api.openai.com</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+    
+    Host
+    
+  </h3>
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>There is an unknown connection issue between Cloudflare and the origin web server. As a result, the web page can not be displayed.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                          <h3 class="text-15 font-semibold mb-2">If you are a visitor of this website:</h3>
+      <p class="mb-6">Please try again in a few minutes.</p>
+
+      <h3 class="text-15 font-semibold mb-2">If you are the owner of this website:</h3>
+      <p><span>There is an issue between Cloudflare's cache and your origin web server. Cloudflare monitors for these errors and automatically investigates the cause. To help support the investigation, you can pull the corresponding error log from your web server and submit it our support team.  Please include the Ray ID (which is at the bottom of this error page).</span> <a rel="noopener noreferrer" href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-520/">Additional troubleshooting resources</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">97a8f8625e4b67dd</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">108.211.109.135</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div>
+</div>
+</body>
+</html>
+2025-09-05 14:55:57,290 - root - ERROR - Failed to process prompt 4: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+
+<title>api.openai.com | 520: Web server is returning an unknown error</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+
+
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+              <span class="inline-block">Web server is returning an unknown error</span>
+              <span class="code-label">Error code 520</span>
+            </h1>
+            <div>
+               Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-09-05 21:55:57 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                  
+<div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+    
+    Browser
+    
+  </h3>
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+</div>
+
+<div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">San Jose</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+    </a>
+  </h3>
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+</div>
+
+<div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">api.openai.com</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+    
+    Host
+    
+  </h3>
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>There is an unknown connection issue between Cloudflare and the origin web server. As a result, the web page can not be displayed.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                          <h3 class="text-15 font-semibold mb-2">If you are a visitor of this website:</h3>
+      <p class="mb-6">Please try again in a few minutes.</p>
+
+      <h3 class="text-15 font-semibold mb-2">If you are the owner of this website:</h3>
+      <p><span>There is an issue between Cloudflare's cache and your origin web server. Cloudflare monitors for these errors and automatically investigates the cause. To help support the investigation, you can pull the corresponding error log from your web server and submit it our support team.  Please include the Ray ID (which is at the bottom of this error page).</span> <a rel="noopener noreferrer" href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-520/">Additional troubleshooting resources</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">97a8f8625e4b67dd</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">108.211.109.135</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div>
+</div>
+</body>
+</html>
+2025-09-05 14:55:57,298 - root - INFO - Starting batch 2/4 with 5 prompts
+2025-09-05 14:56:05,661 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:05,675 - root - INFO - Successfully processed prompt 9/9
+2025-09-05 14:56:06,642 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:06,644 - root - INFO - Successfully processed prompt 10/10
+2025-09-05 14:56:07,021 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:07,022 - root - INFO - Successfully processed prompt 8/8
+2025-09-05 14:56:07,128 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:07,131 - root - INFO - Successfully processed prompt 7/7
+2025-09-05 14:56:08,000 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:08,003 - root - INFO - Successfully processed prompt 6/6
+2025-09-05 14:56:08,005 - root - INFO - Starting batch 3/4 with 5 prompts
+2025-09-05 14:56:13,368 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:13,371 - root - INFO - Successfully processed prompt 15/15
+2025-09-05 14:56:15,808 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:15,810 - root - INFO - Successfully processed prompt 11/11
+2025-09-05 14:56:17,692 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:17,694 - root - INFO - Successfully processed prompt 12/12
+2025-09-05 14:56:18,383 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:18,384 - root - INFO - Successfully processed prompt 13/13
+2025-09-05 14:56:19,024 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:19,026 - root - INFO - Successfully processed prompt 14/14
+2025-09-05 14:56:19,027 - root - INFO - Starting batch 4/4 with 5 prompts
+2025-09-05 14:56:26,592 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:26,595 - root - INFO - Successfully processed prompt 18/18
+2025-09-05 14:56:26,909 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:26,912 - root - INFO - Successfully processed prompt 20/20
+2025-09-05 14:56:27,115 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:27,118 - root - INFO - Successfully processed prompt 16/16
+2025-09-05 14:56:27,932 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:27,934 - root - INFO - Successfully processed prompt 19/19
+2025-09-05 14:56:28,654 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 14:56:28,656 - root - INFO - Successfully processed prompt 17/17
+2025-09-05 14:56:28,661 - root - INFO - Saving benchmark data to benchmarks/2025-09-05/benchmark_20250905_145519.json
+2025-09-05 14:56:28,662 - root - INFO - Successfully saved benchmark data to benchmarks/2025-09-05/benchmark_20250905_145519.json
+2025-09-05 14:56:28,675 - root - INFO - Loading responses from responses/2025-09-05/responses_rag_20250905_143718.json
+2025-09-05 14:56:28,676 - root - INFO - Successfully loaded responses from responses/2025-09-05/responses_rag_20250905_143718.json
+2025-09-05 14:56:28,685 - root - INFO - Latest responses file: responses/2025-09-05/responses_rag_20250905_143718.json
+2025-09-05 14:56:28,685 - root - INFO - Latest responses filename: responses_rag_20250905_143718.json
+2025-09-05 14:56:28,686 - root - INFO - Download button rendered for responses_rag_20250905_143718.json
+2025-09-05 18:27:19,961 - root - INFO - Loading responses from responses/2025-09-05/responses_rag_20250905_153434.json
+2025-09-05 18:27:19,966 - root - INFO - Successfully loaded responses from responses/2025-09-05/responses_rag_20250905_153434.json
+2025-09-05 18:27:19,978 - root - INFO - Latest responses file: responses/2025-09-05/responses_rag_20250905_153434.json
+2025-09-05 18:27:19,979 - root - INFO - Latest responses filename: responses_rag_20250905_153434.json
+2025-09-05 18:27:19,981 - root - INFO - Download button rendered for responses_rag_20250905_153434.json
