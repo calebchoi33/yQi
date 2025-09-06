@@ -13,7 +13,7 @@ class RAGSystem:
     """Simple RAG system using OpenAI API for embeddings and generation."""
     
     def __init__(self, 
-                 embedding_model: str = "text-embedding-3-small",
+                 embedding_model: str = "text-embedding-3-large",
                  language_model: str = "gpt-4o-mini",
                  vector_db_path: str = None,
                  api_key: str = None):

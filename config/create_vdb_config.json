@@ -1,0 +1,32 @@
+{
+  "chunk_size": 800,
+  "chunk_overlap": 100,
+  "chunking_method": "section",
+  "embed_chapter_info": true,
+  "embedding_model": "text-embedding-3-small",
+  "language_model": "gpt-4o-mini",
+  "vector_db_path": "models/vector_db_enhanced.pkl",
+  "context_window_considerations": {
+    "note": "Larger chunks (800) for better context retention",
+    "rationale": "TCM texts benefit from preserving diagnostic context and prescription details together"
+  },
+  "chunking_options": {
+    "regular": "Fixed-size chunks with overlap (legacy method)",
+    "chapter": "Split by #CHAPTER markers, preserve chapter context",
+    "section": "Split by #SECTION markers, finer granularity"
+  },
+  "tcm_specific_settings": {
+    "preserve_prescriptions": true,
+    "maintain_diagnostic_flow": true,
+    "marker_detection": {
+      "chapter_marker": "#CHAPTER",
+      "section_marker": "#SECTION",
+      "formula_marker": "#FORMULA"
+    },
+    "legacy_chapter_patterns": [
+      "第[一二三四五六七八九十百千]+章",
+      "《[^》]+》",
+      "[一二三四五六七八九十百千]+、"
+    ]
+  }
+}

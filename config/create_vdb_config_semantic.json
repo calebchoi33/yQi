@@ -1,0 +1,11 @@
+{
+  "chunking_method": "semantic_section",
+  "chunk_size": 1500,
+  "chunk_overlap": 100,
+  "max_tokens": 7500,
+  "detect_tcm_markers": true,
+  "preserve_semantic_boundaries": true,
+  "embedding_model": "text-embedding-3-large",
+  "fallback_to_regular": true,
+  "semantic_priority": "complete_sections"
+}

@@ -21,3 +21,21 @@ __pycache__/
 
 # Streamlit specific
 .streamlit/
+
+# Vector databases (too large for GitHub)
+*.pkl
+models/*.pkl
+
+# Large document files
+*.docx
+docs/*.docx
+
+# Evaluation outputs
+evaluation/responses/
+evaluation/benchmarks/
+evaluation/batch_results/
+evaluation/batches/
+
+# Output files
+output/*.json
+!output/.gitkeep

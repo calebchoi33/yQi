@@ -7,7 +7,6 @@ from pathlib import Path
 
 from text_extractors import TextExtractionManager
 from chunking_strategies import ChunkingStrategyFactory, TCMMarkerDetector
-from chunking_strategies_semantic import ChunkingStrategyFactory as SemanticChunkingStrategyFactory
 
 logger = logging.getLogger(__name__)
 
@@ -92,20 +91,13 @@ class DocumentProcessor:
             logger.warning(f"Documents directory not found: {self.docs_directory}")
             return chunks
         
-        # Create chunking strategy - try semantic first, then fall back to regular
+        # Create chunking strategy
         try:
-            if chunking_method.startswith('semantic_') or chunking_method == 'hybrid':
-                strategy = SemanticChunkingStrategyFactory.create_strategy(
-                    chunking_method, 
-                    chunk_size=chunk_size, 
-                    overlap=overlap
-                )
-            else:
-                strategy = ChunkingStrategyFactory.create_strategy(
-                    chunking_method, 
-                    chunk_size=chunk_size, 
-                    overlap=overlap
-                )
+            strategy = ChunkingStrategyFactory.create_strategy(
+                chunking_method, 
+                chunk_size=chunk_size, 
+                overlap=overlap
+            )
         except ValueError as e:
             logger.error(f"Invalid chunking method: {e}")
             return chunks
@@ -140,32 +132,18 @@ class DocumentProcessor:
                         'chunk_title': chunk_data.get('title', f'Chunk {i+1}')
                     }
                     
-                    # Add all chunk-specific metadata
-                    for key, value in chunk_data.items():
-                        if key != 'text':  # Don't duplicate text in metadata
-                            chunk_metadata[key] = value
+                    # Add chapter/section specific metadata if available
+                    if 'chapter_title' in chunk_data:
+                        chunk_metadata['chapter_title'] = chunk_data['chapter_title']
+                    if 'section_title' in chunk_data:
+                        chunk_metadata['section_title'] = chunk_data['section_title']
                     
-                    # Create final chunk with preserved metadata
-                    final_chunk = {
+                    chunks.append({
                         'text': chunk_data['text'],
                         'source': file_path.name,
                         'chunk_id': f"{file_path.stem}_{i}",
                         'metadata': chunk_metadata
-                    }
-                    
-                    # Also preserve semantic metadata at top level for easy access
-                    if 'preserved_complete' in chunk_data:
-                        final_chunk['preserved_complete'] = chunk_data['preserved_complete']
-                    if 'type' in chunk_data:
-                        final_chunk['type'] = chunk_data['type']
-                    if 'title' in chunk_data:
-                        final_chunk['title'] = chunk_data['title']
-                    if 'chapter_title' in chunk_data:
-                        final_chunk['chapter_title'] = chunk_data['chapter_title']
-                    if 'section_title' in chunk_data:
-                        final_chunk['section_title'] = chunk_data['section_title']
-                    
-                    chunks.append(final_chunk)
+                    })
                     
             except Exception as e:
                 logger.error(f"Error processing {file_path.name}: {e}")
