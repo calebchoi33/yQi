@@ -1,5 +1,5 @@
 {
-  "created_at": "2025-09-05T19:01:03.361127",
+  "created_at": "2025-09-09T10:38:56.303143",
   "chunking_method": "semantic_section",
   "embedding_model": "text-embedding-3-large",
   "total_chunks": 810,

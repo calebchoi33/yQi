@@ -138,7 +138,7 @@ class RAGSystem:
         if not chunk_text.strip():
             return False
         
-        embedding = self.get_embedding(chunk_text)
+        embedding = self._get_embedding(chunk_text)
         if not embedding:
             return False
         

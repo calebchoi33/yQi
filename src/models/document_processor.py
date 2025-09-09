@@ -22,10 +22,10 @@ class DocumentProcessor:
             docs_directory: Path to directory containing documents
         """
         if docs_directory is None:
-            # Default to docs folder in yQi directory
+            # Default to data/documents folder in yQi directory
             models_dir = Path(__file__).parent.absolute()
-            yqi_root = models_dir.parent
-            self.docs_directory = yqi_root / "docs"
+            yqi_root = models_dir.parent.parent
+            self.docs_directory = yqi_root / "data" / "documents"
         else:
             self.docs_directory = Path(docs_directory)
         

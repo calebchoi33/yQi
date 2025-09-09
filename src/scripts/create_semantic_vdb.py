@@ -96,7 +96,7 @@ def create_semantic_vector_database(config_path: str, output_path: Optional[str]
             'config_used': config
         }
         
-        metadata_path = Path(output_path).with_suffix('.metadata.json') if output_path else Path('models/semantic_vector_db.metadata.json')
+        metadata_path = Path(output_path).with_suffix('.metadata.json') if output_path else Path('data/vector_dbs/semantic_vector_db.metadata.json')
         with open(metadata_path, 'w', encoding='utf-8') as f:
             json.dump(metadata, f, indent=2, ensure_ascii=False)
         
@@ -128,7 +128,7 @@ def main():
                        default='config/create_vdb_config_semantic.json',
                        help='Configuration file path')
     parser.add_argument('--output',
-                       default='models/semantic_vector_db.pkl',
+                       default='data/vector_dbs/semantic_vector_db.pkl',
                        help='Output vector database path')
     
     args = parser.parse_args()
