@@ -5,7 +5,7 @@
   "embed_chapter_info": true,
   "embedding_model": "text-embedding-3-small",
   "language_model": "gpt-4o-mini",
-  "vector_db_path": "models/vector_db_enhanced.pkl",
+  "vector_db_path": "data/vector_dbs/vector_db_enhanced.pkl",
   "context_window_considerations": {
     "note": "Larger chunks (800) for better context retention",
     "rationale": "TCM texts benefit from preserving diagnostic context and prescription details together"

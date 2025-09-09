@@ -9,43 +9,59 @@ yQi/
 ├── config/                    # Configuration files
 │   ├── create_vdb_config.json # Vector database creation settings
 │   ├── eval_config.json       # Evaluation configuration
+│   ├── eval_config_semantic.json # Semantic evaluation config
 │   └── patient_cases.json     # TCM patient test cases
-├── scripts/                   # Main execution scripts
-│   ├── create_new_vdb.py      # Vector database creation
-│   └── run_eval.py            # Command-line evaluation runner
+├── src/                       # Source code
+│   ├── scripts/               # Main execution scripts
+│   │   ├── create_new_vdb.py  # Vector database creation
+│   │   ├── create_semantic_vdb.py # Semantic vector database
+│   │   └── run_eval.py        # Command-line evaluation runner
+│   └── models/                # Core system modules
+│       ├── rag_system.py      # Main RAG system with bilingual support
+│       ├── document_processor.py # Document processing with TCM chunking
+│       ├── text_extractors.py # Text extraction strategies
+│       └── chunking_strategies.py # Modular chunking methods
+├── data/                      # Data storage
+│   ├── documents/             # TCM source documents
+│   │   └── 倪海廈人紀電子書 - 傷寒論.txt
+│   └── vector_dbs/            # Vector databases
+│       ├── semantic_vector_db.pkl
+│       └── vector_db_enhanced.pkl
 ├── tests/                     # Test and debug scripts
 │   ├── test_chunking.py       # Chunking functionality tests
 │   ├── test_enhanced_rag.py   # RAG system integration tests
 │   └── test_refactored_processor.py # Document processor tests
 ├── output/                    # Generated output files
-│   ├── out.json              # Legacy output
-│   ├── out_enhanced.json     # Enhanced output
-│   └── test_results.json     # Test results
-├── models/                    # Core system modules
-│   ├── rag_system.py         # Main RAG system
-│   ├── document_processor.py # Document processing with TCM chunking
-│   ├── text_extractors.py    # Text extraction strategies
-│   └── chunking_strategies.py # Modular chunking methods
-├── docs/                      # TCM documents
-│   └── 倪海廈人紀電子書 - 傷寒論.txt
 ├── evaluation/                # Evaluation platform
 │   ├── app.py                # Streamlit evaluation UI
-│   └── benchmarks/           # Evaluation results
-└── run_eval.py               # Convenience wrapper (backward compatibility)
-└── create_new_vdb.py         # Convenience wrapper (backward compatibility)
+│   ├── prompts.py            # Default evaluation prompts
+│   ├── results/              # Evaluation results
+│   ├── benchmarks/           # Performance benchmarks
+│   └── mock_retrieval_data.json # Mock data for testing
+├── run_eval.py               # Convenience wrapper
+├── create_vdb.py             # Convenience wrapper
+└── create_semantic_vdb.py    # Convenience wrapper
 ```
 
 ## 🚀 Quick Start
 
 ### 1. Create Vector Database
 ```bash
-# Using convenience wrapper
-python3 create_new_vdb.py --config config/create_vdb_config.json
+# Create regular vector database
+python3 create_vdb.py --config config/create_vdb_config.json
+
+# Create semantic vector database (recommended)
+python3 create_semantic_vdb.py --config config/create_vdb_config_semantic.json
+```
 
 ### 2. Run Evaluation
 ```bash
-# Using convenience wrapper  
-python3 run_eval.py --config config/eval_config.json --cases config/patient_cases.json
+# Run bilingual RAG evaluation
+python3 run_eval.py --config config/eval_config_semantic.json --output evaluation/results/my_test.json
+
+# Run with mock data for testing
+python3 run_eval.py --config config/eval_config_semantic.json --output evaluation/results/mock_test.json
+```
 
 ### 3. Launch Evaluation UI
 ```bash
@@ -62,9 +78,12 @@ streamlit run app.py
 - **Metadata enrichment**: Chapter titles, section titles, chunk types
 
 ### RAG System
-- **OpenAI Integration**: Uses `text-embedding-3-small` for embeddings, `gpt-4o-mini` for generation
+- **OpenAI Integration**: Uses `text-embedding-3-large` for embeddings, `gpt-4o-mini` for generation
+- **Bilingual Support**: Generates responses in both Chinese and English
 - **Vector Database**: Pickle-based storage with cosine similarity search
-- **Flexible Retrieval**: Configurable top-k retrieval with metadata filtering
+- **Adjacent Chunk Retrieval**: Enhanced context with neighboring chunks
+- **Mock Mode**: Testing capability with predefined retrieval data
+- **Translated Chunks**: Automatic translation of retrieved Chinese text to English
 
 ### Evaluation Platform
 - **Streamlit UI**: Interactive evaluation interface
@@ -84,12 +103,17 @@ streamlit run app.py
 }
 ```
 
-### Evaluation Config (`config/eval_config.json`)
+### Evaluation Config (`config/eval_config_semantic.json`)
 ```json
 {
-  "vector_db_path": "models/tcm_vector_db.pkl",
-  "top_k": 3,
-  "system_prompt": "You are a TCM expert..."
+  "use_rag": true,
+  "docs_directory": "data/documents",
+  "vector_db_path": "data/vector_dbs/semantic_vector_db.pkl",
+  "model": "gpt-4o-mini",
+  "embedding_model": "text-embedding-3-large",
+  "top_n_chunks": 3,
+  "chunking_method": "semantic_section",
+  "preserve_semantic_boundaries": true
 }
 ```
 
@@ -104,16 +128,25 @@ python3 tests/test_chunking.py
 
 ## 📊 Output
 
-- **Evaluation results**: `evaluation/benchmarks/` and `evaluation/responses/`
+- **Evaluation results**: `evaluation/results/` (consolidated JSON with bilingual responses)
+- **Performance benchmarks**: `evaluation/benchmarks/`
+- **Response archives**: `evaluation/responses/`
+- **Vector databases**: `data/vector_dbs/`
 - **Test outputs**: `output/`
-- **Vector databases**: `models/`
 
-## 🔄 Migration Notes
+## 🔄 Recent Updates
 
-This project has been reorganized for better maintainability:
-- Configuration files moved to `config/`
-- Scripts organized in `scripts/` with root-level wrappers for compatibility
-- Tests consolidated in `tests/`
-- Output files organized in `output/`
+### Enhanced Features
+- **Bilingual RAG**: Responses generated in both Chinese and English
+- **Translated Retrieval**: Chinese chunks automatically translated to English
+- **Adjacent Chunks**: Enhanced context with neighboring document sections
+- **Mock Testing**: Controlled testing with predefined retrieval data
+- **Timestamped Output**: Automatic file naming with date/time stamps
+
+### Refactored Structure
+- **Cleaner Organization**: Source code moved to `src/`, data to `data/`
+- **Deprecated Files Removed**: Eliminated backup files and redundant scripts
+- **Updated Paths**: All configurations updated for new folder structure
+- **Convenience Wrappers**: Root-level scripts maintain backward compatibility
 
 All existing workflows remain compatible through convenience wrapper scripts.

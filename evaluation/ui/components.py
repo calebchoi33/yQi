@@ -66,8 +66,12 @@ class UIComponents:
         # Import here to avoid circular imports
         from prompts import DEFAULT_PROMPTS
         
-        # Initialize session state for prompts if not exists
+        # Always initialize from evaluation/prompts.py
         if 'editable_prompts' not in st.session_state:
+            st.session_state.editable_prompts = DEFAULT_PROMPTS.copy()
+        
+        # Ensure we're always using the latest from prompts.py
+        if len(st.session_state.editable_prompts) != len(DEFAULT_PROMPTS):
             st.session_state.editable_prompts = DEFAULT_PROMPTS.copy()
         
         # Initialize system prompt if not exists
@@ -110,7 +114,10 @@ Please respond in a structured, professional manner that would be appropriate fo
         
         with col2:
             if st.button("Reset to Defaults"):
+                # Always reset to current prompts.py content
+                from prompts import DEFAULT_PROMPTS
                 st.session_state.editable_prompts = DEFAULT_PROMPTS.copy()
+                st.success("Reset to evaluation/prompts.py defaults")
                 st.rerun()
         
         with col3:
@@ -124,7 +131,8 @@ Please respond in a structured, professional manner that would be appropriate fo
                 st.rerun()
         
         if prompt_mode == "Edit Default Prompts":
-            st.write("**Edit individual prompts below:**")
+            st.write("**Edit prompts from evaluation/prompts.py:**")
+            st.info("These prompts are loaded from evaluation/prompts.py. Changes here are temporary - modify prompts.py to make permanent changes.")
             
             # Create editable text areas for each prompt
             for i, prompt in enumerate(st.session_state.editable_prompts):
@@ -136,7 +144,7 @@ Please respond in a structured, professional manner that would be appropriate fo
                         value=prompt,
                         height=100,
                         key=f"prompt_{i}",
-                        help=f"Edit prompt {i+1}"
+                        help=f"Edit prompt {i+1} (temporary change)"
                     )
                     st.session_state.editable_prompts[i] = new_prompt
                 
@@ -144,19 +152,38 @@ Please respond in a structured, professional manner that would be appropriate fo
                     st.write("")  # Spacing
                     st.write("")  # Spacing
                     if st.button("Delete", key=f"delete_{i}", help=f"Delete prompt {i+1}"):
-                        if len(st.session_state.editable_prompts) > 1:
+                        if len(st.session_state.editable_prompts) > 1 and st.session_state.editable_prompts[i].strip():
                             st.session_state.editable_prompts.pop(i)
                             st.rerun()
+                        elif len(st.session_state.editable_prompts) > 1:
+                            st.error("Cannot delete empty prompt!")
                         else:
                             st.error("Cannot delete the last prompt!")
             
-            # Filter out empty prompts
-            prompts = [p.strip() for p in st.session_state.editable_prompts if p.strip()]
+            # Load examples from evaluation/prompts.py
+            from prompts import DEFAULT_PROMPTS
+            example_text = "\n\n".join(DEFAULT_PROMPTS[:3])  # Show first 3 as examples
             
+            st.info("Default prompts loaded from evaluation/prompts.py. Modify the text below or edit prompts.py directly.")
+            
+            custom_prompts = st.text_area(
+                "Custom TCM Clinical Case Prompts (from evaluation/prompts.py)", 
+                value=example_text,
+                height=400,
+                help="These prompts are loaded from evaluation/prompts.py. Enter each TCM clinical case prompt on a separate line."
+            )
+            prompts = [p.strip() for p in custom_prompts.split('\n') if p.strip()]
+        
         elif prompt_mode == "Use Custom Prompts":
-            st.write("**Enter your custom prompts (one per line):**")
+            st.write("**Enter your custom TCM clinical case prompts (one per line):**")
+            
+            # Load examples from evaluation/prompts.py
+            from prompts import DEFAULT_PROMPTS
+            example_text = "\n\n".join(DEFAULT_PROMPTS[:3])  # Show first 3 as examples
+            
             custom_prompts = st.text_area(
                 "Custom Prompts", 
+                value=example_text,
                 height=300,
                 help="Enter each prompt on a separate line"
             )
