@@ -1,0 +1,167 @@
+{
+  "next_chapter_idx": 2,
+  "graph": {
+    "symptoms": [
+      {
+        "id": "symp-0001",
+        "type": "symptom",
+        "name": "心下痞 / epigastric fullness/obstruction",
+        "name_zh": "心下痞",
+        "name_en": "epigastric fullness/obstruction",
+        "description": "病者胸膈以下、上腹部感到脹滿、悶堵或異物感，按之不舒。多因胸膈積聚或痰飲(tanyin)內停所致，痰飲可向胸腹間蔓延形成痰水或局部水腫。臨床上心下痞可見於急性胰臟炎等重症腹部疾病，腹部或胸腹間電腦斷層(CT)常可顯示痰水積聚或水腫(edema)，影像學發現可作為痰飲內停的客觀證據。在大陷胸湯證中，心下痞為重要辨證徵象；若合併CT見痰水/水腫，支持為痰飲壅盛、胸膈實阻之大陷胸證，具有提示需迅速以攻下化痰、泄實之經方處理的診斷價值。 / A sensation of fullness, oppression, or obstruction under the heart (epigastrium/upper abdomen), uncomfortable to pressure. Usually due to accumulation in the chest/epigastrium or internal retention of phlegm-fluid (tanyin), with phlegm-fluid extending between chest and abdomen to form localized collections of fluid or edema. Clinically, xin xia pi may occur in acute pancreatitis and other severe abdominal conditions; abdominal or thoracoabdominal CT often demonstrates phlegm-fluid collections or localized edema, and such imaging can serve as objective evidence of internal phlegm-fluid retention. In the Da Xian Xiong Tang pattern, epigastric fullness (xin xia pi) is an important diagnostic sign—when accompanied by CT evidence of phlegm-fluid/edema it supports a diagnosis of heavy phlegm-fluid obstruction and chest-epigastric repletion consistent with the Da Xian Xiong Tang pattern, indicating the need for prompt, aggressive measures to purge and resolve phlegm-fluid with the classical formula.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0002",
+        "type": "symptom",
+        "name": "痰水積聚 / phlegm-fluid accumulation",
+        "name_zh": "痰水積聚",
+        "name_en": "phlegm-fluid accumulation",
+        "description": "體內痰濁與水飲互結，濕痰凝滯不化，表現為胸中痰飲壅阻、心下痞硬或胸腹積水、組織間或體腔液體滯留；黏滯不散，難以運化。常因外感邪毒化熱、感染或內臟急性炎症（如急性胰臟炎）造成水液內結並生痰濁，因而可在影像學（如CT）見到腔隙或組織間的水腫或積液。臨床症候可包括胸悶、胸脘脹滿、心下痞塊（xinxiapi）、咳嗽痰多或痰黏難咯、尿少、舌苔膩、脈滑或沉緊等。痰水積聚阻滯氣機、閉阻胸中，可致急重病變，對應《傷寒論》大陷胸等證，影像學所見的edema或積液與此病機相符。 / Pathological interbinding of phlegm turbidity and retained fluids (phlegm-fluid). Damp-phlegm and water congeal and fail to resolve, presenting as phlegm-fluid stagnation obstructing the chest, palpable epigastric obstruction (xinxiapi), thoracic or abdominal effusion, or interstitial/cavitary fluid accumulation; the fluids are sticky and refractory. Common causes include pathogenic invasion transforming to heat, infection, or acute visceral inflammation (for example acute pancreatitis) leading to internal binding of fluids and generation of turbid phlegm. These collections may be visible on imaging (e.g., CT) as edema or localized fluid collections. Clinical manifestations can include chest oppression, epigastric/distension, a palpable mass under the heart (xinxiapi), cough with copious or sticky sputum difficult to expectorate, oliguria, greasy tongue coating, and a slippery or deep/tight pulse. Phlegm-fluid accumulation obstructs qi movement and may close the chest, producing severe presentations; imaging findings of edema or fluid in conditions such as pancreatitis correspond to the Daxianxiong pattern described in Shanghan Lun.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0003",
+        "type": "symptom",
+        "name": "水腫 / edema",
+        "name_zh": "水腫",
+        "name_en": "edema",
+        "description": "水腫：指周身或局部組織因液體滯留而出現腫脹，或影像學可見體腔積液（如胸水、腹水）。中醫認為多由水濕內停、脾失運化、陽氣不足或衛氣不固，或痰飲互結、經絡壅滯所致。臨床表現可為浮腫（按之呈凹陷）、肢體沉重、面目或局部腫脹、尿少或尿清長、舌胖苔膩或白滑、脈沉緩或細弱；若痰水壅於胸下、心下痞滿者，可屬大陷胸證，影像上可見胸腹腔大量積液，提示病情可能嚴重、危急，需速辨證處理。 / Edema: swelling due to retention of fluid in tissues or body cavities, or fluid accumulation visible on imaging (eg pleural or abdominal effusion). In TCM it is usually attributed to internal retention of dampness/fluid from spleen failing to transport, yang deficiency or impaired defensive qi, or to phlegm-fluid congealment and channel obstruction. Clinical features include pitting edema, heaviness of the limbs, facial or local swelling, reduced or clear frequent urination, a swollen tongue with greasy or white coating, and a deep slow or thin weak pulse. When phlegm-fluid obstructs the chest with epigastric/fullness symptoms (the classical da xian xiong pattern), imaging may show large pleural or abdominal effusions; such findings can indicate severe or critical disease and require prompt pattern differentiation and treatment.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0004",
+        "type": "symptom",
+        "name": "胸中痰飲積聚 / phlegm-fluid retention in the chest",
+        "name_zh": "胸中痰飲積聚",
+        "name_en": "phlegm-fluid retention in the chest",
+        "description": "痰飲阻滯於胸膈之內，導致胸悶、咳嗽、氣機阻塞或心下痞等臨床表現，為胸中閉阻的主要病機。 / Retention of phlegm-fluid within the chest, causing chest oppression, cough, obstruction of qi movement, or epigastric obstruction; a key pathomechanism for chest blockage.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0005",
+        "type": "symptom",
+        "name": "影像學見體腔液體積聚（CT） / imaging-detected cavity fluid accumulation (CT)",
+        "name_zh": "影像學見體腔液體積聚（CT）",
+        "name_en": "imaging-detected cavity fluid accumulation (CT)",
+        "description": "指在影像學檢查（如腹部或胸部電腦斷層CT）上可見體腔或組織間液體積聚的客觀發現，常提示痰水、積液或水腫等病理狀態。 / An objective imaging finding (e.g., abdominal or thoracic CT) showing fluid accumulation in body cavities or interstitial spaces, often indicating phlegm-fluid, effusion, or edema.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0006",
+        "type": "symptom",
+        "name": "咳吐黃稠痰 / expectoration of thick yellow sputum",
+        "name_zh": "咳吐黃稠痰",
+        "name_en": "expectoration of thick yellow sputum",
+        "description": "咳嗽伴隨排出黃色、黏稠之痰液，常提示內有熱邪與濕熱痰濁。 / Cough with expectoration of thick, yellow sputum, often indicating internal heat with turbid phlegm or damp-heat accumulation.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0007",
+        "type": "symptom",
+        "name": "氣不得下 / inability of qi to descend",
+        "name_zh": "氣不得下",
+        "name_en": "inability of qi to descend",
+        "description": "氣機下行受阻，表現為胸悶脘悶、噯氣不順，或呼吸短促、氣上逆。 / Downward movement of qi is obstructed, presenting as chest/epigastric oppression, belching, or shortness of breath and rebellious qi.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0008",
+        "type": "symptom",
+        "name": "胸痛 / chest pain",
+        "name_zh": "胸痛",
+        "name_en": "chest pain",
+        "description": "胸部疼痛，可能是刺痛、脹痛或悶痛，伴隨心下痞或胸中積聚等證候。 / Pain in the chest, which may be stabbing, distending, or oppressive, often accompanying epigastric obstruction or chest accumulation.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0009",
+        "type": "symptom",
+        "name": "腹部影像可見痰水（腹部CT示） / abdominal imaging showing phlegm-fluid (abdominal CT)",
+        "name_zh": "腹部影像可見痰水（腹部CT示）",
+        "name_en": "abdominal imaging showing phlegm-fluid (abdominal CT)",
+        "description": "腹部CT等影像學上顯示腸周或胰周有液體或黏稠物，常見於急性胰臟炎伴隨的局部積液或膿性滲出。 / Findings on abdominal CT showing fluid or viscous material around the intestines or pancreas, common in acute pancreatitis with peripancreatic fluid collections or exudates.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      }
+    ],
+    "syndromes": [
+      {
+        "id": "syn-0001",
+        "type": "syndrome",
+        "name": "大陷胸證 / Da Xian Xiong pattern (Great Collapsed Chest)",
+        "name_zh": "大陷胸證",
+        "name_en": "Da Xian Xiong pattern (Great Collapsed Chest)",
+        "description": "大陷胸證為《傷寒論》之急重實證，病因多屬胸中痰飲、熱結或實邪內鬱，阻遏氣機使氣機不降致胸下（心下）閉阻。病機為痰飲互結致熱，熱迫液聚，或熱壅痰凝，夾阻中焦、胸膈，使氣機上逆或不能下降。臨床以心下痞滿、胸悶胸痛或胸部壓迫感、氣不得下、咳吐黃稠痰、喘促、形體沉重、發熱、口渴、口苦、便閉或燥結為主；舌多見舌紅苔黃厚或黃膩，脈多為滑數或沉實有力。此證因病位偏於胸腹間、痰飲結聚，故在現代影像學上可呈胸腹腔痰水樣積液、胰腺周圍水腫或滲出（如急性胰臟炎合併滲出、胸腹腔水腫/edema）之表現。辨證要點為屬實邪閉阻、痰飲熱結、陽盛有力者，與虛寒、陰虛氣虛或脾腎陽虛者相辨。治法以峻下逐飲、瀉熱消結、通利胸下閉阻為主（峻下逐飲、清熱消結）。臨證若確認為大陷胸證，常用短程大劑量峻下劑以速通關阻，但須在有經驗醫師下辨證施治並嚴密監護，注意脫水、電解質失衡、腎功能惡化及藥物毒性等併發症，孕婦、體弱、老年、氣血虛或陰虛發熱者禁或慎用。 / Da Xian Xiong (Great Collapsed Chest) is a classical, urgent repletion pattern from Shanghan Lun characterized by chest obstruction due to accumulation of phlegm-fluid, congealed heat, or vigorous pathogenic repletion that prevents the normal downward movement of qi. Pathomechanism: phlegm and fluid congeal and combine with heat, blocking the chest and middle burner so qi cannot descend; heat may drive fluid and consolidate masses. Clinical features: epigastric/under-chest fullness and oppression (xinxia pi), chest pain or pressure, inability of qi to descend, coughing up thick yellow sputum, dyspnea or rapid breathing, heavy body sensation, fever, thirst, constipation or dry stools. Typical tongue/pulse: red tongue with yellow or greasy coating, pulse slippery-rapid or submerged and forceful. Modern correlation: may resemble acute pancreatitis with peripancreatic fluid/edema or chest–abdominal fluid collections on CT (edema/effusion). Key differential: must be a true replete (shi) pattern, not xu patterns such as yin or qi deficiency. Principle: vigorous purgation to drain phlegm-fluid and clear heat (jun xia zhu yin, qing re xiao jie). Use is typically short-course, relatively large-dose and requires clear pattern differentiation and administration under experienced clinicians with close monitoring for dehydration, electrolyte disturbances, renal impairment, and other toxic effects; contraindicated in pregnancy, the frail, elderly, qi/blood or yin-deficient patients.",
+        "symptoms": [
+          "symp-0001",
+          "symp-0002",
+          "symp-0003",
+          "symp-0004",
+          "symp-0005",
+          "symp-0006",
+          "symp-0007",
+          "symp-0008",
+          "symp-0009"
+        ],
+        "herbal_treatments": "大陷胸湯（經方）：主治大陷胸證之峻下逐飲方。經典常用君臣佐使組成以大黃、芒硝、甘遂為主（古方不同流傳處劑量略有差異），各藥性與功能概述：大黃（Da Huang，性苦寒，瀉下攻積、清熱瀉火、活血逐瘀，主通腑泄熱、破結；臨證以大劑通腸胃以速開閉阻）；芒硝（Mang Xiao，性寒苦鹹，瀉下軟堅、潤下通便、化痰通絡，助大黃潤下黏滯痰涎）；甘遂（Gan Sui，性寒苦咸，有峻下逐水、消散水飲痰膿之功，驅逐胸中痰飲，藥性較峻猛且具毒性）。配伍要旨為君以大黃通腑、臣以芒硝潤下導瀉、佐以甘遂逐水痰，從而速通胸下閉阻。用量特色為短程大劑（古方中常用上倍至十數倍於平日劑量的概念），現代應依個案體質與危重程度調整劑量並採分次或加強監護。加減：臨床若需可配合宣化藥如厚朴、枳實以助氣機下行或化痰寬胸，但須慎重。禁忌與注意事項：孕婦禁止使用；兒童、體弱、老年人、氣血虛或陰虛發熱者禁或慎用；甘遂等含毒性成分者慎防脫水、電解質紊亂、腎功能受損與心血管不穩定；施用前須明確為實證並於短期內觀察療效與不良反應，必要時抽血監測電解質與腎功、監測生命徵象與排便情形，出現劇烈腹痛、持續嘔吐、脫水或意識改變等應立即停藥並轉入西醫急診處理。 / Da Xian Xiong Tang (Great Collapsed Chest Decoction): a classical harsh-purgative formula for true replete chest obstruction. Common core ingredients and actions: rhubarb (Da Huang, strong cold bitter purgative to drain accumulations, clear heat, promote bowel movement and break up stagnation), mirabilitum (Mang Xiao, a saline laxative that softens hard stools, draws water into the gut and facilitates downward discharge, and helps resolve phlegm-fluid), kansui (Gan Sui, a very strong cold herb that expels water-phlegm and drives out fluid accumulations; pharmacologically and traditionally considered toxic and powerful). Therapeutic rationale: large-dose purgation by Da Huang to open the bowels, Mang Xiao to moisten and ease downward flow, Gan Sui to expel water-phlegm and resolve chest-fluid obstruction. Typical administration characteristics: relatively large doses over a short course to rapidly relieve obstruction; classical practice often uses much larger single-course doses than routine formulas, but modern dosing should be individualized. Possible adjuncts: in some clinical modifications herbs such as Hou Po (Magnolia) or Zhi Shi (Aurantii) may be added to promote qi descent and transform damp-phlegm, but additions must respect the repletion pattern and safety. Contraindications and monitoring: contraindicated in pregnancy; avoid or use extreme caution in the elderly, children, frail patients, those with qi/blood deficiency or yin deficiency. Because ingredients (especially kansui) are potent and can cause dehydration, electrolyte disturbances, renal impairment and cardiac effects, therapy must be short-term under experienced clinician supervision with close monitoring of vital signs, fluid status, urine output, serum electrolytes and renal function. If severe abdominal pain, persistent vomiting, marked dehydration, altered consciousness, or other serious adverse signs develop, stop treatment and seek emergency care (including imaging and conventional supportive measures) as indicated."
+      }
+    ]
+  },
+  "book_meta": {
+    "chapters_total": 11,
+    "chapters": [
+      {
+        "title": "《人紀傷寒論》"
+      },
+      {
+        "title": "《傷寒論》序言"
+      },
+      {
+        "title": "前言"
+      },
+      {
+        "title": "辨太陽病脈證並治法上篇"
+      },
+      {
+        "title": "辨太陽病脈證並治法中篇"
+      },
+      {
+        "title": "辨太陽病脈證並治法下篇"
+      },
+      {
+        "title": "辨陽明病脈證並治法"
+      },
+      {
+        "title": "辨少陽病脈症並治法"
+      },
+      {
+        "title": "辨太陰病脈證並治法"
+      },
+      {
+        "title": "辨少陰病脈證並治法"
+      },
+      {
+        "title": "辨厥陰病脈證並治"
+      }
+    ]
+  },
+  "updated_at": "20250908_235812"
+}

@@ -1,0 +1,3898 @@
+{
+  "next_chapter_idx": 5,
+  "graph": {
+    "symptoms": [
+      {
+        "id": "symp-0001",
+        "type": "symptom",
+        "name": "心下痞 / epigastric fullness/obstruction",
+        "name_zh": "心下痞",
+        "name_en": "epigastric fullness/obstruction",
+        "description": "病者胸膈以下、上腹部感到脹滿、悶堵或異物感，按之不舒。多因胸膈積聚或痰飲(tanyin)內停所致，痰飲可向胸腹間蔓延形成痰水或局部水腫。臨床上心下痞可見於急性胰臟炎等重症腹部疾病，腹部或胸腹間電腦斷層(CT)常可顯示痰水積聚或水腫(edema)，影像學發現可作為痰飲內停的客觀證據。在大陷胸湯證中，心下痞為重要辨證徵象；若合併CT見痰水/水腫，支持為痰飲壅盛、胸膈實阻之大陷胸證，具有提示需迅速以攻下化痰、泄實之經方處理的診斷價值。 / A sensation of fullness, oppression, or obstruction under the heart (epigastrium/upper abdomen), uncomfortable to pressure. Usually due to accumulation in the chest/epigastrium or internal retention of phlegm-fluid (tanyin), with phlegm-fluid extending between chest and abdomen to form localized collections of fluid or edema. Clinically, xin xia pi may occur in acute pancreatitis and other severe abdominal conditions; abdominal or thoracoabdominal CT often demonstrates phlegm-fluid collections or localized edema, and such imaging can serve as objective evidence of internal phlegm-fluid retention. In the Da Xian Xiong Tang pattern, epigastric fullness (xin xia pi) is an important diagnostic sign—when accompanied by CT evidence of phlegm-fluid/edema it supports a diagnosis of heavy phlegm-fluid obstruction and chest-epigastric repletion consistent with the Da Xian Xiong Tang pattern, indicating the need for prompt, aggressive measures to purge and resolve phlegm-fluid with the classical formula.",
+        "syndromes": [
+          "syn-0001",
+          "syn-0024",
+          "syn-0063",
+          "syn-0068"
+        ]
+      },
+      {
+        "id": "symp-0002",
+        "type": "symptom",
+        "name": "痰水積聚 / phlegm-fluid accumulation",
+        "name_zh": "痰水積聚",
+        "name_en": "phlegm-fluid accumulation",
+        "description": "體內痰濁與水飲互結，濕痰凝滯不化，表現為胸中痰飲壅阻、心下痞硬或胸腹積水、組織間或體腔液體滯留；黏滯不散，難以運化。常因外感邪毒化熱、感染或內臟急性炎症（如急性胰臟炎）造成水液內結並生痰濁，因而可在影像學（如CT）見到腔隙或組織間的水腫或積液。臨床症候可包括胸悶、胸脘脹滿、心下痞塊（xinxiapi）、咳嗽痰多或痰黏難咯、尿少、舌苔膩、脈滑或沉緊等。痰水積聚阻滯氣機、閉阻胸中，可致急重病變，對應《傷寒論》大陷胸等證，影像學所見的edema或積液與此病機相符。 / Pathological interbinding of phlegm turbidity and retained fluids (phlegm-fluid). Damp-phlegm and water congeal and fail to resolve, presenting as phlegm-fluid stagnation obstructing the chest, palpable epigastric obstruction (xinxiapi), thoracic or abdominal effusion, or interstitial/cavitary fluid accumulation; the fluids are sticky and refractory. Common causes include pathogenic invasion transforming to heat, infection, or acute visceral inflammation (for example acute pancreatitis) leading to internal binding of fluids and generation of turbid phlegm. These collections may be visible on imaging (e.g., CT) as edema or localized fluid collections. Clinical manifestations can include chest oppression, epigastric/distension, a palpable mass under the heart (xinxiapi), cough with copious or sticky sputum difficult to expectorate, oliguria, greasy tongue coating, and a slippery or deep/tight pulse. Phlegm-fluid accumulation obstructs qi movement and may close the chest, producing severe presentations; imaging findings of edema or fluid in conditions such as pancreatitis correspond to the Daxianxiong pattern described in Shanghan Lun.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0003",
+        "type": "symptom",
+        "name": "水腫 / edema",
+        "name_zh": "水腫",
+        "name_en": "edema",
+        "description": "水腫：指周身或局部組織因液體滯留而出現腫脹，或影像學可見體腔積液（如胸水、腹水）。中醫認為多由水濕內停、脾失運化、陽氣不足或衛氣不固，或痰飲互結、經絡壅滯所致。臨床表現可為浮腫（按之呈凹陷）、肢體沉重、面目或局部腫脹、尿少或尿清長、舌胖苔膩或白滑、脈沉緩或細弱；若痰水壅於胸下、心下痞滿者，可屬大陷胸證，影像上可見胸腹腔大量積液，提示病情可能嚴重、危急，需速辨證處理。 / Edema: swelling due to retention of fluid in tissues or body cavities, or fluid accumulation visible on imaging (eg pleural or abdominal effusion). In TCM it is usually attributed to internal retention of dampness/fluid from spleen failing to transport, yang deficiency or impaired defensive qi, or to phlegm-fluid congealment and channel obstruction. Clinical features include pitting edema, heaviness of the limbs, facial or local swelling, reduced or clear frequent urination, a swollen tongue with greasy or white coating, and a deep slow or thin weak pulse. When phlegm-fluid obstructs the chest with epigastric/fullness symptoms (the classical da xian xiong pattern), imaging may show large pleural or abdominal effusions; such findings can indicate severe or critical disease and require prompt pattern differentiation and treatment.",
+        "syndromes": [
+          "syn-0001",
+          "syn-0047",
+          "syn-0055"
+        ]
+      },
+      {
+        "id": "symp-0004",
+        "type": "symptom",
+        "name": "胸中痰飲積聚 / phlegm-fluid retention in the chest",
+        "name_zh": "胸中痰飲積聚",
+        "name_en": "phlegm-fluid retention in the chest",
+        "description": "痰飲阻滯於胸膈之內，導致胸悶、咳嗽、氣機阻塞或心下痞等臨床表現，為胸中閉阻的主要病機。 / Retention of phlegm-fluid within the chest, causing chest oppression, cough, obstruction of qi movement, or epigastric obstruction; a key pathomechanism for chest blockage.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0005",
+        "type": "symptom",
+        "name": "影像學見體腔液體積聚（CT） / imaging-detected cavity fluid accumulation (CT)",
+        "name_zh": "影像學見體腔液體積聚（CT）",
+        "name_en": "imaging-detected cavity fluid accumulation (CT)",
+        "description": "指在影像學檢查（如腹部或胸部電腦斷層CT）上可見體腔或組織間液體積聚的客觀發現，常提示痰水、積液或水腫等病理狀態。 / An objective imaging finding (e.g., abdominal or thoracic CT) showing fluid accumulation in body cavities or interstitial spaces, often indicating phlegm-fluid, effusion, or edema.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0006",
+        "type": "symptom",
+        "name": "咳吐黃稠痰 / expectoration of thick yellow sputum",
+        "name_zh": "咳吐黃稠痰",
+        "name_en": "expectoration of thick yellow sputum",
+        "description": "咳嗽伴隨排出黃色、黏稠之痰液，常提示內有熱邪與濕熱痰濁。 / Cough with expectoration of thick, yellow sputum, often indicating internal heat with turbid phlegm or damp-heat accumulation.",
+        "syndromes": [
+          "syn-0001",
+          "syn-0019"
+        ]
+      },
+      {
+        "id": "symp-0007",
+        "type": "symptom",
+        "name": "氣不得下 / inability of qi to descend",
+        "name_zh": "氣不得下",
+        "name_en": "inability of qi to descend",
+        "description": "氣不得下，指氣機下行受阻，病邪或內外傳變阻滯中焦、胸膈或氣機的清降功能，致使氣不能向下運行而上逆。臨床表現為胸悶、脘悶、噯氣不順、氣上逆、呼吸短促，重者見嘔逆、咳喘或上焦脹滿。從六經傳變的病機看，當外感病邪由表入裡（如太陽傳入陽明、少陽等）或正氣失常、寒濕熱邪阻滯，使本應順時針運行的氣機被擾動，降濁不暢，即成氣不得下；治療上需疏通氣機、助其下行、調和中焦，並依六經辨證定方藥。 / Inability of qi to descend refers to obstruction of qi's downward movement: pathogens or internal transmission block the middle burner or chest, impairing the normal descending (clearing) function so qi fails to move downward and instead rebels upward. Clinical manifestations include chest and epigastric oppression, belching, uncoordinated eructation, upward-flowing qi, shortness of breath, and in severe cases vomiting, coughing or wheezing and upper‑burner fullness. In terms of six-channel (liujing) transmission, when an external disorder moves inward (e.g. from taiyang into yangming or shaoyang) or when the upright qi is disrupted and cold, damp or heat block the course of qi, the normally clockwise circulation of qi is disturbed and descent is impaired. Treatment focuses on unblocking and directing qi downward, harmonizing the middle burner, and selecting formulas according to six‑channel pattern differentiation.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0008",
+        "type": "symptom",
+        "name": "胸痛 / chest pain",
+        "name_zh": "胸痛",
+        "name_en": "chest pain",
+        "description": "胸部疼痛，可能是刺痛、脹痛或悶痛，伴隨心下痞或胸中積聚等證候。 / Pain in the chest, which may be stabbing, distending, or oppressive, often accompanying epigastric obstruction or chest accumulation.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0009",
+        "type": "symptom",
+        "name": "腹部影像可見痰水（腹部CT示） / abdominal imaging showing phlegm-fluid (abdominal CT)",
+        "name_zh": "腹部影像可見痰水（腹部CT示）",
+        "name_en": "abdominal imaging showing phlegm-fluid (abdominal CT)",
+        "description": "腹部CT等影像學上顯示腸周或胰周有液體或黏稠物，常見於急性胰臟炎伴隨的局部積液或膿性滲出。 / Findings on abdominal CT showing fluid or viscous material around the intestines or pancreas, common in acute pancreatitis with peripancreatic fluid collections or exudates.",
+        "syndromes": [
+          "syn-0001"
+        ]
+      },
+      {
+        "id": "symp-0010",
+        "type": "symptom",
+        "name": "惡寒發熱 / chills and fever",
+        "name_zh": "惡寒發熱",
+        "name_en": "chills and fever",
+        "description": "表證常見，外感寒邪攻表，表現為畏寒伴或不伴發熱。 / An exterior sign commonly seen in external cold attacks, characterized by aversion to cold often accompanied by fever.",
+        "syndromes": [
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0011",
+        "type": "symptom",
+        "name": "頭痛 / headache",
+        "name_zh": "頭痛",
+        "name_en": "headache",
+        "description": "頭部疼痛，可見於多種外感表證或裡證轉變過程中。 / Head pain that can occur in many exterior disorders or during transition to internal stages.",
+        "syndromes": [
+          "syn-0004",
+          "syn-0015",
+          "syn-0029"
+        ]
+      },
+      {
+        "id": "symp-0012",
+        "type": "symptom",
+        "name": "項背強 / nape/back stiffness",
+        "name_zh": "項背強",
+        "name_en": "nape/back stiffness",
+        "description": "項背或肩背肌肉緊張、僵硬，常見於太陽表證。 / Stiffness or rigidity of the nape and upper back muscles, commonly seen in Taiyang exterior patterns.",
+        "syndromes": [
+          "syn-0004",
+          "syn-0016",
+          "syn-0029",
+          "syn-0064",
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0013",
+        "type": "symptom",
+        "name": "脈浮 / floating pulse",
+        "name_zh": "脈浮",
+        "name_en": "floating pulse",
+        "description": "脈形浮在皮表，輕按便可觸及，為外邪在表的脈象。 / Pulse that is felt superficially with light touch, indicating exterior pathogenic presence.",
+        "syndromes": [
+          "syn-0004",
+          "syn-0047",
+          "syn-0073",
+          "syn-0077"
+        ]
+      },
+      {
+        "id": "symp-0014",
+        "type": "symptom",
+        "name": "往來寒熱 / alternating chills and fever",
+        "name_zh": "往來寒熱",
+        "name_en": "alternating chills and fever",
+        "description": "指寒熱往來交替，為半表半裡的少陽證特徵。 / Alternating chills and fever, characteristic of a half-exterior half-interior Shaoyang pattern.",
+        "syndromes": [
+          "syn-0006",
+          "syn-0035",
+          "syn-0070"
+        ]
+      },
+      {
+        "id": "symp-0015",
+        "type": "symptom",
+        "name": "胸脅苦滿 / chest and hypochondriac fullness",
+        "name_zh": "胸脅苦滿",
+        "name_en": "chest and hypochondriac fullness",
+        "description": "胸脅部脹滿不舒，常見於少陽病的氣機不和證候。 / Fullness and discomfort in the chest and hypochondria, commonly seen in Shaoyang disorders due to constrained qi.",
+        "syndromes": [
+          "syn-0006",
+          "syn-0035",
+          "syn-0070"
+        ]
+      },
+      {
+        "id": "symp-0016",
+        "type": "symptom",
+        "name": "口苦咽乾 / bitter taste in the mouth and dry throat",
+        "name_zh": "口苦咽乾",
+        "name_en": "bitter taste in the mouth and dry throat",
+        "description": "口中帶苦、咽乾不適，為少陽病的典型口症。 / Bitter taste in the mouth with dryness of the throat, a classic oral symptom of Shaoyang disorder.",
+        "syndromes": [
+          "syn-0006",
+          "syn-0020"
+        ]
+      },
+      {
+        "id": "symp-0017",
+        "type": "symptom",
+        "name": "脈弦 / wiry pulse",
+        "name_zh": "脈弦",
+        "name_en": "wiry pulse",
+        "description": "脈象緊張有力呈弦狀，常見於肝郁或少陽病等氣機不和之證。 / A tight, forceful pulse with a wiry quality, often seen in liver qi constraint or Shaoyang patterns.",
+        "syndromes": [
+          "syn-0006",
+          "syn-0065"
+        ]
+      },
+      {
+        "id": "symp-0018",
+        "type": "symptom",
+        "name": "高熱 / high fever",
+        "name_zh": "高熱",
+        "name_en": "high fever",
+        "description": "明顯的高體溫，多見於裡實熱證如陽明病。 / Markedly elevated body temperature, commonly seen in interior excess heat patterns such as Yangming.",
+        "syndromes": [
+          "syn-0005",
+          "syn-0062"
+        ]
+      },
+      {
+        "id": "symp-0019",
+        "type": "symptom",
+        "name": "大渴 / great thirst",
+        "name_zh": "大渴",
+        "name_en": "great thirst",
+        "description": "強烈口渴欲飲，多為裡有熱邪消耗津液的表現。 / Intense thirst with a strong desire to drink, reflecting internal heat that consumes body fluids.",
+        "syndromes": [
+          "syn-0005",
+          "syn-0011"
+        ]
+      },
+      {
+        "id": "symp-0020",
+        "type": "symptom",
+        "name": "煩躁 / irritability/restlessness",
+        "name_zh": "煩躁",
+        "name_en": "irritability/restlessness",
+        "description": "情緒煩亂、躁動不安，可見於熱證或心神受擾之情況。 / Agitation and restlessness; may be seen in heat patterns or when the mind/Spirit is disturbed.",
+        "syndromes": [
+          "syn-0005",
+          "syn-0008",
+          "syn-0023",
+          "syn-0025",
+          "syn-0033",
+          "syn-0032",
+          "syn-0038",
+          "syn-0045",
+          "syn-0047",
+          "syn-0004",
+          "syn-0076",
+          "syn-0077",
+          "syn-0074"
+        ]
+      },
+      {
+        "id": "symp-0021",
+        "type": "symptom",
+        "name": "實滿便秘 / abdominal fullness with constipation",
+        "name_zh": "實滿便秘",
+        "name_en": "abdominal fullness with constipation",
+        "description": "腹部實滿伴大便秘結，多為裡熱實證所致。 / Abdominal fullness accompanied by constipation, typically due to interior excess heat and stagnation.",
+        "syndromes": [
+          "syn-0005",
+          "syn-0027",
+          "syn-0066",
+          "syn-0068"
+        ]
+      },
+      {
+        "id": "symp-0022",
+        "type": "symptom",
+        "name": "脈洪大 / large flooding pulse",
+        "name_zh": "脈洪大",
+        "name_en": "large flooding pulse",
+        "description": "脈象洪大有力，常見於熱盛實證如陽明熱勢。 / A large, flooding and forceful pulse often seen in vigorous heat-excess patterns like Yangming.",
+        "syndromes": [
+          "syn-0005",
+          "syn-0062"
+        ]
+      },
+      {
+        "id": "symp-0023",
+        "type": "symptom",
+        "name": "腹滿 / abdominal fullness",
+        "name_zh": "腹滿",
+        "name_en": "abdominal fullness",
+        "description": "腹部脹滿不適，為太陰病常見表現之一，與脾陽虛或痰飲有關。 / Abdominal distention and fullness, common in Taiyin patterns often related to Spleen yang deficiency or phlegm-fluid retention.",
+        "syndromes": [
+          "syn-0007",
+          "syn-0043",
+          "syn-0053",
+          "syn-0027",
+          "syn-0068",
+          "syn-0005",
+          "syn-0066"
+        ]
+      },
+      {
+        "id": "symp-0024",
+        "type": "symptom",
+        "name": "嘔吐 / vomiting",
+        "name_zh": "嘔吐",
+        "name_en": "vomiting",
+        "description": "反胃嘔吐，主因為中焦不和或痰飲上逆。臨床上嘔吐可為外感太陽病進入少陽（嘔吐為少陽證）或因中焦（脾胃）運化失常、痰飲濁滯上逆所致。書中並特別指出：常喝酒者（酒客病）因酒傷胃、胃陽失常，遇甘膩藥物（如桂枝湯中之紅棗）易反胃嘔吐；凡屬“吐家”者（平素易噁心、嘔吐、胃隱痛者）恐有胃潰瘍或胃內腫瘤，忌服桂枝湯，因桂枝芍藥發陽、促血行，可能誘發吐膿血或吐血。若舌苔濁膩、黃厚常提示濕熱或痰濁；舌苔薄白則胃氣較健。治法除調理中焦、化痰、降逆外，酒客或吐家應避免用桂枝湯，可用如葛根芩連湯以清化濕熱，或在兼咳喘、黃痰時酌加厚朴、杏仁等藥。臨床警語：出現反覆嘔吐、吐血、或服桂枝湯後嘔吐者，應懷疑胃器質性病變並慎選方藥。 / Nausea and vomiting resulting from disharmony of the middle burner (middle jiao) or upward movement of phlegm-fluid. In TCM vomiting may indicate that an external Taiyang pattern has progressed into Shaoyang (vomiting is characteristic of Shaoyang), or it may arise from impaired spleen-stomach transport with retention of dampness/phlegm that rises and counterflows. The text specifically warns that habitual drinkers (“jiuke”/alcoholics) have damaged stomach function and often react with nausea or vomiting to sweet, sticky herbs (for example the jujube in Gui Zhi Tang); such patients frequently dislike sweet tastes. People prone to vomiting (“tujia”)—those with chronic nausea, epigastric discomfort or occult gastric pain—may have peptic ulcers or gastric masses and should avoid Gui Zhi Tang, because the warming, dispersing action of guizhi and shaoyao can accelerate circulation and provoke vomiting of pus or blood. A greasy yellow thick coating on the tongue suggests damp-heat or phlegm-damp; a thin white coating indicates relatively intact stomach qi. Management focuses on harmonizing the middle jiao, transforming phlegm and directing rebellious qi downward. In alcohol-damaged or chronic-vomiter cases Gui Zhi Tang is contraindicated; alternatives include Ge Gen Qin Lian Tang to clear damp-heat, or adding herbs such as Hou Po and Xing Ren when cough/bronchial phlegm and yellow sputum are present. Clinical caution: recurrent vomiting, vomiting of blood or pus, or vomiting precipitated by Gui Zhi Tang should prompt suspicion of organic gastric disease and careful selection or avoidance of formulas.",
+        "syndromes": [
+          "syn-0007",
+          "syn-0020",
+          "syn-0015",
+          "syn-0049",
+          "syn-0051",
+          "syn-0068",
+          "syn-0065",
+          "syn-0070"
+        ]
+      },
+      {
+        "id": "symp-0025",
+        "type": "symptom",
+        "name": "食少 / poor appetite",
+        "name_zh": "食少",
+        "name_en": "poor appetite",
+        "description": "食欲減退，常見於脾胃虛弱或太陰病。 / Reduced appetite, commonly seen in Spleen-Stomach deficiency or Taiyin patterns.",
+        "syndromes": [
+          "syn-0007",
+          "syn-0020"
+        ]
+      },
+      {
+        "id": "symp-0026",
+        "type": "symptom",
+        "name": "體倦 / fatigue",
+        "name_zh": "體倦",
+        "name_en": "fatigue",
+        "description": "全身乏力、倦怠，與中氣不足或脾陽虛有關。 / Generalized tiredness and lassitude, related to middle qi deficiency or Spleen yang deficiency.",
+        "syndromes": [
+          "syn-0007"
+        ]
+      },
+      {
+        "id": "symp-0027",
+        "type": "symptom",
+        "name": "便溏 / loose stools",
+        "name_zh": "便溏",
+        "name_en": "loose stools",
+        "description": "大便稀薄不實，為脾運不健或太陰病的典型表現。 / Loose or watery stools, typical of impaired Spleen transportive function or Taiyin pattern.",
+        "syndromes": [
+          "syn-0007",
+          "syn-0049"
+        ]
+      },
+      {
+        "id": "symp-0028",
+        "type": "symptom",
+        "name": "畏寒肢冷 / aversion to cold with cold extremities",
+        "name_zh": "畏寒肢冷",
+        "name_en": "aversion to cold with cold extremities",
+        "description": "怕冷、四肢冰冷，多見於少陰陽虛或陽虛證。 / Sensitivity to cold with cold limbs, commonly seen in Shaoyin patterns of Yang deficiency.",
+        "syndromes": [
+          "syn-0008"
+        ]
+      },
+      {
+        "id": "symp-0029",
+        "type": "symptom",
+        "name": "心悸 / palpitations",
+        "name_zh": "心悸",
+        "name_en": "palpitations",
+        "description": "心神不安或心動過速不規則，少陰病可見心下悸或心悸症狀。 / Uneasy sensation in the heart or irregular rapid heartbeats; palpitations can be seen in Shaoyin disorders.",
+        "syndromes": [
+          "syn-0008",
+          "syn-0065",
+          "syn-0075",
+          "syn-0076"
+        ]
+      },
+      {
+        "id": "symp-0030",
+        "type": "symptom",
+        "name": "睡不安 / restless sleep",
+        "name_zh": "睡不安",
+        "name_en": "restless sleep",
+        "description": "睡眠不寧、多夢或難以安眠，心腎不交或虛擾常見。 / Disturbed sleep with restlessness or excessive dreaming; common when Heart and Kidney are not harmonized.",
+        "syndromes": [
+          "syn-0008",
+          "syn-0038",
+          "syn-0047",
+          "syn-0059"
+        ]
+      },
+      {
+        "id": "symp-0031",
+        "type": "symptom",
+        "name": "虛熱 / empty-heat",
+        "name_zh": "虛熱",
+        "name_en": "empty-heat",
+        "description": "陰虛虛熱，表現為午後潮熱、盜汗、口乾但無大熱勢。 / Heat due to yin deficiency presenting as tidal fever in the afternoon, night sweats, dry mouth without high fever.",
+        "syndromes": [
+          "syn-0008"
+        ]
+      },
+      {
+        "id": "symp-0032",
+        "type": "symptom",
+        "name": "四肢厥冷 / cold extremities (Jueyin)",
+        "name_zh": "四肢厥冷",
+        "name_en": "cold extremities (Jueyin)",
+        "description": "四肢冰冷、厥逆感，為厥陰病或重症的常見表現。 / Coldness of the limbs with a sense of reversal, common in Jueyin pattern or severe disorders.",
+        "syndromes": [
+          "syn-0009",
+          "syn-0028",
+          "syn-0045"
+        ]
+      },
+      {
+        "id": "symp-0033",
+        "type": "symptom",
+        "name": "嘔逆 / rebelious vomiting",
+        "name_zh": "嘔逆",
+        "name_en": "rebelious vomiting",
+        "description": "胃氣逆上引起反胃噁心與嘔吐，厥陰、太陰等可見。 / Upward reversal of stomach qi causing nausea and vomiting; may be seen in Jueyin or Taiyin patterns.",
+        "syndromes": [
+          "syn-0009",
+          "syn-0002"
+        ]
+      },
+      {
+        "id": "symp-0034",
+        "type": "symptom",
+        "name": "躁擾 / agitation",
+        "name_zh": "躁擾",
+        "name_en": "agitation",
+        "description": "精神躁動、焦慮不安，常見於熱擾或營血不和之證。 / Mental agitation and restlessness, often seen with heat disturbance or disharmony of nutritive-level and blood.",
+        "syndromes": [
+          "syn-0009"
+        ]
+      },
+      {
+        "id": "symp-0035",
+        "type": "symptom",
+        "name": "惡寒 / aversion to cold",
+        "name_zh": "惡寒",
+        "name_en": "aversion to cold",
+        "description": "感到寒冷、發抖並畏寒不暖，常見於太陽表證及傷寒。 / Sensation of pronounced cold with shivering and aversion to cold, commonly seen in Taiyang external presentations and Shanghan.",
+        "syndromes": [
+          "syn-0004",
+          "syn-0002",
+          "syn-0018",
+          "syn-0033",
+          "syn-0032",
+          "syn-0015",
+          "syn-0064"
+        ]
+      },
+      {
+        "id": "symp-0036",
+        "type": "symptom",
+        "name": "發熱 / fever",
+        "name_zh": "發熱",
+        "name_en": "fever",
+        "description": "體溫升高，可為低熱或高熱，為表裡熱證的一般表現。 / Elevated body temperature, ranging from low-grade to high fever, a common sign of internal or external heat patterns.",
+        "syndromes": [
+          "syn-0010",
+          "syn-0011",
+          "syn-0015",
+          "syn-0021",
+          "syn-0022",
+          "syn-0023",
+          "syn-0033",
+          "syn-0032",
+          "syn-0055",
+          "syn-0028",
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0037",
+        "type": "symptom",
+        "name": "汗出 / sweating",
+        "name_zh": "汗出",
+        "name_en": "sweating",
+        "description": "汗出（可自汗或他汗）提示營衛、腸胃津液、肺胃等的津液與衛氣變動。發汗後常見的證候與機轉：\n- 發汗後仍然身疼、脈沉遲：為汗發過度傷津、孫絡乾耗，屬表已解但裏虛，應以調和營衛、補回津液為要（如桂枝加芍藥生薑人參新加湯調理）。\n- 汗出而喘、無大熱：表虛而邪入肺，需宣肺而不再發汗，以麻黃配石膏、杏仁、甘草下降清熱、祛痰（如麻黃杏仁甘草石膏湯變方）。\n- 發汗過多導致心下悸、叉手自冒心或臍下悸奔豚：為發陽過度或津液被動上衝所致，視病位用桂枝甘草湯以化水氣、回陽或茯苓桂枝甘草大棗湯以利水導下、補回腸胃津液。麻黃類發汗傷肺多見心下悸；桂枝類傷腸胃多見臍下悸奔豚。\n- 發汗後腹脹（虛脹或實脹）：虛脹多為腸胃虛、腸氣停聚，用厚朴、生薑、半夏、甘草、人參調和降逆開氣；實脹多為實邪積滯，當攻下。\n- 吐下後心下逆滿、氣上衝胸、起則頭眩、發汗即抽搐或震顫：為中膈水飲晃動，宜以茯苓、桂枝、白朮、甘草以利水、健脾、安中（如茯苓桂枝白朮甘草湯）。\n- 發汗後煩躁、手足厥冷（四逆）：如兼見煩躁為水上凌心、陰陽兩虛或陽虛者，當以人參、附子、乾薑、甘草、茯苓等補扶陽氣並利水（如茯苓四逆湯及其加減）。\n- 發汗後惡寒為虛故；汗後僅覺熱則屬實，需和胃或攻裡（視證如調胃承氣湯等）。\n- 大汗後胃中乾、煩躁不眠、渴欲飲水者，應少量分次給水以和胃氣，勿一次大量飲入以防氣機逆亂。\n臨床要點：查脈（沉遲、浮滑、微弱等）、辨有無發熱、喘咳、噯氣、腹脹、臍下悸、煩躁、四肢寒冷等，依證屬虛實與病在肺、胃或下焦選方扶正兼導水、兼顧和胃與止驚。常用方劑（中文名）示例：桂枝加芍藥生薑人參新加湯、麻黃杏仁甘草石膏湯、桂枝甘草湯、茯苓桂枝甘草大棗湯、厚朴生薑半夏甘草人參湯、茯苓桂枝白朮甘草湯、茯苓四逆湯、調胃承氣湯等。 / Sweating (spontaneous or induced) indicates changes in the interaction of ying and wei, body fluids (jinye), and functions of lung and stomach. Common post-sweating patterns, mechanisms and management principles:\n- Persistent body aches with a submerged and slow pulse: excessive sweating has damaged fluids and the collateral network (sun luo), producing interior deficiency after the surface is released. Principle: harmonize ying and wei and replenish fluids (e.g. guizhi jia shaoyao shengjiang renshen xinjiatang).\n- Sweating with dyspnea but without high fever: the pathogen has entered the lung while the surface is vacuous. Do not continue to induce sweat; instead open the lung and clear lung heat, resolve phlegm and harmonize the stomach (e.g. mahuang xingren gancao shigao tang pattern or its variants).\n- Excessive sweating causing palpitations under the heart (xinxia ji), ‘hands crossed over the chest’ feeling, or periumbilical palpitation/ben tun upward rushing: caused by over-dispersed yang or passive upward rush of water. Treat by vaporizing or restoring water qi and supporting yang: guizhi gancao tang for rapid drainage/return of vaporized fluid; fuling guizhi gancao dazao tang to drain damp and restore gastrointestinal fluids. Note: mahua n-type over-sweating tends to injure lung fluids and produce xinxia ji; guizhi-type overdispersal tends to injure stomach/intestine fluids producing periumbilical symptoms.\n- Post-sweat abdominal distension (xu or shi distension): xu distension (likes pressure, excessive intestinal gas) calls for aromatic descend and spleen/tone support using houpo shengjiang banxia gancao renshen tang; shi distension (rebound pain, fullness) requires purgation (chengqi-type treatments).\n- After vomiting/diarrhea with heart-substernal fullness, qi rushing to the chest, dizziness on rising, sweat-provoked cramps or whole-body tremor: indicates middle-jiao water accumulation (water drink) affecting the diaphragm. Principle: promote water transformation, tonify the spleen and stabilize the middle (e.g. fuling guizhi baizhu gancao tang).\n- Post-sweat vexation with cold extremities (si ni 四逆): indicates yang collapse or combined yin-yang deficiency. Use warming and supporting formulas that restore yang and guide water downward (e.g. fuling sin i tang and its modifications; where human ginseng containing formulas are used if both yin and yang are weak).\n- Post-sweat aversion to cold denotes deficiency; no aversion but heat denotes excess—treat by warming and nourishing if deficient, or by harmonizing the stomach and addressing interior excess if real heat/retention is present (e.g. tiaowei chengqi-type differentiation).\n- After profuse sweat with a dry stomach, irritability, inability to sleep and thirst: give small frequent sips to harmonize stomach qi rather than large boluses.\nClinical approach: differentiate pulse and signs (e.g. chen chi, floating, faint), presence of heat, wheeze, belching, abdominal distension, periumbilical palpitation, vexation or cold limbs; determine whether the pattern is lung, stomach, or lower-jiao and whether it is xu or shi, then apply principles of supporting the correct qi, replenishing fluids, harmonizing the stomach, and guiding water. Representative formulas (pinyin): guizhi jia shaoyao shengjiang renshen xinjiatang; mahuang xingren gancao shigao tang; guizhi gancao tang; fuling guizhi gancao dazao tang; houpo shengjiang banxia gancao renshen tang; fuling guizhi baizhu gancao tang; fuling si ni tang; tiaowei chengqi tang.",
+        "syndromes": [
+          "syn-0010",
+          "syn-0004",
+          "syn-0015",
+          "syn-0033",
+          "syn-0040",
+          "syn-0047"
+        ]
+      },
+      {
+        "id": "symp-0038",
+        "type": "symptom",
+        "name": "惡風 / aversion to wind",
+        "name_zh": "惡風",
+        "name_en": "aversion to wind",
+        "description": "不喜風吹拂，遇風則症狀加重，為表邪作用的表現之一。 / Dislike of drafts or wind with symptom aggravation on exposure, a common sign of exterior pathogenic influence.",
+        "syndromes": [
+          "syn-0010",
+          "syn-0015",
+          "syn-0017",
+          "syn-0029",
+          "syn-0033",
+          "syn-0019",
+          "syn-0064",
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0039",
+        "type": "symptom",
+        "name": "脈緩 / slow/relaxed pulse",
+        "name_zh": "脈緩",
+        "name_en": "slow/relaxed pulse",
+        "description": "脈象緩慢、節律放慢，多見於中風證或虛弱者感染時。 / A slow or relaxed pulse often seen in Zhongfeng presentations or when weakened patients are infected.",
+        "syndromes": [
+          "syn-0010"
+        ]
+      },
+      {
+        "id": "symp-0040",
+        "type": "symptom",
+        "name": "脈緊 / tight/tense pulse",
+        "name_zh": "脈緊",
+        "name_en": "tight/tense pulse",
+        "description": "脈來緊張有力，按之緊束，常見於寒邪束表或傷寒時脈象。 / A tense, tight pulse felt bound under pressure, commonly seen with cold constraining the exterior or in Shanghan.",
+        "syndromes": [
+          "syn-0059"
+        ]
+      },
+      {
+        "id": "symp-0041",
+        "type": "symptom",
+        "name": "自汗出 / spontaneous sweating",
+        "name_zh": "自汗出",
+        "name_en": "spontaneous sweating",
+        "description": "非運動或發熱時出汗，多因津液耗傷或衛虛所致，常見風溫或氣虛。 / Sweating that occurs without exertion or fever, often due to fluid loss or deficient wei qi, seen in Fengwen or qi deficiency.",
+        "syndromes": [
+          "syn-0012",
+          "syn-0015",
+          "syn-0039",
+          "syn-0061"
+        ]
+      },
+      {
+        "id": "symp-0042",
+        "type": "symptom",
+        "name": "身重 / heavy body sensation",
+        "name_zh": "身重",
+        "name_en": "heavy body sensation",
+        "description": "全身覺得沉重乏力，常與水濕或脾失運化相關。 / Generalized heaviness and lethargy often associated with damp accumulation or Spleen dysfunction.",
+        "syndromes": [
+          "syn-0012",
+          "syn-0073"
+        ]
+      },
+      {
+        "id": "symp-0043",
+        "type": "symptom",
+        "name": "多眠睡 / excessive sleepiness",
+        "name_zh": "多眠睡",
+        "name_en": "excessive sleepiness",
+        "description": "嗜睡、睡眠時間延長且精神不振，見於津液不足或中毒性表證。 / Oversleeping with prolonged sleep and lethargy, seen with fluid depletion or systemic toxic exterior patterns.",
+        "syndromes": [
+          "syn-0012"
+        ]
+      },
+      {
+        "id": "symp-0044",
+        "type": "symptom",
+        "name": "鼻息必鼾 / snoring",
+        "name_zh": "鼻息必鼾",
+        "name_en": "snoring",
+        "description": "睡中呼吸鼾聲，提示呼吸道或氣機不利且多見於表熱耗津後的沉睡狀態。 / Noisy breathing during sleep (snoring), indicating airway or qi dysfunction often seen after exterior heat with fluid loss.",
+        "syndromes": [
+          "syn-0012",
+          "syn-0016"
+        ]
+      },
+      {
+        "id": "symp-0045",
+        "type": "symptom",
+        "name": "言語難出 / difficulty speaking",
+        "name_zh": "言語難出",
+        "name_en": "difficulty speaking",
+        "description": "言語減少或發言困難，反映神志或肌肉運動受影響。 / Reduced speech or difficulty articulating, reflecting impairment of consciousness or motor control.",
+        "syndromes": [
+          "syn-0012"
+        ]
+      },
+      {
+        "id": "symp-0046",
+        "type": "symptom",
+        "name": "小便不利 / scanty urination",
+        "name_zh": "小便不利",
+        "name_en": "scanty urination",
+        "description": "尿量減少或排尿困難，常見於體內津液不足或水濕內停。 / Decreased urine output or difficulty urinating, commonly due to fluid depletion or internal damp retention.",
+        "syndromes": [
+          "syn-0012",
+          "syn-0017",
+          "syn-0024",
+          "syn-0028",
+          "syn-0047",
+          "syn-0035",
+          "syn-0064",
+          "syn-0073"
+        ]
+      },
+      {
+        "id": "symp-0047",
+        "type": "symptom",
+        "name": "直視 / fixed gaze",
+        "name_zh": "直視",
+        "name_en": "fixed gaze",
+        "description": "眼睛凝視不轉，可能為失血或嚴重虛損所致之危急表現。 / Eyes fixed without normal movement, a possible acute sign of severe blood loss or profound deficiency.",
+        "syndromes": [
+          "syn-0012",
+          "syn-0059"
+        ]
+      },
+      {
+        "id": "symp-0048",
+        "type": "symptom",
+        "name": "失溲 / urinary incontinence",
+        "name_zh": "失溲",
+        "name_en": "urinary incontinence",
+        "description": "無法控制排尿或尿失禁，屬嚴重津液或腎氣衰竭的表現之一。 / Loss of urinary control or incontinence, indicating severe fluid depletion or kidney qi failure.",
+        "syndromes": [
+          "syn-0012"
+        ]
+      },
+      {
+        "id": "symp-0049",
+        "type": "symptom",
+        "name": "面色微黃 / slightly yellow complexion",
+        "name_zh": "面色微黃",
+        "name_en": "slightly yellow complexion",
+        "description": "面色偏黃但非典型肝膽黃疸，常見於津液耗損顯露血色。 / A mildly yellow facial color not typical of hepatobiliary jaundice, often due to fluid loss exposing blood hue.",
+        "syndromes": [
+          "syn-0012",
+          "syn-0013",
+          "syn-0014",
+          "syn-0015",
+          "syn-0064"
+        ]
+      },
+      {
+        "id": "symp-0050",
+        "type": "symptom",
+        "name": "抽搐 / convulsions",
+        "name_zh": "抽搐",
+        "name_en": "convulsions",
+        "description": "肌肉不自主收縮或抽搐，見於嚴重津液喪失或中風發驚癇。 / Involuntary muscle contractions or seizures, seen in severe fluid depletion or acute convulsive states.",
+        "syndromes": [
+          "syn-0012"
+        ]
+      },
+      {
+        "id": "symp-0051",
+        "type": "symptom",
+        "name": "身灼熱 / burning body sensation",
+        "name_zh": "身灼熱",
+        "name_en": "burning body sensation",
+        "description": "全身呈灼熱感，常伴體表有熱但內津不足之候。 / A burning sensation of the body, often with exterior heat and internal fluid insufficiency.",
+        "syndromes": [
+          "syn-0012"
+        ]
+      },
+      {
+        "id": "symp-0052",
+        "type": "symptom",
+        "name": "體痛 / body aches",
+        "name_zh": "體痛",
+        "name_en": "body aches",
+        "description": "全身或四肢酸痛痠楚，多見於外邪束表或水濕停滯所致。 / Generalized or limb aching commonly seen with exterior pathogenic confinement or fluid stagnation.",
+        "syndromes": [
+          "syn-0002",
+          "syn-0029",
+          "syn-0033",
+          "syn-0032",
+          "syn-0040",
+          "syn-0058",
+          "syn-0028"
+        ]
+      },
+      {
+        "id": "symp-0053",
+        "type": "symptom",
+        "name": "脈陰陽俱緊 / both pulses tight",
+        "name_zh": "脈陰陽俱緊",
+        "name_en": "both pulses tight",
+        "description": "寸尺脈同時浮而緊或俱緊，常為傷寒之脈象，提示病在表而束。 / Both inch and cubit pulses are simultaneously tight and tense, often a Shanghan pulse indicating exterior-constraining pathogenic influence.",
+        "syndromes": [
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0054",
+        "type": "symptom",
+        "name": "脈陰陽俱浮 / both pulses floating",
+        "name_zh": "脈陰陽俱浮",
+        "name_en": "both pulses floating",
+        "description": "左右寸尺脈同時浮出，表示病在表且為表熱或表證之象。 / Both inch and cubit pulses are simultaneously floating, indicating an exterior pattern affecting both sides or an exterior heat presentation.",
+        "syndromes": [
+          "syn-0012"
+        ]
+      },
+      {
+        "id": "symp-0055",
+        "type": "symptom",
+        "name": "脈數急 / rapid and urgent pulse",
+        "name_zh": "脈數急",
+        "name_en": "rapid and urgent pulse",
+        "description": "脈來數且急促，為病勢傳入裏者之警示脈象。 / A rapid and hurried pulse indicating that the disease is transmitting into the interior.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0056",
+        "type": "symptom",
+        "name": "精神萎靡 / mental lassitude",
+        "name_zh": "精神萎靡",
+        "name_en": "mental lassitude",
+        "description": "表現為精神不振、意識模糊或提不起精神，常見於表證解除後恢復未全的情形。 / Manifested as low spirit, poor mental alertness or lethargy, often seen when exterior signs have resolved but the patient has not fully recovered.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0057",
+        "type": "symptom",
+        "name": "身大熱反欲近衣 / hot body but desires to wear clothes",
+        "name_zh": "身大熱反欲近衣",
+        "name_en": "hot body but desires to wear clothes",
+        "description": "病人體表感覺很熱，但主觀上卻想蓋衣保暖，為真寒假熱的表現之一。 / The body feels very hot while the patient paradoxically wants to cover up; a sign of 'true cold, false heat'.",
+        "syndromes": [
+          "syn-0013"
+        ]
+      },
+      {
+        "id": "symp-0058",
+        "type": "symptom",
+        "name": "身大寒反不欲近衣 / cold body but desires to undress",
+        "name_zh": "身大寒反不欲近衣",
+        "name_en": "cold body but desires to undress",
+        "description": "病人體表感覺寒冷，但主觀上卻想脫衣物，為真熱假寒的表現之一。 / The body feels very cold while the patient paradoxically wants to remove clothing; a sign of 'true heat, false cold'.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0059",
+        "type": "symptom",
+        "name": "鼻鳴 / noisy nasal breathing / nasal flaring",
+        "name_zh": "鼻鳴",
+        "name_en": "noisy nasal breathing / nasal flaring",
+        "description": "鼻腔有明顯響聲或阻塞感，呼吸時有鼻鳴聲，常伴鼻塞或上呼吸道症狀。 / Audible nasal noise or flaring during respiration, often with nasal congestion or upper airway symptoms.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0060",
+        "type": "symptom",
+        "name": "無汗 / absence of sweating",
+        "name_zh": "無汗",
+        "name_en": "absence of sweating",
+        "description": "皮膚無汗出，即使發熱或惡寒也不出汗，常見於表寒束表的情況。 / Lack of sweating even with fever or aversion to cold, commonly seen when exterior cold constricts the pores.",
+        "syndromes": [
+          "syn-0024",
+          "syn-0029",
+          "syn-0033",
+          "syn-0032",
+          "syn-0004",
+          "syn-0077"
+        ]
+      },
+      {
+        "id": "symp-0061",
+        "type": "symptom",
+        "name": "面頰鮮紅界限分明 / bilateral bright red cheeks with clear border",
+        "name_zh": "面頰鮮紅界限分明",
+        "name_en": "bilateral bright red cheeks with clear border",
+        "description": "兩頰鮮紅且與周圍皮膚界限明顯，為真寒假熱常見面色表現之一。 / Bright red cheeks on both sides with a distinct border from surrounding skin, often seen in 'true cold, false heat'.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0062",
+        "type": "symptom",
+        "name": "呼出氣不溫且不急促 / exhalation not warm and not rapid",
+        "name_zh": "呼出氣不溫且不急促",
+        "name_en": "exhalation not warm and not rapid",
+        "description": "呼出的氣既不溫暖也不急促，顯示體內陽氣不足或內寒傾向。 / Exhaled breath is neither warm nor rapid, indicating deficient internal yang or tendency toward interior cold.",
+        "syndromes": [
+          "syn-0013"
+        ]
+      },
+      {
+        "id": "symp-0063",
+        "type": "symptom",
+        "name": "舌乾質淡 / tongue dry and pale in quality",
+        "name_zh": "舌乾質淡",
+        "name_en": "tongue dry and pale in quality",
+        "description": "舌乾但質地偏淡，顯示內有寒而津液不足的表征。 / Tongue is dry but pale in substance, suggesting interior cold with insufficient fluids.",
+        "syndromes": [
+          "syn-0013"
+        ]
+      },
+      {
+        "id": "symp-0064",
+        "type": "symptom",
+        "name": "脈浮數按之無力 / floating-rapid but forceless pulse",
+        "name_zh": "脈浮數按之無力",
+        "name_en": "floating-rapid but forceless pulse",
+        "description": "脈象表現為浮而數，但按之無力，常見於表證表現與裡虛並存的情況。 / Pulse is floating and rapid yet feels forceless on pressure, often seen when exterior signs coexist with interior deficiency.",
+        "syndromes": [
+          "syn-0013"
+        ]
+      },
+      {
+        "id": "symp-0065",
+        "type": "symptom",
+        "name": "脈沉細 / deep thin pulse",
+        "name_zh": "脈沉細",
+        "name_en": "deep thin pulse",
+        "description": "脈沉而細小，多提示邪在裡或裡熱耗陰的證候。 / Pulse is deep and thin, often indicating interior location of the pathogen or interior heat consuming yin.",
+        "syndromes": [
+          "syn-0014"
+        ]
+      },
+      {
+        "id": "symp-0066",
+        "type": "symptom",
+        "name": "舌乾質燥 / tongue dry and parched",
+        "name_zh": "舌乾質燥",
+        "name_en": "tongue dry and parched",
+        "description": "舌體乾燥、質地燥裂，常見於裡熱或津液大傷的情形。 / Tongue surface is dry and parched, commonly seen with interior heat or severe fluid injury.",
+        "syndromes": [
+          "syn-0014"
+        ]
+      },
+      {
+        "id": "symp-0067",
+        "type": "symptom",
+        "name": "乾嘔 / dry retching",
+        "name_zh": "乾嘔",
+        "name_en": "dry retching",
+        "description": "有欲嘔惡心但無吐出物，喉間乾嘔，為桂枝湯證可見之伴證之一。 / Nausea with retching but no expectoration of contents, a possible accompanying sign in Gui Zhi Tang presentations.",
+        "syndromes": [
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0068",
+        "type": "symptom",
+        "name": "嗇嗇惡寒 / intermittent chills",
+        "name_zh": "嗇嗇惡寒",
+        "name_en": "intermittent chills",
+        "description": "一陣一陣的寒顫或冷意，常伴有汗出不足之表虛證。 / Intermittent waves of chills or cold sensations, often accompanying deficient exterior patterns with sweating.",
+        "syndromes": [
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0069",
+        "type": "symptom",
+        "name": "淅淅惡風 / sudden aversion to wind",
+        "name_zh": "淅淅惡風",
+        "name_en": "sudden aversion to wind",
+        "description": "對風吹動非常敏感，感覺不適或寒顫，為表證常見症狀。 / Marked sensitivity and discomfort to wind exposure, often causing chills; a common exterior symptom.",
+        "syndromes": [
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0070",
+        "type": "symptom",
+        "name": "胸悶 / chest tightness",
+        "name_zh": "胸悶",
+        "name_en": "chest tightness",
+        "description": "胸口脹悶不舒，可能因氣滯或血虛所致，在誤用桂枝湯時可加重。 / Sensation of tightness or oppression in the chest, possibly due to qi stagnation or reduced circulation; may worsen if inappropriate Gui Zhi Tang is given.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0049"
+        ]
+      },
+      {
+        "id": "symp-0071",
+        "type": "symptom",
+        "name": "脈浮緊 / floating-tense pulse",
+        "name_zh": "脈浮緊",
+        "name_en": "floating-tense pulse",
+        "description": "脈浮緊者脈象浮而緊，為太陽表寒之象，常見無汗、惡寒明顯及身體痠痛；此候當以發汗解表，表實而裏未虛者多主用麻黃湯。但發汗前須辨尺脈是否虛弱，若下焦虛弱不可大汗以免傷津耗血。 / A floating‑tense pulse is floating and tight, indicating Taiyang exterior cold—commonly with absence of sweating, marked aversion to cold, and body aches; this pattern calls for releasing the exterior by sweating and, when the exterior is replete and the interior not deficient, Ma Huang Tang is the primary formula. Before inducing sweating check the chi pulse for deficiency; if the lower pulse is weak do not provoke profuse sweating lest fluids and blood be harmed.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0033",
+          "syn-0032"
+        ]
+      },
+      {
+        "id": "symp-0072",
+        "type": "symptom",
+        "name": "吐膿血 / vomiting pus and blood",
+        "name_zh": "吐膿血",
+        "name_en": "vomiting pus and blood",
+        "description": "嘔吐膿血或帶膿血樣物，多見於胃潰瘍或胃破裂等證候。 / Vomiting pus and blood, often indicates severe gastric lesion such as ulcer or erosion.",
+        "syndromes": [
+          "syn-0020"
+        ]
+      },
+      {
+        "id": "symp-0073",
+        "type": "symptom",
+        "name": "舌苔濁膩 / greasy turbid tongue coating",
+        "name_zh": "舌苔濁膩",
+        "name_en": "greasy turbid tongue coating",
+        "description": "舌苔厚重濁膩，顯示濕熱或痰濕內蘊。 / Thick, greasy, turbid tongue coating indicating damp-heat or phlegm-damp accumulation.",
+        "syndromes": [
+          "syn-0020",
+          "syn-0019"
+        ]
+      },
+      {
+        "id": "symp-0074",
+        "type": "symptom",
+        "name": "舌苔厚黃 / thick yellow tongue coating",
+        "name_zh": "舌苔厚黃",
+        "name_en": "thick yellow tongue coating",
+        "description": "舌苔厚而黃，提示內熱炽盛或濕熱夾雜。 / Thick yellow tongue coating suggesting vigorous internal heat or damp-heat.",
+        "syndromes": [
+          "syn-0019",
+          "syn-0033"
+        ]
+      },
+      {
+        "id": "symp-0075",
+        "type": "symptom",
+        "name": "舌苔薄白 / thin white tongue coating",
+        "name_zh": "舌苔薄白",
+        "name_en": "thin white tongue coating",
+        "description": "舌苔薄白為正常或表證未深，提示胃氣尚存。 / Thin white tongue coating is normal or indicates a superficial exterior pattern with preserved stomach qi.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0020",
+          "syn-0054",
+          "syn-0049",
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0076",
+        "type": "symptom",
+        "name": "氣喘 / dyspnea/wheezing (asthma)",
+        "name_zh": "氣喘",
+        "name_en": "dyspnea/wheezing (asthma)",
+        "description": "呼吸急促、喘息或氣短，多因肺氣不利或痰飲阻肺。 / Rapid breathing, wheeze or shortness of breath, often due to impaired lung qi or phlegm-fluid obstructing the lungs.",
+        "syndromes": [
+          "syn-0019",
+          "syn-0047"
+        ]
+      },
+      {
+        "id": "symp-0077",
+        "type": "symptom",
+        "name": "身癢 / itching (skin itching)",
+        "name_zh": "身癢",
+        "name_en": "itching (skin itching)",
+        "description": "皮膚瘙癢，常因表汗不透或風邪留著肌表所致。 / Skin itching, often due to unresolved exterior or wind remaining in the skin level.",
+        "syndromes": [
+          "syn-0021"
+        ]
+      },
+      {
+        "id": "symp-0078",
+        "type": "symptom",
+        "name": "大汗出 / profuse sweating",
+        "name_zh": "大汗出",
+        "name_en": "profuse sweating",
+        "description": "大量汗出，常使津液耗損，可能轉入裏熱或傷陰。 / Profuse sweating that depletes body fluids and may lead to interior heat or yin damage.",
+        "syndromes": [
+          "syn-0028",
+          "syn-0061",
+          "syn-0062",
+          "syn-0076"
+        ]
+      },
+      {
+        "id": "symp-0079",
+        "type": "symptom",
+        "name": "脈促 / hurried pulse",
+        "name_zh": "脈促",
+        "name_en": "hurried pulse",
+        "description": "脈跳頻促且有間歇，常見於血行回流不暢或驟然失血後的心機不遑。 / Rapid, hurried pulse often with intermittence, seen when venous return is altered or after sudden downward movement of blood.",
+        "syndromes": [
+          "syn-0018"
+        ]
+      },
+      {
+        "id": "symp-0080",
+        "type": "symptom",
+        "name": "四肢微急 / slight limb cramps",
+        "name_zh": "四肢微急",
+        "name_en": "slight limb cramps",
+        "description": "四肢輕微抽搐或攣急，常因津液不足或經脈失養所致。 / Mild cramps or twitching of the limbs, commonly due to fluid depletion or insufficient nourishment of the channels.",
+        "syndromes": [
+          "syn-0017"
+        ]
+      },
+      {
+        "id": "symp-0081",
+        "type": "symptom",
+        "name": "脈微弱 / feeble/weak pulse",
+        "name_zh": "脈微弱",
+        "name_en": "feeble/weak pulse",
+        "description": "脈細弱無力，代表陽氣或津液虛弱，不能發汗或攻下。 / Fine, weak pulse indicating deficiency of yang or body fluids; patient is not suitable for sweating or purging.",
+        "syndromes": [
+          "syn-0023",
+          "syn-0033",
+          "syn-0045",
+          "syn-0047",
+          "syn-0054",
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0082",
+        "type": "symptom",
+        "name": "面色潮紅 / flushed complexion",
+        "name_zh": "面色潮紅",
+        "name_en": "flushed complexion",
+        "description": "面色潮紅，可能為裡熱未解或虛熱外現。 / Flushed face, may indicate unresolved interior heat or false heat due to deficiency.",
+        "syndromes": [
+          "syn-0036"
+        ]
+      },
+      {
+        "id": "symp-0083",
+        "type": "symptom",
+        "name": "胸滿 / chest fullness",
+        "name_zh": "胸滿",
+        "name_en": "chest fullness",
+        "description": "胸中脹滿不舒，常與血行受阻或氣機不利有關。 / Pressure or fullness in the chest, often related to impaired circulation or constrained qi movement.",
+        "syndromes": [
+          "syn-0018",
+          "syn-0027",
+          "syn-0035",
+          "syn-0073"
+        ]
+      },
+      {
+        "id": "symp-0084",
+        "type": "symptom",
+        "name": "翕翕發熱 / intermittent fever",
+        "name_zh": "翕翕發熱",
+        "name_en": "intermittent fever",
+        "description": "一陣一陣的發熱，熱度間歇性出現。 / Intermittent episodes of fever occurring in waves.",
+        "syndromes": [
+          "syn-0024",
+          "syn-0039"
+        ]
+      },
+      {
+        "id": "symp-0085",
+        "type": "symptom",
+        "name": "小便數 / frequent urination",
+        "name_zh": "小便數",
+        "name_en": "frequent urination",
+        "description": "小便次數增多，排尿次數頻繁。 / Increased frequency of urination.",
+        "syndromes": [
+          "syn-0055"
+        ]
+      },
+      {
+        "id": "symp-0086",
+        "type": "symptom",
+        "name": "咽中乾 / dry throat",
+        "name_zh": "咽中乾",
+        "name_en": "dry throat",
+        "description": "咽喉乾燥無潤，常感口渴或吞嚥不適。 / Dryness in the throat causing thirst or discomfort on swallowing.",
+        "syndromes": [
+          "syn-0025",
+          "syn-0056",
+          "syn-0074",
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0087",
+        "type": "symptom",
+        "name": "譫語 / delirium/delirious speech",
+        "name_zh": "譫語",
+        "name_en": "delirium/delirious speech",
+        "description": "神志不清或胡言亂語，精神錯亂。 / Delirious speech or confused, rambling talk.",
+        "syndromes": [
+          "syn-0025",
+          "syn-0027",
+          "syn-0066",
+          "syn-0005",
+          "syn-0073",
+          "syn-0075"
+        ]
+      },
+      {
+        "id": "symp-0088",
+        "type": "symptom",
+        "name": "腳攣急 / leg cramps/spasms",
+        "name_zh": "腳攣急",
+        "name_en": "leg cramps/spasms",
+        "description": "腳部抽筋、拘急或伸屈困難。 / Cramping or spasmodic contraction of the legs causing difficulty in extension.",
+        "syndromes": [
+          "syn-0025",
+          "syn-0026"
+        ]
+      },
+      {
+        "id": "symp-0089",
+        "type": "symptom",
+        "name": "厥逆 / reversal with cold limbs (jueqi)",
+        "name_zh": "厥逆",
+        "name_en": "reversal with cold limbs (jueqi)",
+        "description": "四肢逆冷、末端發涼甚至休克樣的寒逆表現。 / Cold reversal with cold extremities, limbs become cold and may indicate collapse.",
+        "syndromes": [
+          "syn-0025",
+          "syn-0028",
+          "syn-0038"
+        ]
+      },
+      {
+        "id": "symp-0090",
+        "type": "symptom",
+        "name": "足溫 / warm feet",
+        "name_zh": "足溫",
+        "name_en": "warm feet",
+        "description": "足部回溫，為陽氣回復的臨床征象。 / Warmth returning to the feet, a clinical sign of returning yang.",
+        "syndromes": [
+          "syn-0026"
+        ]
+      },
+      {
+        "id": "symp-0091",
+        "type": "symptom",
+        "name": "舌苔厚白 / thick white tongue coating",
+        "name_zh": "舌苔厚白",
+        "name_en": "thick white tongue coating",
+        "description": "舌苔厚重且呈白色，多見於中焦濕盛或寒濕證。 / Thick white tongue coating often indicating dampness or cold in the middle burner.",
+        "syndromes": [
+          "syn-0024"
+        ]
+      },
+      {
+        "id": "symp-0092",
+        "type": "symptom",
+        "name": "下利 / diarrhea/borborygmus with loose stools",
+        "name_zh": "下利",
+        "name_en": "diarrhea/borborygmus with loose stools",
+        "description": "大便稀薄或頻繁下瀉，或腹中湧泄不止。 / Loose, watery stools or frequent diarrhea; urgent downward flow from the intestines.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0093",
+        "type": "symptom",
+        "name": "小便清利 / clear abundant urination",
+        "name_zh": "小便清利",
+        "name_en": "clear abundant urination",
+        "description": "小便清而量多，色淡透明，常見於陽虛或寒證。 / Clear, abundant pale urine often seen in yang deficiency or cold patterns.",
+        "syndromes": [
+          "syn-0028",
+          "syn-0027"
+        ]
+      },
+      {
+        "id": "symp-0094",
+        "type": "symptom",
+        "name": "微惡寒 / slight aversion to cold",
+        "name_zh": "微惡寒",
+        "name_en": "slight aversion to cold",
+        "description": "內生的輕微怕冷感，常提示裏虛或陰陽失衡。 / A slight internal aversion to cold, often indicating internal deficiency or imbalance.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0095",
+        "type": "symptom",
+        "name": "胃氣不和 / disharmony of stomach qi",
+        "name_zh": "胃氣不和",
+        "name_en": "disharmony of stomach qi",
+        "description": "胃氣運行不調，表現為噁心、嘔逆、脘腹脹痛或食滯。 / Disordered stomach qi manifesting as nausea, vomiting, epigastric/distension, or food stagnation.",
+        "syndromes": [
+          "syn-0027"
+        ]
+      },
+      {
+        "id": "symp-0096",
+        "type": "symptom",
+        "name": "喉嚨痛 / sore throat",
+        "name_zh": "喉嚨痛",
+        "name_en": "sore throat",
+        "description": "咽喉部疼痛或刺痛感，常伴有咽乾或吞嚥不適。 / Pain or soreness in the throat, often with dryness or painful swallowing.",
+        "syndromes": [
+          "syn-0029"
+        ]
+      },
+      {
+        "id": "symp-0097",
+        "type": "symptom",
+        "name": "骨節疼痛 / joint and bone pain",
+        "name_zh": "骨節疼痛",
+        "name_en": "joint and bone pain",
+        "description": "骨節和關節酸痛，活動時加重，多見於風寒束表或痰濕阻絡。 / Aching pain of bones and joints, worse with movement, often seen with wind‑cold or phlegm‑damp obstruction.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0098",
+        "type": "symptom",
+        "name": "頭項強痛 / nape and neck stiffness/pain",
+        "name_zh": "頭項強痛",
+        "name_en": "nape and neck stiffness/pain",
+        "description": "頭後項部位緊張僵硬或疼痛，常見於太陽經束表或表寒。 / Stiffness or pain in the nape and neck region, commonly seen with Taiyang exterior disorders or cold constriction.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0099",
+        "type": "symptom",
+        "name": "微痛 / mild pain",
+        "name_zh": "微痛",
+        "name_en": "mild pain",
+        "description": "輕微的疼痛感，痛勢不重但可影響舒適度。 / Mild, slight pain that is not severe but causes discomfort.",
+        "syndromes": [
+          "syn-0024"
+        ]
+      },
+      {
+        "id": "symp-0100",
+        "type": "symptom",
+        "name": "吐逆 / rebellious vomiting",
+        "name_zh": "吐逆",
+        "name_en": "rebellious vomiting",
+        "description": "胃氣上逆導致嘔吐、反胃或逆噴。 / Upward counterflow of stomach qi resulting in vomiting or regurgitation.",
+        "syndromes": [
+          "syn-0025"
+        ]
+      },
+      {
+        "id": "symp-0101",
+        "type": "symptom",
+        "name": "下利清穀 / watery diarrhea with undigested food",
+        "name_zh": "下利清穀",
+        "name_en": "watery diarrhea with undigested food",
+        "description": "下利清穀，食入即下，呈清稀白色，未消化的穀物隨瀉出。 / Watery diarrhea containing undigested food particles, with pale, clear stools passed soon after eating.",
+        "syndromes": [
+          "syn-0028"
+        ]
+      },
+      {
+        "id": "symp-0102",
+        "type": "symptom",
+        "name": "口渴 / thirst",
+        "name_zh": "口渴",
+        "name_en": "thirst",
+        "description": "感覺口乾渴欲飲，常見於內有熱或津液不足。 / A sensation of oral dryness with desire to drink, often seen with interior heat or fluid deficiency.",
+        "syndromes": [
+          "syn-0029",
+          "syn-0040",
+          "syn-0056",
+          "syn-0035",
+          "syn-0047",
+          "syn-0062",
+          "syn-0063",
+          "syn-0027",
+          "syn-0066",
+          "syn-0068",
+          "syn-0005"
+        ]
+      },
+      {
+        "id": "symp-0103",
+        "type": "symptom",
+        "name": "脈浮細 / floating-thin pulse",
+        "name_zh": "脈浮細",
+        "name_en": "floating-thin pulse",
+        "description": "脈象浮而細，表證猶存但脈力減弱。 / Pulse that is floating and thin, indicating a lingering exterior sign with weakened pulse strength.",
+        "syndromes": [
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0104",
+        "type": "symptom",
+        "name": "嗜臥 / preference to lie down / somnolence",
+        "name_zh": "嗜臥",
+        "name_en": "preference to lie down / somnolence",
+        "description": "病人多欲臥，嗜睡不喜活動。 / Marked desire to lie down or somnolence; patient prefers sleeping and reduced activity.",
+        "syndromes": [
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0105",
+        "type": "symptom",
+        "name": "咽喉癢 / itchy throat",
+        "name_zh": "咽喉癢",
+        "name_en": "itchy throat",
+        "description": "咽喉覺得癢癢，常引發咳嗽或欲清喉。 / Itchy sensation in the throat, often provoking cough or throat-clearing.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0106",
+        "type": "symptom",
+        "name": "吐出白色泡沫痰 / expectoration of white foamy sputum",
+        "name_zh": "吐出白色泡沫痰",
+        "name_en": "expectoration of white foamy sputum",
+        "description": "吐出清白泡沫狀痰，多見於表裏俱寒、水飲內停。 / Expectoration of clear white foamy sputum, often seen with exterior–interior cold and internal water retention.",
+        "syndromes": [
+          "syn-0034",
+          "syn-0019",
+          "syn-0074"
+        ]
+      },
+      {
+        "id": "symp-0107",
+        "type": "symptom",
+        "name": "表寒裏熱 / exterior cold with interior heat",
+        "name_zh": "表寒裏熱",
+        "name_en": "exterior cold with interior heat",
+        "description": "表證為寒而裏實或裏熱，表寒與裏熱同時存在的臨床表現。 / Clinical picture of exterior cold coexisting with interior heat (cold on the surface, heat internally).",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0108",
+        "type": "symptom",
+        "name": "心下有水氣 / water accumulation below the heart (epigastric water retention)",
+        "name_zh": "心下有水氣",
+        "name_en": "water accumulation below the heart (epigastric water retention)",
+        "description": "心下（胃脘）有水飲停聚，常致乾嘔、咳嗽或喉中癢。 / Water/drink accumulation in the epigastrium causing dry retching, cough, or throat irritation.",
+        "syndromes": [
+          "syn-0034"
+        ]
+      },
+      {
+        "id": "symp-0109",
+        "type": "symptom",
+        "name": "少腹滿 / lower abdominal fullness",
+        "name_zh": "少腹滿",
+        "name_en": "lower abdominal fullness",
+        "description": "少腹脹滿不舒，伴小便不利或水氣停聚。 / Fullness and distension in the lower abdomen, often with urinary difficulty or retained water.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0110",
+        "type": "symptom",
+        "name": "喉中如結 / sensation of a knot in the throat (globus)",
+        "name_zh": "喉中如結",
+        "name_en": "sensation of a knot in the throat (globus)",
+        "description": "喉中有異物感，似有東西結在喉中，影響吞咽或咳嗽。 / A sensation of a lump or knot in the throat (globus), interfering with swallowing or provoking cough.",
+        "syndromes": [
+          "syn-0033"
+        ]
+      },
+      {
+        "id": "symp-0111",
+        "type": "symptom",
+        "name": "咳嗽 / coughing",
+        "name_zh": "咳嗽",
+        "name_en": "coughing",
+        "description": "呼吸道刺激引起的咳嗽，可伴痰、喘等。 / Cough caused by respiratory tract irritation, may be accompanied by sputum or wheeze.",
+        "syndromes": [
+          "syn-0034",
+          "syn-0019",
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0112",
+        "type": "symptom",
+        "name": "表不解 / exterior not resolved",
+        "name_zh": "表不解",
+        "name_en": "exterior not resolved",
+        "description": "表證未解，惡寒、發熱等表象仍在，外邪未散。 / Exterior signs persist (aversion to cold, fever, etc.), indicating the exterior pathogen has not been released.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0113",
+        "type": "symptom",
+        "name": "微熱 / low-grade fever",
+        "name_zh": "微熱",
+        "name_en": "low-grade fever",
+        "description": "輕微的發熱，體溫略高但不達高熱。 / Mild elevation of body temperature; slight fever not reaching high fever.",
+        "syndromes": [
+          "syn-0034",
+          "syn-0047"
+        ]
+      },
+      {
+        "id": "symp-0114",
+        "type": "symptom",
+        "name": "不渴 / no thirst",
+        "name_zh": "不渴",
+        "name_en": "no thirst",
+        "description": "缺乏口渴感，常見於體內水飲盛時。 / Absence of thirst, often seen when internal fluids are abundant.",
+        "syndromes": [
+          "syn-0034",
+          "syn-0038",
+          "syn-0048",
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0115",
+        "type": "symptom",
+        "name": "脅痛 / hypochondriac pain",
+        "name_zh": "脅痛",
+        "name_en": "hypochondriac pain",
+        "description": "脅肋部位疼痛脹痛，常見於少陽證。 / Pain or distention in the hypochondriac region, commonly seen in Shaoyang patterns.",
+        "syndromes": [
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0116",
+        "type": "symptom",
+        "name": "吐出清白泡沫痰 / expectoration of clear white foamy sputum",
+        "name_zh": "吐出清白泡沫痰",
+        "name_en": "expectoration of clear white foamy sputum",
+        "description": "痰清白如泡沫，常見於寒飲內停之證。 / Clear white foamy sputum, typical of cold fluid retention.",
+        "syndromes": [
+          "syn-0034"
+        ]
+      },
+      {
+        "id": "symp-0117",
+        "type": "symptom",
+        "name": "吐痰影響臥位 / expectoration that prevents lying down",
+        "name_zh": "吐痰影響臥位",
+        "name_en": "expectoration that prevents lying down",
+        "description": "咳痰劇烈至不得臥，躺下即咳，坐不得睡。 / Expectoration and cough severe enough to prevent lying down; patient must sit up to breathe.",
+        "syndromes": [
+          "syn-0034"
+        ]
+      },
+      {
+        "id": "symp-0118",
+        "type": "symptom",
+        "name": "表寒 / exterior cold",
+        "name_zh": "表寒",
+        "name_en": "exterior cold",
+        "description": "表證以寒為主，惡寒、脈浮緊或浮緩等表層病象。 / Exterior pattern dominated by cold, marked by aversion to cold and floating pulse.",
+        "syndromes": [
+          "syn-0034"
+        ]
+      },
+      {
+        "id": "symp-0119",
+        "type": "symptom",
+        "name": "脈浮弱 / floating-weak pulse",
+        "name_zh": "脈浮弱",
+        "name_en": "floating-weak pulse",
+        "description": "脈浮而力量薄弱，示表邪猶在而正氣不足，屬太陽病外證未解之證候；治以解表發汗為主，原則上宜用桂枝湯，凡久病仍見此脈象仍以證取方。若兼微喘咳嗽，當用桂枝加厚朴杏仁湯等加減；切忌誤以攻下（下之為逆）或在尺脈遲微、下焦虛弱時強行發汗。 / A floating but weak pulse indicates an exterior pathogen still present with deficient upright qi — a Taiyang pattern of unresolved exterior; treatment aims to release the exterior by inducing sweat, typically with Gui Zhi Tang, and even in prolonged illness the formula is chosen by pattern. If there is slight panting or cough, modify to Gui Zhi Jia Hou Po Xing Ren Tang; do not use purgation or aggressive downward-draining therapies (downbearing causes reversal), and avoid forcing sweat when the chi (distal) pulse is slow or very weak, which indicates interior deficiency.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0064"
+        ]
+      },
+      {
+        "id": "symp-0120",
+        "type": "symptom",
+        "name": "微喘 / mild dyspnea",
+        "name_zh": "微喘",
+        "name_en": "mild dyspnea",
+        "description": "輕微氣促或呼吸短促，多見於表未解或喘咳未止之狀。 / Slight shortness of breath or mild wheezing, often occurring when the exterior is unresolved or cough persists.",
+        "syndromes": [
+          "syn-0019"
+        ]
+      },
+      {
+        "id": "symp-0121",
+        "type": "symptom",
+        "name": "脈濇 / choppy/rough pulse",
+        "name_zh": "脈濇",
+        "name_en": "choppy/rough pulse",
+        "description": "脈象扁而遲細，按之不流暢，常提示汗出不澈或津液不和。 / A flattened, slow and thin pulse that feels uneven on palpation, often indicating imperfect sweating or disharmony of body fluids.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0036",
+          "syn-0065"
+        ]
+      },
+      {
+        "id": "symp-0122",
+        "type": "symptom",
+        "name": "脈浮數 / floating-rapid pulse",
+        "name_zh": "脈浮數",
+        "name_en": "floating-rapid pulse",
+        "description": "脈位浮而數，表熱兼外證未解，見於表證尚在且有熱象者。 / Pulse that is floating and rapid, seen when the exterior is present with signs of heat.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0037",
+          "syn-0032",
+          "syn-0047"
+        ]
+      },
+      {
+        "id": "symp-0123",
+        "type": "symptom",
+        "name": "汗出不澈 / imperfect sweating",
+        "name_zh": "汗出不澈",
+        "name_en": "imperfect sweating",
+        "description": "汗出但不暢或表未完全解，病邪未盡而表氣怫鬱。 / Sweating that is incomplete or not thorough, indicating the exterior pathogen has not been fully released.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0036"
+        ]
+      },
+      {
+        "id": "symp-0124",
+        "type": "symptom",
+        "name": "自衄 / spontaneous epistaxis (nosebleed)",
+        "name_zh": "自衄",
+        "name_en": "spontaneous epistaxis (nosebleed)",
+        "description": "不由外傷而自發的鼻衄，多見於陽熱亢盛或陽氣上迫者。 / Spontaneous nosebleed not caused by trauma, often seen with exuberant yang or upward rush of qi and blood.",
+        "syndromes": [
+          "syn-0032",
+          "syn-0015",
+          "syn-0059"
+        ]
+      },
+      {
+        "id": "symp-0125",
+        "type": "symptom",
+        "name": "偏頭痛 / unilateral headache (migraine-like)",
+        "name_zh": "偏頭痛",
+        "name_en": "unilateral headache (migraine-like)",
+        "description": "一側頭痛或脈絡局限性劇痛，與少陽或半表半裏證相絡。 / Pain localized to one side of the head, often associated with Shaoyang or mixed exterior-interior patterns.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0126",
+        "type": "symptom",
+        "name": "印堂痛 / glabellar pain",
+        "name_zh": "印堂痛",
+        "name_en": "glabellar pain",
+        "description": "位於兩眉間印堂處的疼痛，為陽明上衝或腸胃熱向上擾動之象。 / Pain located at the glabella (between the eyebrows), often reflecting upward disturbance of stomach heat or Yangming disorder.",
+        "syndromes": [
+          "syn-0027"
+        ]
+      },
+      {
+        "id": "symp-0127",
+        "type": "symptom",
+        "name": "脈濇按之扁 / flattened choppy pulse",
+        "name_zh": "脈濇按之扁",
+        "name_en": "flattened choppy pulse",
+        "description": "指濇脈扁平不流暢，壓之扁，提示汗出不澈或脈象濁澀。 / A choppy (se) pulse that feels flattened and not flowing, suggesting imperfect sweating or turbid pulse quality.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0128",
+        "type": "symptom",
+        "name": "面色緣緣正赤 / bright red facial flush",
+        "name_zh": "面色緣緣正赤",
+        "name_en": "bright red facial flush",
+        "description": "面色紅潤且邊緣鮮明，為陽氣郁於表而上衝之象。 / A bright red facial complexion with clear border, indicating yang qi constrained at the surface and rushing upward.",
+        "syndromes": [
+          "syn-0036"
+        ]
+      },
+      {
+        "id": "symp-0129",
+        "type": "symptom",
+        "name": "尺中脈微 / feeble pulse at chi (deep/weak at wrist-southern position)",
+        "name_zh": "尺中脈微",
+        "name_en": "feeble pulse at chi (deep/weak at wrist-southern position)",
+        "description": "尺中脈微表下焦或腎精不足，按之微弱乃裏虛之象。 / A feeble pulse at the chi position indicating lower burner or kidney deficiency and interior vacuity.",
+        "syndromes": [
+          "syn-0037"
+        ]
+      },
+      {
+        "id": "symp-0130",
+        "type": "symptom",
+        "name": "脈微細 / fine-weak pulse",
+        "name_zh": "脈微細",
+        "name_en": "fine-weak pulse",
+        "description": "脈象細小而微弱，常見於陰陽兩虛或津液不足後的脈象。 / Pulse is thin and weak, often seen in combined yin-yang deficiency or after fluid depletion.",
+        "syndromes": [
+          "syn-0028",
+          "syn-0049",
+          "syn-0027"
+        ]
+      },
+      {
+        "id": "symp-0131",
+        "type": "symptom",
+        "name": "脈沉微 / deep-faint pulse",
+        "name_zh": "脈沉微",
+        "name_en": "deep-faint pulse",
+        "description": "脈沉而細微，按之難覺，常見於陽虛或臟腑深處病勢。 / Pulse is deep and faint, hard to perceive on palpation; commonly indicates yang deficiency or deep-organ pathology.",
+        "syndromes": [
+          "syn-0038",
+          "syn-0028"
+        ]
+      },
+      {
+        "id": "symp-0132",
+        "type": "symptom",
+        "name": "脈沉遲 / deep-slow pulse",
+        "name_zh": "脈沉遲",
+        "name_en": "deep-slow pulse",
+        "description": "脈象沉而遲澀，代表病在裡且有寒證或氣血虛損。 / Pulse that is deep and slow, indicating interior location and cold or qi/blood depletion.",
+        "syndromes": [
+          "syn-0040"
+        ]
+      },
+      {
+        "id": "symp-0133",
+        "type": "symptom",
+        "name": "四肢末端疼痛 / distal limb pain",
+        "name_zh": "四肢末端疼痛",
+        "name_en": "distal limb pain",
+        "description": "四肢末端（手足）疼痛，發汗後常見的末梢疼痛表現。 / Pain in the distal parts of the limbs (hands/feet), a distal aching often seen after excessive sweating.",
+        "syndromes": [
+          "syn-0040"
+        ]
+      },
+      {
+        "id": "symp-0134",
+        "type": "symptom",
+        "name": "心下悸 / epigastric palpitation",
+        "name_zh": "心下悸",
+        "name_en": "epigastric palpitation",
+        "description": "心下部或臍下有跳動感或悸動，按壓可緩解，常見於發汗過多後。 / Sensation of palpitations or pounding beneath the epigastrium/umbilicus, sometimes relieved by pressing; often follows excessive sweating.",
+        "syndromes": [
+          "syn-0041",
+          "syn-0048",
+          "syn-0055"
+        ]
+      },
+      {
+        "id": "symp-0135",
+        "type": "symptom",
+        "name": "叉手自冒心 / pressing chest with hands/urge to press epigastrium",
+        "name_zh": "叉手自冒心",
+        "name_en": "pressing chest with hands/urge to press epigastrium",
+        "description": "患者用手叉於胸前欲按壓心下以求舒緩的不適姿勢或衝動。 / The urge or action of clutching the chest/epigastrium with the hands to relieve discomfort.",
+        "syndromes": [
+          "syn-0041",
+          "syn-0076"
+        ]
+      },
+      {
+        "id": "symp-0136",
+        "type": "symptom",
+        "name": "臍下悸 / lower-abdominal palpitation",
+        "name_zh": "臍下悸",
+        "name_en": "lower-abdominal palpitation",
+        "description": "臍下或下腹有跳動感，欲作奔豚的先兆。 / Palpitation or throbbing beneath the umbilicus, a precursor to the 'running piglet' sensation (bentun).",
+        "syndromes": [
+          "syn-0042"
+        ]
+      },
+      {
+        "id": "symp-0137",
+        "type": "symptom",
+        "name": "奔豚 / running-piglet (bentun) sensation",
+        "name_zh": "奔豚",
+        "name_en": "running-piglet (bentun) sensation",
+        "description": "一種劇烈向上衝動的腹下跳動及不安感，古方描述下焦水上衝之象。 / A forceful upward surging movement from the lower abdomen with restlessness, classical sign of lower burner water rushing upward.",
+        "syndromes": [
+          "syn-0042",
+          "syn-0075"
+        ]
+      },
+      {
+        "id": "symp-0138",
+        "type": "symptom",
+        "name": "虛脹 / deficient abdominal distention",
+        "name_zh": "虛脹",
+        "name_en": "deficient abdominal distention",
+        "description": "腹脹但按之喜按、伴有放屁多、為脾胃虛弱與腸氣盛所致。 / Abdominal distention with preference for pressure, excessive flatus, due to spleen-stomach deficiency with trapped intestinal gas.",
+        "syndromes": [
+          "syn-0043"
+        ]
+      },
+      {
+        "id": "symp-0139",
+        "type": "symptom",
+        "name": "實脹 / excess abdominal distention",
+        "name_zh": "實脹",
+        "name_en": "excess abdominal distention",
+        "description": "腹脹拒按，常由實邪如燥屎或食積阻塞所致，按天樞可痛。 / Abdominal distention with resistance to pressure, caused by excess accumulation such as hardened stool or food retention.",
+        "syndromes": [
+          "syn-0043"
+        ]
+      },
+      {
+        "id": "symp-0140",
+        "type": "symptom",
+        "name": "心下逆滿 / epigastric counterflow fullness",
+        "name_zh": "心下逆滿",
+        "name_en": "epigastric counterflow fullness",
+        "description": "心下（上腹）逆滿悶脹不舒，常見於吐下傷胃後水飲停聚。 / A sense of counterflow fullness and oppression in the epigastrium, often seen after vomiting/diarrhea with retained fluids.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0141",
+        "type": "symptom",
+        "name": "氣上衝胸 / qi rushing to the chest",
+        "name_zh": "氣上衝胸",
+        "name_en": "qi rushing to the chest",
+        "description": "氣上逆衝及胸，伴胸悶或呼吸受限，常伴頭眩。 / Qi counterflow rising into the chest, causing chest oppression or dyspnea and often accompanied by dizziness.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0142",
+        "type": "symptom",
+        "name": "頭眩 / vertigo/dizziness",
+        "name_zh": "頭眩",
+        "name_en": "vertigo/dizziness",
+        "description": "起坐或移動時出現的天旋地轉或頭暈目眩。 / Spinning vertigo or dizziness on standing or movement.",
+        "syndromes": [
+          "syn-0046",
+          "syn-0047",
+          "syn-0055",
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0143",
+        "type": "symptom",
+        "name": "脈沉緊 / deep-tense pulse",
+        "name_zh": "脈沉緊",
+        "name_en": "deep-tense pulse",
+        "description": "脈沉而緊，常見有寒飲或水飲內停之象。 / A deep and tight pulse, often indicating internal cold or retained water.",
+        "syndromes": [
+          "syn-0046"
+        ]
+      },
+      {
+        "id": "symp-0144",
+        "type": "symptom",
+        "name": "身體震顫 / body tremor/shaking",
+        "name_zh": "身體震顫",
+        "name_en": "body tremor/shaking",
+        "description": "全身或局部顫抖，因中膈水飲晃動或津液不足而生。 / Generalized or localized trembling caused by shifting of fluids in the diaphragm region or fluid depletion.",
+        "syndromes": [
+          "syn-0046",
+          "syn-0055",
+          "syn-0060"
+        ]
+      },
+      {
+        "id": "symp-0145",
+        "type": "symptom",
+        "name": "胃中乾 / dryness of the stomach",
+        "name_zh": "胃中乾",
+        "name_en": "dryness of the stomach",
+        "description": "胃中津液不足，口渴、胃燥、煩躁等表現。 / Depletion of gastric fluids presenting with thirst, gastric dryness, and irritability.",
+        "syndromes": [
+          "syn-0047"
+        ]
+      },
+      {
+        "id": "symp-0146",
+        "type": "symptom",
+        "name": "嗳氣放屁 / eructation and flatus",
+        "name_zh": "嗳氣放屁",
+        "name_en": "eructation and flatus",
+        "description": "頻繁打嗝與排氣，為腹部脹氣排泄之象，多見於虛脹。 / Frequent belching and passage of gas, a sign of venting intestinal gas often seen in deficient abdominal distention.",
+        "syndromes": [
+          "syn-0043",
+          "syn-0053"
+        ]
+      },
+      {
+        "id": "symp-0147",
+        "type": "symptom",
+        "name": "痰多 / copious sputum",
+        "name_zh": "痰多",
+        "name_en": "copious sputum",
+        "description": "痰量多，咳吐頻繁，常見於痰飲或肺熱化痰。 / Large amounts of sputum with frequent expectoration, seen in phlegm-fluid retention or lung-heat producing sputum.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0148",
+        "type": "symptom",
+        "name": "肺熱 / lung heat",
+        "name_zh": "肺熱",
+        "name_en": "lung heat",
+        "description": "肺燥熱或肺部發炎之象，伴咳嗽、黃稠痰、喘促等。 / Heat in the lungs or pulmonary inflammation, accompanying cough, yellow sticky sputum, and wheeze.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0149",
+        "type": "symptom",
+        "name": "無大熱 / absence of high fever",
+        "name_zh": "無大熱",
+        "name_en": "absence of high fever",
+        "description": "有發汗或胸悶但未見高熱，臨床提示表虛或肺熱不重。 / Sweating or chest symptoms without high fever, suggesting superficial deficiency or less severe pulmonary heat.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0150",
+        "type": "symptom",
+        "name": "津液傷損 / fluid depletion",
+        "name_zh": "津液傷損",
+        "name_en": "fluid depletion",
+        "description": "因過度發汗或藥力過強致體液津傷、口渴、體虛等表現。 / Loss of body fluids due to excessive sweating or overly strong dispersing medicines, resulting in thirst and deficiency symptoms.",
+        "syndromes": [
+          "syn-0040",
+          "syn-0055"
+        ]
+      },
+      {
+        "id": "symp-0151",
+        "type": "symptom",
+        "name": "不惡寒但熱 / heat without aversion to cold",
+        "name_zh": "不惡寒但熱",
+        "name_en": "heat without aversion to cold",
+        "description": "患者不怕冷而感到身熱，為實熱或陽明內熱之象。 / Patient feels heat without aversion to cold, indicating excess heat or internal Yangming heat.",
+        "syndromes": [
+          "syn-0027"
+        ]
+      },
+      {
+        "id": "symp-0152",
+        "type": "symptom",
+        "name": "煩渴 / irritability with great thirst",
+        "name_zh": "煩渴",
+        "name_en": "irritability with great thirst",
+        "description": "煩躁口渴，欲飲大量冷水，常見於陽明大熱與白虎證。 / Restlessness with intense thirst and desire to drink large amounts of cold water, seen in Yangming or Baihu patterns.",
+        "syndromes": [
+          "syn-0027",
+          "syn-0067"
+        ]
+      },
+      {
+        "id": "symp-0153",
+        "type": "symptom",
+        "name": "小便淡白 / pale dilute urine",
+        "name_zh": "小便淡白",
+        "name_en": "pale dilute urine",
+        "description": "小便淡白清稀，提示虛脹或水飲內停。 / Pale, dilute urination suggesting deficient distention or water retention.",
+        "syndromes": [
+          "syn-0043"
+        ]
+      },
+      {
+        "id": "symp-0154",
+        "type": "symptom",
+        "name": "小便黃 / dark-yellow urine",
+        "name_zh": "小便黃",
+        "name_en": "dark-yellow urine",
+        "description": "小便色澤黃濃，提示內實或熱證（實脹候）。 / Dark yellow concentrated urine indicating internal excess or heat (seen in excess abdominal distention).",
+        "syndromes": [
+          "syn-0043",
+          "syn-0049",
+          "syn-0047"
+        ]
+      },
+      {
+        "id": "symp-0155",
+        "type": "symptom",
+        "name": "大汗出後欲飲水 / desire to sip water after profuse sweating",
+        "name_zh": "大汗出後欲飲水",
+        "name_en": "desire to sip water after profuse sweating",
+        "description": "大汗出後胃乾、煩躁而想少量多次進水，以和胃氣為治。 / After profuse sweating, with gastric dryness and agitation, patient desires small sips of water repeatedly to harmonize stomach qi.",
+        "syndromes": [
+          "syn-0041",
+          "syn-0047"
+        ]
+      },
+      {
+        "id": "symp-0156",
+        "type": "symptom",
+        "name": "消渴 / inability to quench thirst (unquenchable thirst)",
+        "name_zh": "消渴",
+        "name_en": "inability to quench thirst (unquenchable thirst)",
+        "description": "喝再多水仍覺口渴，水不能化為津液，常見於發汗後或水停表面的證候。 / Persistent thirst despite drinking; fluids are not transformed into body fluids, often after sweating or when water is trapped at the body surface.",
+        "syndromes": [
+          "syn-0047",
+          "syn-0052"
+        ]
+      },
+      {
+        "id": "symp-0157",
+        "type": "symptom",
+        "name": "飲水則吐 / vomiting when ingesting water",
+        "name_zh": "飲水則吐",
+        "name_en": "vomiting when ingesting water",
+        "description": "病人飲水即吐，常見於表裏不和或水逆證，表示水不能下受或被上逆。 / Vomiting immediately after drinking water, seen in disharmony of exterior and interior or 'water reversal' patterns, indicating fluids cannot be received or descend.",
+        "syndromes": [
+          "syn-0047",
+          "syn-0052",
+          "syn-0045"
+        ]
+      },
+      {
+        "id": "symp-0158",
+        "type": "symptom",
+        "name": "虛煩不得眠 / restless agitation with insomnia (deficiency vexation)",
+        "name_zh": "虛煩不得眠",
+        "name_en": "restless agitation with insomnia (deficiency vexation)",
+        "description": "發汗吐下或溫病後，津液不足導致的心煩不安、夜間難眠。 / Agitation and inability to sleep due to fluid/ Yin deficiency after sweating, vomiting, or warm-disease convalescence.",
+        "syndromes": [
+          "syn-0049",
+          "syn-0050",
+          "syn-0053"
+        ]
+      },
+      {
+        "id": "symp-0159",
+        "type": "symptom",
+        "name": "少氣 / shortness of breath/low energy (shaoqi)",
+        "name_zh": "少氣",
+        "name_en": "shortness of breath/low energy (shaoqi)",
+        "description": "氣虛或中焦受阻導致的氣短或乏力感。 / Shortness of breath or low energy due to qi deficiency or obstruction of the middle jiao.",
+        "syndromes": [
+          "syn-0048",
+          "syn-0050"
+        ]
+      },
+      {
+        "id": "symp-0160",
+        "type": "symptom",
+        "name": "四肢無力 / limb weakness (weak limbs)",
+        "name_zh": "四肢無力",
+        "name_en": "limb weakness (weak limbs)",
+        "description": "四肢乏力、無力活動，常見於氣虛或虛煩後期。 / Weakness of the limbs, reduced strength for activity, commonly seen with qi deficiency or convalescence after illness.",
+        "syndromes": [
+          "syn-0048",
+          "syn-0049",
+          "syn-0050"
+        ]
+      },
+      {
+        "id": "symp-0161",
+        "type": "symptom",
+        "name": "心中懊惱 / chest vexation/inner agitation",
+        "name_zh": "心中懊惱",
+        "name_en": "chest vexation/inner agitation",
+        "description": "心中煩悶、不安，常表現為胸悶或惱怒。 / Inner vexation or irritability manifested as chest oppression or mental agitation.",
+        "syndromes": [
+          "syn-0049"
+        ]
+      },
+      {
+        "id": "symp-0162",
+        "type": "symptom",
+        "name": "臥起不安 / unrest on lying and rising",
+        "name_zh": "臥起不安",
+        "name_en": "unrest on lying and rising",
+        "description": "患者在臥或起時感到不安、翻來覆去、難以安寢。 / Restlessness when lying down or rising, with tossing and inability to settle during sleep.",
+        "syndromes": [
+          "syn-0053"
+        ]
+      },
+      {
+        "id": "symp-0163",
+        "type": "symptom",
+        "name": "結實 / focal binding/impaction",
+        "name_zh": "結實",
+        "name_en": "focal binding/impaction",
+        "description": "腸內局部結塊或結實，導致局部脹滿或通行不暢。 / Localized hardening or binding in the intestines causing focal fullness and impaired passage.",
+        "syndromes": [
+          "syn-0053"
+        ]
+      },
+      {
+        "id": "symp-0164",
+        "type": "symptom",
+        "name": "腸胃虛寒 / gastrointestinal cold deficiency",
+        "name_zh": "腸胃虛寒",
+        "name_en": "gastrointestinal cold deficiency",
+        "description": "胃腸陽氣不足，寒凝於中，見腹脹、食少、舌苔薄白、脈微弱等。 / Deficiency cold of the stomach and intestines with reduced digestive warmth, presenting with fullness, poor appetite, thin white coating, and weak pulse.",
+        "syndromes": [
+          "syn-0054",
+          "syn-0049",
+          "syn-0028"
+        ]
+      },
+      {
+        "id": "symp-0165",
+        "type": "symptom",
+        "name": "化膿瘡 / suppurated ulcer",
+        "name_zh": "化膿瘡",
+        "name_en": "suppurated ulcer",
+        "description": "皮膚或組織已化膿、膿液流出的瘡瘍狀態，不宜發汗。 / A sore or ulcer that has suppurated with pus discharge; sweating is contraindicated.",
+        "syndromes": [
+          "syn-0058"
+        ]
+      },
+      {
+        "id": "symp-0166",
+        "type": "symptom",
+        "name": "小便濃濁 / turbid urine",
+        "name_zh": "小便濃濁",
+        "name_en": "turbid urine",
+        "description": "小便色濁如膏，有可能伴有黏稠或異味，提示下焦濕熱或膿血。 / Urine that is turbid or milky, suggesting lower burner damp-heat or purulent/seminal leakage.",
+        "syndromes": [
+          "syn-0057"
+        ]
+      },
+      {
+        "id": "symp-0167",
+        "type": "symptom",
+        "name": "血尿 / hematuria",
+        "name_zh": "血尿",
+        "name_en": "hematuria",
+        "description": "小便帶血或出血性小便，為淋家或下焦實熱、結石等病理所致。 / Blood in the urine, seen in strangury, stones, or lower burner heat and injury.",
+        "syndromes": [
+          "syn-0057",
+          "syn-0072"
+        ]
+      },
+      {
+        "id": "symp-0168",
+        "type": "symptom",
+        "name": "面色蒼白 / pale complexion",
+        "name_zh": "面色蒼白",
+        "name_en": "pale complexion",
+        "description": "面色蒼白、唇色淡薄，提示血虛或失血後的體虛狀態。 / Pale facial complexion and thin lip color, indicating blood deficiency or post-bleeding depletion.",
+        "syndromes": [
+          "syn-0060"
+        ]
+      },
+      {
+        "id": "symp-0169",
+        "type": "symptom",
+        "name": "恍惚心亂 / mental confusion and disorientation",
+        "name_zh": "恍惚心亂",
+        "name_en": "mental confusion and disorientation",
+        "description": "神志恍惚、心緒紊亂、注意力不集中，常因津液虧損或陽虛而生。 / Mental cloudiness, agitation, and disorientation often due to fluid depletion or yang deficiency.",
+        "syndromes": [
+          "syn-0061"
+        ]
+      },
+      {
+        "id": "symp-0170",
+        "type": "symptom",
+        "name": "小便短赤 / short red urination",
+        "name_zh": "小便短赤",
+        "name_en": "short red urination",
+        "description": "小便短少而色赤，提示膀胱下焦有熱或腸胃傳熱於膀胱。 / Scanty, short, and reddish urination indicating heat in the bladder or transmitted heat from the intestines.",
+        "syndromes": [
+          "syn-0061",
+          "syn-0072"
+        ]
+      },
+      {
+        "id": "symp-0171",
+        "type": "symptom",
+        "name": "振振欲擗地 / head-heavy staggering",
+        "name_zh": "振振欲擗地",
+        "name_en": "head-heavy staggering",
+        "description": "頭重腳輕、欲仆地或搖動不穩的眩暈狀態，多見於浮陽上亢與陰重。 / A sensation of head heaviness and staggering with instability, often from floating yang rising and relatively heavy yin.",
+        "syndromes": [
+          "syn-0055"
+        ]
+      },
+      {
+        "id": "symp-0172",
+        "type": "symptom",
+        "name": "微煩 / slight vexation",
+        "name_zh": "微煩",
+        "name_en": "slight vexation",
+        "description": "輕微的煩躁不安，常見於病後虛熱或虛寒兼見時。 / Mild irritability or vexation often seen after illness when residual deficiency heat or cold remains.",
+        "syndromes": [
+          "syn-0054",
+          "syn-0065",
+          "syn-0068"
+        ]
+      },
+      {
+        "id": "symp-0173",
+        "type": "symptom",
+        "name": "汗出不解 / sweating without resolution",
+        "name_zh": "汗出不解",
+        "name_en": "sweating without resolution",
+        "description": "發汗後汗出仍未解表，病情未能解除，常伴虛熱或水飲內停。 / Persistent sweating after inducing sweat without resolving the exterior, with ongoing symptoms often due to deficiency heat or internal water accumulation.",
+        "syndromes": [
+          "syn-0055",
+          "syn-0028"
+        ]
+      },
+      {
+        "id": "symp-0174",
+        "type": "symptom",
+        "name": "心煩 / heart vexation/mental agitation",
+        "name_zh": "心煩",
+        "name_en": "heart vexation/mental agitation",
+        "description": "胸中或心中煩躁不安，表現為心神不寧、焦慮或易怒。 / Mental agitation centered in the chest or heart, presenting as unease, anxiety, or irritability.",
+        "syndromes": [
+          "syn-0053"
+        ]
+      },
+      {
+        "id": "symp-0175",
+        "type": "symptom",
+        "name": "吐蚘 / vomiting of worms",
+        "name_zh": "吐蚘",
+        "name_en": "vomiting of worms",
+        "description": "吐蚘：吐出寄生蟲或蟲卵的證候。多見於胃中虛寒或腸胃內容腐敗化生蟲時，患者多有胃脘寒冷、噁心嘔吐、食少或不欲食、脈沉細或虛等表現。病機為胃中寒濕或津液虛少，使蟲卵孵化或蟲體蘇生並隨嘔吐出來；臨床常見於感冒後或誤用發汗、攻下等法，致胃陽受損、津液耗傷、裏寒大盛而生蟲。治療要點以溫中回陽、補益津液、清化腸胃、解毒滅蟲為主，常用乾薑以溫胃、甘草以解毒調中，必要時溫裏救陽（如四逆湯）或和解營衛（如桂枝湯），局部可用殺蟲藥如巴椒（蜀椒）。註：此證與胃中寒冷、胃津不足密切相關，常見於發汗或攻下後虛寒耗傷胃陽之情形。 / Vomiting of worms: a TCM pattern in which parasites or worm ova are expelled by vomiting. It commonly occurs when the stomach is cold or when spoiled intestinal material generates parasites; patients often have gastric coldness, nausea and vomiting, poor appetite or aversion to food, and a sinking or deficient pulse. Pathomechanism: cold and deficient stomach yang with depleted gastric fluids permits eggs to hatch or parasites to become active and be vomited; this often follows colds or mistaken use of diaphoresis or purgation that injures stomach qi and exhausts fluids, producing interior cold. Treatment principles are to warm the middle and restore yang, replenish fluids, clear and detoxify the gut and kill parasites — e.g. dried ginger to warm the stomach, licorice to detoxify and harmonize, warming rescue formulas (Si Ni Tang) or harmonizing formulas (Guizhi Tang) as indicated, and antiparasitic herbs such as Sichuan pepper. Note: this symptom is closely linked to a cold stomach and weakened gastric fluids, especially after sweating or purgation that depletes stomach yang.",
+        "syndromes": [
+          "syn-0015",
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0176",
+        "type": "symptom",
+        "name": "胃中寒 / coldness in the stomach",
+        "name_zh": "胃中寒",
+        "name_en": "coldness in the stomach",
+        "description": "胃中寒：感覺胃內寒冷、胃脘痞冷或澀痛，伴隨食慾不振、消化吸收差，常見噁心、想吐或嘔吐（有時吐出蟲蚘），大便清稀、食入即下（清穀不止）或脘腹冷痛，手足冰冷，脈沉細或沉遲，舌淡白。病因常為腸胃素體虛寒或外邪處理次序錯誤（先發汗或誤攻下）致津液虧虛、裏寒加重；津液虛寒時為蟲卵孳生提供條件，故常見吐蚘。臨床應與腸熱、陽明實熱（大便臭、熱象）鑑別。治法以溫中回陽、救裏止瀉為主（如四逆湯類溫裡方；遇桂枝湯證改用乾薑以助回陽），並可用甘草解百毒、以辛溫藥溫胃、必要時用巴椒等殺蟲藥；若有胃腸積滯伴輕度不下可用調胃承氣以通十二指腸積滯，但凡辨證重在溫裡回陽、補津止瀉與驅蟲。 / Coldness in the stomach: a sensation of chill or coldness localized to the epigastrium with a cold, distended or constricted feeling; accompanied by poor appetite, reduced digestion and absorption, nausea or retching, sometimes vomiting (including expectoration of worms), loose watery stools or passage of undigested food (continuous clearing of grains), cold abdominal pain, cold hands and feet, and a deep thin or slow pulse with a pale white tongue. Etiology is usually intrinsic spleen–stomach yang deficiency or injury to stomach fluids after incorrect treatment order (e.g., sweating first or mistaken purgation) leading to depleted gastric fluids and increased interior cold; such cold, debilitated gastric conditions permit parasite egg hatching and thus vomiting of worms. Differentiate from intestinal heat/yangming heat (foul stools, febrile signs). Treatment principle is to warm the middle and restore yang, rescue the interior and stop diarrhea (e.g., warming decoctions like SiNiTang type for interior rescue; in GuizhiTang patterns replace fresh ginger with dried ginger to warm), use licorice to detoxify and clear harmful substances in the gut, employ pungent‑warm herbs to warm the stomach, and when indicated use antiparasitic herbs such as Sichuan pepper. If there is mild retained stagnation in the duodenum, a gentle purgative like Tiaowei Chengqi Tang may be used; overall management emphasizes warming the interior, restoring fluids and yang, arresting diarrhea, and addressing parasites when present.",
+        "syndromes": [
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0177",
+        "type": "symptom",
+        "name": "血弱氣虛 / blood-deficiency with qi deficiency",
+        "name_zh": "血弱氣虛",
+        "name_en": "blood-deficiency with qi deficiency",
+        "description": "血量不足、氣力衰弱的狀態，表現為面色蒼白、疲倦、易感冒等虛弱征象。 / State of blood deficiency and qi weakness, presenting with pale complexion, fatigue, and increased susceptibility to illness.",
+        "syndromes": [
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0178",
+        "type": "symptom",
+        "name": "脅下痞硬 / hypochondriac/subcostal hardness (xiexia pi ying)",
+        "name_zh": "脅下痞硬",
+        "name_en": "hypochondriac/subcostal hardness (xiexia pi ying)",
+        "description": "脅下或胸脅下方觸及的結節性或堅硬不移的抵抗物，伴胸脅脹滿或疼痛。 / A palpable, often hard focal resistance under the costal margin or hypochondrium, associated with hypochondriac fullness or pain.",
+        "syndromes": [
+          "syn-0035",
+          "syn-0064",
+          "syn-0068"
+        ]
+      },
+      {
+        "id": "symp-0179",
+        "type": "symptom",
+        "name": "腹中痛 / abdominal pain (epigastric/central)",
+        "name_zh": "腹中痛",
+        "name_en": "abdominal pain (epigastric/central)",
+        "description": "中腹或胃區疼痛，可因寒滯、氣滯或熱邪而起，常影響食慾與排便。 / Pain in the central abdomen or epigastrium, caused by cold stagnation, qi stagnation, or heat, often affecting appetite and bowel function.",
+        "syndromes": [
+          "syn-0035",
+          "syn-0065"
+        ]
+      },
+      {
+        "id": "symp-0180",
+        "type": "symptom",
+        "name": "默默不欲食 / reduced appetite/silent anorexia",
+        "name_zh": "默默不欲食",
+        "name_en": "reduced appetite/silent anorexia",
+        "description": "食慾不振，面無表情、不願進食，多見於半表半裏的少陽邪結。 / Marked loss of appetite with listlessness or lack of interest in eating, common in Shaoyang patterns with intercostal/lymphatic congestion.",
+        "syndromes": [
+          "syn-0035",
+          "syn-0064"
+        ]
+      },
+      {
+        "id": "symp-0181",
+        "type": "symptom",
+        "name": "心煩喜嘔 / vexation with marked nausea",
+        "name_zh": "心煩喜嘔",
+        "name_en": "vexation with marked nausea",
+        "description": "心胸煩悶並伴有欲嘔或嘔吐，有時食物難以下嚥，見於少陽證或胸脅鬱結。 / Mental agitation or chest vexation accompanied by strong nausea or retching, sometimes with impaired swallowing; typical of Shaoyang congestion.",
+        "syndromes": [
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0182",
+        "type": "symptom",
+        "name": "振慄 / shivering with tremors",
+        "name_zh": "振慄",
+        "name_en": "shivering with tremors",
+        "description": "身體顫抖、發冷且伴有短促顫栗，常見於表未解或氣血不足時。 / Shivering with tremors and chills, often seen when the exterior is unresolved or with qi-blood deficiency.",
+        "syndromes": [
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0183",
+        "type": "symptom",
+        "name": "脈陰陽俱微 / both pulses (yin and yang) faint",
+        "name_zh": "脈陰陽俱微",
+        "name_en": "both pulses (yin and yang) faint",
+        "description": "尺寸兩部脈均微弱不明，表示表證消失而中焦虛弱或氣血不足。 / Both the yin and yang positions (deep and superficial) show faint pulses, indicating disappearance of the exterior pulse with mid-body deficiency or qi-blood insufficiency.",
+        "syndromes": [
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0184",
+        "type": "symptom",
+        "name": "營弱衛強 / weak ying, strong wei (ying weak wei strong)",
+        "name_zh": "營弱衛強",
+        "name_en": "weak ying, strong wei (ying weak wei strong)",
+        "description": "營血虛而衛氣相對較強，導致汗出但營血不能充足支撐的證候。 / Weak nutritive (ying) blood with relatively stronger defensive (wei) qi, leading to sweating while nutritive blood is insufficient to support function.",
+        "syndromes": [
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0185",
+        "type": "symptom",
+        "name": "表裏俱虛 / exterior and interior both deficient",
+        "name_zh": "表裏俱虛",
+        "name_en": "exterior and interior both deficient",
+        "description": "表證未能與裏證同時恢復，表裏氣血俱虛，常見於發汗與攻下交錯後的虛弱狀態。 / Both the exterior and interior are deficient concurrently, seen after inappropriate sequence of sweating and purgation leading to generalized qi-blood weakness.",
+        "syndromes": [
+          "syn-0015"
+        ]
+      },
+      {
+        "id": "symp-0186",
+        "type": "symptom",
+        "name": "煩熱 / vexation with high fever",
+        "name_zh": "煩熱",
+        "name_en": "vexation with high fever",
+        "description": "高熱伴煩躁、口渴的症狀，屬陽明熱類型。 / High fever accompanied by irritability and thirst, characteristic of Yangming heat.",
+        "syndromes": [
+          "syn-0062"
+        ]
+      },
+      {
+        "id": "symp-0187",
+        "type": "symptom",
+        "name": "下重 / prolapse/heaviness after defecation",
+        "name_zh": "下重",
+        "name_en": "prolapse/heaviness after defecation",
+        "description": "大便後肛門不能收回或脫垂感，常見於攻下過度後。 / Sensation of prolapse or heaviness after defecation, inability of the anus to retract, often following excessive purgation.",
+        "syndromes": [
+          "syn-0045"
+        ]
+      },
+      {
+        "id": "symp-0188",
+        "type": "symptom",
+        "name": "噦 / hiccup/belching (yue)",
+        "name_zh": "噦",
+        "name_en": "hiccup/belching (yue)",
+        "description": "吞氣或打嗝的反射，代表胃氣失和或胃氣衰竭。 / Hiccup or belching reflex indicating disharmony or failure of stomach qi.",
+        "syndromes": [
+          "syn-0045"
+        ]
+      },
+      {
+        "id": "symp-0189",
+        "type": "symptom",
+        "name": "手足溫 / warm hands and feet",
+        "name_zh": "手足溫",
+        "name_en": "warm hands and feet",
+        "description": "手足溫熱，為陽明熱或裡熱證候之一。 / Warmth of the hands and feet, a sign often seen in Yangming or interior heat patterns.",
+        "syndromes": [
+          "syn-0064",
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0190",
+        "type": "symptom",
+        "name": "胃陰虛 / stomach-yin deficiency",
+        "name_zh": "胃陰虛",
+        "name_en": "stomach-yin deficiency",
+        "description": "胃津不足，口渴但胃虛，消化不良、心下痞等並見。 / Deficiency of stomach yin with inadequate fluids, presenting with thirst, poor digestion, and epigastric obstruction.",
+        "syndromes": [
+          "syn-0063"
+        ]
+      },
+      {
+        "id": "symp-0191",
+        "type": "symptom",
+        "name": "面目及身黃 / facial and body jaundice",
+        "name_zh": "面目及身黃",
+        "name_en": "facial and body jaundice",
+        "description": "面部及全身呈現黃染，示脾失運化或陽黃膽證之分別。 / Yellow discoloration of face and body, suggesting spleen transport failure or yang (bilious) jaundice depending on quality.",
+        "syndromes": [
+          "syn-0064"
+        ]
+      },
+      {
+        "id": "symp-0192",
+        "type": "symptom",
+        "name": "噁心 / nausea",
+        "name_zh": "噁心",
+        "name_en": "nausea",
+        "description": "惡心、想吐的感覺，為胃氣不和或少陽症狀之一。 / Sensation of nausea or inclination to vomit, often due to stomach qi disharmony or a Shaoyang symptom.",
+        "syndromes": [
+          "syn-0035"
+        ]
+      },
+      {
+        "id": "symp-0193",
+        "type": "symptom",
+        "name": "脈結代 / intermittent-knotted pulse (jie dai)",
+        "name_zh": "脈結代",
+        "name_en": "intermittent-knotted pulse (jie dai)",
+        "description": "脈象結而代，節律不整，時有停滯，多見於心脾虛或痰火阻絡。 / Pulse that is knotted and intermittent, irregular rhythm with pauses; often seen in heart or spleen deficiency or phlegm-heat obstruction.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0194",
+        "type": "symptom",
+        "name": "日晡發潮熱 / tidal fever in late afternoon",
+        "name_zh": "日晡發潮熱",
+        "name_en": "tidal fever in late afternoon",
+        "description": "午後黃昏時段陣發性的潮熱，常見於陽明傳熱或中焦熱積。 / Paroxysmal tidal fever occurring in late afternoon (around 3–5 pm), often seen with Yangming heat or heat accumulation in the middle jiao.",
+        "syndromes": [
+          "syn-0070"
+        ]
+      },
+      {
+        "id": "symp-0195",
+        "type": "symptom",
+        "name": "舌紅中帶紫 / tongue red with purple center",
+        "name_zh": "舌紅中帶紫",
+        "name_en": "tongue red with purple center",
+        "description": "舌體以紅色為主，舌中帶有紫色瘀斑，提示血瘀或瘀血內阻。 / Tongue that is predominantly red with purple discoloration in the center, suggesting blood stasis or internal stasis.",
+        "syndromes": [
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0196",
+        "type": "symptom",
+        "name": "舌有齒痕 / teeth-marked tongue",
+        "name_zh": "舌有齒痕",
+        "name_en": "teeth-marked tongue",
+        "description": "舌邊有牙齒壓痕，常見於脾氣虛弱或循環不良。 / Tongue with teeth impressions on the edges, commonly seen with spleen qi deficiency or poor circulation.",
+        "syndromes": [
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0197",
+        "type": "symptom",
+        "name": "膈俞痛 / pain at Geshu (Geshu point pain)",
+        "name_zh": "膈俞痛",
+        "name_en": "pain at Geshu (Geshu point pain)",
+        "description": "督脈膈俞穴位（第七胸椎旁一寸半）有壓痛，為瘀血或胸膈相關病變的體表徵象。 / Tenderness at the Geshu (T7, 1.5 cun lateral) point, a surface sign suggesting blood stasis or pathology related to the chest/diaphragm.",
+        "syndromes": [
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0198",
+        "type": "symptom",
+        "name": "血海痛 / Xuehai point pain",
+        "name_zh": "血海痛",
+        "name_en": "Xuehai point pain",
+        "description": "足太陰脾經血海穴（膝上）有壓痛，常與血絡不暢或瘀血有關。 / Tenderness at the Xuehai (SP10) point on the spleen channel, often associated with impaired blood circulation or blood stasis.",
+        "syndromes": [
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0199",
+        "type": "symptom",
+        "name": "三陰交痛 / Sanyinjiao point pain",
+        "name_zh": "三陰交痛",
+        "name_en": "Sanyinjiao point pain",
+        "description": "三陰交（內踝上）有壓痛，常見於婦科瘀血或少腹病變。 / Tenderness at Sanyinjiao (SP6) above the medial malleolus, commonly seen in gynecological blood stasis or lower abdominal disorders.",
+        "syndromes": [
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0200",
+        "type": "symptom",
+        "name": "腹部青紫 / abdominal ecchymoses/blue‑purple patches",
+        "name_zh": "腹部青紫",
+        "name_en": "abdominal ecchymoses/blue‑purple patches",
+        "description": "腹部可見青紫斑塊或瘀斑，提示局部瘀血或出血後色素沉著。 / Blue‑purple patches or ecchymoses on the abdomen, indicating local blood stasis or post‑hemorrhagic discoloration.",
+        "syndromes": [
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0201",
+        "type": "symptom",
+        "name": "口渴而不欲飲 / thirst without desire to drink",
+        "name_zh": "口渴而不欲飲",
+        "name_en": "thirst without desire to drink",
+        "description": "患者口乾但不願或不欲飲水，見於瘀血阻滯或熱極傷津的情況。 / Dry mouth with little desire to drink, seen with blood stasis obstructing circulation or severe heat damaging fluids.",
+        "syndromes": [
+          "syn-0071"
+        ]
+      },
+      {
+        "id": "symp-0202",
+        "type": "symptom",
+        "name": "咽爛 / throat erosion/ulceration",
+        "name_zh": "咽爛",
+        "name_en": "throat erosion/ulceration",
+        "description": "咽部黏膜潰爛、灼痛或糜爛，常見於熱傷津液或劇烈炎症。 / Erosive or ulcerative changes of the pharyngeal mucosa with soreness, often due to heat injuring fluids or severe inflammation.",
+        "syndromes": []
+      },
+      {
+        "id": "symp-0203",
+        "type": "symptom",
+        "name": "頭汗出 / head-only sweating",
+        "name_zh": "頭汗出",
+        "name_en": "head-only sweating",
+        "description": "僅頭部出汗而四肢無汗，為浮陽或津液局部失衡之象。 / Sweating confined to the head while the rest of the body is dry, a sign of floating yang or localized fluid imbalance.",
+        "syndromes": [
+          "syn-0074",
+          "syn-0076"
+        ]
+      },
+      {
+        "id": "symp-0204",
+        "type": "symptom",
+        "name": "捻衣摸床 / picking at clothes and bedding",
+        "name_zh": "捻衣摸床",
+        "name_en": "picking at clothes and bedding",
+        "description": "病人反覆捻衣、摸床邊，為神志混亂或津竭近乎抽搐的行為表現。 / Repetitive picking at clothes or bedding, indicating mental confusion or near‑exhaustion of bodily fluids with restless movements.",
+        "syndromes": [
+          "syn-0074",
+          "syn-0075"
+        ]
+      },
+      {
+        "id": "symp-0205",
+        "type": "symptom",
+        "name": "燥屎 / dried hard stools (desiccated feces)",
+        "name_zh": "燥屎",
+        "name_en": "dried hard stools (desiccated feces)",
+        "description": "腸中乾結的糞便，顏色暗黑或乾硬，不易排出，常見於陽明燥熱或久積實熱。 / Desiccated, hard feces that are dark or dry and difficult to pass, commonly seen with Yangming dryness-heat or prolonged interior heat.",
+        "syndromes": [
+          "syn-0005"
+        ]
+      },
+      {
+        "id": "symp-0206",
+        "type": "symptom",
+        "name": "熱結膀胱 / heat accumulation in bladder",
+        "name_zh": "熱結膀胱",
+        "name_en": "heat accumulation in bladder",
+        "description": "膀胱中有熱結、尿短赤或血尿等表現，伴少腹拘急及小便不利。 / Heat accumulation within the bladder manifested by scanty red urine or hematuria, lower abdominal tension, and urinary difficulty.",
+        "syndromes": [
+          "syn-0072"
+        ]
+      },
+      {
+        "id": "symp-0207",
+        "type": "symptom",
+        "name": "驚煩 / fright‑induced agitation",
+        "name_zh": "驚煩",
+        "name_en": "fright‑induced agitation",
+        "description": "因驚嚇或陽浮所致的煩躁不安、驚惶或類似近狂的表現。 / Agitation and restlessness due to fright or floating yang, presenting as panic‑like or near‑manic behavior.",
+        "syndromes": [
+          "syn-0073",
+          "syn-0074"
+        ]
+      },
+      {
+        "id": "symp-0208",
+        "type": "symptom",
+        "name": "燙傷 / thermal burn injury",
+        "name_zh": "燙傷",
+        "name_en": "thermal burn injury",
+        "description": "皮膚被熱力傷及，出現水泡、紅腫或皮膚組織損傷並伴瘙癢疼痛。 / Thermal injury to the skin with blisters, erythema, tissue damage, and associated pain and irritation.",
+        "syndromes": [
+          "syn-0074"
+        ]
+      },
+      {
+        "id": "symp-0209",
+        "type": "symptom",
+        "name": "便秘 / constipation / constipation",
+        "name_zh": "便秘 / constipation",
+        "name_en": "constipation",
+        "description": "大便乾結不通，排便困難，常見於陽明實熱或血虛津傷。 / Dry, difficult bowel movements with inability to pass stool, commonly due to Yangming excess-heat or fluid/blood deficiency.",
+        "syndromes": [
+          "syn-0005",
+          "syn-0027",
+          "syn-0066",
+          "syn-0068"
+        ]
+      },
+      {
+        "id": "symp-0210",
+        "type": "symptom",
+        "name": "少腹拘急 / lower abdominal acute tension / lower abdominal tenseness/acute lower abdominal tension",
+        "name_zh": "少腹拘急 / lower abdominal acute tension",
+        "name_en": "lower abdominal tenseness/acute lower abdominal tension",
+        "description": "小腹中極關元一帶緊繃、刺痛或繃緊，見於膀胱熱結或瘀血阻滯。 / Acute tenseness or rigidity in the lower abdomen (around Zhongji/Guan yuan), seen with bladder heat accumulation or blood stasis obstructing the pelvis.",
+        "syndromes": [
+          "syn-0072"
+        ]
+      },
+      {
+        "id": "symp-0211",
+        "type": "symptom",
+        "name": "不可轉側 / inability to turn in bed / inability to turn over in bed",
+        "name_zh": "不可轉側 / inability to turn in bed",
+        "name_en": "inability to turn over in bed",
+        "description": "病人因全身沉重、痠痛或抽搐而無法自行翻身，見於極度虛弱或全身拘急情況。 / Patient cannot turn over in bed due to heaviness, stiffness, or weakness; seen in severe weakness or generalized rigidity.",
+        "syndromes": [
+          "syn-0073"
+        ]
+      },
+      {
+        "id": "symp-0212",
+        "type": "symptom",
+        "name": "小便利者可治 / small urine with treatable prognosis / small amount of urine with treatable prognosis",
+        "name_zh": "小便利者可治 / small urine with treatable prognosis",
+        "name_en": "small amount of urine with treatable prognosis",
+        "description": "在重症中若仍有小便通利，代表元陽未盡，可望轉機與治療成功。 / In severe cases, presence of some urinary output indicates residual yuan yang and a better prognosis; patient is still treatable.",
+        "syndromes": [
+          "syn-0074"
+        ]
+      },
+      {
+        "id": "symp-0213",
+        "type": "symptom",
+        "name": "吐血 / hematemesis / vomiting blood",
+        "name_zh": "吐血",
+        "name_en": "hematemesis / vomiting blood",
+        "description": "自口中吐出血液的症狀。 / Vomiting blood (hematemesis).",
+        "syndromes": [
+          "syn-0004",
+          "syn-0077",
+          "syn-0074"
+        ]
+      },
+      {
+        "id": "symp-0214",
+        "type": "symptom",
+        "name": "便血 / hematochezia / blood in stools",
+        "name_zh": "便血",
+        "name_en": "hematochezia / blood in stools",
+        "description": "大便中帶有血液的表現。 / Blood in stools (hematochezia).",
+        "syndromes": [
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0215",
+        "type": "symptom",
+        "name": "腰以下重而痺 / lower-body heaviness with numbness",
+        "name_zh": "腰以下重而痺",
+        "name_en": "lower-body heaviness with numbness",
+        "description": "腰以下肢體沉重且感覺痺麻，常見於陽上亢、水停下焦之證。 / Heaviness and numbness below the waist, often seen when yang rises and fluids stagnate inferiorly.",
+        "syndromes": [
+          "syn-0077",
+          "syn-0074"
+        ]
+      },
+      {
+        "id": "symp-0216",
+        "type": "symptom",
+        "name": "脈微數 / fine-rapid pulse (thin and rapid)",
+        "name_zh": "脈微數",
+        "name_en": "fine-rapid pulse (thin and rapid)",
+        "description": "脈微數：脈象既微又數，屬虛熱之象；忌用灸法（含艾灸、溫針）。因火為邪，加灸易致火入裏動煩，追虛逐實，血散脈中、出血及傷津耗液，久則焦骨傷筋，病情反重難復。 / Fine‑rapid pulse: a thin (weak) yet rapid pulse indicating deficient‑heat. Moxibustion (including warming needles) is contraindicated because added fire acts as a pathogenic factor that can be driven inward, producing vexation and internal counteraction, dispersal of blood from the vessels and bleeding, depletion of fluids, and eventual injury to bone and sinews; the heat may worsen and the condition become difficult to reverse.",
+        "syndromes": [
+          "syn-0004"
+        ]
+      },
+      {
+        "id": "symp-0217",
+        "type": "symptom",
+        "name": "到經不解 / illness not resolving by expected time",
+        "name_zh": "到經不解",
+        "name_en": "illness not resolving by expected time",
+        "description": "病程在應解的時限內未見好轉或解表的現象。 / Illness fails to resolve within the expected time window for release (e.g., not resolving by sixth/seventh day).",
+        "syndromes": [
+          "syn-0004",
+          "syn-0077"
+        ]
+      },
+      {
+        "id": "symp-0218",
+        "type": "symptom",
+        "name": "盜汗 / night sweating / spontaneous nocturnal sweating",
+        "name_zh": "盜汗",
+        "name_en": "night sweating / spontaneous nocturnal sweating",
+        "description": "夜間無故出汗，屬陰虛或營衛失調之證候。 / Nocturnal spontaneous sweating, often indicating yin deficiency or ying‑wei disharmony.",
+        "syndromes": [
+          "syn-0076"
+        ]
+      }
+    ],
+    "syndromes": [
+      {
+        "id": "syn-0001",
+        "type": "syndrome",
+        "name": "大陷胸證 / Da Xian Xiong pattern (Great Collapsed Chest)",
+        "name_zh": "大陷胸證",
+        "name_en": "Da Xian Xiong pattern (Great Collapsed Chest)",
+        "description": "大陷胸證為《傷寒論》所載之急重實證，屬傷寒經方學中因痰飲、熱結或實邪壅阻胸中、夾阻中焦而致氣機不得下降之閉阻症候。病機多為痰飲互結化熱，或熱迫液聚，痰熱夾阻胸膈、心下，使氣機上逆或停滯不下，兼及水飲壅滯致氣血運行受阻。臨床以心下痞滿、胸悶或胸部壓迫感、氣不得下、咳吐黃稠痰、喘促、形體沉重、發熱、口渴口苦、便閉或燥結為主，舌紅多見黃厚或黃膩苔，脈多滑數或沉實有力。於六經辨證框架中屬實邪閉阻之重證，需與虛寒、陰虛或氣虛所致之類似胸悶症狀相鑑別。現代影像及臨床上可對應為胸腹腔之水腫或積液、胰周或胸腹腔炎性滲出（如急性胰腺炎合併滲出、胸腹腔積液/edema）等表現。治則以峻下逐飲、瀉熱消結、通利胸下閉阻為要，常採短程大劑量速攻以通關阻，但必須在有經驗之中醫師辨證施治並嚴密監護，注意脫水、電解質失衡、腎功能惡化與藥物毒性等併發症；孕婦、年老體弱、兒童及氣血虛或陰虛發熱者禁或慎用。臨床加減可配宣化理氣藥如厚朴、枳實以助氣機下行與化痰，但凡用須以“實邪閉阻”為前提，治療期間密切觀察排便、尿量、生命徵象與實驗室指標，出現劇烈腹痛、持續嘔吐、意識改變或急性腎功能等異常應停藥並轉西醫急救處理。 / Da Xian Xiong (Great Collapsed Chest) is an acute, severe replete pattern recorded in the Shanghan Lun. It arises when phlegm-fluid, congealed heat, or vigorous pathogenic repletion obstructs the chest and middle burner so qi cannot descend. Pathomechanism: phlegm and fluid intermix and congeal with heat, or heat drives fluid to aggregate, producing phlegm-heat that blocks the chest and epigastrium and forces qi upward or prevents its downward movement; water accumulation further impairs circulation. Clinically characterized by epigastric/under-chest fullness (xinxia pi), chest oppression or pressure, inability of qi to descend, coughing up thick yellow sputum, dyspnea or rapid breathing, sense of heaviness, fever, thirst or bitter taste, and constipation or dry stools. Tongue often red with yellow thick or yellow-greasy coating; pulse slippery-rapid or submerged and forceful. Within the six-channel differentiation framework this is a true replete obstruction and must be distinguished from xu patterns such as cold deficiency, yin deficiency, or qi/blood deficiency. Modern correlates include pleural/abdominal fluid collections, inflammatory edema or exudates around the pancreas (e.g., acute pancreatitis with peripancreatic/pleuroperitoneal effusion). Treatment principle: vigorous purgation to drain phlegm-fluid, clear heat and open the chest (jun xia zhu yin, qing re xiao jie). Therapy is usually a short-course, relatively large-dose, rapid-acting purgative approach and requires experienced clinicians, close monitoring for dehydration, electrolyte disturbance, renal impairment and herb toxicity. Contraindicated or used with extreme caution in pregnancy, the frail, elderly, children, and those with qi/blood or yin deficiency. Adjunctive herbs that transform phlegm and promote qi descent (e.g., Hou Po, Zhi Shi) may be added when indicated, but only after confirming a true replete pattern; monitor bowel and urine output, vital signs and laboratory indices, and stop treatment and refer for emergency care if severe abdominal pain, persistent vomiting, altered consciousness or acute organ dysfunction occurs.",
+        "symptoms": [
+          "symp-0001",
+          "symp-0002",
+          "symp-0003",
+          "symp-0004",
+          "symp-0005",
+          "symp-0006",
+          "symp-0007",
+          "symp-0008",
+          "symp-0009"
+        ],
+        "herbal_treatments": "大陷胸湯（經方主方）：君藥大黃、臣藥芒硝、佐藥甘遂。大黃性苦寒，瀉下攻積、清熱破結、活血以通腑；芒硝性寒苦鹹，潤下軟堅、導瀉通便、助大黃潤下化痰；甘遂性寒苦咸，峻下逐水、消散痰飲膿液，驅逐胸中痰飲（藥性較峻猛且有毒性）。配伍要旨為大劑通腑以開閉阻，芒硝潤下助行，甘遂逐水散結以速除胸下阻滯。用法特色為短程大劑量、分次給服或以經驗醫師監護下使用，臨床可視需加厚朴、枳實等以宣化寬胸或化痰寬中，但不得在虛證或孕婦中使用。禁忌與注意事項：孕婦禁用；兒童、老年、氣血虛或陰虛者慎用或避免；施用期間應監測水電解質、腎功能、生命徵象、排便與尿量，防止脫水、電解質紊亂、腎功能惡化及藥物毒性，若有劇烈腹痛、持續嘔吐、意識混亂等立即停藥並就醫。 / Da Xian Xiong Tang (classical formula): core herbs are Da Huang (rhubarb), Mang Xiao (mirabilitum/sodium sulfate), and Gan Sui (kansui). Da Huang: cold bitter purgative that drains accumulations, clears heat, breaks up stagnation and opens the bowels; Mang Xiao: cold saline laxative that softens hard stools, draws water to the gut to facilitate downward discharge and assists in transforming phlegm-fluid; Gan Sui: very strong cold herb that expels water-phlegm and disperses accumulations in the chest (noted for potent action and toxicity). Formulation principle: use large-dose purgation to rapidly open the bowels and relieve chest obstruction, Mang Xiao to moisten and ease descent, Gan Sui to expel water-phlegm and dissolve masses. Administration characteristics: short-course, relatively large doses given with close supervision; some clinical modifications add Hou Po (Magnolia) or Zhi Shi (Aurantii) to promote qi descent and transform phlegm, but additions must respect the replete pattern and safety. Contraindications and precautions: contraindicated in pregnancy; use with extreme caution or avoid in children, the elderly, the frail, and those with qi/blood or yin deficiency. Monitor for dehydration, electrolyte disturbances, renal impairment and cardiovascular instability; check urine output, vital signs and relevant laboratory tests during treatment. Discontinue and obtain emergency care if severe abdominal pain, persistent vomiting, altered consciousness or other serious adverse signs occur."
+      },
+      {
+        "id": "syn-0002",
+        "type": "syndrome",
+        "name": "傷寒 / Shanghan (Cold Damage)",
+        "name_zh": "傷寒",
+        "name_en": "Shanghan (Cold Damage)",
+        "description": "廣義上指『傷於寒』之外感性急性病，張仲景以六經辨證（太陽、陽明、少陽、太陰、少陰、厥陰）為主的病機分類與治療原則。 / Broadly refers to externally contracted illnesses caused by cold. Zhang Zhongjing classified these using the Six Channels (Taiyang, Yangming, Shaoyang, Taiyin, Shaoyin, Jueyin) for diagnosis and treatment strategies.",
+        "symptoms": [
+          "symp-0033",
+          "symp-0052",
+          "symp-0035"
+        ],
+        "herbal_treatments": "經典方劑示例：麻黃湯、桂枝湯、白虎湯、小柴胡湯等。 / Example classic formulas: Ma Huang Tang (Ephedra Decoction), Gui Zhi Tang (Cinnamon Twig Decoction), Bai Hu Tang (White Tiger Decoction), Xiao Chai Hu Tang (Minor Bupleurum Decoction)."
+      },
+      {
+        "id": "syn-0003",
+        "type": "syndrome",
+        "name": "時疫 / Epidemic disease (Shiyi)",
+        "name_zh": "時疫",
+        "name_en": "Epidemic disease (Shiyi)",
+        "description": "指不論個人體質，感染後表現出相似群體性病證的外感病，常有同時期多人發病的特徵。 / Refers to epidemic external diseases that produce similar clinical manifestations across people regardless of individual constitution; commonly causes simultaneous outbreaks among many people.",
+        "symptoms": [],
+        "herbal_treatments": "處方思路與傷寒有重疊，但重視群體防治與解表清熱之法，常用經典解表或清疫方。 / Treatment approach overlaps with Shanghan but emphasizes epidemic control and formulas that release the exterior and clear epidemic toxins; classic formulas for resolving epidemics and clearing heat may be used."
+      },
+      {
+        "id": "syn-0004",
+        "type": "syndrome",
+        "name": "太陽病 / Taiyang pattern",
+        "name_zh": "太陽病",
+        "name_en": "Taiyang pattern",
+        "description": "太陽病為六經之一的表證，以脈浮、頭項強痛、惡寒為核心，常見發熱、或有汗、或無汗等不同表證。依汗出與津液狀態可分為中風（發熱汗出、脈緩）、傷寒（無汗、惡寒、脈緊）、溫病（發熱口渴、熱在表或裡）或風溫（自汗、身灼、津液耗傷）等類型。未及時解表，可向少陽、陽明等裏經傳入，出現裏熱或腑熱。臨床強調以汗解為主（宜慎用發汗法而非以火熏灸取汗）；嚴禁用溫針、灸或以火烘患者取汗，因火攻可致邪由表入裏，造成「火逆」（上煩煩躁、頭汗身不汗、舌咽燥）、病勢延遲不解（到經不解）、吐血或下血等危重證候。《辨太陽病》中多處警示：脈浮熱甚勿灸，微數脈勿灸（虛熱忌灸），發汗應先見煩而後自汗，發汗過度或火熏可致陽浮、津液耗傷與心悸奔豚。總結：太陽證以發汗解表為首要原則，對有虛熱、津液不足或脈象提示內熱者慎用或禁用灸法，按證選方和補益生津以防裏熱與火逆。 / The Taiyang pattern is an exterior syndrome of the Six Channels characterized by a floating pulse, nape/neck stiffness, headache and aversion to cold, often with fever and either presence or absence of sweat. It is subclassified by sweating and fluid status into Zhongfeng (wind-strike: fever with sweating, slow pulse), Shanghan (cold-damage: aversion to cold, no sweat, tight pulse), Wenbing (warm-disease: fever with thirst) or Fengwen (wind-warmth: spontaneous sweating, body burning, fluid depletion). If untreated it may transmit inward to Shaoyang or Yangming producing interior or bowel heat. Clinical principle is to resolve the exterior by inducing sweat; do not substitute with moxibustion/warming needles (fire-application), because applying heat can drive the pathogen inward and cause 'fire reversal' (huo ni) — manifested by agitation, head sweating with body dryness, thirst, delayed course ('daojing bujie'), hematemesis or hematochezia and other severe signs. Textual cautions: when the pulse is floating with marked heat do not moxibust; a fine‑rapid (micro‑rapid) pulse indicates xu-heat and also contraindicates moxibustion. Sweating therapy should be controlled (often vexation precedes spontaneous sweating); excessive sweating or fire‑application risks consuming jin/fluids, producing floating yang, heart vexation and complex inward patterns. In short: use sweating to release the Taiyang exterior, avoid fire‑based methods when there is xu or signs of internal heat, and treat progression to Shaoyang/Yangming according to their patterns while protecting fluids.",
+        "symptoms": [
+          "symp-0010",
+          "symp-0011",
+          "symp-0012",
+          "symp-0013",
+          "symp-0035",
+          "symp-0053",
+          "symp-0037",
+          "symp-0182",
+          "symp-0183",
+          "symp-0213",
+          "symp-0214",
+          "symp-0020",
+          "symp-0060",
+          "symp-0086",
+          "symp-0217",
+          "symp-0216",
+          "symp-0081"
+        ],
+        "herbal_treatments": "常用方：麻黃湯（無汗、表實兼寒者，以發汗散寒）；桂枝湯（有汗或營衛不和者，以解表和營衛）。溫病或風溫重在益津養液，處方中可加生津藥如沙參、麥冬、生地等，並避免過度發汗或以火熏、溫針取汗。若病勢傳入少陽、陽明，依證加用小柴胡湯或承氣類、白虎類攻裏清熱生津之劑。臨床禁忌與處理：嚴禁用灸或溫針強行取汗（可致火逆、煩躁、到經不解、吐血、下血、奔豚等）；遇火逆或燙針煩躁、頭汗身不汗、脈浮熱盛者，可酌用桂枝加桂湯以振發逼散腸中濁氣，或用桂苓甘草龍骨牡蠣湯等安神鎮陽、生津除煩，並以茯苓利水以助中焦氣化（劑量與加減依證）。 / Common formulas: Ma Huang Tang (Ephedra Decoction) — for exterior cold without sweating to induce sweat and disperse cold; Gui Zhi Tang (Cinnamon Twig Decoction) — for exterior disorders with sweating or ying‑wei disharmony to harmonize. For wenbing or wind‑warmth prioritize fluid‑nourishing and yin‑enriching herbs (e.g., shashen/Glehnia, maidong/Ophiopogon, shengdi/Rehmannia) to protect jin/fluids and avoid excessive induced sweating or local heating. If the disorder transmits to Shaoyang or Yangming, treat per pattern (e.g., Xiao Chaihu Tang for Shaoyang; Chengqi‑type or Bai Hu Tang for Yangming) and add draining/clearing formulas as appropriate. Contraindications and special measures: avoid moxibustion or warming needles to force sweat — fire‑application can cause 'fire reversal' (huo ni) with agitation, head‑only sweating and body dryness, delayed resolution, hematemesis or hematochezia, and other severe signs. In such fire‑reversal or post‑thermal agitation states clinicians may consider guizhi jiagui tang (pinyin) to strongly mobilize yang and disperse intestinal turbidity, or guilinggancao longgu muli tang (pinyin) to calm vexation, settle floating yang and support fluids; add fuling (poria) to resolve retained water when indicated. Dosage and choice must follow the specific pulse and symptom picture and always protect jin/fluids."
+      },
+      {
+        "id": "syn-0005",
+        "type": "syndrome",
+        "name": "陽明病 / Yangming pattern",
+        "name_zh": "陽明病",
+        "name_en": "Yangming pattern",
+        "description": "六經之一，屬裡實熱位，常見高熱、大渴、煩躁、實滿便秘、脈洪大等陽明熱象。 / A Six Channels pattern representing interior excess heat; commonly presents with high fever, great thirst, irritability, abdominal fullness with constipation, and a large flooding pulse.",
+        "symptoms": [
+          "symp-0018",
+          "symp-0019",
+          "symp-0020",
+          "symp-0021",
+          "symp-0022",
+          "symp-0205",
+          "symp-0087",
+          "symp-0102",
+          "symp-0023",
+          "symp-0209"
+        ],
+        "herbal_treatments": "常用方：白虎湯、大承氣湯等清熱瀉實方。 / Common formulas: Bai Hu Tang (White Tiger Decoction), Da Cheng Qi Tang (Major Order the Qi Decoction) for clearing heat and draining excess."
+      },
+      {
+        "id": "syn-0006",
+        "type": "syndrome",
+        "name": "少陽病 / Shaoyang pattern",
+        "name_zh": "少陽病",
+        "name_en": "Shaoyang pattern",
+        "description": "六經之一，病位在半表半裡，症見往來寒熱、胸脅苦滿、默默不欲飲食、口苦咽乾、脈弦。 / One of the Six Channels; a half-exterior, half-interior disorder characterized by alternating chills and fever, chest and hypochondriac fullness, poor appetite, bitter taste in the mouth, dry throat, and a wiry pulse.",
+        "symptoms": [
+          "symp-0014",
+          "symp-0015",
+          "symp-0016",
+          "symp-0017"
+        ],
+        "herbal_treatments": "常用方：小柴胡湯等和解少陽方。 / Common formulas: Xiao Chai Hu Tang (Minor Bupleurum Decoction) for harmonizing Shaoyang."
+      },
+      {
+        "id": "syn-0007",
+        "type": "syndrome",
+        "name": "太陰病 / Taiyin pattern",
+        "name_zh": "太陰病",
+        "name_en": "Taiyin pattern",
+        "description": "六經之一，多與脾陽虛、痰飲內停有關，表現為腹滿、嘔吐、食少、體倦、便溏等。 / One of the Six Channels often associated with Spleen yang deficiency and internal retention of phlegm-fluid, presenting with abdominal fullness, vomiting, poor appetite, fatigue, and loose stools.",
+        "symptoms": [
+          "symp-0023",
+          "symp-0024",
+          "symp-0025",
+          "symp-0026",
+          "symp-0027"
+        ],
+        "herbal_treatments": "常用方：理中湯、參苓白術散等補脾暖中、化痰利濕方。 / Common formulas: Li Zhong Tang (Regulate the Middle Decoction), Shen Ling Bai Zhu San (Ginseng, Poria and Atractylodes Powder) to tonify the Spleen, warm the middle, and resolve dampness."
+      },
+      {
+        "id": "syn-0008",
+        "type": "syndrome",
+        "name": "少陰病 / Shaoyin pattern",
+        "name_zh": "少陰病",
+        "name_en": "Shaoyin pattern",
+        "description": "六經之一，與心腎虛寒或熱結有關，症狀可表現為畏寒肢冷、心下悸、睡不安或虛熱煩躁等。 / One of the Six Channels related to Heart and Kidney deficiency or internal imbalance; symptoms may include aversion to cold and cold extremities, palpitations, restless sleep, or false heat with irritability.",
+        "symptoms": [
+          "",
+          "symp-0029",
+          "symp-0030",
+          "symp-0031",
+          "symp-0020"
+        ],
+        "herbal_treatments": "常用方：參附湯、歸脾湯等補益心腎、溫養陽氣的方劑。 / Common formulas: Shen Fu Tang variants, Gui Pi Tang (Restore the Spleen Decoction) and other formulas to support Heart-Kidney and warm yang as appropriate."
+      },
+      {
+        "id": "syn-0009",
+        "type": "syndrome",
+        "name": "厥陰病 / Jueyin pattern",
+        "name_zh": "厥陰病",
+        "name_en": "Jueyin pattern",
+        "description": "六經之一，為病機最深且變化繁多之經，常見四肢厥冷、嘔逆、躁擾或熱象交錯等複雜表現。 / One of the Six Channels; often the deepest and most complex stage with varied presentations such as cold extremities, vomiting, agitation, or mixed heat-cold signs.",
+        "symptoms": [
+          "symp-0032",
+          "symp-0033",
+          "symp-0034"
+        ],
+        "herbal_treatments": "治療以復陰調營、和解變證為主，方用視病機而定，古方如烏梅丸、四逆湯等可視證選用。 / Treatment focuses on restoring Yin and harmonizing complex transformations; formula selection depends on the pattern. Example classical formulas that may be considered include Wu Mei Wan and Si Ni Tang (depending on manifestations)."
+      },
+      {
+        "id": "syn-0010",
+        "type": "syndrome",
+        "name": "中風 / Zhongfeng (wind attack)",
+        "name_zh": "中風",
+        "name_en": "Zhongfeng (wind attack)",
+        "description": "太陽病的一種表證類型，特徵為發熱、汗出、惡風及脈緩，表證有汗而不解者。 / A Taiyang exterior subtype characterized by fever, sweating, aversion to wind and a relaxed pulse; sweating may not relieve the illness.",
+        "symptoms": [
+          "symp-0036",
+          "symp-0037",
+          "symp-0038",
+          "symp-0039"
+        ],
+        "herbal_treatments": "常用桂枝湯類解表發汗劑以和營衛，必要時調補津液。 / Often treated with Guizhi-type formulas (e.g., Guizhi Tang) to harmonize ying and wei and induce sweating, with fluid-replenishing herbs as needed."
+      },
+      {
+        "id": "syn-0011",
+        "type": "syndrome",
+        "name": "溫病 / Wenbing (warm disease)",
+        "name_zh": "溫病",
+        "name_en": "Wenbing (warm disease)",
+        "description": "因先傷寒後轉熱證或因汗液大量流失而表現為發熱、口渴且不惡寒之溫熱病候。 / A warm-disease pattern arising after cold injury or substantial fluid loss, presenting with fever and thirst without aversion to cold.",
+        "symptoms": [
+          "symp-0036",
+          "symp-0019"
+        ],
+        "herbal_treatments": "以清熱、生津、滋陰為主，兼顧補液以防脫水。 / Treatment focuses on clearing heat and generating fluids (shengjin), nourishing yin and replenishing fluids to prevent dehydration."
+      },
+      {
+        "id": "syn-0012",
+        "type": "syndrome",
+        "name": "風溫 / Fengwen (wind-warmth)",
+        "name_zh": "風溫",
+        "name_en": "Fengwen (wind-warmth)",
+        "description": "風溫類型屬於太陽病中津液大損之表熱，表現為自汗出、身灼熱、脈浮以及身重嗜睡等。 / A wind-warmth variant of Taiyang with severe fluid loss presenting as spontaneous sweating, burning body sensation, floating pulse, heaviness and somnolence.",
+        "symptoms": [
+          "symp-0041",
+          "symp-0051",
+          "symp-0054",
+          "symp-0042",
+          "symp-0043",
+          "symp-0044",
+          "symp-0045",
+          "symp-0046",
+          "symp-0047",
+          "symp-0048",
+          "symp-0049",
+          "symp-0050"
+        ],
+        "herbal_treatments": "以解表並兼生津補液為要，並慎用發汗劑；常酌用滋陰生津藥。 / Treatment aims to release the exterior while nourishing fluids; use diaphoresis cautiously and include yin-nourishing, fluid-generating herbs."
+      },
+      {
+        "id": "syn-0013",
+        "type": "syndrome",
+        "name": "真寒假熱 / true cold, false heat",
+        "name_zh": "真寒假熱",
+        "name_en": "true cold, false heat",
+        "description": "表現為表面似熱而內裡實寒的證候，常見面頰鮮紅而呼吸不溫、脈浮數而無力等。 / A pattern in which the exterior appears hot while the interior is truly cold; often presents with bright cheeks, cool exhalation, and a floating-rapid yet forceless pulse.",
+        "symptoms": [
+          "symp-0057",
+          "symp-0049",
+          "symp-0062",
+          "symp-0063",
+          "symp-0064"
+        ],
+        "herbal_treatments": "視證而定，兼顧解表與溫里 / Treatment according to presentation, typically combining releasing the exterior and warming the interior."
+      },
+      {
+        "id": "syn-0014",
+        "type": "syndrome",
+        "name": "真熱假寒 / true heat, false cold",
+        "name_zh": "真熱假寒",
+        "name_en": "true heat, false cold",
+        "description": "表面顯示寒冷但裡熱甚重的證候，常見有四肢寒而胸腹熱、舌燥苔黃、脈沉細兼數急等。 / A pattern where the surface appears cold but interior heat is predominant; often shows cold extremities with warm chest/abdomen, dry-yellow tongue coating, and deep thin with rapid pulse.",
+        "symptoms": [
+          "symp-0049",
+          "symp-0065",
+          "symp-0066"
+        ],
+        "herbal_treatments": "視證而定，需同時清裡與護陰 / Treatment individualized; often requires clearing interior heat while protecting yin."
+      },
+      {
+        "id": "syn-0015",
+        "type": "syndrome",
+        "name": "桂枝湯證 / Gui Zhi Tang pattern",
+        "name_zh": "桂枝湯證",
+        "name_en": "Gui Zhi Tang pattern",
+        "description": "調和營衛、解表與固表，常用桂枝、甘草、生薑、大棗等；甘草能解百毒，助清腸胃之惡物。 / Harmonizes ying and wei, releases the exterior and secures the exterior; commonly includes Guizhi, Gan Cao, Sheng Jiang, and Da Zao; Gan Cao helps 'detoxify' and clear harmful intestinal substances.",
+        "symptoms": [
+          "symp-0011",
+          "symp-0036",
+          "symp-0037",
+          "symp-0038",
+          "symp-0067",
+          "symp-0069",
+          "symp-0068",
+          "symp-0070",
+          "symp-0071",
+          "symp-0075",
+          "symp-0024",
+          "symp-0049",
+          "symp-0119",
+          "symp-0123",
+          "symp-0122",
+          "symp-0035",
+          "symp-0121",
+          "symp-0041",
+          "symp-0124",
+          "symp-0175",
+          "symp-0176",
+          "symp-0177",
+          "symp-0184",
+          "symp-0142",
+          "symp-0185"
+        ],
+        "herbal_treatments": "桂枝、甘草、生薑、大棗 / Guizhi (Cinnamon Twig), Gan Cao (Licorice), Sheng Jiang (Fresh Ginger), Da Zao (Jujube)"
+      },
+      {
+        "id": "syn-0016",
+        "type": "syndrome",
+        "name": "桂枝加葛根湯證 / Gui Zhi Jia Ge Gen Tang pattern",
+        "name_zh": "桂枝加葛根湯證",
+        "name_en": "Gui Zhi Jia Ge Gen Tang pattern",
+        "description": "桂枝加葛根湯證屬太陽表證，特徵為項背強急（頸背肌肉拘緊、活動受限）、頭痛、發熱、汗出、惡風或惡寒兼見者。病機為風邪束肌，致肌中水液凝滯不能升散，停滯於項背則肌肉拘緊；同時營衛不調，陽氣上擠，外有汗出但肌裏仍有凝滯之水。方以葛根升提肌中水氣以舒解項背拘急，桂枝發散肌表以助汗解肌，白芍和桂枝調和營衛、緩急止痛，炙甘草、生薑、大棗補助固表和中。臨床要點：用湯劑、火候偏大以取其發散性；葛根份量較重以達項背；服後應溫覆以促微汗，汗出不宜過甚；若脈浮而緊、無汗者屬表寒實束，不宜用此方（應慎用麻黃類方）；服藥並忌生冷粘滑、葷腥及酒酪等易損中焦者。 / Gui Zhi Jia Ge Gen Tang pattern is a Taiyang exterior disorder characterized by stiff neck and back (rigid, constrained cervical and dorsal muscles), headache, fever, sweating, and aversion to wind (sometimes alternating with chills). Pathomechanism: wind invasion constrains the muscle layer and causes retention/condensation of fluids in the muscles; retained muscle fluids produce rigidity of the nape and back while the ying-wei disharmony permits sweating but fails to resolve the trapped fluids. Ge Gen (kudzu root) is used to raise and mobilize the muscle-level fluids to relieve nape/back rigidity; Gui Zhi (cinnamon twig) disperses the muscle layer and promotes sweating; Bai Shao moderates and harmonizes ying and wei and relieves spasm; Zhi Gan Cao, Sheng Jiang and Da Zao support and protect the middle, preserve fluids and harmonize the formula. Clinical notes: use as a decoction with strong heat to favor dispersal; Ge Gen is used relatively heavy to reach the nape/back; after ingestion cover warmly to produce mild sweating but avoid profuse sweat; if the pulse is floating-tight with no sweating (true exterior cold), this formula is inappropriate (consider mahuang-based therapy); avoid raw/cold, greasy or irritating foods, alcohol and dairy while taking the formula.",
+        "symptoms": [
+          "symp-0012",
+          "symp-0044"
+        ],
+        "herbal_treatments": "方藥（代表劑型）：桂枝、白芍（等量）、葛根（較重）、炙甘草、生薑、大棗。作用分工：葛根升提肌中水液、解痺、通上部；桂枝發散肌表、壯心陽以助動脈推濶；白芍養血斂陰、緩急止痛、助靜脈回流；炙甘草和中緩急、補益津液；生薑回陽和胃、促腸胃蠕動；大棗補中益氣、保護腸胃津液。配伍要點：桂枝與白芍等量以調陰陽；葛根用量較桂枝增重以確保上達項背；煎法用大火取其氣，服後溫被促微汗，桂枝加葛根湯因葛根升陽較強故不須餐後啜粥；若汗出過多則應減量或停藥；如脈浮緊無汗屬表寒實，忌用此方，須改麻黃類方或按證變方；常見加減：扁桃腺或咽乾加連翹、銀花、浮萍、蟬蛻；面部中風或偏癱重用葛根并配針灸等。 / Formula (typical decoction): Gui Zhi (Cinnamon twig), Bai Shao (White peony) in equal amounts, Ge Gen (Kudzu root) in a heavier dose, Zhi Gan Cao (Honey-fried licorice), Sheng Jiang (Fresh ginger), Da Zao (Jujube). Roles: Ge Gen raises and mobilizes muscle-level fluids, relieves paralysis/bi and clears the upper region; Gui Zhi disperses the muscle layer and supports cardiac yang to promote circulation; Bai Shao nourishes blood, restrains yin, relieves spasm and assists venous return; Zhi Gan Cao harmonizes and moderates, protects qi and fluids; Sheng Jiang restores middle yang, stimulates GI motility and protects the stomach; Da Zao supplements the middle and secures fluids. Formulation notes: Gui Zhi and Bai Shao are equal to balance ying and wei; Ge Gen is used relatively heavier so the action reaches the nape/back; decoct with strong heat to favor dispersal; after dosing cover warmly to induce mild sweating — Gui Zhi Jia Ge Gen Tang, because of Ge Gen's strong ascending action, does not require drinking congee after the dose; reduce or stop if sweating is excessive. Contraindications: a floating-tight pulse without sweating indicates exterior cold and this formula is inappropriate (consider mahuang-type treatment or modify according to signs). Common modifications: add Lian Qiao and Jin Yin Hua etc. for tonsillitis; increase Ge Gen and combine with acupuncture for facial palsy or severe focal bi."
+      },
+      {
+        "id": "syn-0017",
+        "type": "syndrome",
+        "name": "桂枝加附子湯證 / Gui Zhi Jia Fu Zi Tang pattern",
+        "name_zh": "桂枝加附子湯證",
+        "name_en": "Gui Zhi Jia Fu Zi Tang pattern",
+        "description": "發汗過度或表虛兼裡虛，惡風，小便難，四肢微急，難以屈伸，需溫補腎陽以固表。 / After excessive sweating or combined exterior and interior deficiency: aversion to wind, difficulty urinating, slight limb cramps, inability to flex/extend; needs warming kidney yang and securing exterior.",
+        "symptoms": [
+          "symp-0046",
+          "symp-0038",
+          "symp-0080"
+        ],
+        "herbal_treatments": "方用桂枝、芍藥、炙甘草、生薑、大棗、炮附子。 / Formula includes Gui Zhi, Shao Yao, roasted Gan Cao, Sheng Jiang, Da Zao, and prepared Fu Zi (aconite)."
+      },
+      {
+        "id": "syn-0018",
+        "type": "syndrome",
+        "name": "桂枝去芍藥湯證 / Gui Zhi without Shao Yao Tang pattern",
+        "name_zh": "桂枝去芍藥湯證",
+        "name_en": "Gui Zhi without Shao Yao Tang pattern",
+        "description": "太陽病下後出現脈促、胸滿，主證在於血行回流不暢或心陽不足，去芍可避免血回流過快。 / After downward attack in Taiyang disease causing hurried pulse and chest fullness due to altered venous return or cardiac yang deficiency; removing Shao Yao slows venous return.",
+        "symptoms": [
+          "symp-0079",
+          "symp-0083",
+          "symp-0035"
+        ],
+        "herbal_treatments": "方用桂枝、炙甘草、生薑、大棗（去芍藥）。 / Formula uses Gui Zhi, roasted Gan Cao, Sheng Jiang, Da Zao (without Shao Yao)."
+      },
+      {
+        "id": "syn-0019",
+        "type": "syndrome",
+        "name": "桂枝加厚朴杏仁湯證 / Gui Zhi plus Hou Po and Xing Ren Tang pattern",
+        "name_zh": "桂枝加厚朴杏仁湯證",
+        "name_en": "Gui Zhi plus Hou Po and Xing Ren Tang pattern",
+        "description": "桂枝加厚朴杏仁湯為桂枝湯之變方，主治外證未解（太陽證未散）而兼喘咳者。臨床以脈浮、表未解或汗出不暢為本，常見咳嗽、微喘、氣短，痰多可為黃稠黏膩或為白沫性痰，舌苔多呈黃膩或白膩。病機多屬痰濕蘊肺或濕熱蘊肺，兼有表邪未解導致氣機不利。方以桂枝調和營衛、芍藥緩急和里、甘草大棗補益，生薑解表和胃；加厚朴以行氣燥濕、降逆利胸膈，杏仁以降氣止咳、潤肺化痰。主治要點：外證未解、脈浮或浮數、表裡夾痰、咳嗽氣喘、痰多（黃稠或白沫）、舌苔黃膩或白膩。禁忌：無表證而為真陰虧耗或純裏寒虛者慎用或禁用。 / Gui Zhi plus Hou Po and Xing Ren Tang is a modification of Gui Zhi Tang indicated when an exterior disorder remains unresolved (Taiyang pattern) with concurrent cough and mild wheezing. Typical findings: floating pulse, unresolved exterior or incomplete sweating, cough with mild dyspnea, sputum that may be thick yellow and greasy or white and foamy, and a yellow‑greasy or white‑greasy tongue coating. Pathomechanism: phlegm‑damp obstructing the Lung, sometimes with heat (damp‑heat) or mixed exterior disorder impeding qi movement. Actions of the formula: Gui Zhi harmonizes ying and wei; Shao Yao moderates and protects the interior; Gan Cao and Da Zao support and harmonize; Sheng Jiang releases the exterior; Hou Po dries damp, promotes qi movement and descends rebellious qi; Xing Ren descends lung qi, stops cough and moistens. Key clinical indications: unresolved exterior with cough/wheeze, floating pulse, profuse sticky sputum (yellow or white‑foamy), greasy tongue coating. Contraindicated in cases of true yin deficiency with dry cough or in patients without an exterior pattern.",
+        "symptoms": [
+          "symp-0006",
+          "symp-0074",
+          "symp-0076",
+          "symp-0073",
+          "symp-0120",
+          "symp-0111",
+          "symp-0106",
+          "symp-0038"
+        ],
+        "herbal_treatments": "方藥主治與應用要點：桂枝調和營衛，芍藥和里緩急，甘草大棗補中益氣以護正，生薑解表和胃；厚朴行氣燥濕、降逆利胸膈；杏仁降肺氣、潤肺止咳、化痰。臨床加減要點：若以痰熱為主、痰黃濃稠可合清熱化痰藥（例：黃芩、瓜蒌、貝母或連翹）；若以寒濕白沫痰為主可加溫化寒痰藥（例：半夏、乾薑）並重行氣；表虛或陰虛燥咳者宜慎用或酌加滋陰益肺藥。遵從仲景方劑精神，依脈證舌象與汗證輕重調整用藥。 / Herbal notes and clinical use: Actions—Gui Zhi harmonizes ying/wei; Shao Yao moderates and protects the interior; Gan Cao and Da Zao tonify and harmonize; Sheng Jiang releases the exterior and warms the middle; Hou Po moves qi, dries damp and descends rebellious qi; Xing Ren descends lung qi, moistens the lung, and stops cough. Modification tips: if phlegm‑heat predominates with thick yellow sputum, add heat‑clearing and phlegm‑transforming herbs (e.g., Huang Qin, Gua Lou, Bei Mu, Lian Qiao); if cold/dense white foamy phlegm predominates, add warm, phlegm‑transforming herbs (e.g., Ban Xia, Gan Jiang) and emphasize qi movement; if there is pronounced yin or interior deficient dryness, use cautiously or add yin‑nourishing herbs. Follow Zhang Zhongjing’s formulaic principles and adjust according to pulse, tongue, and the degree of exterior involvement."
+      },
+      {
+        "id": "syn-0020",
+        "type": "syndrome",
+        "name": "酒客病（胃受損） / alcohol habitué disorder (gastric injury)",
+        "name_zh": "酒客病（胃受損）",
+        "name_en": "alcohol habitué disorder (gastric injury)",
+        "description": "長期嗜酒導致胃陽不固、胃氣功能受損，舌苔多為濁膩或黃厚，易不耐甘溫濕膩藥物。 / Chronic heavy drinking damages stomach function and stomach yang, often with greasy/yellow tongue coating; patients poorly tolerate sweet, warm or viscous herbs such as jujube in Gui Zhi Tang.",
+        "symptoms": [
+          "symp-0073",
+          "symp-0072",
+          "symp-0024",
+          "symp-0016",
+          "symp-0025",
+          "symp-0075"
+        ],
+        "herbal_treatments": "宜用去濕兼清熱之劑，如葛根芩連湯等，避免含甘厚增濕藥物如紅棗之方。 / Use formulas that resolve dampness and clear heat (e.g., Ge Gen Qin Lian Tang); avoid sweets and viscous herbs like jujube that increase dampness."
+      },
+      {
+        "id": "syn-0021",
+        "type": "syndrome",
+        "name": "桂枝麻黃各半湯證 / Gui Zhi and Ma Huang Equal-Halves Tang pattern",
+        "name_zh": "桂枝麻黃各半湯證",
+        "name_en": "Gui Zhi and Ma Huang Equal-Halves Tang pattern",
+        "description": "表虛而汗不透，面色反熱、身癢、脈微緩欲愈或發作如瘧，需發微汗以解表。 / Exterior pattern where sweating is unresolved with flushed face, skin itching, and slight pulse relaxation; may present intermittent fever and chills—requires mild sweating to release the exterior.",
+        "symptoms": [
+          "symp-0077",
+          "symp-0036"
+        ],
+        "herbal_treatments": "藥用桂枝、麻黃並行，並配芍藥、甘草、生薑、大棗、杏仁以兼顧潤肺與補中。 / Uses equal parts Gui Zhi and Ma Huang with Shao Yao, Gan Cao, Sheng Jiang, Da Zao, and Xing Ren to release the exterior while supporting fluids."
+      },
+      {
+        "id": "syn-0022",
+        "type": "syndrome",
+        "name": "桂枝二麻黃一湯證 / Gui Zhi 2 : Ma Huang 1 Tang pattern",
+        "name_zh": "桂枝二麻黃一湯證",
+        "name_en": "Gui Zhi 2 : Ma Huang 1 Tang pattern",
+        "description": "病人發熱多於惡寒，日再發者，汗出必解，需加重桂枝以助發表並適度宣肺。 / When fever predominates over chills and there are recurrent daily attacks, needing stronger Gui Zhi relative to Ma Huang to release the exterior and support the lungs.",
+        "symptoms": [
+          "symp-0036"
+        ],
+        "herbal_treatments": "方中桂枝量較麻黃為重，配芍藥、麻黃、生薑、杏仁、甘草、大棗。 / Formula increases Gui Zhi relative to Ma Huang and includes Shao Yao, Ma Huang, Sheng Jiang, Xing Ren, Gan Cao, and Da Zao."
+      },
+      {
+        "id": "syn-0023",
+        "type": "syndrome",
+        "name": "桂枝二越婢一湯證 / Gui Zhi 2 : Yue Bi 1 Tang pattern",
+        "name_zh": "桂枝二越婢一湯證",
+        "name_en": "Gui Zhi 2 : Yue Bi 1 Tang pattern",
+        "description": "太陽病兼有煩躁、脈微弱、熱多寒少，肺熱而津液不足者，宜以石膏并用麻黃清肺降熱並保津。 / Taiyang disease with irritability, feeble pulse, and predominant heat—lung heat with depleted fluids; use gypsum with Ma Huang and Gui Zhi to clear lung heat while preserving fluids.",
+        "symptoms": [
+          "symp-0020",
+          "symp-0081",
+          "symp-0036"
+        ],
+        "herbal_treatments": "方中桂枝、麻黃、石膏、芍藥、甘草、生薑、大棗合用。 / Formula contains Gui Zhi, Ma Huang, Gypsum (Shi Gao), Shao Yao, Gan Cao, Sheng Jiang, and Da Zao."
+      },
+      {
+        "id": "syn-0024",
+        "type": "syndrome",
+        "name": "桂枝去桂加茯苓白朮湯證 / Gui Zhi remove Gui plus Fu Ling Bai Zhu Tang pattern",
+        "name_zh": "桂枝去桂加茯苓白朮湯證",
+        "name_en": "Gui Zhi remove Gui plus Fu Ling Bai Zhu Tang pattern",
+        "description": "服桂枝湯或攻下後仍有頭項強痛、翕翕發熱、無汗、心下滿、微痛、小便不利等，因中焦濕盛而用以利小便、健脾祛濕。 / Pattern after Gui Zhi Tang or mistaken downward treatment with persistent nape stiffness, intermittent fever, no sweat, epigastric/fullness below the heart, slight pain, and difficult urination; indicates middle‑burner dampness — treated by promoting urination and strengthening spleen to remove dampness.",
+        "symptoms": [
+          "symp-0084",
+          "symp-0060",
+          "symp-0001",
+          "symp-0099",
+          "symp-0046",
+          "symp-0091"
+        ],
+        "herbal_treatments": "芍藥、炙甘草、生薑、茯苓、白朮、大棗 / Shao Yao (Paeonia), Honey‑fried Gan Cao (Licorice), Sheng Jiang (Fresh Ginger), Fu Ling (Poria), Bai Zhu (Atractylodes), Da Zao (Jujube/date)"
+      },
+      {
+        "id": "syn-0025",
+        "type": "syndrome",
+        "name": "甘草乾薑湯證 / Gan Cao Gan Jiang Tang pattern (Licorice and Dried Ginger Decoction pattern)",
+        "name_zh": "甘草乾薑湯證",
+        "name_en": "Gan Cao Gan Jiang Tang pattern (Licorice and Dried Ginger Decoction pattern)",
+        "description": "由誤用桂枝湯致裏虛陽衰，出現厥逆、咽中乾、煩躁、吐逆、譫語、腳攣急等，用甘草乾薑湯以復其陽、健脾溫中。 / Pattern caused by mistaken use of Gui Zhi Tang leading to internal deficiency and yang collapse with reversal cold, dry throat, agitation, vomiting, delirium, and leg cramps; treated with Licorice‑Dried Ginger Decoction to restore yang, strengthen spleen, and warm the middle.",
+        "symptoms": [
+          "symp-0089",
+          "symp-0086",
+          "symp-0020",
+          "symp-0100",
+          "symp-0087",
+          "symp-0088"
+        ],
+        "herbal_treatments": "炙甘草、乾薑 / Honey‑fried Licorice, Dried Ginger"
+      },
+      {
+        "id": "syn-0026",
+        "type": "syndrome",
+        "name": "芍藥甘草湯證 / Shao Yao Gan Cao Tang pattern (Paeonia and Licorice Decoction pattern)",
+        "name_zh": "芍藥甘草湯證",
+        "name_en": "Shao Yao Gan Cao Tang pattern (Paeonia and Licorice Decoction pattern)",
+        "description": "甘草乾薑湯後若厥愈、足溫但腿仍攣急，需用芍藥甘草湯止攣，使足部功能恢復。 / Pattern following partial recovery with return of warmth to feet but persistent leg cramps; use Shao Yao Gan Cao Decoction to relieve cramps and restore limb function.",
+        "symptoms": [
+          "symp-0090",
+          "symp-0088"
+        ],
+        "herbal_treatments": "白芍、炙甘草 / Bai Shao (White Paeony), Honey‑fried Licorice"
+      },
+      {
+        "id": "syn-0027",
+        "type": "syndrome",
+        "name": "調胃承氣湯證 / Tiao Wei Cheng Qi Tang pattern (Regulate the Stomach and Support the Qi Decoction pattern)",
+        "name_zh": "調胃承氣湯證",
+        "name_en": "Tiao Wei Cheng Qi Tang pattern (Regulate the Stomach and Support the Qi Decoction pattern)",
+        "description": "胃氣不和、譫語、胸滿、下利或不通大便，伴舌乾、燥裂者，用調胃承氣湯以通導中焦下行。 / Pattern of stomach qi disharmony with delirium, chest fullness, constipation or dysentery-like stools, and dry cracked tongue; treated by regulating the stomach and purging to descend stagnation.",
+        "symptoms": [
+          "symp-0095",
+          "symp-0087",
+          "symp-0083",
+          "symp-0021",
+          "symp-0126",
+          "symp-0093",
+          "symp-0151",
+          "symp-0152",
+          "symp-0130",
+          "symp-0102",
+          "symp-0023",
+          "symp-0209"
+        ],
+        "herbal_treatments": "大黃、炙甘草、芒硝 / Da Huang (Rhubarb), Honey‑fried Licorice, Mang Xiao (Mirabilite)"
+      },
+      {
+        "id": "syn-0028",
+        "type": "syndrome",
+        "name": "四逆湯證 / Si Ni Tang pattern (Four Reversals Decoction pattern)",
+        "name_zh": "四逆湯證",
+        "name_en": "Si Ni Tang pattern (Four Reversals Decoction pattern)",
+        "description": "重發汗或失血後陽氣大傷、手足厥冷、四肢厥逆、下利清穀、小便清利等屬四逆證，用以回陽救逆。 / Pattern of severe yang collapse after over‑sweating or blood loss with cold extremities, reversal cold of limbs, watery diarrhea of unabsorbed food, and clear urination; treated to restore yang and rescue from collapse.",
+        "symptoms": [
+          "symp-0032",
+          "symp-0078",
+          "symp-0093",
+          "symp-0101",
+          "symp-0046",
+          "symp-0089",
+          "symp-0130",
+          "symp-0052",
+          "symp-0131",
+          "symp-0173",
+          "symp-0036",
+          "symp-0164"
+        ],
+        "herbal_treatments": "炙甘草、乾薑、生附子 / Honey‑fried Licorice, Dried Ginger, Raw Aconite (Fuzi)"
+      },
+      {
+        "id": "syn-0029",
+        "type": "syndrome",
+        "name": "葛根湯證 / Ge Gen Tang pattern (Pueraria Decoction pattern)",
+        "name_zh": "葛根湯證",
+        "name_en": "Ge Gen Tang pattern (Pueraria Decoction pattern)",
+        "description": "太陽表證兼有項背強、無汗、惡風、喉嚨痛、口渴、頭痛、身痛等表實證候，或太陽陽明合病伴下利者，用葛根湯解表升陽。 / Taiyang exterior pattern with rigid neck/back, absence of sweat, aversion to wind, sore throat, thirst, headache and body aches; also indicated when Taiyang and Yangming combine producing diarrhea — treated by Ge Gen Tang to release the exterior and raise fluids.",
+        "symptoms": [
+          "symp-0012",
+          "symp-0060",
+          "symp-0038",
+          "symp-0096",
+          "symp-0102",
+          "symp-0011",
+          "symp-0052"
+        ],
+        "herbal_treatments": "葛根、麻黃、桂枝、芍藥、炙甘草、生薑、大棗 / Ge Gen (Pueraria), Ma Huang (Ephedra), Gui Zhi (Cinnamon Twig), Shao Yao (Paeonia), Honey‑fried Licorice, Fresh Ginger, Jujube"
+      },
+      {
+        "id": "syn-0030",
+        "type": "syndrome",
+        "name": "葛根加半夏湯證 / Ge Gen Jia Ban Xia Tang pattern (Ge Gen plus Pinellia Decoction pattern)",
+        "name_zh": "葛根加半夏湯證",
+        "name_en": "Ge Gen Jia Ban Xia Tang pattern (Ge Gen plus Pinellia Decoction pattern)",
+        "description": "太陽與陽明合病且兼嘔吐或胃內停飲者，用加半夏以止嘔、化水導下。 / Pattern of combined Taiyang‑Yangming disorder with vomiting or retained fluids in stomach; Pinellia is added to stop vomiting and transform retained water.",
+        "symptoms": [],
+        "herbal_treatments": "葛根、麻黃、桂枝、芍藥、炙甘草、生薑、大棗、生半夏 / Ge Gen, Ma Huang, Gui Zhi, Shao Yao, Honey‑fried Licorice, Fresh Ginger, Jujube, Sheng Ban Xia (raw Pinellia)"
+      },
+      {
+        "id": "syn-0031",
+        "type": "syndrome",
+        "name": "葛根黃芩黃連湯證 / Ge Gen Huang Qin Huang Lian Tang pattern",
+        "name_zh": "葛根黃芩黃連湯證",
+        "name_en": "Ge Gen Huang Qin Huang Lian Tang pattern",
+        "description": "桂枝證被誤下導致持續下利、脈促、喘而汗出等，表未解但裏有熱或濕熱者，宜以葛根與黃芩黃連清裡解表並止利。 / Pattern when a Gui Zhi type is mistakenly purged causing persistent diarrhea, rapid pulse, panting and sweating — exterior unresolved while interior heat/damp‑heat exists; treated with Ge Gen plus Huang Qin and Huang Lian to clear interior heat while addressing exterior disorder.",
+        "symptoms": [],
+        "herbal_treatments": "葛根、炙甘草、黃芩、黃連 / Ge Gen, Honey‑fried Licorice, Huang Qin (Scutellaria), Huang Lian (Coptis)"
+      },
+      {
+        "id": "syn-0032",
+        "type": "syndrome",
+        "name": "麻黃湯證 / Ma Huang Tang pattern (Ephedra Decoction pattern)",
+        "name_zh": "麻黃湯證",
+        "name_en": "Ma Huang Tang pattern (Ephedra Decoction pattern)",
+        "description": "受寒傷表之太陽證，頭痛、發熱、身痛、惡風、無汗且喘者，屬麻黃湯證，以發汗解表、利肺宣氣為主。 / Taiyang cold invasion with headache, fever, body and joint aches, aversion to wind, absence of sweat and wheezing; treated with Ma Huang Tang to induce sweating, release the exterior, and relieve lung constriction.",
+        "symptoms": [
+          "symp-0071",
+          "symp-0036",
+          "symp-0035",
+          "symp-0052",
+          "symp-0060",
+          "symp-0020",
+          "symp-0122",
+          "symp-0124"
+        ],
+        "herbal_treatments": "麻黃、桂枝、炙甘草、杏仁 / Ma Huang (Ephedra), Gui Zhi (Cinnamon Twig), Honey‑fried Licorice, Xing Ren (Apricot Kernel)"
+      },
+      {
+        "id": "syn-0033",
+        "type": "syndrome",
+        "name": "大青龍湯證 / Da Qing Long Tang pattern (Great Qinglong Decoction)",
+        "name_zh": "大青龍湯證",
+        "name_en": "Da Qing Long Tang pattern (Great Qinglong Decoction)",
+        "description": "大青龍湯證為表寒裡熱之候，屬太陽傷寒但已內化熱象。主症為脈浮緊，發熱惡寒，身體疼痛，不出汗而煩躁，喉中癢咳，痰黃濃稠或黃濃，舌苔黃濃，或口渴、胃納不佳、小便短赤或小便不利；並可見心下有水氣、胸悶咳喘、或全身沉重、水腫等水氣證。方性為麻黃湯之變方：加生薑、大棗以扶脾胃、養津；加石膏以清肺熱、瀉裡降逆。與麻黃湯關係緊密（麻黃主發汗解表），又與麻杏甘石湯、越婢湯有配伍與證候區別：若胃口尚好且以肺熱為主，常用麻杏甘石湯；越婢湯則着重利尿取小便。臨床用於疫病或季節反常引起的表寒裡熱、肺熱化燥、以及早期肺胸水飲積聚引起的咳喘、身重、水腫等。同時注意禁忌：脈微弱、汗出、惡風者不可服（此為裡虛失津，不宜石膏瀉去陰液），服用不慎可致厥逆、筋惕肉挛等。煎服時常先煮麻黃以減沫並分次服，若汗出過多以溫粉（牡蠣、龍骨、糯米等研粉）擦拭止汗；臨床可依煩躁、發熱、咳嗽痰多等加減石膏或杏仁，對病情轉變須與麻黃湯、小青龍湯等方比較辨證選用。 / Da Qing Long Tang pattern is an exterior-cold with interior-heat syndrome, a Taiyang (exterior) cold that has transformed into internal heat. Principal signs: floating-tense pulse, fever with chills, body aches, absence of sweating with irritability/restlessness, itchy throat with coughing, thick yellow sticky sputum, yellow greasy tongue coating; may also present with thirst, poor appetite, scanty or difficult urination, water accumulation below the chest (xinxia yinqi), cough and slight dyspnea, generalized heaviness or edema. The formula is a modification of Ma Huang Tang: added Sheng Jiang and Da Zao to support the middle and generate fluids, and Shi Gao to clear lung heat and direct heat downward. Relation to other formulas: closely related to Ma Huang Tang (Ma Huang releases the exterior); distinguished from Ma Xing Gan Shi Tang (Ma Xing Gan Shi) — if appetite is good and pulmonary heat predominates, Ma Xing Gan Shi may be preferred; Yue Bi Tang emphasizes promoting urination. Clinically indicated in epidemic disorders or abnormal seasonal shifts causing exterior-cold with interior lung heat, early pulmonary or thoracic fluid accumulation causing cough/shortness of breath, and whole-body heaviness/edema. Contraindications: do not use when the pulse is frail/weak, there is spontaneous sweating, and fan-wind intolerance (脈微弱、汗出、惡風) — these indicate internal deficiency and insufficient fluids; Shi Gao’s cold-draining action and diaphoresis can further harm fluids and cause collapse (cold reversal, muscular spasms). Decoction technique and dosage adjustments are important: Ma Huang is partly directed outward with Xing Ren while part works with Shi Gao downward; increase Shi Gao for high fever/marked irritability, increase Xing Ren for frequent cough or abundant sputum. If excessive sweating occurs after administration, apply warming powder (wenfen) and stop further doses.",
+        "symptoms": [
+          "symp-0071",
+          "symp-0036",
+          "symp-0035",
+          "symp-0052",
+          "symp-0060",
+          "symp-0020",
+          "symp-0074",
+          "symp-0081",
+          "symp-0037",
+          "symp-0038",
+          "symp-0110"
+        ],
+        "herbal_treatments": "方藥（原方與用法）：麻黃六兩、桂枝二兩（去皮）、甘草二兩（炙）、杏仁五十個（去皮尖）、生薑二兩（切）、大棗十二枚（劈）、石膏如雞子大（碎）。右七味，以水九升，先煮麻黃，減二升，去上沫，內諸藥，煮取三升，去滓，溫服八合，取微似汗；若一服汗多則停服並以溫粉撲之。藥性與加減：麻黃為發表利肺藥，方中一部分與杏仁走表，一部分與石膏走裡；石膏甘寒清熱潤肺、降逆，通常石膏四到五錢為常用量，重症煩躁或高熱可增至一兩；杏仁常用二錢至五錢以降喘化痰，咳嗽頻繁或痰多則加杏仁。臨床變通：若汗出過多用溫粉（牡蠣、龍骨、糯米等等量磨粉）擦拭止汗；若脈微弱、汗出、畏風或素虛者忌用，可改用扶正溫解之方（如桂枝加附子類）。備註：現代臨床常按兩制或錢制換算用量，臨證應依體質與病勢加減。 / Formula (original and administration): Ma Huang (Ephedra) 6 liang, Gui Zhi (Cinnamon twig) 2 liang (peeled), Gan Cao (Licorice, honey-fried) 2 liang, Xing Ren (Apricot seed) 50 seeds (skin/tips removed), Sheng Jiang (Fresh ginger) 2 liang (sliced), Da Zao (Jujube/Chinese date) 12 pieces (halved), Shi Gao (Gypsum) about the size of an egg (crushed). Decoction: use 9 sheng of water, first boil Ma Huang and reduce by 2 sheng, skim foam, add the other herbs and decoct to obtain 3 sheng; strain and take warm 8 he (approximate classical dose) to produce slight sweating; if one dose causes excessive sweating stop further doses and apply warming powder. Actions and modifications: Ma Huang releases the exterior and opens the lung; part of Ma Huang with Xing Ren is directed to the exterior while part with Shi Gao is directed inward; Shi Gao is cooling and clears lung heat—common amount 4–5 qian, may be increased to 1 liang for marked fever/irritability; Xing Ren commonly 2–5 qian—increase for frequent cough or abundant sputum. If excessive sweating occurs use wenfen (warming powder: oystershell, longgu/dragon bone (equine bone), and glutinous rice, equal parts, powdered) to rub and warm. Contraindications: do not use when pulse is frail/weak, there is spontaneous sweating and wind aversion (indicating interior deficiency); such patients need supportive-warming prescriptions (e.g., Gui Zhi with Fuzi) rather than Da Qing Long Tang. Adjust doses according to constitution and severity in modern practice."
+      },
+      {
+        "id": "syn-0034",
+        "type": "syndrome",
+        "name": "小青龍湯證 / Xiao Qing Long Tang pattern (Minor Qinglong Decoction)",
+        "name_zh": "小青龍湯證",
+        "name_en": "Xiao Qing Long Tang pattern (Minor Qinglong Decoction)",
+        "description": "證候概述：表裏俱寒，外感寒邪束表而內有水飲停聚，主要表現為心下有水氣（胃脘悶滿、上衝感）、咳嗽吐白色泡沫痰、氣喘咳嗽、喉中癢或咳而舒適、可有微熱但多不渴，舌苔多白，脈多浮或浮細；兼見小便清白或小便不利、少腹脹滿、乾嘔等。病機：外寒不解同時內寒夾飲，寒束肺胃、津液凝滯上逆成痰飲。治則：解表化飲、溫肺散寒、降逆止咳、和中安胃。與大青龍湯比較：小青龍湯為表裡俱寒、痰為清白泡沫，病人常素體偏寒、發汗後可見口渴；大青龍湯為表寒裏熱、痰黃黏稠並伴煩渴、舌苔黃濁。臨床加減要點：若服方後覺渴者，表示裡寒去欲解，可加生津藥；若有明顯口渴，方中可去半夏、加栝蔞根（3兩）；若微下利（輕瀉）去麻黃，加芫花少許以止瀉（如雞子大，熬令赤色）；若噫氣嚴重，去麻黃，加炮附子一枚；若小便不利、少腹滿，去麻黃，加茯苓4兩；喘甚時常須加杏仁而不必去麻黃（後世有去麻黃加杏仁之法，但臨證需慎）。注意：細辛性熱、有毒，臨床用量慎小；服湯時若汗出過多以炙甘草助收；體虛汗多者慎用發汗藥。 / Pattern summary: Concurrent exterior and interior cold with internal water accumulation. Key signs: epigastric (substernal) water sensation, cough with expectoration of white foamy sputum, wheezy cough, itchy throat, possible low-grade fever without thirst, tongue with white coating, pulse floating or fine. Pathomechanism: exterior cold not resolved with cold-induced retention of fluids in Lung and Stomach producing phlegm-fluid that ascends and causes coughing/retching. Treatment principle: release the exterior and transform fluids, warm the Lung and disperse cold, descend rebellious qi and stop cough, harmonize the Middle. Contrast with Da Qing Long Tang: Xiao Qing Long is for exterior-and-interior cold with white frothy sputum and often a constitutionally cold patient who may become thirsty after fluids are driven off; Da Qing Long Tang treats exterior cold with interior heat, yellow sticky sputum, thirst and irritability. Key modifications: if thirst appears after dosing, representatory cold is resolving and add yin- or fluid-restoring herbs; if patient is thirsty initially remove Ban Xia and add Gua Lou Gen 3 liang; if slight diarrhea (mild stool loosening) remove Ma Huang and add a small amount of Yuan Hua (about size of an egg to decoct to red); if persistent hiccup/eructation remove Ma Huang and add processed Fuzi 1 piece; if urinary difficulty or lower abdominal fullness remove Ma Huang and add Fu Ling 4 liang; for severe wheeze consider adding Xing Ren (apricot kernel) — clinical judgment required. Note: Xi Xin is hot and toxic; use small dose; monitor for over-sweating and avoid powerful diaphoresis in deficient patients.",
+        "symptoms": [
+          "symp-0108",
+          "symp-0106",
+          "symp-0111",
+          "symp-0113",
+          "symp-0114",
+          "symp-0116",
+          "symp-0117",
+          "symp-0118"
+        ],
+        "herbal_treatments": "方藥（原方及作用）：麻黃三兩（發汗解表、宣肺平喘、利水）；芍藥三兩（養營斂肝、調和桂枝以緩筋緊）；細辛三兩（溫化寒飲、通陽散寒，性熱有毒，臨用量宜小）；乾薑三兩（溫中散寒、溫肺化飲）；甘草三兩（炙，和中緩急、收斂回陽、止咳調和諸藥）；桂枝三兩（發汗解表、溫經通陽）；五味子半斤（收斂止咳、斂肺固表、生津止嘔）；半夏半升（洗，燥濕化痰、降逆止嘔，需處理以減毒）。加減要點：若有口渴，去半夏，加栝蔞根3兩；若微利（輕瀉），去麻黃，加芫花少許（如雞子大，熬令赤色）；若噫氣（打嗝、上逆）去麻黃，加炮附子1枚；若小便不利、少腹滿，去麻黃，加茯苓4兩；若喘甚可加杏仁（半升，去皮尖），臨床視體質與證候酌減增減。注意事項：細辛毒性、麻黃發汗利水力強，氣虛津虧者慎用；汗出過多以炙甘草、保溫止汗。 / Herbs (original formula and functions): Ma Huang (Ephedra) 3 liang – induces sweating, opens the exterior, disseminates Lung, relieves wheeze and mobilizes water; Shao Yao (Paeonia) 3 liang – moderates spasms, harmonizes with Gui Zhi and protects fluids; Xi Xin (Asarum) 3 liang – warms and dispels cold from the interior, opens orifices (hot and toxic, use minimal dose); Gan Jiang (Dried ginger) 3 liang – warms the Middle, restores Yang, warms Lung to transform cold-fluid; Gan Cao (Licorice, honey-fried) 3 liang – harmonizes formula, moderates harshness, helps stop excessive sweating and supports Middle; Gui Zhi (Cinnamon twig) 3 liang – releases the exterior, warms channels; Wu Wei Zi (Schisandra) 1/2 jin – astringes the Lung, stops cough and generates fluids; Ban Xia (Pinellia, washed) 1/2 sheng – dries damp, transforms phlegm, descends rebellious qi and relieves nausea (must be prepared/wash to reduce toxicity). Common modifications: if thirsty remove Ban Xia and add Gua Lou Gen (Trichosanthes root) 3 liang; if slight diarrhea remove Ma Huang and add a small amount of Yuan Hua (Genkwa flower) (size of an egg, decoct until red); if persistent belching/hiccough remove Ma Huang and add processed Fuzi (Aconite) one piece; if urinary difficulty or lower abdominal fullness remove Ma Huang and add Fu Ling 4 liang; for marked wheeze consider adding Xing Ren (Apricot kernel) (clinically often Ma Huang is retained). Cautions: Xi Xin is toxic; Ma Huang strongly induces sweating and fluid mobilization so avoid in qi/yin-deficient patients with spontaneous sweating; if sweating is excessive use roasted licorice and rewarm the patient."
+      },
+      {
+        "id": "syn-0035",
+        "type": "syndrome",
+        "name": "小柴胡湯證 / Xiao Chai Hu Tang pattern (Minor Bupleurum Decoction)",
+        "name_zh": "小柴胡湯證",
+        "name_en": "Xiao Chai Hu Tang pattern (Minor Bupleurum Decoction)",
+        "description": "少陽（半表半裏）證，常見為太陽轉少陽時胸脘或心下、脅部脹滿苦悶、往來寒熱、默默不欲食、心煩喜嘔，兼見口渴、小便不利或咳嗽、潮熱等。病機為邪鬱於三焦、淋巴腺與中焦，表裏未和，治以小柴胡湯和解少陽、疏散鬱熱並扶正和中。 / Shaoyang (minor yang) pattern — a half‑exterior, half‑interior disorder that typically follows a Taiyang exterior illness — characterized by alternating fever and chills, chest/epigastric and hypochondriac distention or pain, poor appetite, vexation with nausea or vomiting, and sometimes thirst, difficult urination, cough or tidal fever. The pathogen is constrained in the Sanjiao/lymphatic region with disordered middle Jiao qi and relative qi–blood weakness; treatment principle is to harmonize the Shaoyang with Xiao Chai Hu Tang to release the half‑exterior, clear constrained heat and support the middle.",
+        "symptoms": [
+          "symp-0083",
+          "symp-0115",
+          "symp-0014",
+          "symp-0103",
+          "symp-0104",
+          "symp-0015",
+          "symp-0180",
+          "symp-0181",
+          "symp-0178",
+          "symp-0114",
+          "symp-0046",
+          "symp-0111",
+          "symp-0102",
+          "symp-0179",
+          "symp-0175",
+          "symp-0036",
+          "symp-0038",
+          "symp-0012",
+          "symp-0189",
+          "symp-0192"
+        ],
+        "herbal_treatments": "君藥柴胡（疏散少陽、疏肝解鬱）、臣藥黃芩（清熱去火）、佐藥半夏（降逆止嘔），佐使有人參或黨參（補中益氣）、甘草（調和、解毒）、生薑（溫中止嘔）與大棗（補養脾胃、助藥性）。常用加減：若胸中煩而不嘔去半夏加栝蔞實；若口渴去半夏加人參與栝蔞根；脅下痞硬或腫塊加牡蠣、桃仁以軟堅破瘀；小便不利加茯苓；咳嗽時可去人參大棗改用五味子等。 / Core formula: Chai Hu (Bupleurum) as the chief to harmonize Shaoyang and soothe constrained qi; Huang Qin (Scutellaria) to clear internal heat; Ban Xia (Pinellia) to descend rebellious qi and stop vomiting; Ren Shen or Dang Shen (Ginseng/Codonopsis) to tonify the middle; Gan Cao (Licorice) to harmonize and moderate; Sheng Jiang (Fresh ginger) to warm the middle and stop vomiting; Da Zao (Jujube) to support qi and fluids. Common modifications: if vexation without vomiting remove Ban Xia and add Gua Lou Shi; if marked thirst remove Ban Xia and add Ren Shen plus Gua Lou root; for hypochondrial masses or hard nodules add Mu Li or Tao Ren to soften and resolve stasis; for urinary difficulty add Fu Ling; for cough remove Ren Shen/Da Zao and add Wu Wei Zi, etc."
+      },
+      {
+        "id": "syn-0036",
+        "type": "syndrome",
+        "name": "桂枝湯加葛根證 / Gui Zhi Tang plus Ge Gen pattern",
+        "name_zh": "桂枝湯加葛根證",
+        "name_en": "Gui Zhi Tang plus Ge Gen pattern",
+        "description": "表未解且汗出不澈者，加葛根以升陽解肌、助津液以助汗出。 / When Gui Zhi Tang pattern has imperfect sweating, add Ge Gen to raise yang and release the muscle layer while supporting body fluids to aid sweating.",
+        "symptoms": [
+          "symp-0123",
+          "symp-0082",
+          "symp-0121",
+          "symp-0128"
+        ],
+        "herbal_treatments": "桂枝湯加葛根（方中増用葛根） / Gui Zhi Tang plus Ge Gen (addition of Pueraria root)"
+      },
+      {
+        "id": "syn-0037",
+        "type": "syndrome",
+        "name": "小建中湯加黃耆證 / Xiao Jian Zhong Tang plus Huang Qi pattern",
+        "name_zh": "小建中湯加黃耆證",
+        "name_en": "Xiao Jian Zhong Tang plus Huang Qi pattern",
+        "description": "下焦或裏虛明顯者，用小建中湯補中、和里，加黃耆固表補氣，適用於裏虛而需發汗者。 / For patients with underlying interior deficiency, use Xiao Jian Zhong Tang to tonify the center and harmonize the interior, adding Huang Qi to consolidate the exterior and augment qi when sweating is needed.",
+        "symptoms": [
+          "symp-0122",
+          "symp-0129"
+        ],
+        "herbal_treatments": "小建中湯加黃耆（飴糖或方糖作補） / Xiao Jian Zhong Tang plus Huang Qi (adding maltose or sugar as tonic)"
+      },
+      {
+        "id": "syn-0038",
+        "type": "syndrome",
+        "name": "乾薑附子湯證 / Gan Jiang Fu Zi Tang pattern (Dry Ginger and Aconite Decoction)",
+        "name_zh": "乾薑附子湯證",
+        "name_en": "Gan Jiang Fu Zi Tang pattern (Dry Ginger and Aconite Decoction)",
+        "description": "下後復發汗、白天煩躁不得眠、夜而安靜、脈沉微者，主以乾薑附子湯救陽回陽。 / After purgation with recurrent exterioring, daytime agitation with insomnia, night calm, and a deep-faint pulse indicate Gan Jiang Fu Zi Tang pattern to urgently rescue yang.",
+        "symptoms": [
+          "symp-0020",
+          "symp-0030",
+          "symp-0114",
+          "symp-0131",
+          "symp-0089"
+        ],
+        "herbal_treatments": "方：乾薑一兩，附子一枚（生用，去皮破八片）。以水三升，煮取一升，頓服。 / Formula: Gan Jiang 1 liang, raw Fu Zi 1 piece (peeled, split into 8); decoct in 3 sheng water to 1 sheng, take as one dose."
+      },
+      {
+        "id": "syn-0039",
+        "type": "syndrome",
+        "name": "營衛不和 / Ying-Wei disharmony",
+        "name_zh": "營衛不和",
+        "name_en": "Ying-Wei disharmony",
+        "description": "營衛失調，表現為時發熱自汗出，病久不愈，為桂枝湯所主。 / Disharmony between nutritive (ying) and protective (wei) qi, presenting with intermittent fever and spontaneous sweating that does not resolve; treated by Gui Zhi Tang.",
+        "symptoms": [
+          "symp-0041",
+          "symp-0084"
+        ],
+        "herbal_treatments": "桂枝湯：桂枝、白芍、生薑、甘草、大棗等（以湯劑調和營衛）。 / Gui Zhi Tang: cinnamon twig, peony, fresh ginger, licorice, jujube (decoction to harmonize ying and wei)."
+      },
+      {
+        "id": "syn-0040",
+        "type": "syndrome",
+        "name": "桂枝加芍藥生薑人參新加湯證 / Guizhi plus Shaoyao Shengjiang Renshen (Xinjia Tang) pattern",
+        "name_zh": "桂枝加芍藥生薑人參新加湯證",
+        "name_en": "Guizhi plus Shaoyao Shengjiang Renshen (Xinjia Tang) pattern",
+        "description": "發汗過多後，身體疼痛、四肢末端疼痛，脈沉遲，因津液傷損，宜用本方補回津液、和營衛。 / After excessive sweating with body aches, distal limb pain, and deep-slow pulse due to fluid loss; use this formula to restore fluids and harmonize Ying-Wei.",
+        "symptoms": [
+          "symp-0037",
+          "symp-0052",
+          "symp-0132",
+          "symp-0133",
+          "symp-0102",
+          "symp-0150"
+        ],
+        "herbal_treatments": "桂枝、芍藥、生薑、人參、甘草、大棗等（新加湯加重芍藥與人參）。 / Guizhi, Shaoyao, Shengjiang, Renshen, Gancao, Dazao (Xinjia Tang with increased Shaoyao and Renshen)."
+      },
+      {
+        "id": "syn-0041",
+        "type": "syndrome",
+        "name": "桂枝甘草湯證 / Guizhi Gancao Tang pattern",
+        "name_zh": "桂枝甘草湯證",
+        "name_en": "Guizhi Gancao Tang pattern",
+        "description": "發汗過多後心下悸，患者欲按壓心下且按之可緩，宜桂枝甘草湯和解胃中之陽虛。 / After excessive sweating with epigastric palpitation relieved by pressing, treat with Guizhi Gancao Tang to harmonize and restore gastric yang.",
+        "symptoms": [
+          "symp-0134",
+          "symp-0135",
+          "symp-0155"
+        ],
+        "herbal_treatments": "桂枝、甘草二味。 / Guizhi (Cinnamomi Ramulus) and Gancao (Licorice)."
+      },
+      {
+        "id": "syn-0042",
+        "type": "syndrome",
+        "name": "茯苓桂枝甘草大棗湯證 / Fuling Guizhi Gancao Dazao Tang pattern",
+        "name_zh": "茯苓桂枝甘草大棗湯證",
+        "name_en": "Fuling Guizhi Gancao Dazao Tang pattern",
+        "description": "發汗後臍下悸、欲作奔豚者，主於下焦水上衝，宜用茯苓、桂枝、甘草、大棗以利水和中。 / After sweating with lower-abdominal palpitation and tendency toward running-piglet, indicating lower burner water surging upward; use Fuling, Guizhi, Gancao, Dazao to drain and harmonize.",
+        "symptoms": [
+          "symp-0136",
+          "symp-0137"
+        ],
+        "herbal_treatments": "茯苓、桂枝、甘草、大棗等。 / Fuling (Poria), Guizhi, Gancao, Dazao."
+      },
+      {
+        "id": "syn-0043",
+        "type": "syndrome",
+        "name": "厚朴生薑半夏甘草人參湯證 / Houpo Shengjiang Banxia Gancao Renshen Tang pattern",
+        "name_zh": "厚朴生薑半夏甘草人參湯證",
+        "name_en": "Houpo Shengjiang Banxia Gancao Renshen Tang pattern",
+        "description": "發汗後腹脹滿、嗳氣放屁或大便不暢，分虛實，虛脹宜本方以厚朴降氣、半夏降逆、補脾胃。 / Post-sweating abdominal distention with belching and flatulence; for deficient distention use this formula to descend qi, suppress counterflow, and tonify spleen-stomach.",
+        "symptoms": [
+          "symp-0023",
+          "symp-0138",
+          "symp-0139",
+          "symp-0146",
+          "symp-0153",
+          "symp-0154"
+        ],
+        "herbal_treatments": "厚朴、生薑、半夏、甘草、人參等。 / Houpo (Magnolia), Shengjiang, Banxia (Pinellia), Gancao, Renshen."
+      },
+      {
+        "id": "syn-0044",
+        "type": "syndrome",
+        "name": "芍藥甘草附子湯證 / Shao Yao Gancao Fuzi Tang pattern",
+        "name_zh": "芍藥甘草附子湯證",
+        "name_en": "Shao Yao Gancao Fuzi Tang pattern",
+        "description": "發汗後病不解反惡寒，素虛畏寒或四肢厥冷者，宜芍藥甘草附子湯以補血、溫陽、回陽止冷。 / After sweating with unresolved illness and returning aversion to cold in deficient patients with cold extremities; treat with Shaoyao Gancao Fuzi Tang to nourish blood and warm yang.",
+        "symptoms": [],
+        "herbal_treatments": "芍藥、甘草、附子等。 / Shao Yao (Paeonia), Gancao, Fuzi (Aconite)."
+      },
+      {
+        "id": "syn-0045",
+        "type": "syndrome",
+        "name": "茯苓四逆湯證 / Fuling Sini Tang pattern",
+        "name_zh": "茯苓四逆湯證",
+        "name_en": "Fuling Sini Tang pattern",
+        "description": "發汗或下之後出現煩躁、四肢四逆（手足冰冷）、脈微弱或沉細，陰陽兩虛者可用。 / After sweating or purging with persistent vexation, cold extremities (four reversals), and weak/faint pulse indicating yang deficiency or combined deficiency; use Fuling Sini Tang to restore yang and drain water.",
+        "symptoms": [
+          "symp-0020",
+          "symp-0032",
+          "symp-0081",
+          "symp-0188",
+          "symp-0157",
+          "symp-0187"
+        ],
+        "herbal_treatments": "茯苓、人參、附子、甘草、乾薑等。 / Fuling, Renshen, Fuzi, Gancao, Ganjiang."
+      },
+      {
+        "id": "syn-0046",
+        "type": "syndrome",
+        "name": "茯苓桂枝白朮甘草湯證 / Fuling Guizhi Baizhu Gancao Tang pattern",
+        "name_zh": "茯苓桂枝白朮甘草湯證",
+        "name_en": "Fuling Guizhi Baizhu Gancao Tang pattern",
+        "description": "吐下傷胃後心下逆滿、氣上衝胸、起則頭眩、脈沉緊、發汗則動經，身體振搖者，宜本方利水健脾安中。 / After vomiting and purging causing epigastric counterflow fullness, qi rushing to chest and vertigo on standing with deep-tense pulse and trembling on movement; use this formula to resolve water retention, strengthen the spleen, and calm the middle.",
+        "symptoms": [
+          "symp-0143",
+          "symp-0142",
+          "symp-0144"
+        ],
+        "herbal_treatments": "茯苓、桂枝、白朮、甘草等。 / Fuling, Guizhi, Baizhu, Gancao."
+      },
+      {
+        "id": "syn-0047",
+        "type": "syndrome",
+        "name": "五苓散證 / Wuling San pattern",
+        "name_zh": "五苓散證",
+        "name_en": "Wuling San pattern",
+        "description": "以小便不利、脈浮（或脈浮數）、微熱、消渴及表面水腫為主的水濕停聚證，常見於發汗後津液未能回中焦。 / Pattern of water-damp retention characterized by scanty urination, floating (often rapid) pulse, low-grade fever, unquenchable thirst, and superficial edema; often follows excessive sweating when fluids fail to return to the middle jiao.",
+        "symptoms": [
+          "symp-0046",
+          "symp-0013",
+          "symp-0122",
+          "symp-0113",
+          "symp-0156",
+          "symp-0003",
+          "symp-0157",
+          "symp-0076",
+          "symp-0037",
+          "symp-0145",
+          "symp-0020",
+          "symp-0030",
+          "symp-0155",
+          "symp-0142",
+          "symp-0081",
+          "symp-0154",
+          "symp-0102"
+        ],
+        "herbal_treatments": "豬苓、澤瀉、茯苓、桂枝、白朮（五味） / Zhu Ling (Polyporus), Ze Xie (Alisma), Fu Ling (Poria), Gui Zhi (Cinnamon twig), Bai Zhu (Atractylodes)"
+      },
+      {
+        "id": "syn-0048",
+        "type": "syndrome",
+        "name": "茯苓甘草湯證 / Fuling Gancao Tang pattern",
+        "name_zh": "茯苓甘草湯證",
+        "name_en": "Fuling Gancao Tang pattern",
+        "description": "以心下悸或中焦飲停所致的心悸、四肢乏力為主，重在利水健脾以止悸。 / Pattern treated by Fuling Gancao Tang marked by epigastric palpitations and diminished qi/weakness due to retained fluids in the middle jiao; emphasis on diuresis and strengthening the spleen to relieve palpitations.",
+        "symptoms": [
+          "symp-0134",
+          "symp-0114",
+          "symp-0159",
+          "symp-0160"
+        ],
+        "herbal_treatments": "茯苓、桂枝、生薑、炙甘草 / Fu Ling (Poria), Gui Zhi (Cinnamon twig), Sheng Jiang (Fresh ginger), Zhi Gan Cao (Prepared licorice)"
+      },
+      {
+        "id": "syn-0049",
+        "type": "syndrome",
+        "name": "梔子豉湯證 / Zhizi Chi Tang pattern",
+        "name_zh": "梔子豉湯證",
+        "name_en": "Zhizi Chi Tang pattern",
+        "description": "發汗吐下後餘熱未清、虛煩不得眠、心中懊惱或胸中窒悶等虛熱症候的調理方證。 / Pattern for post-sweating/vomiting/defecation residual heat with deficiency vexation, insomnia, irritability, or chest oppression; a restorative formula to clear lingering heat and calm the mind.",
+        "symptoms": [
+          "symp-0158",
+          "symp-0161",
+          "symp-0070",
+          "symp-0154",
+          "symp-0160",
+          "symp-0024",
+          "symp-0027",
+          "symp-0075",
+          "symp-0130",
+          "symp-0164"
+        ],
+        "herbal_treatments": "梔子、豆豉（香豉） / Zhi Zi (Gardenia), Fermented Soybean (Douchi)"
+      },
+      {
+        "id": "syn-0050",
+        "type": "syndrome",
+        "name": "梔子甘草豉湯證 / Zhizi Gancao Chi Tang pattern",
+        "name_zh": "梔子甘草豉湯證",
+        "name_en": "Zhizi Gancao Chi Tang pattern",
+        "description": "梔子豉湯加甘草，用於虛煩伴少氣、四肢無力或食後嘔吐之情形，重在補中緩煩。 / Variant of Zhizi Chi Tang with added licorice for deficiency vexation accompanied by shortness of breath, weakness, or nausea after eating; focuses on tonifying the middle and relieving vexation.",
+        "symptoms": [
+          "symp-0158",
+          "symp-0159",
+          "symp-0160"
+        ],
+        "herbal_treatments": "梔子、甘草、豆豉 / Zhi Zi (Gardenia), Gan Cao (Licorice), Fermented Soybean (Douchi)"
+      },
+      {
+        "id": "syn-0051",
+        "type": "syndrome",
+        "name": "梔子生薑豉湯證 / Zhizi Shengjiang Chi Tang pattern",
+        "name_zh": "梔子生薑豉湯證",
+        "name_en": "Zhizi Shengjiang Chi Tang pattern",
+        "description": "梔子豉湯加生薑，用於發汗吐下後伴嘔吐或胃氣不降者，以和胃降逆止嘔為主。 / Variant of Zhizi Chi Tang with added fresh ginger for post-treatment nausea or failure of stomach qi to descend; harmonizes the stomach and stops vomiting.",
+        "symptoms": [
+          "symp-0024"
+        ],
+        "herbal_treatments": "梔子、生薑、豆豉 / Zhi Zi (Gardenia), Sheng Jiang (Fresh ginger), Fermented Soybean (Douchi)"
+      },
+      {
+        "id": "syn-0052",
+        "type": "syndrome",
+        "name": "水逆 / Shui Ni (water reversal)",
+        "name_zh": "水逆",
+        "name_en": "Shui Ni (water reversal)",
+        "description": "表裏不和或陽氣上浮導致下焦水上逆，病人渴而飲水則吐，呈水上逆胃中不受之象。 / Disharmony where yang rises and fluids are drawn upward causing lower-jiao fluids to reverse; patients thirst but vomit on drinking, indicating fluids cannot be received by the stomach.",
+        "symptoms": [
+          "symp-0157",
+          "symp-0156"
+        ],
+        "herbal_treatments": ""
+      },
+      {
+        "id": "syn-0053",
+        "type": "syndrome",
+        "name": "梔子厚朴枳實湯證 / Zhizi Houpo Zhishi Tang pattern",
+        "name_zh": "梔子厚朴枳實湯證",
+        "name_en": "Zhizi Houpo Zhishi Tang pattern",
+        "description": "傷寒下後出現心煩、腹滿、臥起不安，屬虛煩兼有局部結實與脹氣者所見之證。 / Pattern after Shanghan with vexation, abdominal fullness, and unrest on lying/rising; deficiency vexation with focal binding and trapped intestinal gas.",
+        "symptoms": [
+          "symp-0162",
+          "symp-0023",
+          "symp-0163",
+          "symp-0146",
+          "symp-0158",
+          "symp-0174"
+        ],
+        "herbal_treatments": "方：梔子十四枚，厚朴四兩，枳實四枚。以水三升半，煮取一升半，分二服。 / Formula: Zhizi 14 pieces, Hou Po 4 liang (fried), Zhi Shi 4 pieces; decoct in 3.5 sheng of water to yield 1.5 sheng, two doses."
+      },
+      {
+        "id": "syn-0054",
+        "type": "syndrome",
+        "name": "梔子乾薑豉湯證 / Zhizi Ganjiang Chi Tang pattern",
+        "name_zh": "梔子乾薑豉湯證",
+        "name_en": "Zhizi Ganjiang Chi Tang pattern",
+        "description": "攻下大便已行而身熱不解、微煩，舌苔薄白、脈微弱，為腸胃虛寒需溫中者。 / After purgation with persistent body heat and slight vexation, thin white coating and weak pulse indicating gastrointestinal cold deficiency requiring warming the center.",
+        "symptoms": [
+          "symp-0172",
+          "symp-0164",
+          "symp-0075",
+          "symp-0081"
+        ],
+        "herbal_treatments": "方：梔子十四枚，乾薑二兩，香豉四合；以水三升，煮取一升半，分二服。 / Formula: Zhizi 14 pieces, dried ginger 2 liang, fragrant fermented soy (xiang chi) 4 he; decoct in 3 sheng water to yield 1.5 sheng, two doses."
+      },
+      {
+        "id": "syn-0055",
+        "type": "syndrome",
+        "name": "真武湯證 / Zhenwu Tang pattern",
+        "name_zh": "真武湯證",
+        "name_en": "Zhenwu Tang pattern",
+        "description": "發汗後汗出不解而見身熱、心下悸、頭眩、身體震顫、振振欲擗地，兼有津液不足與水飲內停者。 / After sweating with unresolved symptoms, presenting with fever, epigastric palpitations, dizziness, body tremor, and sinking/floaty sensation; due to water accumulation and fluid depletion.",
+        "symptoms": [
+          "symp-0173",
+          "symp-0036",
+          "symp-0134",
+          "symp-0142",
+          "symp-0144",
+          "symp-0171",
+          "symp-0150",
+          "symp-0003",
+          "symp-0085"
+        ],
+        "herbal_treatments": "方：茯苓三兩，芍藥三兩，生薑三兩，白朮二兩，附子一枚；以水八升，煮取三升，溫服。 / Formula: Fu Ling 3 liang, Shao Yao 3 liang, Sheng Jiang 3 liang, Bai Zhu 2 liang (fried), Fuzi 1 piece; decoct and warm for administration."
+      },
+      {
+        "id": "syn-0056",
+        "type": "syndrome",
+        "name": "麥門冬湯證 / Mai Men Dong Tang pattern",
+        "name_zh": "麥門冬湯證",
+        "name_en": "Mai Men Dong Tang pattern",
+        "description": "以咽喉乾燥、口渴為主的咽喉陰虛證，需潤肺滋陰以養津液者。 / Pattern of throat dryness and thirst due to yin deficiency of the throat and lungs, requiring lung-nourishing and fluid-restoring therapy.",
+        "symptoms": [
+          "symp-0086",
+          "symp-0102"
+        ],
+        "herbal_treatments": "主方：麥門冬湯，主藥為麥門冬，方中以潤肺滋陰為旨。 / Mai Men Dong Tang: centered on Mai Men Dong (Ophiopogon) to moisten the lungs and nourish yin."
+      },
+      {
+        "id": "syn-0057",
+        "type": "syndrome",
+        "name": "淋家 / Lin-type patients (strangury-prone)",
+        "name_zh": "淋家",
+        "name_en": "Lin-type patients (strangury-prone)",
+        "description": "指素有小便異常（石淋、膏淋或血淋）者，遇發汗反易傷陰而致出血或症情惡化，故不可發汗。 / Patients prone to urinary strangury (stone, turbid, or bloody types); sweating may further damage yin and provoke bleeding or worsen the condition, thus sweating is contraindicated.",
+        "symptoms": [
+          "symp-0166",
+          "symp-0167"
+        ],
+        "herbal_treatments": "常用方：豬苓湯等利水清熱方以利小便。 / Common treatment: Zhu Ling Tang and other diuretic/heat-clearing formulas to promote urination."
+      },
+      {
+        "id": "syn-0058",
+        "type": "syndrome",
+        "name": "瘡家 / Sore/ulcer-type patients",
+        "name_zh": "瘡家",
+        "name_en": "Sore/ulcer-type patients",
+        "description": "指有外科瘡瘍的病人，已化膿者忌發汗，未化膿者可用解表藥助其排膿出表。 / Patients with sores or ulcers: if suppurated, sweating is contraindicated; if not yet suppurated, releasing the exterior may help bring pus to the surface.",
+        "symptoms": [
+          "symp-0165",
+          "symp-0052"
+        ],
+        "herbal_treatments": "臨證可用小建中湯溫補或小柴胡湯調和，未破潰者可用發表藥促表達。 / Clinically may use Xiao Jian Zhong Tang for gentle warming or Xiao Chai Hu Tang to harmonize; exterior-releasing herbs indicated prior to suppuration."
+      },
+      {
+        "id": "syn-0059",
+        "type": "syndrome",
+        "name": "衄家 / Epistaxis-prone patients",
+        "name_zh": "衄家",
+        "name_en": "Epistaxis-prone patients",
+        "description": "素有鼻衄之人，發汗易使額上三陽經氣血失養而加重出血與陰虛失眠，故不可任意發汗。 / Patients prone to frequent nosebleeds; sweating can exacerbate bleeding by further depleting blood and yin, causing dizziness and insomnia, therefore sweating is contraindicated.",
+        "symptoms": [
+          "symp-0124",
+          "symp-0040",
+          "symp-0047",
+          "symp-0030"
+        ],
+        "herbal_treatments": "處置方例：黃連阿膠雞子黃湯或小柴胡湯等以苦寒降虛熱並滋養陰血。 / Treatment examples: Huanglian Ejiao Jizi Huang Tang or Xiao Chai Hu Tang to reduce deficient heat and nourish yin/blood."
+      },
+      {
+        "id": "syn-0060",
+        "type": "syndrome",
+        "name": "亡血家 / bleeding-depleted patients",
+        "name_zh": "亡血家",
+        "name_en": "bleeding-depleted patients",
+        "description": "指因失血造成素虛、面色蒼白、怕冷顫慄等陰虛證候者，忌用發散發汗藥，當以回陽、補血為先。 / Patients depleted by bleeding presenting with pallor, cold intolerance and shivering from deficiency; avoid dispersing/sweating therapies and prioritize restoring yang and blood.",
+        "symptoms": [
+          "symp-0168",
+          "symp-0144"
+        ],
+        "herbal_treatments": "治法：人參四逆湯、附子理中湯或小建中湯佐蔥豉等以回陽補血並慎和表。 / Approach: use Ren Shen Si Ni Tang, Fuzi Lizhong Tang, or Xiao Jian Zhong Tang with scallion and fermented soy to restore yang and blood while cautiously harmonizing the exterior."
+      },
+      {
+        "id": "syn-0061",
+        "type": "syndrome",
+        "name": "汗家 / sweat-prone patients",
+        "name_zh": "汗家",
+        "name_en": "sweat-prone patients",
+        "description": "平素易自汗或汗多者，重發汗會消耗津液而致心神恍惚、胃中津液枯竭並兼見小便短赤等症，發汗應慎之。 / People who habitually sweat easily; excessive additional sweating depletes fluids leading to mental confusion, exhausted gastric fluids, and possible shortened/dark urination, so sweating should be used cautiously.",
+        "symptoms": [
+          "symp-0041",
+          "symp-0078",
+          "symp-0169",
+          "symp-0170"
+        ],
+        "herbal_treatments": "調治可用溫和補益如人參、甘草、生薑、紅棗等以固衛補津，或仿桂枝湯法少量發汗。 / Management: gentle tonics such as ginseng, licorice, ginger, and jujube to restore fluids, or adopt a mild sweating method modeled on Gui Zhi Tang to avoid overexertion."
+      },
+      {
+        "id": "syn-0062",
+        "type": "syndrome",
+        "name": "白虎湯證 / Bai Hu Tang pattern",
+        "name_zh": "白虎湯證",
+        "name_en": "Bai Hu Tang pattern",
+        "description": "陽明熱盛之證，以大熱大渴、汗多、脈洪大為主。 / Yangming heat pattern characterized by high fever, great thirst, profuse sweating, and a large flooding pulse.",
+        "symptoms": [
+          "symp-0102",
+          "symp-0186",
+          "symp-0018",
+          "symp-0078",
+          "symp-0022"
+        ],
+        "herbal_treatments": "石膏、知母、粳米、炙甘草 / Gypsum (Shi Gao), Anemarrhena (Zhi Mu), Japonica rice (Geng Mi), honey-fried Licorice (Zhi Gan Cao)"
+      },
+      {
+        "id": "syn-0063",
+        "type": "syndrome",
+        "name": "人參白虎湯證 / Ren Shen Bai Hu Tang pattern",
+        "name_zh": "人參白虎湯證",
+        "name_en": "Ren Shen Bai Hu Tang pattern",
+        "description": "白虎證兼胃陰不足者，加入人參以益胃陰、復脾胃之津液。 / Bai Hu pattern with stomach-yin deficiency; Ren Shen is added to nourish stomach yin and restore stomach fluids.",
+        "symptoms": [
+          "symp-0102",
+          "symp-0190",
+          "symp-0001"
+        ],
+        "herbal_treatments": "人參、石膏、知母、粳米、炙甘草 / Ginseng (Ren Shen), Gypsum (Shi Gao), Anemarrhena (Zhi Mu), Japonica rice (Geng Mi), honey-fried Licorice (Zhi Gan Cao)"
+      },
+      {
+        "id": "syn-0064",
+        "type": "syndrome",
+        "name": "柴胡湯證 / Chai Hu Tang pattern",
+        "name_zh": "柴胡湯證",
+        "name_en": "Chai Hu Tang pattern",
+        "description": "疏解少陽、和解表裏之證，常見胸脅不舒、往來寒熱或口苦等。 / Pattern of harmonizing the Shaoyang, relieving constraint between exterior and interior; often presents with hypochondriac discomfort, alternating chills and fever, or bitter taste.",
+        "symptoms": [
+          "symp-0119",
+          "symp-0035",
+          "symp-0038",
+          "symp-0189",
+          "symp-0180",
+          "symp-0178",
+          "symp-0049",
+          "symp-0012",
+          "symp-0046",
+          "symp-0191"
+        ],
+        "herbal_treatments": "柴胡、黃芩、半夏、生薑、大棗、甘草、人參 / Bupleurum (Chai Hu), Scutellaria (Huang Qin), Pinellia (Ban Xia), Fresh Ginger (Sheng Jiang), Jujube (Da Zao), Licorice (Gan Cao), Ginseng (Ren Shen)"
+      },
+      {
+        "id": "syn-0065",
+        "type": "syndrome",
+        "name": "小建中湯證 / Xiao Jian Zhong Tang pattern",
+        "name_zh": "小建中湯證",
+        "name_en": "Xiao Jian Zhong Tang pattern",
+        "description": "治中焦虛寒、脘腹綿痛、喜溫喜按之裏虛證。 / Treats middle jiao cold deficiency with intermittent abdominal pain relieved by warmth and pressure.",
+        "symptoms": [
+          "symp-0121",
+          "symp-0179",
+          "symp-0029",
+          "symp-0172",
+          "symp-0017",
+          "symp-0024"
+        ],
+        "herbal_treatments": "桂枝三兩、炙甘草二兩、大棗十二枚、芍藥六兩、生薑三兩、膠飴一升 / Cinnamon Twig (Gui Zhi) 3 liang, Honey-fried Licorice (Zhi Gan Cao) 2 liang, Jujubes (Da Zao) 12 pieces, Peony (Shao Yao) 6 liang, Fresh Ginger (Sheng Jiang) 3 liang, Maltose syrup (Jiao Yi)"
+      },
+      {
+        "id": "syn-0066",
+        "type": "syndrome",
+        "name": "大小承氣湯證 / Da/Xiao Chengqi Tang patterns",
+        "name_zh": "大小承氣湯證",
+        "name_en": "Da/Xiao Chengqi Tang patterns",
+        "description": "陽明腑實或大小承氣證，主大便閉結、譫語、煩渴及腹實之證。 / Patterns of purging heat accumulation in the Yangming (Da or Xiao Chengqi), presenting with constipation with delirium, great thirst, and abdominal fullness.",
+        "symptoms": [
+          "symp-0102",
+          "symp-0087",
+          "symp-0021",
+          "symp-0023",
+          "symp-0209"
+        ],
+        "herbal_treatments": "大黃、芒硝、枳實等攻下泻下藥 / Rhubarb (Da Huang), Mirabilite (Mang Xiao), Immature Bitter Orange (Zhi Shi) and other purgatives"
+      },
+      {
+        "id": "syn-0067",
+        "type": "syndrome",
+        "name": "柴胡白虎湯證 / Chai Hu Bai Hu Tang pattern",
+        "name_zh": "柴胡白虎湯證",
+        "name_en": "Chai Hu Bai Hu Tang pattern",
+        "description": "少陽與陽明夾雜之證，兼見煩渴與往來寒熱者，可用小柴胡加白虎類合方。 / Combined Shaoyang-Yangming pattern with vexation and thirst; a modification combining Chai Hu and Bai Hu formulas.",
+        "symptoms": [
+          "symp-0152"
+        ],
+        "herbal_treatments": "柴胡、石膏、知母、甘草等（小柴胡與白虎加減） / Bupleurum (Chai Hu), Gypsum (Shi Gao), Anemarrhena (Zhi Mu), Licorice (Gan Cao) (combination of Xiao Chai Hu and Bai Hu herbs)"
+      },
+      {
+        "id": "syn-0068",
+        "type": "syndrome",
+        "name": "大柴胡湯證 / Da Chai Hu Tang pattern",
+        "name_zh": "大柴胡湯證",
+        "name_en": "Da Chai Hu Tang pattern",
+        "description": "兼治少陽與陽明之間的夾雜證，見嘔吐、腹滿、實滿便秘、胸脅苦滿等。 / Pattern that treats combined Shaoyang and Yangming disorders, presenting with persistent vomiting, abdominal distention, constipation with focal hardness, and hypochondriac/fullness.",
+        "symptoms": [
+          "symp-0024",
+          "symp-0023",
+          "symp-0021",
+          "symp-0001",
+          "symp-0102",
+          "symp-0178",
+          "symp-0172",
+          "symp-0209"
+        ],
+        "herbal_treatments": "柴胡、黃芩、芍藥、半夏、生薑、枳實、大棗、大黃 / Bupleurum (Chai Hu), Scutellaria (Huang Qin), Peony (Shao Yao), Pinellia (Ban Xia), Fresh Ginger (Sheng Jiang), Immature Bitter Orange (Zhi Shi), Jujube (Da Zao), Rhubarb (Da Huang)"
+      },
+      {
+        "id": "syn-0069",
+        "type": "syndrome",
+        "name": "炙甘草湯證 / Zhi Gan Cao Tang pattern",
+        "name_zh": "炙甘草湯證",
+        "name_en": "Zhi Gan Cao Tang pattern",
+        "description": "用於脈結代、虛勞心悸及虛寒脈弱之證，補脾益氣並調和心脈。 / Pattern for knotted-intermittent pulse, palpitations from deficiency, and weak cold pulse; nourishes spleen qi and harmonizes the pulse.",
+        "symptoms": [],
+        "herbal_treatments": "炙甘草、人參、乾薑等 / Honey-fried Licorice (Zhi Gan Cao), Ginseng (Ren Shen), Dried Ginger (Gan Jiang), etc."
+      },
+      {
+        "id": "syn-0070",
+        "type": "syndrome",
+        "name": "柴胡證 / Chai Hu pattern (Shao Yang/Chaihu pattern)",
+        "name_zh": "柴胡證",
+        "name_en": "Chai Hu pattern (Shao Yang/Chaihu pattern)",
+        "description": "少陽證表現有胸脇滿、嘔吐、往來寒熱，可能兼見日晡潮熱，先解表再攻裏。 / Shao Yang/Chai Hu pattern marked by chest and hypochondriac fullness, vomiting, and alternating chills and fever; may show late‑afternoon tidal fever; treat by releasing the exterior first then regulating the interior.",
+        "symptoms": [
+          "symp-0015",
+          "symp-0024",
+          "symp-0014",
+          "symp-0194"
+        ],
+        "herbal_treatments": "小柴胡湯，後加芒硝（柴胡加芒硝湯） / Xiao Chai Hu Tang initially, followed by Xiao Chai Hu plus Mang Xiao (Chai Hu Jia Mang Xiao Tang)"
+      },
+      {
+        "id": "syn-0071",
+        "type": "syndrome",
+        "name": "瘀血證 / Blood stasis pattern",
+        "name_zh": "瘀血證",
+        "name_en": "Blood stasis pattern",
+        "description": "局部或全身血液流通不暢，見胸腹拘痛、舌紫或舌中紫斑、膈俞痛、舌齒痕等。 / Pattern of blood stasis with impaired circulation, presenting with fixed stabbing pains, abdominal or chest masses, tongue with purple spots, Geshu point tenderness, and teeth‑marked tongue.",
+        "symptoms": [
+          "symp-0195",
+          "symp-0196",
+          "symp-0197",
+          "symp-0198",
+          "symp-0199",
+          "symp-0200",
+          "symp-0201",
+          "symp-0075"
+        ],
+        "herbal_treatments": "桃核承氣湯、下瘀血湯、桂枝茯苓丸等 / Tao He Cheng Qi Tang, Xia Yu Xue Tang, Gui Zhi Fu Ling Wan, formulas used to move blood and resolve stasis"
+      },
+      {
+        "id": "syn-0072",
+        "type": "syndrome",
+        "name": "膀胱熱結（瘀血及熱結於膀胱） / Bladder heat accumulation / bladder blood‑heat pattern",
+        "name_zh": "膀胱熱結（瘀血及熱結於膀胱）",
+        "name_en": "Bladder heat accumulation / bladder blood‑heat pattern",
+        "description": "膀胱或小便道內熱結或瘀血導致小便短赤、帶血、少腹拘急，伴譫語或狂躁。 / Heat or blood‑heat accumulated in the bladder causing scanty, bloody or reddish urine, lower abdominal tension, and possible delirium or agitation.",
+        "symptoms": [
+          "symp-0206",
+          "symp-0170",
+          "symp-0167",
+          "symp-0210"
+        ],
+        "herbal_treatments": "桃核承氣湯 / Tao He Cheng Qi Tang (Tao He Chengqi Tang)"
+      },
+      {
+        "id": "syn-0073",
+        "type": "syndrome",
+        "name": "半表半裏、三焦水道堵塞（誤下後的半表半裏證） / Half‑exterior half‑interior with Jiao water‑path obstruction (post‑misapplied purging)",
+        "name_zh": "半表半裏、三焦水道堵塞（誤下後的半表半裏證）",
+        "name_en": "Half‑exterior half‑interior with Jiao water‑path obstruction (post‑misapplied purging)",
+        "description": "表證未解且被誤下攻後，病邪陷於表裏之間，表裏互結，表現胸滿、驚煩、小便不利、譫語、一身重等。 / Condition where exterior signs persist yet the patient was inappropriately purged, causing pathogen to lodge between exterior and interior (half‑exterior/half‑interior), with chest fullness, agitation, urinary difficulty, delirium, and heavy body.",
+        "symptoms": [
+          "symp-0083",
+          "symp-0207",
+          "symp-0046",
+          "symp-0087",
+          "symp-0042",
+          "symp-0211",
+          "symp-0013"
+        ],
+        "herbal_treatments": "柴胡加龍骨牡蠣湯（加大黃半夏等） / Chai Hu Jia Long Gu Mu Li Tang (Chai Hu plus Longgu and Muli), often including Da Huang, Ban Xia, Ren Shen, Sheng Jiang, Da Zao"
+      },
+      {
+        "id": "syn-0074",
+        "type": "syndrome",
+        "name": "浮陽上擾兼失津（燙傷/火災急症） / Floating yang uprising with fluid loss (thermal burn/fire trauma emergency)",
+        "name_zh": "浮陽上擾兼失津（燙傷/火災急症）",
+        "name_en": "Floating yang uprising with fluid loss (thermal burn/fire trauma emergency)",
+        "description": "火傷或被火炙烤後津液外被驅散、陽浮上擾，出現頭汗、驚狂、起臥不安、皮膚水疱與多痰等。 / After thermal injury or fire exposure, body fluids are driven outward and yang floats, causing head‑only sweating, agitation/delirium, inability to settle, blisters, and copious phlegm; urgent calming and fluid/yang resuscitation indicated.",
+        "symptoms": [
+          "symp-0208",
+          "symp-0203",
+          "symp-0204",
+          "symp-0207",
+          "symp-0106",
+          "symp-0212",
+          "symp-0086",
+          "symp-0020",
+          "symp-0213",
+          "symp-0215"
+        ],
+        "herbal_treatments": "桂枝去芍藥加蜀漆龍骨牡蠣救逆湯，外用牡蠣粉、麻油等。 / Gui Zhi (without Shao Yao) plus Shu Chi, Long Gu and Mu Li rescue‑reversal decoction; topical Mu Li, sesame oil, sulfur/Da Huang preparations for burns."
+      },
+      {
+        "id": "syn-0075",
+        "type": "syndrome",
+        "name": "桂枝加桂湯證 / Gui Zhi Jia Gui Tang pattern",
+        "name_zh": "桂枝加桂湯證",
+        "name_en": "Gui Zhi Jia Gui Tang pattern",
+        "description": "治奔豚等因腸胃濁氣上逆、心臟噴射迫回濁氣之證。常以桂枝湯加肉桂以振發心陽。 / Pattern treated by Gui Zhi Jia Gui Tang for running‑piglet sensation due to turbid intestinal qi rising and being forced back by cardiac discharge; uses Gui Zhi Tang with added cinnamon (Rougui) to strengthen cardiac yang.",
+        "symptoms": [
+          "symp-0137",
+          "symp-0204",
+          "symp-0087",
+          "symp-0029"
+        ],
+        "herbal_treatments": "以桂枝湯加肉桂（桂枝、白芍、炙甘草、生薑、大棗，加少量肉桂）為主。 / Gui Zhi Tang plus added Rougui (Cinnamon): Gui Zhi, Shao Yao, Zhi Gan Cao, Sheng Jiang, Da Zao, with small amount of Rougui."
+      },
+      {
+        "id": "syn-0076",
+        "type": "syndrome",
+        "name": "桂苓甘草龍骨牡蠣湯證 / Gui Ling Gan Cao Long Gu Mu Li Tang pattern",
+        "name_zh": "桂苓甘草龍骨牡蠣湯證",
+        "name_en": "Gui Ling Gan Cao Long Gu Mu Li Tang pattern",
+        "description": "因發汗過多或火逆造成浮陽上擾、煩躁心悸，兼有失津、盜汗或頭部出汗之證。 / Pattern for irritability and palpitations from excessive sweating or fire reversal with floating yang disturbance, fluid loss, night sweating or head‑only sweating.",
+        "symptoms": [
+          "symp-0020",
+          "symp-0135",
+          "symp-0203",
+          "symp-0029",
+          "symp-0078",
+          "symp-0218"
+        ],
+        "herbal_treatments": "常用藥：桂枝、甘草、龍骨、牡蠣、茯苓等。 / Typical herbs: Gui Zhi, Gan Cao, Long Gu, Mu Li, Fu Ling."
+      },
+      {
+        "id": "syn-0077",
+        "type": "syndrome",
+        "name": "火逆 / fire reversal pattern",
+        "name_zh": "火逆",
+        "name_en": "fire reversal pattern",
+        "description": "火邪上逆致陽亢、下焦水停，表現為煩躁、腰以下沉重痺麻及口咽乾燥或吐血下血等。 / Pathogenic fire rising counterflow causing yang hyperactivity and inferior fluid stagnation, presenting with agitation, lower‑body heaviness/numbness, throat dryness, and possible hematemesis or hematochezia.",
+        "symptoms": [
+          "symp-0215",
+          "symp-0020",
+          "symp-0213",
+          "symp-0013",
+          "symp-0217",
+          "symp-0060"
+        ],
+        "herbal_treatments": "治法以汗解或清熱瀉火並調和營衛；方例如桂枝加桂湯、桂苓甘草龍骨牡蠣湯等。 / Treat by inducing sweating or clearing heat and harmonizing ying‑wei; example formulas include Gui Zhi Jia Gui Tang and Gui Ling Gan Cao Long Gu Mu Li Tang."
+      }
+    ]
+  },
+  "book_meta": {
+    "chapters_total": 11,
+    "chapters": [
+      {
+        "title": "《人紀傷寒論》"
+      },
+      {
+        "title": "《傷寒論》序言"
+      },
+      {
+        "title": "前言"
+      },
+      {
+        "title": "辨太陽病脈證並治法上篇"
+      },
+      {
+        "title": "辨太陽病脈證並治法中篇"
+      },
+      {
+        "title": "辨太陽病脈證並治法下篇"
+      },
+      {
+        "title": "辨陽明病脈證並治法"
+      },
+      {
+        "title": "辨少陽病脈症並治法"
+      },
+      {
+        "title": "辨太陰病脈證並治法"
+      },
+      {
+        "title": "辨少陰病脈證並治法"
+      },
+      {
+        "title": "辨厥陰病脈證並治"
+      }
+    ]
+  },
+  "updated_at": "20250909_100109"
+}
