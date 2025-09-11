@@ -1,0 +1,21 @@
+{
+    "sections": [
+        {
+            "section_id": "十九",
+            "tags": [
+                {
+                    "type": "症狀",
+                    "canon_zh": "項強",
+                    "canon_en": "neck stiffness",
+                    "surface": "項強"
+                },
+                {
+                    "type": "症狀",
+                    "canon_zh": "胸痛",
+                    "canon_en": "chest pain",
+                    "surface": "胸痛"
+                }
+            ]
+        }
+    ]
+}
