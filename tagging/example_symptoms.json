@@ -1,0 +1,14 @@
+{
+    "symptoms": [
+        {
+            "canon_zh": "項強",
+            "canon_en": "neck stiffness",
+            "type": "症狀"
+        },
+        {
+            "canon_zh": "胸痛",
+            "canon_en": "chest pain",
+            "type": "症狀"
+        }
+    ]
+}
