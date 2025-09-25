@@ -1,0 +1,550 @@
+{
+  "run_id": "rag_20250826_150046",
+  "model": "RAG_Local",
+  "system_prompt": "You are an expert Traditional Chinese Medicine (TCM) practitioner with extensive knowledge of TCM diagnosis, treatment principles, and herbal prescriptions. \n\nFor each medical case presented, please provide:\n1. A detailed TCM diagnostic analysis including symptom analysis and syndrome differentiation (辨證論治)\n2. Specific Chinese herbal prescriptions with individual herbs and recommended dosages\n\nPlease respond in a structured, professional manner that would be appropriate for clinical practice.",
+  "total_prompts": 20,
+  "total_tokens": 0,
+  "total_cost": 0.0,
+  "responses": [
+    {
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n**症狀分析：**\n- **疲勞**：這可能表明氣虛或陰虛的情況。\n- **肩頸痠痛**：常見於風寒侵襲，表明外感風寒或風邪。\n- **怕冷**：這是風寒侵襲的典型症狀之一，顯示寒邪的存在。\n- **頭痛、發燒39攝氏度**：代表外感病邪，尤其是風寒或風熱入侵。\n- **咳嗽、咽喉疼痛、白痰**：白痰多見於寒邪或風寒引起的咳嗽，咽喉疼痛提示有腫脹和炎症。\n\n**證型判斷：**\n根據以上症狀，可以初步判斷為「風寒感冒」的證型。因為主要表現為怕冷、肩頸痠痛、發熱、咳嗽及白痰，這些都符合風寒侵襲的典型。\n\n### 2) 建議的中藥處方\n\n**方劑：** 銀翹散（Yin Qiao San）\n\n**方中具體藥物及劑量：**\n1. 金銀花（Jin Yin Hua） - 15克\n2. 連翹（Lian Qiao） - 15克\n3. 薄荷（Bo He） - 6克\n4. 牛蒡子（Niu Bang Zi） - 10克\n5. 甘草（Gan Cao） - 6克\n6. 桔梗（Jie Geng） - 10克\n7. 生薑（Sheng Jiang） - 3片\n8. 大棗（Da Zao） - 3枚\n\n**煎煮方法：**\n將上述藥材加水煎煮，先用大火煮沸，然後轉小火煮30分鐘，過濾取汁，分為2-3次服用，建議每日1劑。\n\n### 附註：\n患者如有痰多、咳嗽劇烈等情況，可以適當添加止咳化痰的藥物，如白前（Bai Qian）或前胡（Qian Hu），以增強止咳效果。\n\n這個處方的目的是疏風解表，清熱解毒，適合目前患者的症狀表現。若有症狀加重或無改善，應及時就醫。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:00:59.299860",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.36895977309522615,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.30316063891172895,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。昨天上午退燒了，但下午開始拉肚子，排泄物黃臭，噁心，食慾很差。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析：\n- **疲勞**、**肩頸痠痛**、**怕冷**：這些症狀提示身體有外邪侵襲，可能為風寒或風熱。\n- **頭痛**、**發燒39攝氏度**：發熱和頭痛表示有內熱存在。\n- **咳嗽**、**咽喉疼痛**、**白痰**：這些呼吸道症狀可能與肺部的風寒或風熱有關。\n- **拉肚子**、**排泄物黃臭**、**噁心**、**食慾差**：腹瀉及消化不良可能與脾胃受損有關，並可能是因為內熱或濕熱影響脾胃的功能。\n\n#### 證型判斷：\n根據上述症狀，可以辨別為**風熱感冒合併濕熱內蘊**：\n- **風熱**：由於有發熱、咳嗽、白痰及咽喉疼痛等表現。\n- **濕熱**：因為出現拉肚子、排泄物黃臭及食慾不佳，顯示脾胃受損且有內熱。\n\n### 2) 建議的中藥處方\n\n#### 中藥處方：\n1. **銀翹解毒丸** (或類似的清熱解毒方)：有助於清熱解毒，對於風熱感冒有效。\n   - **金銀花** (Honeysuckle flower) - 10克\n   - **連翹** (Forsythia fruit) - 10克\n   - **薄荷** (Mint) - 6克 (輕微散熱)\n   - **荊芥** (Schizonepeta) - 6克 (疏風解表)\n   - **牛蒡子** (Burdock seeds) - 10克 (清熱解毒)\n   \n2. **白朮** (Atractylodes) - 6克 (健脾益氣)\n3. **茯苓** (Poria) - 6克 (利水消腫，健脾)\n4. **生薑** (Fresh ginger) - 3克 (發汗解表)\n5. **半夏** (Pinellia) - 6克 (化痰止咳)\n\n#### 劑量建議：\n- 上述中藥可根據病人的具體情況進行調整，建議每日1劑，水煎服，分兩次服用。 \n- 針對腹瀉的症狀，若症狀加重，應考慮加入**白芍** (White peony) 10克，來和中緩急，減少腹痛。\n\n#### 注意事項：\n- 還需觀察病人的體溫和腹瀉情況，若症狀未改善或加重，應及時就醫。\n- 建議病人多休息，保持充足水分，避免油膩食物。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:01:15.099151",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.3728314994307111,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.31838618552607006,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。昨天咳嗽加重，胸口壓力大，躺下來咳嗽更嚴重，無法躺平睡覺，得用兩個枕頭墊高睡覺。舌苔白厚，但很乾。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析：\n- **疲勞**：表明氣虛或血虛。\n- **肩頸痠痛**：可能與外感風寒有關，或是氣滯血瘀所致。\n- **怕冷**：提示寒邪侵襲，可能是風寒表證。\n- **頭痛、發燒（39攝氏度）**：高熱顯示外感邪氣，伴隨頭痛，可能表明風寒或風熱的影響。\n- **咳嗽、咽喉疼痛**：咳嗽伴白痰，咽喉疼痛通常與肺部有關，白痰表明痰濕或外感風寒。\n- **胸口壓力大、躺下咳嗽加重**：這是由於肺氣不宣，加上痰濕阻滯所致，影響了呼吸。\n- **無法躺平睡覺**：通常與呼吸不暢或體內的痰濕有關。\n- **舌苔白厚但乾**：白苔顯示有外邪，厚苔顯示痰濕的存在，然舌乾則可能是體內津液不足。\n\n#### 證型判斷：\n根據症狀，患者的主要證型為**風寒感冒合併肺熱**，表現為外感風寒的症狀（肩頸痠痛、怕冷、咳嗽）以及內熱的表現（高熱、咽喉疼痛、白痰）。同時，患者的胸悶和咳嗽加重在躺下時，顯示肺氣不宣和痰濕阻滯的情況。\n\n綜合分析，患者的證型為**風寒襲肺，痰濕內阻**。\n\n### 2) 建議的中藥處方\n\n#### 中藥方劑：\n1. **麻黃**（Ephedra） 9克 - 發汗解表，散寒通肺。\n2. **桂枝**（Cinnamon Twig） 6克 - 解表散寒，調和營衛。\n3. **甘草**（Licorice） 3克 - 調和諸藥，潤肺止咳。\n4. **杏仁**（Apricot Kernel） 9克 - 潤肺化痰，止咳平喘。\n5. **白芍**（White Peony Root） 9克 - 養血柔肝，舒緩痙攣。\n6. **石膏**（Gypsum） 15克 - 清熱瀉火，降氣止咳。\n7. **生薑**（Fresh Ginger） 3片 - 健胃消化，散寒。\n\n#### 煎煮方法：\n將以上藥材放入鍋中，加水煎煮，煮沸後轉小火煎煮40分鐘，過濾後取汁。每日服用2次，每次150ml，連續服用3天。\n\n此次處方旨在解表散寒，清熱化痰，舒緩咳嗽，同時兼顧肺的功能。根據患者的具體情況，後續可根據反應調整方劑。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:01:30.984568",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.35217693623033125,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.28709246993724147,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，40歲，白人。胃口不好，但吃了不多後，就覺得胃脹。便秘，三四天大便一次，大便乾硬，小粒狀。平時容易疲勞，常常感冒。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析：\n- **胃口不好**：可見食慾減退，多由於脾胃虛弱或氣滯引起。\n- **胃脹**：在進食後出現的脹滿感，提示可能有食滯或氣滯，亦可能是由於脾虛導致的運化不良。\n- **便秘**：三四天大便一次，且大便乾硬、小粒狀，顯示腸道的津液不足及運行不暢，常與脾虛及腎陰不足有關。\n- **容易疲勞**：常感疲乏，可能提示氣虛或血虛的情況。\n- **常常感冒**：這可能反映出免疫力低下，與脾氣虛弱、衛氣不足有關。\n\n#### 證型判斷：\n綜合以上症狀，此患者的情況可初步判為：\n- **脾虛**：由於食慾不振、胃脹及便秘，脾的運化功能明顯不足。\n- **氣虛**：由於疲勞及易感冒，表明身體的正氣不足。\n- **腎陰虛**：由於可能的便秘與易疲勞，腎陰不足可能是潛在因素。\n\n### 2) 建議的中藥處方\n\n#### 處方：\n1. **人參 (Ren Shen)** - 10克：補氣，增強脾胃運化功能。\n2. **黃芪 (Huang Qi)** - 15克：益氣固表，增強免疫力。\n3. **當歸 (Dang Gui)** - 10克：補血，調經，改善血液循環。\n4. **地黃 (Di Huang)** - 10克：滋陰，養血，滋潤腸道。\n5. **白術 (Bai Zhu)** - 10克：健脾益氣，利水消腫。\n6. **枳實 (Zhi Shi)** - 6克：行氣消脹，幫助食物消化。\n7. **牛膝 (Niu Xi)** - 10克：引導血液回流，促進腸道蠕動。\n\n#### 煎煮方法：\n將以上藥材加水煎煮，先用大火煮沸，然後轉小火煮約30-45分鐘，過濾取汁，分2-3次服用，建議每日一劑。\n\n#### 注意事項：\n- 服用期間，建議患者注意飲食，選擇易消化的食物，避免油膩及生冷食物。\n- 定期觀察病情變化，如有不適，需及時就醫。 \n\n此處方旨在調和脾胃，增強氣血，以改善患者的整體健康狀況。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:01:45.324746",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.34823655951382404,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.2635846609246761,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，40歲，白人。胃口不錯，但吃了不多後，就覺得胃脹，有點泛酸、噁心的感覺。吃油膩的食物，容易拉肚子。偶而右下肋隱痛，早上起床口苦。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n**症狀分析：**\n- **胃口不錯，但吃了不多後就覺得胃脹**：這表明脾胃功能可能存在問題，可能是脾虛或胃氣不暢。\n- **泛酸、噁心的感覺**：這些症狀通常與胃腸的濕熱或胃氣逆行有關。\n- **吃油膩的食物，容易拉肚子**：這提示可能有濕邪阻滯或脾胃消化功能不佳。\n- **偶而右下肋隱痛**：右下肋的隱痛可能與肝膽有關，可能是肝氣鬱結或膽囊問題。\n- **早上起床口苦**：口苦常見於肝膽濕熱或肝鬱化火。\n\n**證型判斷：**\n綜合以上症狀，可以判斷為「脾虛濕滯伴隨肝鬱」。具體分析如下：\n- **脾虛**：表現為食欲正常但易脹，消化不良。\n- **濕滯**：油膩食物後拉肚子，泛酸、噁心均指向濕邪。\n- **肝鬱**：右下肋隱痛和口苦提示肝氣鬱結，可能影響脾胃。\n\n### 2) 建議的中藥處方\n\n**方劑名稱**：健脾化濕湯\n\n**具體藥物及劑量**：\n1. **白術** (Bai Zhu, Atractylodes Macrocephala) - 10克：健脾益氣，去濕。\n2. **茯苓** (Fu Ling, Poria) - 10克：利水滲濕，健脾安神。\n3. **陳皮** (Chen Pi, Citri Reticulatae Pericarpium) - 6克：理氣健脾，消食化滯。\n4. **澤瀉** (Ze Xie, Alisma) - 10克：利水滲濕，清利濕熱。\n5. **柴胡** (Chai Hu, Bupleurum) - 6克：疏肝解鬱，調和脾胃。\n6. **當歸** (Dang Gui, Angelica Sinensis) - 6克：活血化瘀，調理氣血。\n7. **甘草** (Gan Cao, Glycyrrhiza) - 3克：調和諸藥，益氣和中。\n\n**煎煮方法**：將上述藥材用水煎煮，先用大火煮沸，然後轉小火煮30-40分鐘，取汁服用。建議每日1劑，分2-3次服用。\n\n以上方劑旨在健脾化濕，疏肝解鬱，針對病人的具體症狀進行調理。建議患者在服用中藥的同時，注意飲食清淡，避免油膩食物。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:02:00.424861",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.3151817891224595,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.24716496400869264,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，65歲，白人。偶而心悸，覺得有人抓住她的心臟，感覺心跳大力，但測量下只稍微跳快一些。平時吃素，不吃肉。每週做熱瑜伽兩次。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n**症狀分析：**\n- **心悸**：患者偶而感到心悸，心跳感覺強烈，這可能與心臟的氣血不足或心陰虛有關。\n- **心跳稍微快**：測量心率顯示輕微加快，可能表示心臟功能尚可，但存在不適感。\n- **飲食習慣**：患者平時素食，這可能導致氣血不足，特別是缺乏動物性蛋白質和鐵質，對心臟健康產生影響。\n- **運動習慣**：每週做熱瑜伽兩次，雖然有助於促進氣血流通，但若營養不良，可能會無法完全支持身體的需求。\n\n**證型判斷：**\n根據患者的症狀及其背景，可以考慮以下幾種證型：\n- **心血虛**：患者心悸、心跳不適，可能是心血不足，無法滋養心臟所致。\n- **心陰虛**：心悸伴隨心跳感覺強烈，可能表現為心陰不足，無法安撫心神。\n- **氣虛**：由於長期素食，可能導致氣虛，無法推動血液循環，造成心悸。\n\n綜合以上分析，最可能的證型為**心血虛**伴隨**氣虛**。\n\n### 2) 建議的中藥處方\n\n根據以上的證型判斷，以下是針對患者情況的中藥處方：\n\n**處方：** \n- 人參 (Ginseng) 10克：補氣健脾，強壯身體。\n- 當歸 (Angelica) 10克：補血活血，調理月經，滋養心血。\n- 黃芪 (Astragalus) 15克：益氣固表，增強免疫能力。\n- 地黃 (Rehmannia) 10克：滋陰補血，養心安神。\n\n**使用方法：**\n將所有藥材放入鍋中，加水煮沸，然後小火慢煮約30-45分鐘，濾出藥液後每日服用1-2次，建議早晚各服用一次。\n\n**注意事項：**\n- 此處方建議在專業中醫師指導下使用，並根據患者的具體情況和反應進行調整。\n- 藥物使用期間，建議注意飲食均衡，增加含鐵和蛋白質的食物，必要時可諮詢營養師。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:02:13.395181",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.4105679020275467,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.31401651776618306,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，65歲，白人。偶而心悸，胸悶，覺得有人抓住她的心臟，感覺心跳大力，但測量下只稍微跳快一些，偶而覺得心臟跳跳停一下。手腳非常冰冷，半夜盜汗，出汗後覺得身體冷。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析：\n- **心悸、胸悶**：這些症狀通常與心臟的氣血不足或心腎不交有關，可能與情志因素或內臟功能失調相關。\n- **手腳冰冷**：這表明體內陽氣不足，特別是心陽或腎陽虛，導致四肢末梢循環不良。\n- **半夜盜汗**：這通常是陰虛或氣虛的表現，汗液過多流失後，身體感到寒冷。\n- **出汗後身體冷**：顯示出氣虛或陽虛的情況，汗出過多導致氣血不足，不能保護身體的陽氣。\n\n#### 證型判斷：\n根據以上症狀，這位患者可能屬於心腎不交、陰虛火旺或氣陰雙虛的證型。具體可進一步分為以下幾個方面：\n\n- **心陰虛**：心悸、心跳強烈感，伴有出汗、胸悶，可能是心陰不足，不能潤養心臟。\n- **腎陽虛**：手腳冰冷，夜間盜汗，可能是腎陽不足，無法溫暖全身。\n- **氣虛**：整體感到乏力，體力下降，可能與氣虛有關。\n\n### 2) 建議的中藥處方\n\n根據患者的症狀和證型，建議的中藥處方為：\n\n#### 方劑：心腎陽虛合併氣虛方\n- **人參** (Ren Shen) 10克：補氣，增強脾胃功能，助於氣血生化。\n- **黃芪** (Huang Qi) 15克：健脾益氣，增強免疫力和抗疲勞能力。\n- **當歸** (Dang Gui) 10克：滋養血液，調和氣血，改善心臟供血。\n- **地黃** (Di Huang) 10克：滋陰補腎，增強腎的功能。\n- **桂枝** (Gui Zhi) 6克：助於發汗，溫通經絡，改善循環。\n- **白芍** (Bai Shao) 10克：養血柔肝，緩和心悸。\n- **生薑** (Sheng Jiang) 3片：溫中散寒，幫助調和其他藥物。\n  \n#### 總劑量及使用方法：\n上述藥物可煎煮，水煎取汁，每日一劑，分兩次服用。建議患者在使用藥物期間，注意保暖，避免受寒，並保持心情舒暢。\n\n### 注意事項：\n患者如有其他伴隨症狀或不適，應及時就醫，並在專業中醫師的指導下使用中藥，根據實際情況隨時調整方劑。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:02:27.229851",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.35679599880490825,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.2841125616075111,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，15歲，亞裔。季節性花粉熱，每年三月到六月，打噴嚏、流鼻水不停，偶而鼻塞。平時喜歡喝含糖冷飲，吃很多水果。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 一、中醫診斷的思路分析\n\n#### 症狀分析：\n病人為15歲男孩，季節性花粉熱，主要症狀為打噴嚏、流鼻水、偶而鼻塞，症狀在春季（3月至6月）加重。平時喜好喝含糖冷飲和食用大量水果，這可能導致脾胃負擔加重，影響氣血運行。\n\n#### 證型判斷：\n1. **外感風邪**：這名病人在春季出現的症狀（打噴嚏、流鼻水、鼻塞）符合外感風邪的特徵，因為風邪在春季活動頻繁，容易侵襲人體，尤其是上呼吸道。\n2. **脾虛生痰**：病人平時飲食偏寒涼，喜好冷飲及水果，可能導致脾虛，無法運化水濕，造成痰濕阻塞鼻竅，進一步引起鼻塞及流鼻水的情況。\n\n綜合以上分析，此病人主要為「風寒侵襲」和「脾虛生痰」的表現。\n\n### 二、建議的中藥處方\n\n#### 中藥處方：\n1. **荊芥（Jing Jie）** - 6克：解表散風。\n2. **防風（Fang Feng）** - 6克：解表，祛風。\n3. **白芷（Bai Zhi）** - 6克：散風止痛，通鼻竅。\n4. **甘草（Gan Cao）** - 3克：和中調和其他藥物，潤肺。\n5. **茯苓（Fu Ling）** - 9克：健脾利水，消除痰濕。\n6. **陳皮（Chen Pi）** - 6克：理氣健脾，幫助消化，減少痰濕。\n7. **生薑（Sheng Jiang）** - 3片：溫中散寒，助於化痰。\n\n#### 劑量與使用：\n上述藥材可煎煮成湯劑，每日一劑，分兩次服用。建議連續服用一周，視病情變化調整方劑。\n\n#### 注意事項：\n1. 建議患者避免食用冷飲及過多生冷水果，保持飲食溫暖，增強脾胃功能。\n2. 注意休息，適當增強體質，避免再次受風寒侵襲。\n\n以上為該名患者的中醫診斷及處方建議，應根據患者具體情況隨時調整。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:02:39.038951",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.30241886482206604,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.25483060299501165,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，60歲，亞裔。後腰時不時有刺痛感，小便有灼熱感，有一次看到帶有紅色的尿液。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 一、中醫診斷的思路分析\n\n#### 症狀分析\n1. **後腰刺痛感**：後腰部位的刺痛常與腎臟、膀胱或肝腎陰虛有關，可能指向腎虛或氣滯。\n2. **小便灼熱感**：小便時的灼熱感可能與膀胱熱或腎火亢盛有關，尤其是伴隨有紅色尿液，可能指向有血尿的情況，這在中醫上可理解為腎精不足或濕熱下注。\n3. **紅色尿液**：紅色尿液可能是血尿，這表明腎或膀胱的損傷，常見於腎虛、膀胱濕熱的情況。\n\n#### 證型判斷\n綜合以上症狀，病人可能存在以下幾個證型：\n- **腎虛證**：後腰刺痛且伴隨尿液異常，顯示腎功能受損。\n- **膀胱濕熱證**：灼熱感和血尿表明膀胱有濕熱的情況。\n\n根據以上分析，病人的主要證型可判斷為「腎虛伴隨膀胱濕熱」。\n\n### 二、建議的中藥處方\n\n#### 中藥處方\n1. **生地黃（生地）** - 10克：滋陰補血，清熱涼血。\n2. **當歸（當歸）** - 10克：養血調經，活血化瘀。\n3. **黃芪（黃芪）** - 15克：補氣固表，增強免疫。\n4. **車前子（車前子）** - 10克：利尿通淋，清熱解毒。\n5. **茯苓（茯苓）** - 10克：健脾利水，安神。\n6. **甘草（甘草）** - 6克：調和藥性，緩和腸胃。\n\n#### 劑量與用法\n- 將以上藥材放入水中，煮沸後轉小火煮30分鐘，取汁，早晚各服用一次。可連續服用7-10天，觀察症狀變化。\n\n這個處方旨在滋補腎氣，清熱解毒，並促進尿液排泄，幫助緩解病人的症狀。建議病人在服用中藥的同時，注意休息，避免過度勞累和辛辣刺激的食物。若症狀持續或加重，應及時就醫進一步檢查。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:02:50.029760",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.33092010809917055,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.29544123138244066,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，5歲，亞裔。挑食，喜歡吃零食，上課時注意力不佳，常常被老師叮嚀。喜歡亂敲打東西，出怪聲音，有妥瑞症的表現。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 一、中醫診斷的思路分析\n\n#### 症狀分析\n該病人年齡為5歲，主要症狀包括挑食、喜歡零食、注意力不集中、行為異常（亂敲打東西及出怪聲），並有妥瑞症的表現。這些症狀可能與其脾胃功能、心神及肝氣的失調有關。\n\n1. **挑食與喜歡零食**：這表明脾胃可能虛弱，導致消化吸收不良，影響了氣血生化。\n2. **注意力不佳**：與心神不寧、氣虛或血虛有關，心神無法安定。\n3. **妥瑞症的表現**：可能與肝氣郁結或心肝火旺有關，導致神經過度興奮和肌肉不自主抽動。\n\n#### 證型判斷\n綜合上述症狀，該患兒可能屬於以下證型：\n- **脾虛食滯**：挑食和喜歡零食，脾胃無法運化。\n- **心血虛**：注意力不集中，心神不寧。\n- **肝氣郁結**：行為異常，妥瑞症的表現。\n\n### 二、建議的中藥處方\n\n根據該病人的症狀及證型，建議以下中藥處方：\n\n#### 方劑名稱：健脾安神湯\n\n#### 主要成分及劑量：\n1. **人參 (Ren Shen)** - 5克：補氣健脾，增強消化吸收。\n2. **白術 (Bai Zhu)** - 5克：健脾益氣，防止食滯。\n3. **茯苓 (Fu Ling)** - 5克：利水滲濕，健脾安神。\n4. **當歸 (Dang Gui)** - 5克：補血活血，養心安神。\n5. **龍眼肉 (Long Yan Rou)** - 5克：養心安神，益脾補血。\n6. **甘草 (Gan Cao)** - 3克：調和諸藥，補脾和中。\n\n#### 劑型：\n可製成煎劑，每日1劑，分兩次服用，連續服用1個月，視病情變化調整。\n\n#### 注意事項：\n- 需要定期評估患兒的飲食習慣，建議增加營養均衡的飲食，減少零食攝入。\n- 建議結合行為療法來改善注意力問題和妥瑞症表現。\n- 若症狀未改善或加重，應及時就醫，考慮進一步檢查和治療。\n\n### 結語\n以上中藥處方和建議應根據患者具體情況進行調整，並在專業中醫師的指導下進行治療。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:03:04.640062",
+      "retrieved_chunks": [
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.2229829438327592,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.20409898551843464,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，42歲，亞裔。月經推遲，40～50天才來一次，月經來時經痛嚴重。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n**症狀分析：**\n- 月經推遲：40～50天來一次，顯示月經周期不規則，可能與腎精不足或氣血虛弱有關。\n- 經痛嚴重：經痛通常與氣滯血瘀或寒凝血淤有關，這可能表明經絡不通，或是內部寒邪干擾經血運行。\n\n**證型判斷：**\n根據患者的症狀，可以考慮以下證型：\n- **腎陽虛**：月經不調、經痛，伴隨下腹冷痛，可能有畏寒等症狀。\n- **氣血虛弱**：經期延長，伴隨乏力、臉色蒼白、心悸等，可能有失眠等症狀。\n- **氣滯血瘀**：經痛劇烈，伴有經血量少或經血色暗，可能有腹部脹痛，情緒抑鬱等。\n\n綜合考慮，患者可能存在**腎陽虛**及**氣血虛弱**的情況。\n\n### 2) 建議的中藥處方\n\n根據上述診斷，以下是建議的中藥處方：\n\n**方劑名稱：** 益腎調經湯\n\n**具體藥物及劑量：**\n1. **人參** (Ren Shen) - 10克：補氣強壯，增強脾胃運化功能。\n2. **黃芪** (Huang Qi) - 15克：增強免疫力，補氣固表。\n3. **當歸** (Dang Gui) - 10克：養血調經，緩解經痛。\n4. **白芍** (Bai Shao) - 10克：養血柔肝，緩和經痛。\n5. **肉桂** (Rou Gui) - 6克：溫腎散寒，促進血液循環。\n6. **地黃** (Di Huang) - 15克：滋陰養血，調和全方。\n7. **川芎** (Chuan Xiong) - 6克：活血行氣，緩解經痛。\n\n**用法：** 將上藥加水煎煮，取汁，日服2次，早晚各一次。煎煮的水量依患者個人情況調整，通常用750毫升水煎至250毫升即可。\n\n### 注意事項\n- 建議患者調整生活方式，包括飲食均衡、適量運動、保持情緒穩定等。\n- 如症狀未見改善或有其他異常情況，需及時就醫檢查。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:03:15.749351",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.3213740640995609,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.23983063156604184,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，42歲，亞裔。月經準時28天來一次，可是每次都來10多天，前面兩三天血量正常，之後一直滴滴漏漏，到12～13天才完全停止出血。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析\n病人為42歲亞裔女性，月經周期為28天，但每次月經持續時間過長，達到10多天。前2-3天血量正常，隨後則是滴滴漏漏，直到第12-13天才完全停止出血。這些症狀提示以下幾個方面：\n\n- **月經周期正常**：提示腎功能和脾胃功能在一定程度上是正常的，但月經持續時間過長表明可能存在內部的失調。\n- **前期正常，後期滴漏**：這可能顯示出體內的血液運行不暢或血液不足，無法正常排出。\n- **年齡因素**：42歲女性，接近更年期，可能涉及腎陰虛或腎陽虛的問題。\n\n#### 證型判斷\n根據上述症狀，初步診斷可考慮以下幾種證型：\n\n- **肝血虛**：月經持久，且滴漏不止，可能與肝血不足有關，無法滋養子宮，導致月經不調。\n- **脾虛血弱**：脾虛則無法運化水濕，造成血液運行不暢，出現月經過長現象。\n- **腎陰虛**：年齡接近更年期，可能出現腎陰虛，導致月經不規則及持續時間過長。\n\n綜合以上分析，患者的證型可初步判定為「肝血虛伴脾虛」。\n\n### 2) 建議的中藥處方\n\n根據患者的具體情況，建議使用以下中藥處方：\n\n#### 處方名稱：養血調經湯\n\n**組成藥物及劑量：**\n1. 當歸 (Dang Gui) - 15克：養血活血，調經止痛。\n2. 白芍 (Bai Shao) - 15克：養血和營，調和肝脾。\n3. 黃芪 (Huang Qi) - 15克：補氣固表，提升免疫力，增強脾胃功能。\n4. 牡丹皮 (Mu Dan Pi) - 10克：清熱涼血，活血化瘀。\n5. 人參 (Ren Shen) - 10克：大補元氣，強化脾胃。\n6. 茯苓 (Fu Ling) - 10克：健脾利水，安神。\n7. 川芎 (Chuan Xiong) - 10克：活血行氣，改善血液循環。\n\n**用法**：將上述藥材煎煮，水450毫升，煮沸後改小火煮30分鐘，取汁，早晚各服用一次。\n\n**注意事項**：\n- 此方僅作為初步建議，具體用藥需根據患者的實際情況進行調整。\n- 服藥期間注意調整飲食，多食用養血、健脾的食物，如紅棗、桂圓、豬蹄等。\n- 若症狀未見改善，建議患者及時回診，進行進一步的診斷與調整。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:03:30.151330",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.3124541657486788,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.26604338955281465,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，48歲，亞裔。這一年月經週期開始變亂，有時提前，有時延後。偶而下午會突然身體燥熱，心情也比較煩躁，容易生氣。偶而半夜醒來後，就無法再入睡。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析：\n- **月經週期變亂**：可能與肝腎功能失調有關，月經的提前和延後顯示出氣血運行的不暢，可能是肝氣鬱結或腎陰虛。\n- **燥熱感**：下午突然感到身體燥熱，這可能是腎陰虛或肝火上炎的表現。\n- **情緒煩躁、容易生氣**：情緒不穩定常見於肝氣鬱結，肝失疏泄。\n- **半夜醒來無法再入睡**：可能是心腎不交或陰虛火旺的表現，影響了睡眠質量。\n\n#### 證型判斷：\n綜合以上症狀，患者的情況可能屬於以下幾種證型：\n1. **肝氣鬱結**：情緒波動，月經不規則，伴有燥熱感。\n2. **腎陰虛**：燥熱，失眠，情緒焦躁，月經變亂。\n3. **心腎不交**：半夜驚醒，難以再入睡。\n\n考慮到這些因素，主要證型應為“肝腎陰虛”伴隨“肝氣鬱結”。 \n\n### 2) 建議的中藥處方\n\n#### 中藥處方：\n**方名**：肝腎陰虛調理方\n\n- **生地黃 (Rehmannia glutinosa)** 15克：滋養腎陰，養血。\n- **當歸 (Angelica sinensis)** 10克：補血活血，調經。\n- **黃芪 (Astragalus membranaceus)** 15克：益氣固表，增強免疫。\n- **白芍 (Paeonia lactiflora)** 10克：柔肝止痛，養血和中。\n- **柴胡 (Bupleurum chinense)** 10克：疏肝解鬱，調和肝氣。\n- **麥冬 (Ophiopogon japonicus)** 10克：滋陰潤燥，助於安神。\n- **枸杞子 (Lycium barbarum)** 10克：補肝腎，明目。\n\n#### 用法：\n將上述藥材放入鍋中，加水煎煮，取汁，分為兩次服用，早晚各一次。可根據患者的具體情況調整劑量或加入其他藥材。\n\n#### 注意事項：\n- 建議患者保持良好的作息，避免熬夜，減少情緒壓力。\n- 定期觀察月經變化及症狀改善情況，必要時可調整方劑。 \n\n希望以上建議對患者的健康有所幫助。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:03:43.526989",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.3482106756427401,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.2575819543198259,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，35歲，白人。身材肥胖，肚子突出明顯。身上多處皮疹，太陽曬及洗熱水澡後更加嚴重，偶而會很癢，抓了以後會破皮，流出透明的組織液。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析：\n- **肥胖及腹部突出**：這表明可能存在脾胃虛弱，導致水濕滯留，體內痰濕較重。\n- **皮疹及癢感**：皮疹在陽光曝曬及熱水澡後加重，這指向外感熱邪或濕熱內蘊的可能性。\n- **破皮及流透明組織液**：此症狀表明皮膚可能有濕熱內蕴，若擴大且抓破後流出液體，顯示皮膚的屏障功能受損，可能存在濕邪和熱毒。\n\n#### 證型判斷：\n根據症狀，患者的主要證型為：\n- **濕熱下注**：由於肥胖及皮疹，尤其是濕熱引起的皮膚症狀。\n- **脾虛**：因為肥胖可能導致脾胃功能失調，無法運化水濕。\n\n綜合分析，患者可歸為“濕熱瘡瘍”與“脾虛”相結合的證型。\n\n### 2) 建議的中藥處方\n\n#### 中藥處方：\n- **茯苓** (Fuling) 15克：健脾利濕，去除多餘水濕。\n- **白術** (Baizhu) 15克：補脾益氣，增強脾的運化功能。\n- **黃芩** (Huangqin) 10克：清熱燥濕，解毒，對皮膚癢和皮疹有良好效果。\n- **生薑** (Shengjiang) 5克：調和脾胃，促進消化。\n- **當歸** (Danggui) 10克：滋養血液，促進皮膚癒合。\n- **金銀花** (Jinyinhua) 15克：清熱解毒，對於皮膚發炎和癢感有效。\n- **蒲公英** (Pugongying) 15克：清熱解毒，利濕消腫。\n\n#### 總劑量：\n每日一劑，水煎服，每日一至兩次，連服一至兩周，視病情改善情況調整。\n\n### 注意事項\n- 建議患者注意飲食，避免辛辣、油膩食物，增加清淡易消化的飲食。\n- 同時建議保持皮膚乾燥，避免過度抓撓，必要時可用溫水清洗並輕輕拍乾皮膚，減少刺激。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:03:54.065992",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.2841773933504099,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.26255581156161806,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，55歲，白人。小腿紫癜多年，其它部位也常瘀青，但是，病人覺得除了這些問題外，身體沒有什麼異常。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析\n- **病人年齡**：55歲，接近更年期，可能有陰血不足的情況。\n- **紫癜及瘀青**：小腿及其他部位出現紫癜和瘀青，顯示血液循環不畅，可能涉及血液的生成或運行問題。\n- **病人自述**：除了紫癜和瘀青外無其他明顯異常，這可能表示沒有明顯的內臟器官功能障礙，但仍需考慮氣血兩虧或脾虛的情況。\n\n#### 證型判斷\n綜合以上症狀，病人可能存在以下證型：\n- **氣虛血虛**：長期的紫癜及瘀青，可能表現為氣虛，導致血液生成不足，血液運行不暢。病人年齡偏大，尤其在女性中，可能因為陰血不足而加重。\n- **脾虛**：脾主運化，若脾虛則無法有效生成血液，亦可導致瘀血的形成。\n\n### 2) 建議的中藥處方\n\n根據病人的症狀和證型，建議以下中藥處方：\n\n#### 處方：\n- **人參 (Ren Shen)** 10克：大補元氣，增強脾的運化功能。\n- **黃芪 (Huang Qi)** 15克：補氣固表，增強免疫力，促進血液生成。\n- **當歸 (Dang Gui)** 12克：養血活血，調理月經，對瘀血有一定的改善效果。\n- **地黃 (Di Huang)** 10克：滋陰補血，尤其對於年長女性的血虛有良好的效果。\n- **赤芍 (Chi Shao)** 10克：活血化瘀，對於紫癜和瘀青的改善有促進作用。\n  \n#### 用法：\n將以上中藥材放入清水中，煮沸後轉小火煮約30分鐘，取汁服用。每日1劑，可持續服用2周觀察效果。\n\n#### 注意事項：\n- 服藥期間，建議注意休息，避免過度勞累。\n- 若症狀持續不改善，建議就診進一步檢查，以排除其他可能的病因。 \n\n希望以上分析和建議能對病人的健康有幫助。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:04:06.434946",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.3345663167749002,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.27600620662089115,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，10歲，亞裔和白人混血。一週有四五個晚上會尿床，父母試著讓他晚餐後少喝水，依然沒有改善。病人父親陳述，他自己小時候也是尿床到十多歲，因此懷疑是不是遺傳的問題。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析\n病人的主要症狀是夜間尿床（遺尿），每週有四到五個晚上發生。病人年齡較小，男孩10歲，且有家族史（父親小時候也有類似情況）。由於父母已經嘗試控制晚餐後的水分攝入，但症狀沒有改善，這表明問題可能不僅僅是水分攝取的問題。\n\n#### 證型判斷\n根據中醫的理論，尿床主要與腎、膀胱的功能有關。考慮到病人年紀尚小，腎氣尚未完全發育成熟，加上有家族遺傳的背景，可能涉及以下幾種證型：\n\n1. **腎虛**：腎氣虛弱，無法固攝尿液，常見於小兒，表現為夜間尿床、精神狀況較差、容易疲倦等。\n2. **脾虛**：脾虛導致水濕不化，影響腎的固攝功能，可能表現為食欲不振、容易腹瀉等。\n3. **心腎不交**：心神不寧，影響腎的功能，可能伴隨失眠、焦慮等情況。\n\n根據病人的表現，主要考慮腎虛和脾虛的可能性。\n\n### 2) 建議的中藥處方\n\n#### 中藥處方\n根據上述的證型判斷，建議使用以下中藥處方：\n\n**方劑名**：八珍湯（可作調整）\n\n**組成藥物與劑量**：\n1. **人參（人參）** - 10克：補氣健脾。\n2. **黃芪（黃芪）** - 10克：增強免疫力，補氣固表。\n3. **當歸（當歸）** - 10克：補血活血，調和營衛。\n4. **白術（白術）** - 10克：健脾益氣，利水消腫。\n5. **茯苓（茯苓）** - 10克：利水滲濕，健脾安神。\n6. **桂枝（桂枝）** - 6克：助陽解表，促進氣血循環。\n7. **地黃（地黃）** - 12克：滋陰補腎，養血。\n8. **甘草（甘草）** - 6克：調和諸藥，補中益氣。\n\n#### 使用方法\n將以上藥材用清水煎煮，先用大火煮沸，再轉小火煎煮約30-40分鐘，取湯飲用。每日一劑，連續服用2-4周，視病情變化而定。\n\n### 注意事項\n- 建議定期隨訪，觀察病情變化及藥物效果。\n- 在治療期間，注意調整飲食，避免吃生冷、油膩重的食物。\n- 建議父母在心理上給予孩子支持，減少焦慮感，促進心理健康。\n\n以上是針對該病人的中醫診斷及處方建議，若有其他症狀或情況變化，請及時調整方案。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:04:23.026689",
+      "retrieved_chunks": [
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.2449859079901491,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.24171754284579047,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，男，70歲，白人。直腸癌二期，西醫都過手術，也做過化療及放療，暫時病情穩定，癌症未復發。但是，病人每天大便多次，大便很稀軟不成行，沒有血跡或黏液，西醫不認為是大腸炎或其它問題，目前只能靠止痢的藥物勉強減緩，病人依然每天大便氣七八次，偶而會來不及上廁所，無法控制，弄髒衣服，讓病人十分尷尬。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 中醫診斷分析\n\n#### 症狀分析\n病人70歲，男性，直腸癌二期，經過手術及化療、放療後病情穩定，但目前主要症狀為：\n- 每天大便多次（七八次）\n- 大便稀軟不成形\n- 無血跡或黏液\n- 偶爾會有急迫感，來不及上廁所，導致弄髒衣服\n\n這些症狀提示腸道功能失常，導致排便不適。由於病人有癌症病史，且經歷過手術和放化療，這可能影響到腸道的功能，造成腸道運動異常。\n\n#### 證型判斷\n在中醫的角度，考量到病人的年齡、病史及目前的症狀，可以進行以下證型判斷：\n1. **脾虛失運**：由於腸道功能受損，導致水濕內停，脾的運化功能不足，出現大便稀軟。\n2. **腎陽不足**：年齡較大，可能有腎陽虛弱的情況，這也會影響到腸道的運動。\n3. **氣虛下陷**：由於癌症手術後的虛弱，可能導致氣虛，無法支撐腸道的正常運作。\n\n綜合考慮，病人的主要證型為脾虛伴隨氣虛。\n\n### 中藥處方建議\n\n#### 具體藥物及劑量\n根據以上證型，可以考慮以下中藥處方：\n\n1. **人參（人參）**：10克 - 補氣健脾，增強脾胃運化功能。\n2. **白術（白术）**：10克 - 健脾益氣，助於脾的運化功能。\n3. **茯苓（茯苓）**：15克 - 利水滲濕，健脾安神。\n4. **當歸（當歸）**：6克 - 養血調經，對於年齡較大者可促進血液循環。\n5. **甘草（甘草）**：6克 - 調和諸藥，且能緩解腸道不適。\n6. **白芍（白芍）**：10克 - 養血柔肝，緩解腹痛。\n\n#### 使用方法\n將以上藥材放入清水中，煮沸後小火煎煮約30分鐘，取汁，分兩次服用，建議每日一劑。根據病情情況，持續使用2至4周，觀察病人的排便情況及改善情況。\n\n### 注意事項\n- 建議病人注意飲食，選擇易消化且富含纖維的食物，避免過於油膩。\n- 定期回診，根據病情及時調整處方。\n- 若出現新的症狀或不適，應及時就醫。 \n\n此處方需根據具體病情及病人的體質進行調整，並在專業中醫師的指導下使用。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:04:39.706483",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.27813805998939156,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.24086507173902674,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，30歲，亞裔和白人混血。自述從新冠肺炎爆發在家工作時開始，感到焦慮，心情低落，對生活及工作沒有興趣，也沒有什麼耐心做完一件事，偶而有厭世的念頭，服用過抗憂鬱的精神科藥物，效果有限，因為導致胃腸不適而停止服用。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n**症狀分析：**\n- 患者年齡30歲，女性，混血族裔，這可能會影響其生活習慣和情緒狀態。\n- 主訴焦慮、心情低落、對生活及工作失去興趣，缺乏耐心、偶爾有厭世的念頭。\n- 服用抗憂鬱藥物後出現胃腸不適，這表明患者的脾胃功能可能較弱，且情緒困擾影響到脾胃的運行。\n\n**證型判斷：**\n根據症狀，可以考慮以下幾個證型：\n- **心脾兩虛**：焦慮和心情低落可能是心氣不足、心血不足所致，而對生活的興趣減少和缺乏耐心則與脾虛有關。\n- **肝鬱氣滯**：情緒不穩定、焦慮，可以判斷為肝氣鬱結，未能疏通，導致情緒低落。\n- **陰虛火旺**：如果伴隨有心煩失眠、口乾等症狀，則可能有陰虛火旺的情況。\n\n綜合考慮，患者的主要問題是心脾兩虛，肝鬱氣滯。\n\n### 2) 建議的中藥處方\n\n**處方：健脾養心湯**\n- **人參 (Ren Shen)**：6克，強壯脾氣，提升精神狀態。\n- **黃芪 (Huang Qi)**：9克，增強免疫力，提升整體氣血。\n- **當歸 (Dang Gui)**：6克，養血調經，改善心情和情緒。\n- **茯苓 (Fu Ling)**：9克，健脾利水，安神。\n- **白朮 (Bai Zhu)**：9克，健脾燥濕，增強食慾。\n- **柴胡 (Chai Hu)**：6克，疏肝解鬱，幫助情緒平衡。\n- **酸棗仁 (Suan Zao Ren)**：9克，養心安神，改善睡眠質量。\n\n**劑量及用法：**\n將以上中藥材煎煮，取汁，分為2次飲用，建議早晚各一次。連續服用2-4週，根據病情調整。\n\n### 注意事項\n- 注意患者的脾胃功能，避免食用生冷、油膩的食物。\n- 定期跟蹤患者的情緒變化及身體反應，必要時調整處方。\n- 針對情緒問題，可以考慮配合針灸或心理諮詢來進行綜合治療。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:04:54.476883",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.31702803717428585,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.24722830955914105,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，30歲，亞裔。在高科技公司工作，壓力很大。強迫症，每次碰了什麼東西以後，都得洗手十幾次，不然擔心會被病菌感染。雖然理智上知道那並不合理，心理上卻無法克服恐懼。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n**症狀分析：**\n- 患者為30歲女性，工作於高科技公司，面臨較大壓力。\n- 主要症狀為強迫症，表現為反覆洗手，對病菌感染感到恐懼，雖然理智上明白此行為不合理，但心理上無法克服。\n- 以上症狀顯示出情緒壓力與焦慮的明顯影響，可能與心氣虛弱及肝鬱有關。\n\n**證型判斷：**\n- **心氣虛弱（心神不寧）**：強迫行為及焦慮的心理表現，可能是因心氣不足，無法安定心神。常伴有疲倦乏力，心悸等症狀。\n- **肝氣鬱結**：工作壓力導致情緒不舒，肝氣鬱結，影響脾胃，可能導致消化不良或食慾減退。\n- **脾虛（血虛）**：脾虛可能導致氣血生化不足，進一步影響心神，出現焦慮及恐懼感。\n\n綜合以上分析，患者的主要證型可定為**心氣虛弱合併肝氣鬱結**，需針對心、肝、脾進行調理。\n\n### 2) 建議的中藥處方\n\n**方劑：補心安神湯**（可根據患者具體狀況調整）\n\n**藥材及劑量：**\n- 人參（Ginseng） 10克：補氣強身，增強心神安定。\n- 甘草（甘草） 6克：調和諸藥，增強脾胃功能。\n- 當歸（Angelica） 10克：養血活血，調和心神。\n- 菊花（Chrysanthemum） 10克：清肝明目，舒肝解鬱。\n- 白芍（White Peony Root） 10克：養血柔肝，緩和情緒。\n- 大棗（Jujube） 5枚：養心安神，增強脾胃。\n- 薰衣草（Lavender） 5克：具有鎮靜、安神的作用，幫助緩解焦慮。\n\n**使用方式：**\n- 將上述藥材加水煮沸，轉小火繼續煮30分鐘，過濾後取汁，每日1劑，分2次服用，建議連續服用2週，視症狀改善情況可調整方劑。\n\n**注意事項：**\n- 避免辛辣刺激食物，保持規律作息，緩解壓力，適度運動，增強心理健康。 \n- 若症狀持續或加重，建議患者尋求心理專業幫助。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:05:08.023763",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.24755572890827973,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.246193549339653,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    },
+    {
+      "prompt": "病人，女，華人，三十五歲。一個月會有一週左右發生肌肉痛、無力、嘔吐、意識不清、腫脹、心律不整的現象，西醫診斷為横纹肌溶解症，使用藥物暫時壓制住症狀，但一陣子後又再度發作，認為是基因遺傳缺陷導致的。病人平時生活有壓迫感，發病後更為焦慮。病人體型偏腫胖，每次發作時，除了上述的症狀外，還有明顯水腫及血糖飆高。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 1) 中醫診斷的思路分析\n\n#### 症狀分析：\n- **肌肉痛、無力**：表明氣血虧虛，腎精不足，可能影響了筋脈的運行。\n- **嘔吐、意識不清**：可能與胃氣不和及脾胃虛弱有關，影響了飲食的消化吸收，導致氣血不足。\n- **腫脹、水腫**：水濕內停，脾虛無力，無法運化水液，或腎陽不足，無法排出體內多餘的水分。\n- **心律不整**：心陽不足，或心腎不交，導致心臟的功能失調。\n- **焦慮、壓迫感**：情志因素影響，心肝受損，可能導致氣機不暢。\n- **發胖**：脾虛運化不良，水濕內停，導致體重增加。\n\n#### 證型判斷：\n根據上述症狀，可以考慮以下幾種證型：\n- **脾氣虛證**：表現為無力、食欲不振、水腫等。\n- **腎陽虛證**：表現為水腫、無力、肌肉無力、心律不整等。\n- **肝鬱氣滯證**：焦慮、壓迫感及情志因素影響。\n\n綜合考量，病人可能呈現**脾腎兩虛，水濕內停，伴有肝鬱氣滯**的證型。\n\n### 2) 建議的中藥處方\n\n#### 中藥處方：\n- **人參 (Ren Shen)** 10克：大補元氣，增強脾胃運化功能。\n- **黃芪 (Huang Qi)** 15克：健脾益氣，增強免疫力，促進水液代謝。\n- **當歸 (Dang Gui)** 10克：補血調經，改善血液循環，緩解肌肉疼痛。\n- **地黃 (Di Huang)** 15克：滋陰補腎，強化腎的功能。\n- **茯苓 (Fu Ling)** 10克：利水滲濕，健脾安神。\n- **陳皮 (Chen Pi)** 6克：理氣健脾，幫助消化。\n- **柴胡 (Chai Hu)** 6克：疏肝解鬱，調和肝氣。\n\n#### 製作與服用：\n將上述藥材一同煎煮，水量約為1500毫升，煮至約500毫升，分為兩次服用，早晚各一次。可連續服用兩週，根據症狀改善情況再調整用藥。\n\n#### 注意事項：\n- 建議病人注意休息，避免情緒波動。\n- 飲食上應以清淡、易消化的食物為主，避免油膩及生冷食物。\n- 定期監測血糖及水腫情況，必要時諮詢西醫進一步檢查。",
+      "model": "RAG_Local",
+      "timestamp": "2025-08-26T15:05:22.512523",
+      "retrieved_chunks": [
+        {
+          "text": "er\n- Meridians (經絡): Energy pathways in the body\n\nCommon Herbs:\n- Ginseng (人參): Tonifies qi and strengthens the spleen\n- Astragalus (黃芪): Boosts immune system and tonifies qi\n- Angelica (當歸): Nourishes blood and regulates menstruation\n- Rehmannia (地黃): Nourishes kidney yin and blood\n\nThis document should be successfully processed by the RAG system and used to answer questions about Traditional Chinese Medicine.",
+          "similarity": 0.28949519491221676,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 1,
+            "total_chunks": 2
+          }
+        },
+        {
+          "text": "Traditional Chinese Medicine Test Document\n\nThis is a test document to verify that the RAG system can process documents correctly.\n\nKey TCM Concepts:\n- Qi (氣): The vital energy that flows through the body\n- Yin and Yang (陰陽): The complementary forces that maintain balance\n- Five Elements (五行): Wood, Fire, Earth, Metal, Water\n- Meridians (經絡): Energy pathways in the body",
+          "similarity": 0.24611976043222128,
+          "metadata": {
+            "file_path": "/Users/calebchoi/Desktop/yQi/docs/test_document.txt",
+            "chunk_index": 0,
+            "total_chunks": 2
+          }
+        }
+      ],
+      "num_chunks_used": 2
+    }
+  ]
+}

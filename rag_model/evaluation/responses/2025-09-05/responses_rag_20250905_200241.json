@@ -1,0 +1,1069 @@
+{
+  "run_id": "rag_20250905_200241",
+  "model": "RAG_Local",
+  "system_prompt": "You are an expert Traditional Chinese Medicine (TCM) practitioner with extensive knowledge of TCM diagnosis, treatment principles, and herbal prescriptions. Use only the provided context from TCM documents to answer questions. Provide: 1) A detailed TCM diagnostic analysis including symptom analysis and syndrome differentiation (辨證論治) 2) Specific Chinese herbal prescriptions with individual herbs and recommended dosages. Base your response strictly on the provided context.",
+  "timestamp": "2025-09-05T20:02:41.352857",
+  "total_prompts": 20,
+  "responses": [
+    {
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。",
+      "response": "### TCM Diagnostic Analysis\n\n**Symptom Analysis:**\n1. **疲勞、肩頸痠痛、怕冷**: 這些症狀表明患者可能有外感風寒，因為風寒會導致人體陽氣受阻，出現疲勞和身體疼痛。\n2. **發燒39攝氏度**: 高燒顯示體內有邪熱，可能是因為感受外邪或內有熱邪。\n3. **咳嗽、咽喉疼痛及白痰**: 咳嗽和咽喉痛是上呼吸道感染的典型症狀，而白痰則指示出現寒痰或濕邪，這可能是由於外感風寒所引起的。\n\n**Syndrome Differentiation (辨證論治):**\n考慮到患者的症狀，該患者的主要問題是外感風寒，並伴有內熱的表現。可以歸納為以下的證型：\n\n1. **外感風寒證**: 由於肩頸痠痛、怕冷等症狀，表明風寒入侵，影響了肌表。\n2. **內熱滯留**: 高燒及咽喉疼痛提示內部有熱，特別是發燒與喉嚨痛的關聯，可能是腸胃津液不足或濾過性病毒影響。\n\n### Recommended Herbal Prescription\n\n根據上述的辨證，建議使用以下中藥方劑及單味藥材：\n\n1. **方劑**: **麻黃湯**（Ma Huang Tang）\n   - **麻黃 (Ephedra)**: 9克，發汗解表，驅散風寒。\n   - **桂枝 (Cinnamon Twig)**: 6克，助麻黃發汗，溫經通陽。\n   - **杏仁 (Apricot Kernel)**: 6克，潤肺止咳。\n   - **甘草 (Licorice Root)**: 3克，調和諸藥，緩和咳嗽。\n\n2. **其他單味藥材**（如有需要）:\n   - **金銀花 (Honeysuckle Flower)**: 10克，清熱解毒，特別對於喉嚨痛有效。\n   - **薄荷 (Peppermint)**: 3克，清涼解暑，幫助舒緩喉嚨不適。\n   - **桔梗 (Platycodon Root)**: 6克，宣肺祛痰。\n\n### Recommended Dosage\n- 將上述藥材煎煮，建議每日1劑，分2次服用，連續服用3-5天，以觀察病情變化。\n\n注意在服用藥物的同時，也要根據患者的具體情況調整用藥，並觀察發熱及咳嗽等症狀的改善情況。若症狀持續或加重，應及時就醫。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:02:52.150478",
+      "prompt_number": 1,
+      "retrieved_chunks": [
+        {
+          "text": "，臨床上看病人，病人已經很虛弱了，可是病人又一直在流汗，就代表病人的皮膚不能固表，人的元氣、元陽、精神，高蛋白的東西一直往外流矢，體力通通流失掉，如果「咽中痛者，其喉為痺」，病毒移轉跑到喉嚨上，喉嚨就會發痛，如果「發熱，無汗，利必自止」，熱散不掉，熱會往下走，利必自止。「若不止，便膿血」，這肝炎的東西出來，到喉嚨上，就喉嚨痛，如果沒有到喉嚨往下走的時候，下利就會便膿血，「便膿血，其喉不痺」，便膿血的話，喉嚨就不會痛，所以發炎的濾過性病毒，中藥也殺不掉它，免疫系統也殺不掉它，它一定要有出路，出去的時候從大便或往上跑，想盡辦法把濾過性病毒趕出去。\n三五○．「傷寒」，一二日，至四五日，前厥者，必發熱；前熱後厥者，必厥深熱亦深，厥微者熱亦微。厥應下之，而反發汗者，必口傷爛赤。\n這條辨對應前面的條辨，張仲景的意思是如果進入厥陰證，得到中風傷寒表證的時候，因為裏面已經虛掉了，腸胃津液已經不夠了，腸胃津液不夠的狀況下，切記不要發汗，汗的來源是腸胃的津液，誤汗的時候，造成口傷爛赤，會把肝裏面的黏液發到嘴巴上來了。感冒發燒的時候用汗解，如果是厥陰證的時候就不可以汗解，厥陰證的時候濾過性病毒在肝裏面，發皮",
+          "similarity": 0.5326615737170377,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 492,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 493",
+            "type": "regular",
+            "title": "Chunk 493"
+          }
+        },
+        {
+          "text": "巴上來了。感冒發燒的時候用汗解，如果是厥陰證的時候就不可以汗解，厥陰證的時候濾過性病毒在肝裏面，發皮膚的汗，跟肝沒有關係，反而讓腸胃的津液更傷，免疫系統受到傷害。\n三五一．「傷寒病」，厥五日，熱亦五日，設六日當復厥，不厥者自愈。厥終不過五日，以熱五日，故知自愈。\n昏迷了五天，又熱五天，到第六天的時候應該發冷的，結果病人不冷了，就是病會好了，代表胃氣恢復了，就不會冷了。\n三五二．凡厥者，陰陽氣不相順接，便為厥。厥者，手足逆冷是也。\n厥就是手腳冰冷到手肘、膝蓋，陰陽氣不相順接，就是血液循環產生障礙，血液循環通的時候，人就發熱了，不通的時候，心臟衰弱的時候人就昏迷了。\n三五三．「傷寒」，脈微而厥，至七八日，膚冷，其人躁，無暫安時者，此為藏厥。非若蚘厥也。\n三五四．蚘厥者，其人常自吐蚘。今病者靜，而復時煩，此為蚘厥。蚘上入膈，故煩，須臾復止。得食而嘔又煩者，蚘聞食臭出，其人當吐蚘也。蚘厥者，「烏梅丸」主之，又主久利。\n病人有煩躁的現象，脈微弱，少陰，厥陰都有，少陰證的是煩躁不得臥是持續的，厥陰證的煩躁，有時候躁有時候不躁，這是臟厥，和蚘厥的不一樣。「蚘厥者，其人常自吐蚘」，蟲就從嘴巴吐出來。「",
+          "similarity": 0.5303295255664956,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 493,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 494",
+            "type": "regular",
+            "title": "Chunk 494"
+          }
+        },
+        {
+          "text": "。如果晚上得到的病，就是發於陰，到白天了，才開始算天，所以得病的隔天才算是第一天，足足六天之後，也就是第六天的半夜，會自己痊癒，所以說「六日愈」。不管是陰病或陽病，得到感冒，正常的話，六天一定會好，所以如果感冒不吃藥，一個禮拜會好。\n「陰陽」二字釋義頗泛。以寒熱分「陰陽」，寒為「陰」，熱為「陽」。以表裏分「陰陽」，表為「陽」，裏為「陰」。以臟腑分「陰陽」，臟為「陰」，腑為「陽」。以上下分「陰陽」，上為「陽」，下為「陰」。以左右分「陰陽」，左為「陽」，右為「陰」。以氣血分「陰陽」，氣為「陽」，血為「陰」。以虛實分「陰陽」，虛為「陰」，實為「陽」。其他以身體組織之內分泌液、水份、血漿等有物質者謂之「陰」，身體之抵抗力、細胞之新陳代謝力、各臟腑之自然機能等無形者謂之「陽」。\n十．「太陽病」，頭痛，至七日以上自愈者，以行其經盡故也。若欲作再經者，針「足陽明」，使經不傳則愈。\n頭痛，如果自己會好，一個星期就好了，感冒到第七天還沒好，就要趕快去看醫生了。太陽病，有時候傳陽明或少陽，或從陽明進入少陽，或從少陽進入陽明，不一定的，如果太陽病，在還沒到足陽明之前，先扎足陽明本穴「足三里」就不會傳了，在還",
+          "similarity": 0.5247076205263603,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 19,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 20",
+            "type": "regular",
+            "title": "Chunk 20"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.797571182250977
+    },
+    {
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。昨天上午退燒了，但下午開始拉肚子，排泄物黃臭，噁心，食慾很差。",
+      "response": "### TCM Diagnostic Analysis\n\n1. **Symptom Analysis**:\n   - **疲勞**: Indicates a deficiency of Qi or blood.\n   - **肩頸痠痛、怕冷**: Suggests an invasion of exterior pathogenic factors, possibly wind-cold.\n   - **頭痛、發燒39攝氏度**: Indicates a febrile disease, with significant heat in the body; the high fever suggests a strong pathogenic factor.\n   - **咳嗽、咽喉疼痛、有白痰**: The presence of white phlegm and sore throat suggests a lung involvement, with phlegm accumulation and possible wind-heat or coolness still present.\n   - **拉肚子、排泄物黃臭**: Indicates a transformation of the pathogen and damp-heat developing in the intestines, leading to diarrhea.\n   - **噁心、食慾差**: Suggests disruption of the stomach and digestive functions, likely affected by the damp-heat.\n\n2. **Syndrome Differentiation**:\n   - The initial symptoms of fever, chills, and body aches suggest an exterior invasion (wind-cold) transitioning into an internal condition due to unresolved exterior pathogen leading to damp-heat.\n   - The diarrhea and yellow foul-smelling stools indicate damp-heat in the intestines.\n   - The combination of symptoms points towards a mixed syndrome of **wind-cold transforming to damp-heat** affecting both the exterior and interior.\n\n### Treatment Principles:\n- **Release the exterior** to dispel the wind-cold.\n- **Clear heat** and **resolve dampness** to treat the internal damp-heat.\n\n### Herbal Prescription\n**1. Xiao Feng San (小風散)**\n   - **Composition**:\n     - **Jing Jie (荊芥)**: 6g (expels wind)\n     - **Fang Feng (防風)**: 6g (releases the exterior)\n     - **Qiang Huo (羌活)**: 6g (alleviates pain)\n     - **Bai Zhi (白芷)**: 6g (relieves headache)\n     - **Chuan Xiong (川芎)**: 6g (invigorates blood)\n     - **Gan Cao (甘草)**: 4g (harmonizes)\n     - **Zhi Mu (知母)**: 4g (clears heat)\n     - **Shi Gao (石膏)**: 6g (clears heat and reduces fever)\n\n**2. San Ren Tang (三仁湯)** or **Bai Tou Weng Tang (白頭翁湯)** (for diarrhea)\n   - **Composition for San Ren Tang**:\n     - **Xing Ren (杏仁)**: 6g (relieves cough)\n     - **Bai Dou Kou (白豆蔻)**: 4g (transforms damp)\n     - **Hua Shi (滑石)**: 6g (clears heat and promotes urination)\n     - **Yi Yi Ren (薏苡仁)**: 6g (promotes digestion and resolves dampness)\n\n### Recommended Dosages:\n- **Xiao Feng San**: 1 dose (for 3 days in a row)\n- **San Ren Tang** / **Bai Tou Weng Tang**: 1 dose (for 3 days in a row)\n\n### Conclusion\nThis treatment approach addresses both the initial exterior symptoms and the subsequent internal damp-heat condition, supporting recovery and restoring balance in the patient's body. Regular monitoring of symptoms is essential to adjust the treatment as necessary based on the patient's response.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:03:03.072501",
+      "prompt_number": 2,
+      "retrieved_chunks": [
+        {
+          "text": "睡」，病人體力在太陽的時候已經耗掉很多，進入少陽的時候，腸胃吸收又不好，食物不能化生成血，因為被三焦阻隔到，所以精血的來源不夠，病人就會有但欲眠睡的現象。「目合則汗」，眼睛閉起來會流汗，就是人很虛的現象，正常的流汗一定是在運動或動過後，可是現在病人躺著都會流汗，代表津液一直在喪失的階段，這就是和解少陽，這時候用小柴胡湯。\n如果查到病人胃裏面有燥實，大便很少，津液一直在喪失，就知道病是介在少陽和陽明之間，所以是大柴胡湯，大柴胡湯裏面有大黃，可以同時解少陽陽明併病。\n二八三．「傷寒」六七日，無大熱，其人煩躁者，此為陽去入陰故也。\n照理說「傷寒六七日，無大熱」，病人發熱的現象沒有了，沒有發燒了，結果「其人煩躁者」，有煩躁的現象產生的時候，就知道病人的病由表進入裏了，「此為陽去入陰故也」，陽就是表，陰就是裏，所以陽入陰不一定是進入陰臟，由少陽證進入陽明證也會煩躁。\n二八四．「傷寒」三日，三陽為盡，三陰當受邪，其人反能食而不嘔，此為三陰不受邪也。\n傷寒三日，半個多月，二十一天以後，三陽為盡，三陰當受邪，這病進入少陽、陽明以後，如果沒有治好，應該會進入陰臟了。「其人反能食而不嘔」，反過來，病人可以",
+          "similarity": 0.5590638164370414,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 436,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 437",
+            "type": "regular",
+            "title": "Chunk 437"
+          }
+        },
+        {
+          "text": "病人表證裏證都沒有，沒有寒熱，大便也正常，但是脈又浮又數，浮是表，數是代表熱，可是病人又沒有症狀，先不管他，沒有關係的。「假令已下」，假如已經被攻下了，「脈數，不解，不大便者，有瘀血，宜抵當湯」，如果已攻下而仍然脈大，大便仍有問題，表示有瘀血用抵當湯。「若脈數，不解，而下不止，必協熱而便膿血也」，如果大便出來有血，有的可能是痔瘡，可能是內痔，不開刀生完小孩的太太，大部份是內痔，臨床上看有痔瘡女人比男人多，壓「孔最」或「承山」，會有壓痛點的就有痔瘡，另種造成大便膿血的，就是血裏面熱太盛，血裏面的津液太少，血一但過熱必叛離經道，造成血管破裂，血跑到腑裏面去，所以大便出來有血，大便有膿血的時候有白頭翁湯可用。\n二七三．「傷寒」，發汗已，身目為黃。所以然者，以寒溼在裏不解故也。以為不可下，於寒溼中求之。\n病人本來是傷寒，如果單純傷寒，麻黃湯發汗就好了，可是病人有濕在裏面，麻黃湯一發汗，汗發的只是表證，可是裏濕還是沒有去掉，濕是脾臟，脾是土黃，是陰黃的，發汗是從腸胃的津液來的，因為發汗帶動了裏濕，濕一上來，所以看到黃。寒濕的時候，方劑有「朮附湯」和「五苓散」，都是可以去寒濕的。\n二七四．「傷寒",
+          "similarity": 0.553320149468969,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 423,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 424",
+            "type": "regular",
+            "title": "Chunk 424"
+          }
+        },
+        {
+          "text": "以不要用烤的，火一烤，病人的皮膚表面發黃色，看起來是黃色，其實是血的顏色，血管裏看血液是紅的，經過一層皮膚，看到的血液的顏色會是黃的，這就告訴你血裏面的水沒有了，透過皮膚看到的是血的顏色，所以這種發黃，不是肝膽病的發黃，不要弄錯了，這種是失水導致的發黃。嚴重的話，津液喪失太多的時候，腦裏面得不到正常的血來滋潤，會發驚癇。肝主筋，筋也靠血來養，沒有充份的血來供應，就會抽筋，會時瘈瘲，抽搐一下又鬆開來，抽搐一下又鬆開來，瘲就是筋鬆開來，瘈就是收緊。\n「若火薰之，一逆尚引日，再逆促命期」，錯了也罷，還可以救，如果再用火去烤他，血裏面的水如果完全沒有就完了，打點滴，只能暫時緩解，水還是會從小便流失，一定要從嘴吃下去食物中的水，由腸胃吸收後人體才能受用。\n九．病有發熱惡寒者，發於「陽」也；無熱惡寒者，發於「陰」也。發於「陽」者七日愈，發於「陰」者六日愈，以陽數七，陰數六，故也。\n如果白天得到的病，就是發於陽，過一個晚上，就是第二天了，所以如果足足六天之後，也就是第七天的白天會痊癒，所以說「七日愈」。如果晚上得到的病，就是發於陰，到白天了，才開始算天，所以得病的隔天才算是第一天，足足六天之後，也就",
+          "similarity": 0.5528392031791244,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 18,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 19",
+            "type": "regular",
+            "title": "Chunk 19"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.92197299003601
+    },
+    {
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。昨天咳嗽加重，胸口壓力大，躺下來咳嗽更嚴重，無法躺平睡覺，得用兩個枕頭墊高睡覺。舌苔白厚，但很乾。",
+      "response": "### TCM Diagnostic Analysis\n\n#### Symptom Analysis:\n1. **疲勞和肩頸痠痛**：這表現出身體的氣血不足及外感寒邪的可能。\n2. **怕冷**：這是表明有外感寒邪的症狀，可能與陽氣不足有關。\n3. **發燒39攝氏度**：顯示出體內有熱的存在，這與外感或內熱有關。\n4. **咳嗽和咽喉疼痛**：咽喉疼痛伴隨咳嗽，可能是因為風寒或風熱侵犯，導致肺部受到影響。\n5. **白痰**：白色的痰通常代表寒痰，這與寒邪有關。\n6. **胸口壓力大，躺下來咳嗽更嚴重**：這表現出痰濕或氣機不暢，造成的胸悶。\n7. **舌苔白厚但乾**：白厚苔顯示出有濕邪或寒邪的存在，但苔乾則可能表示津液不足。\n\n#### Syndrome Differentiation:\n- **表邪與裏熱**：此病人有發熱和咳嗽的症狀，顯示出表有熱，而肩頸酸痛和怕冷則表示有寒邪的影響。這是一種表裏不和的狀況。\n- **肺氣不宣**：胸口壓力大，咳嗽加重，表明肺部的氣機受到阻礙，肺氣不宣。\n- **津液不足**：舌苔乾燥代表津液的不足，這可能是由於發熱和咳嗽造成的。\n\n### Recommended Herbal Prescription\n\n**方劑**：**麻黃湯** (Ma Huang Tang)\n\n**組成成分：**\n1. **麻黃 (Ephedra)** - 9克\n2. **桂枝 (Cinnamon twig)** - 6克\n3. **甘草 (Licorice root)** - 3克\n4. **杏仁 (Apricot kernel)** - 9克\n\n**功效**：發汗解表，宣肺平喘，適合外感風寒，伴有發熱、咳嗽、白痰的症狀。\n\n**用法**：\n- 將上述藥材煎煮，取湯服用，建議每日一劑，分為兩次服用。\n\n### 注意事項\n- 如果病人出現發汗過多或有其他不適，需根據臨床情況調整方劑。\n- 若咳嗽加重或出現其他異常症狀，應及時就醫。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:03:13.692855",
+      "prompt_number": 3,
+      "retrieved_chunks": [
+        {
+          "text": "，炮附三錢，生附一枚。\n    \n主方在此，其餘需臨證視情況而定。\n     \n#SECTION\n\n一八三．「傷寒」，若吐，若下後，七八日不解，熱結在裏，表裏俱熱，時汗，惡風，大渴而煩，舌上乾燥，欲飲水數升「白虎加人參湯」主之。\n    \n傷寒應該是用表法、汗法，結果吐下後，胃的津液一定會傷到，七八天都沒有好，結果「熱結在裏，表裏俱熱」，裏面有病，表也有病，裏面的熱哪來？因為津液傷了，人的熱停在津液裏面，也停在血裏面，血裏面有一部份是熱的能源，津液傷了以後，有一部份的熱就離開了津液，離開了血就浮上來了，所以裏面會很熱，第一個受到傷害的就是肺，肺主皮毛，這時候病人常常感覺會流汗、怕風，大渴而煩，上焦太燥熱的時候，因為津液沒有了，上焦就像天上沒有雲了，太陽直射很燙很熱，這是白虎湯證，因為胸陽在上面，心臟和肺有一定的濕度，本來胸口就很熱了，胃熱又往上衝，津液都喪失掉了，流汗流掉了，結果「舌上乾燥」，舌頭伸出來一點口水都沒有，嚴重到舌苔都翻起來，「欲飲水數升者」，渴想喝水，喝了半天都不能止渴，因為水到了胃裏面是往下走，本人並不能吸收，因為真正吸收的水是靠胃液把它化解的，結果胃液都被吐光了，沒了",
+          "similarity": 0.6001784119010872,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 371,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 372",
+            "type": "regular",
+            "title": "Chunk 372"
+          }
+        },
+        {
+          "text": "，臨床上看病人，病人已經很虛弱了，可是病人又一直在流汗，就代表病人的皮膚不能固表，人的元氣、元陽、精神，高蛋白的東西一直往外流矢，體力通通流失掉，如果「咽中痛者，其喉為痺」，病毒移轉跑到喉嚨上，喉嚨就會發痛，如果「發熱，無汗，利必自止」，熱散不掉，熱會往下走，利必自止。「若不止，便膿血」，這肝炎的東西出來，到喉嚨上，就喉嚨痛，如果沒有到喉嚨往下走的時候，下利就會便膿血，「便膿血，其喉不痺」，便膿血的話，喉嚨就不會痛，所以發炎的濾過性病毒，中藥也殺不掉它，免疫系統也殺不掉它，它一定要有出路，出去的時候從大便或往上跑，想盡辦法把濾過性病毒趕出去。\n三五○．「傷寒」，一二日，至四五日，前厥者，必發熱；前熱後厥者，必厥深熱亦深，厥微者熱亦微。厥應下之，而反發汗者，必口傷爛赤。\n這條辨對應前面的條辨，張仲景的意思是如果進入厥陰證，得到中風傷寒表證的時候，因為裏面已經虛掉了，腸胃津液已經不夠了，腸胃津液不夠的狀況下，切記不要發汗，汗的來源是腸胃的津液，誤汗的時候，造成口傷爛赤，會把肝裏面的黏液發到嘴巴上來了。感冒發燒的時候用汗解，如果是厥陰證的時候就不可以汗解，厥陰證的時候濾過性病毒在肝裏面，發皮",
+          "similarity": 0.5899201806589364,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 492,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 493",
+            "type": "regular",
+            "title": "Chunk 493"
+          }
+        },
+        {
+          "text": "巴上來了。感冒發燒的時候用汗解，如果是厥陰證的時候就不可以汗解，厥陰證的時候濾過性病毒在肝裏面，發皮膚的汗，跟肝沒有關係，反而讓腸胃的津液更傷，免疫系統受到傷害。\n三五一．「傷寒病」，厥五日，熱亦五日，設六日當復厥，不厥者自愈。厥終不過五日，以熱五日，故知自愈。\n昏迷了五天，又熱五天，到第六天的時候應該發冷的，結果病人不冷了，就是病會好了，代表胃氣恢復了，就不會冷了。\n三五二．凡厥者，陰陽氣不相順接，便為厥。厥者，手足逆冷是也。\n厥就是手腳冰冷到手肘、膝蓋，陰陽氣不相順接，就是血液循環產生障礙，血液循環通的時候，人就發熱了，不通的時候，心臟衰弱的時候人就昏迷了。\n三五三．「傷寒」，脈微而厥，至七八日，膚冷，其人躁，無暫安時者，此為藏厥。非若蚘厥也。\n三五四．蚘厥者，其人常自吐蚘。今病者靜，而復時煩，此為蚘厥。蚘上入膈，故煩，須臾復止。得食而嘔又煩者，蚘聞食臭出，其人當吐蚘也。蚘厥者，「烏梅丸」主之，又主久利。\n病人有煩躁的現象，脈微弱，少陰，厥陰都有，少陰證的是煩躁不得臥是持續的，厥陰證的煩躁，有時候躁有時候不躁，這是臟厥，和蚘厥的不一樣。「蚘厥者，其人常自吐蚘」，蟲就從嘴巴吐出來。「",
+          "similarity": 0.5797076394761451,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 493,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 494",
+            "type": "regular",
+            "title": "Chunk 494"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.620256900787354
+    },
+    {
+      "prompt": "病人，女，40歲，白人。胃口不好，但吃了不多後，就覺得胃脹。便秘，三四天大便一次，大便乾硬，小粒狀。平時容易疲勞，常常感冒。",
+      "response": "1) **TCM Diagnostic Analysis:**\n\n根据病人的症状，经过分析可以推测出以下几点：\n\n- **食欲不佳，进食后胃胀**：这表明脾胃功能虚弱，可能因脾气不足，无法有效消化食物，从而导致食物滞留，形成胃胀。\n  \n- **便秘，三四天一次，大便干硬，小粒状**：这与脾的运化功能不佳有关，脾虚时，水湿无法正常排出，导致大便干燥且成小粒状。\n\n- **容易疲劳，常常感冒**：这可能与气虚有关，脾气不足，导致全身气血不足，从而容易感到疲惫和抵抗力降低，容易感冒。\n\n通过以上症状分析，可以推测该病人可能是脾虚湿阻，伴有气虚的症状。\n\n**Syndrome Differentiation (辨證論治)**:\n- **脾虚湿阻**：脾气虚弱导致运化功能不良，湿气内生，加重胃胀和便秘的情况。\n- **气虚**：表现为疲劳、易感冒。\n\n2) **Specific Chinese Herbal Prescriptions:**\n\n根据上述诊断，可以考虑以下方剂：\n\n**1. 四君子汤（Si Jun Zi Tang）**：\n   - 人参 (Ren Shen) 10克\n   - 白术 (Bai Zhu) 10克\n   - 茯苓 (Fu Ling) 10克\n   - 甘草 (Gan Cao) 6克\n\n此方主要用于脾虚，能增强脾胃的运化功能，改善消化，缓解胃胀。\n\n**2. 大承气汤（Da Cheng Qi Tang）**（可选）：\n   - 芒硝 (Mang Xiao) 6克\n   - 大黄 (Da Huang) 6克\n   - 厚朴 (Hou Po) 10克\n   - 枳实 (Zhi Shi) 10克\n\n此方主要用于便秘，具有通便的效果，适合干燥便秘的情况。但需注意用量和适应症，确保监控病情。\n\n**使用建议**：\n- 四君子汤：每日一剂，水煎服，分两次服用。\n- 大承气汤：如便秘严重，可根据情况每周1-2次，需在医师指导下使用。\n\n以上方剂仅供参考，具体用药需结合病人实际情况和专业医师的建议。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:03:22.908395",
+      "prompt_number": 4,
+      "retrieved_chunks": [
+        {
+          "text": "造成病人打嗝，反過來說，吃到寒涼藥會打嗝，就知道胃本來就是寒涼的。\n     \n#SECTION\n\n二一一．「陽明病」，脈遲，食難用飽，飽則微煩，頭眩，必小便難，此欲作「穀疸」，雖下之，腹滿如故，所以然者，脈遲故也。\n    \n陽明病是腸胃的問題，「脈遲」，就是胃虛掉了，若脈數，照理說就是裏面發炎了，或腸裏面堵到了，如果脈數，問有沒有大便？答曰：有而且下利，就是他有虛熱。「食難用飽」，吃一點就飽了。「飽則微煩，頭眩，必小便難」，此欲作「穀疸」，造成這些現象大部份的原因是肝、膽、胰分泌的消化液不夠，使腸胃的消化不是很好，腸胃就虛寒掉了。「飽則微煩」，胃裏面的東西不能消化，吃下去的東西撐在胃裏面，人會感覺到微煩。為什麼會頭眩？人吃東西後，營養第一供應到腦部，現在胃虛寒掉了，食物不能消化，沒有營養供應頭部，就會有缺血的現象，所以會頭昏。消化系統不正常的時候，小便也會不正常，「必小便難」，這不正常不見得是量多量少，可能次數多量少，或小便小幾滴出來。消化不好，因為脾臟功能不好，濕會越來越盛，濕是往下的，一般來說濕會往下停在下焦，造成腹滿，如果濕太多堵到了，小便自然會減少，如果小便很正常，代表濕有",
+          "similarity": 0.556162457399429,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 411,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 412",
+            "type": "regular",
+            "title": "Chunk 412"
+          }
+        },
+        {
+          "text": "蠕動了，喝進去的水和吃的五穀雜糧混在一起，喝的水沒辦法氣化，吃的食物又沒完全消化，水和穀就一起從大便出來。所以遇到這種長年下利，大便又沒有什麼味道就是「胃寒」。這種情形，我們可以用到甘草乾薑湯或者是吳茱萸湯，依照症狀來決定。\n     \n#SECTION\n\n二○八．「陽明病」，欲食，大便自調，小便反不利，其人骨節疼，翕翕如有熱狀，奄然發煩，濈然汗出而解者，此水不勝穀氣，與汗共併，脈緊則愈。\n    \n「陽明病，欲食」，想吃東西就是脾臟功能很好，但是不見得已經開始吃東西了。「大便自調」，大便正常。「小便反不利，其人骨節疼」，因為吃進去的食物沒有辦法供應營養。「翕翕有如熱狀」，胃的蠕動不是很好，蠕動正常的時候，就把營養消化給四肢，有時候又沒有，所以會感覺一陣一陣的熱，就像冬天的時候，很冷，肚子餓的時候，會覺得更冷，吃了東西，縱使東西是冷的，也會馬上覺得熱起來，所以體溫的恢復就是胃的功能。「奄然發煩，濈然汗出而解者」，就是胃氣要回來了，產生這樣的原因就是此「水不勝穀氣」，水和食物不一樣，水到胃裏面，是靠胃的熱力把它蒸發出來的，食物吃到胃裏面磨碎是靠脾臟的功能，水道和穀道不一樣，水不勝穀氣就是",
+          "similarity": 0.535094422314065,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 407,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 408",
+            "type": "regular",
+            "title": "Chunk 408"
+          }
+        },
+        {
+          "text": "二升，分溫再服。\n木防己去石膏加茯苓芒硝湯方：\n木防己、桂枝各三兩，茯苓四兩，人參四兩，芒硝三合。\n右五味，以水六升，煮取二升，去滓內芒硝再微煎，分溫再服，微利則愈。\n我們平常每一個人在胃的下方都有一些停留的食物在裡面，這可以慢慢供應我們大概維持七天左右，不吃食物仍然可以存活，但是這個地方的食物必須每餐都在推陳，就是新的食物進來將舊的食物推出去，然後又留一部份新的食物下來。所以有時候你早上吃東西，晚上打嗝時還有早上食物的味道，但是這都是正常的狀況。有一天你胃的功能出現問題了，無法推陳，宿食阻塞在這個地力，食物塞在這種地方，這就中醫叫做『宿垢』，就是很髒東西堵在裡面。在有宿垢的狀態之下胃的功能自然就不好，加上病人喜歡喝冷飲，冷的飲料或食物吃進去就造成寒濕堵在這邊，熱的就不會。寒的食物在裡面會讓腸胃蠕動減緩，於是就會產生阻塞的狀況，終致使得膈間有水飲停滯，這個飲就是有寒濕在裡面，然後一些宿食堵在裡面造成的。這個時候你如果用X光去看是看不到的，因為它不是癌、不是腫瘤而是宿食，X光會透視過去，所以查不到。其症狀為『其人喘滿』，因為沒有辦法正常的消化食物，飲就會慢慢的累積起來，到一定的階段後這個",
+          "similarity": 0.5306933597858549,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 380,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 381",
+            "type": "regular",
+            "title": "Chunk 381"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 9.21549105644226
+    },
+    {
+      "prompt": "病人，女，40歲，白人。胃口不錯，但吃了不多後，就覺得胃脹，有點泛酸、噁心的感覺。吃油膩的食物，容易拉肚子。偶而右下肋隱痛，早上起床口苦。",
+      "response": "1) **詳細的中醫診斷分析及證型辨證**\n\n從病人的症狀描述中，我們可以辨認出以下幾個要點：\n\n- **胃脹與噁心**：病人胃口不錯，但吃了一點食物後就感覺胃脹，伴隨泛酸和噁心，這表明胃的運化功能受到影響，可能與脾胃不和有關。\n- **油膩食物後拉肚子**：這提示脾胃對於油膩食物的運化功能較弱，可能因為脾虛或脾胃濕重。\n- **右下肋隱痛**：這可能與肝膽的功能有關，因為右下肋的部位是肝膽所在，有可能是肝膽氣鬱或肝膽不和。\n- **早上起床口苦**：這是膽汁上逆的表現，提示膽的功能失調或肝熱的可能性。\n\n綜合以上症狀，這位病人可以診斷為「肝膽不和」或「脾胃虛弱伴隨肝氣鬱結」，主要是因為情緒因素（如壓力）或飲食不當導致的。\n\n2) **具體的中藥處方及單味藥劑量**\n\n根據病人的具體情況，建議以下中藥處方：\n\n**小柴胡湯（Xiao Chai Hu Tang）**\n- 柴胡 (Chai Hu) 9克\n- 人參 (Ren Shen) 6克\n- 黃芩 (Huang Qin) 9克 (可適當增量以強化清熱解毒作用)\n- 半夏 (Ban Xia) 9克 (有助於降逆止嘔)\n- 甘草 (Gan Cao) 6克\n- 大棗 (Da Zao) 3枚\n\n**方劑功效**：該方劑主要用於肝膽不和，能舒肝解鬱，調和胃氣，適合病人的胃脹、噁心以及口苦的症狀。\n\n**劑量與用法**：將以上藥材加水煎煮，取汁，分為兩次服用，每日一劑，飯前30分鐘服用，持續用藥一週，根據症狀變化調整劑量或方劑。\n\n此方可幫助改善病人的消化不良症狀，並緩解因肝膽不和引起的相關不適。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:03:33.198287",
+      "prompt_number": 5,
+      "retrieved_chunks": [
+        {
+          "text": "是脾胃。當我們腸胃吸收了食物以後『肝膽之液，滲入胃』，胃裡面有三樣東西：肝的酸、膽的苦、還有脾臟的甜與胰臟的黏液。如果太冷了，我們肝受到寒後，就會吐酸，所以嘔酸的時候我們用燥來止嘔。病人會嘔酸就是肝液外出，我們用吳茱萸湯來治療。如果肝熱則吐膽汁，熱則吐苦味。『老師，為什麼我早上起來嘴巴苦苦的？』這就是膽汁上逆，是小柴胡湯證，諸位現在很熟稔了，如果苦味很嚴重時，小柴胡湯裡面黃芩就要重用，半夏也要重用，半夏能夠降逆止嘔，就是說膽汁往上逆時，我們須要用半夏把它往下降下去，所以小柴胡湯能和胃氣。『溼勝則肝膽不調』，中醫最難讓人家去了解的，就是『氣』，實際上什麼叫氣？西醫看不到氣，只看到一個循環系統，不管是我們的淋巴腺循環系統或者是血液循環系統，西醫看不到是氣在推動這個循環系統，它的原動力就是中醫講的氣。肝膽的氣不夠好，就是肝膽的原動力量不夠了。肝本身是我們身上最大解毒的臟，西醫醫學裡面也是這樣講，我們吃進很多東西，如果肝功能不是很正常時，代謝系統就不會很好，結果解毒的功能就不能完全發揮出來。中醫的觀念，這種狀況就叫做『鬱』，氣鬱在肝裡面，肝沒有辦法蠕動。正常時我們身體會把全身的血液，與身上殘餘",
+          "similarity": 0.5421095265510976,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 10,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 11",
+            "type": "regular",
+            "title": "Chunk 11"
+          }
+        },
+        {
+          "text": "掣痛，少腹惡寒，或引腰脊，下根氣街，氣衝急痛，膝脛疼煩，奄忽眩冒，狀如厥顛，或有憂慘，悲傷多嗔，此皆帶下，非有鬼神。久則羸瘦，脈虛多寒，三十六病，千變萬端，審脈陰陽，虛實緊弦，行其鍼藥，治危得安，其雖同病，脈各異源，子當辨記，勿謂不然。\n這一段諸位看看就可以了。『婦人之病』，一般女子的病有三個原因，一個是身體『虛』，一個是『積冷』，女孩子喜歡吃冰，因為女孩子身體比較虛熱，還有一個是『結氣』，心裡想不開，每天在生氣，也不曉得為什麼事情。『為諸經水斷絕，至有歷年』，於是造成月經停了一年或是兩年都沒來，結果『血寒積結胞門』，瘀血癥痼等積塊寒症，集結在子宮裡，嚴重時寒氣會傷及經絡，如果是『凝堅在上』，病人如果血寒凝結在上面，比較接近肝的位置，病人就會產生『嘔吐』還有『涎唾』，日積月累之下就成為『久成肺痿』。因為肝一半在膈上，一半在膈下，肝的絡直接絡在整個肺周圍，所以病人會有胸苦滿的現象，造成『形體損分』，病人身體越來越削瘦。『在中盤結，繞臍寒疝，或兩疼脇痛』，如果是橫在中焦，就是肝膽脾胃這一帶，就會造成繞臍痛與腹痛或是兩肋下方痛。『與藏相連，或結熱中，痛在關元』，如果與子宮相接觸或是結在任脈時",
+          "similarity": 0.5370490276463222,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 648,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 649",
+            "type": "regular",
+            "title": "Chunk 649"
+          }
+        },
+        {
+          "text": "胃承氣湯」。若不爾者，不可與。但欲嘔，胸中痛，微溏者，此「非柴胡證」，以嘔極吐下，故知也。\n本來太陽應該已經進入少陽、陽明了，如果病人感覺到「心下溫溫」，心下就是胃，如果胃裏面悶悶的，感覺到食物消化不了，就是病進入陽明了。「欲吐，而胸中痛」，就是進入少陽、陽明的時候。病人有噁心的現象，腸胃的功能受到濾過性病毒的影響，胃的功能不是很正常，病人胃的蠕動不是很好的時候，病人就會噁心想吐，或水氣進入的時候也會這樣，因為胃的地方和胸的地方，這整個部份就叫做「陽」，是諸陽之通路，所有的陽都經過它，陽就是身體的動能。「大便反溏」，照理說應該是進入陽明證了，會燥結，結果反而大便很黏稠。「腹微滿，鬱鬱微煩」，肚子脹滿，但是胃裏面很難過，鬱鬱微煩就是脾胃不和，消化不是很好的感覺，如果病人在這種症狀下，病人的感覺是「自欲極下吐者」，就是胃裏面很難過，把這一口吐掉會比較好一點，喝酒喝多了就會有這種感覺，自己想把它吐掉會比較舒服點，有時候不見得是喝酒，所陳述的就是在這裏，如果遇到這種情形，不用去吐，調胃承氣湯一下去，通通清出去了。食物一半在胃的下方，一半在十二指腸裏面，腹診按中脘穴以下的建里、下脘有壓痛反應，調",
+          "similarity": 0.5367754365542301,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 238,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 239",
+            "type": "regular",
+            "title": "Chunk 239"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.289859294891357
+    },
+    {
+      "prompt": "病人，女，65歲，白人。偶而心悸，覺得有人抓住她的心臟，感覺心跳大力，但測量下只稍微跳快一些。平時吃素，不吃肉。每週做熱瑜伽兩次。",
+      "response": "1) **TCM Diagnostic Analysis:**\n   - **Symptom Analysis:**\n     - The patient experiences occasional heart palpitations described as feeling like someone is grabbing her heart, with a perception of a strong heartbeat. However, objective measurement indicates only a slight increase in heart rate.\n     - The patient is a 65-year-old female who follows a vegetarian diet and practices hot yoga twice a week.\n\n   - **Syndrome Differentiation (辨證論治):**\n     - Given the symptoms of heart palpitations and the sensation of tightness or grasping around the heart area, this may indicate a possible imbalance related to the Heart and possibly the Spleen or Kidney systems.\n     - The sensation of a strong heartbeat coupled with a vegetarian diet may suggest a deficiency in blood or Qi, particularly if her diet lacks sufficient nourishing foods that support heart health. \n     - The fact that she practices hot yoga might indicate that her Yang energy is being overexerted or that she is experiencing heat that could lead to heart disturbances, especially if her body is not adequately nourished from her dietary choices.\n\n   - **Diagnosis:**\n     - The patient's condition can be classified under \"Heart Qi Deficiency\" or \"Heart Blood Deficiency\" leading to \"Phlegm Heat\" in the heart, which may explain the palpitations and feeling of tightness.\n\n2) **Specific Chinese Herbal Prescriptions:**\n   - **Herbal Formula: Gui Pi Tang (桂脾湯)**\n     - This formula is designed to tonify the Qi and Blood, which is essential for heart health, and it can help alleviate the palpitations.\n     - **Ingredients and Dosages:**\n       - 人參 (Ren Shen, Ginseng) - 15g\n       - 白朮 (Bai Zhu, Atractylodes) - 15g\n       - 甘草 (Gan Cao, Licorice) - 6g\n       - 當歸 (Dang Gui, Angelica Sinensis) - 10g\n       - 熟地黃 (Shu Di Huang, Rehmannia) - 15g\n       - 薏苡仁 (Yi Yi Ren, Coix) - 15g\n       - 山藥 (Shan Yao, Dioscorea) - 15g\n       - 玫瑰花 (Mei Gui Hua, Rose) - 10g\n     - **Preparation:**\n       - Combine all herbs with 3 liters of water, simmer until reduced to 1 liter, strain, and take in three divided doses throughout the day.\n     - **Note:** Adjustments may be made based on the patient's specific response to the formula and any additional symptoms that may arise. Regular follow-up should be conducted to monitor improvement.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:03:42.257313",
+      "prompt_number": 6,
+      "retrieved_chunks": [
+        {
+          "text": "跟眉毛靠的很近是個想不開的人，這種病人最難治。他的問題自己不能解決，但是腦筋裡面又去空想了很多世界上根本不存在的問題、沒有答案的問題，想了半大當然不能解決。所以我常常跟病人講：『你到我診所來，你的病是我的問題，不關你的事。你的問題是回家把老婆孩子帶好，工作做好，把家顧好，你在那邊空想是沒有用的。』病人不懂醫學，光是在那邊想了半天，如果『去想』可以將病治好，當然是可以想，但是想不但於事無補，反而增加醫師治療上的負擔，因此經常是我們幫病人治療脾臟腫大或者治療胃下垂，或者治療腎臟病，或者治療中風，結果病人還有心傷，在治療的同時還需要去治心，多些問題出來。很多媽媽太太小姐們就是這樣子，生病了很煩，去看病了，回家後還是煩。\n心死脈，浮之實，如麻豆，按之益躁疾者，死。\n『心死脈』，心臟即將停止的脈是什麼樣的狀況？脈『浮之實』，就是輕輕按到皮膚表面，就感覺到脈跳得很硬，根本就是等於是頂在皮膚上面一樣，這種狀況是很亢進的脈動『如麻豆』，就是實如按到豆子一樣的感覺。按之『益躁疾』，你按脈稍重，就跳得更急，這就是死症無救了，這是真心臟脈。摸到真臟脈，心本身主的是洪大的脈，硬硬的，我們在《內經》裡面介紹過，",
+          "similarity": 0.5026423558739342,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 332,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 333",
+            "type": "regular",
+            "title": "Chunk 333"
+          }
+        },
+        {
+          "text": "很難過想壓下去，所以就是「心下悸」，按著就比較舒服。\n六十九條和七十條，這兩條都是發汗以後，但是發汗的力量不一樣，六十九條是麻黃湯發汗以後，胸陽沒了，所以感覺到心下悸，七十條是桂枝湯發汗發太多，腸胃的津液沒了，水不夠，肚臍的地方就開始跳，就準備發奔豚了。中醫的心下悸，並不是臨床上看到的心臟在慌，而是「中脘」的地方在跳動，因為天陽在上面乾掉了，把水硬往上吸，所以梗在「中脘」的地方，這時候就用「桂枝甘草湯」。\n諸位要有一個概念，肚臍中間屬脾，肚臍上方屬腎，肚臍以下屬心，肚臍左邊屬肝，肚臍右邊屬肺。舉例來說，如果肚臍上方有動悸，就要從腎臟下手去治療，其他依此類推。\n桂枝甘草湯方：\n桂枝四兩（去皮），甘草二兩（炙）。\n右二味，以水三升，煮取一升，去滓，頓服。\n桂枝如果四錢，甘草就用二錢，桂枝是甘草的兩倍，因為發汗發太過了，甘草到胃裏面去，把胃的津液補足，為什麼只用桂枝不用白芍？為什麼會動悸？平常喝水下去的時候，胃很熱，水到胃裏面的時候是氣化上來的，是成蒸氣不是水，今水停在「中脘」這裏，桂枝很熱，桂枝下去會蒸發水往上走，還有，心臟的外膜，有很多神經血脈在縱膈膜、橫膈膜，在血管裏面的是「血」，在神",
+          "similarity": 0.49377202436647594,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 127,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 128",
+            "type": "regular",
+            "title": "Chunk 128"
+          }
+        },
+        {
+          "text": "一段是敘述如何用脈來做診斷。\n平人無寒熱，短氣不足以息者，實也。\n什麼叫『平人無寒熱』？就是正常的人，也沒有什麼特別的怕冷或怕熱，就是沒有寒熱的症狀。忽然會感覺到呼吸呼不過來，又『不足以息』，就是呼吸很短促。從這點我們就可以判定，有東西堵到了，就是實症，這就是區分虛實的方法。我們在胸痹這一篇裡面介紹到的通通是治療虛症的，沒有治療實症的。\n胸痹之病，喘息欬唾，胸背痛，短氣，寸口脈沉而遲，關上小緊數，栝蔞薤白白酒湯主之。\n栝蔞薤白白酒湯方：\n栝蔞實一枚搗，薤白半斤，白酒七升。\n右三味，同煮，取二升，分溫再服。\n這是一個很輕的處方，病人有『胸背痛』就是有時候胸痛穿到背部，有時背痛透到前胸位，但是不是心痛徹背那麼強，只是微微的隱隱作痛，這只是胸中陽氣悶在這裡造成的，所以是最輕的一個方子，栝蔞薤白白酒湯。栝蔞實長的好像絲瓜一樣，如果從中間橫切開來看，就好像蕃茄一樣，這是瓜類入藥，從中間橫切出一段一段下來用。如果我們用它的根就是栝蔞根，又名天花粉，栝蔞實就是取用它的果實入藥。你到藥房去買它的時候，拿出來一看：『咦？老師，這長的好像心臟的心室心房。』正面看的時候就是這樣子，裡面還有瓜子在。你如果三天",
+          "similarity": 0.48279205555885824,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 265,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 266",
+            "type": "regular",
+            "title": "Chunk 266"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 9.058983087539673
+    },
+    {
+      "prompt": "病人，女，65歲，白人。偶而心悸，胸悶，覺得有人抓住她的心臟，感覺心跳大力，但測量下只稍微跳快一些，偶而覺得心臟跳跳停一下。手腳非常冰冷，半夜盜汗，出汗後覺得身體冷。",
+      "response": "### TCM Diagnostic Analysis\n\n#### Symptom Analysis\n1. **心悸 (Palpitations)**: The patient's palpitations are described as occasional, with a sensation of something \"grabbing\" her heart and a feeling of strong heartbeat. This suggests a potential disharmony in the heart's Qi and blood flow.\n2. **胸悶 (Chest Tightness)**: This symptom can indicate a blockage or stagnation in the chest, often related to Qi stagnation or blood deficiency.\n3. **心跳加速與偶爾停跳 (Rapid Heartbeat and Intermittent Palpitations)**: The heart's rhythm is irregular, which can be attributed to an imbalance in heart Qi or blood, potentially signaling a deficiency in nourishment.\n4. **手腳冰冷 (Cold Extremities)**: Cold hands and feet often indicate a Yang deficiency or insufficient Qi circulation, particularly involving the heart and spleen.\n5. **盜汗 (Night Sweats)**: Night sweats are associated with Yin deficiency, leading to an inability to properly retain body fluids and temperature regulation.\n6. **出汗後身體冷 (Feeling Cold After Sweating)**: This symptom further supports the idea of Yang deficiency, as the body struggles to maintain warmth after losing fluids through sweating.\n\n#### Syndrome Differentiation (辨證論治)\nBased on the above symptoms, the patient can be diagnosed with:\n- **心血虛 (Heart Blood Deficiency)**: The palpitations, chest tightness, and irregular heartbeat indicate a deficiency in blood nourishing the heart.\n- **陰虛 (Yin Deficiency)**: Symptoms such as night sweats and feeling cold after sweating point towards a Yin deficiency, which fails to anchor the Yang.\n- **脾氣虛 (Spleen Qi Deficiency)**: The cold extremities suggest that the spleen is not effectively transforming and transporting Qi and Blood.\n\n### Herbal Prescription\n\nBased on the analysis, the following herbal prescription is recommended:\n\n#### Prescription: **桂枝甘草湯 (Gui Zhi Gan Cao Tang)**\nThis formula helps to harmonize the Qi and Blood, addressing the palpitations and chest tightness. \n\n**Ingredients:**\n- **桂枝 (Cinnamon Twig)** - 30g (4兩, 去皮)\n- **甘草 (Licorice Root)** - 15g (2兩, 炙)\n\n#### Preparation:\n1. Combine the herbs in 3 liters of water.\n2. Boil down to 1 liter of decoction.\n3. Strain and take as a single dose.\n\n### Additional Recommendations\n- Consider adding **當歸 (Angelica Sinensis)** - 10g to nourish blood.\n- Consider adding **人參 (Ginseng)** - 5g to tonify Qi and support the heart.\n\n### Dosage:\n- The decoction can be taken once daily, preferably in the morning on an empty stomach for optimal absorption.\n\n### Note:\nMonitor the patient's response to the herbs, and adjust the formula based on her progression and feedback on her symptoms. Consider incorporating acupuncture treatment focused on heart and spleen points to enhance the therapeutic effects.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:03:52.033259",
+      "prompt_number": 7,
+      "retrieved_chunks": [
+        {
+          "text": "熱，也就只是這樣辨症而已。突然發生『喘悸』就是病人突發喘的時候，就表示是氣不足。為什麼會如此呢？當人體裏虛掉的時候，腸胃功能一定不好，脾土就不能生金，肺裡面的津液都是靠胰臟、脾臟來供應，脾臟吸收了營養再交給肺，當脾臟功能有問題時，病人就會卒喘，所以是氣不足，才造成這樣子。悸，中醫又叫做『血虛』，所以一個是氣虛，一個是血虛。有動悸的症狀就是心臟的力量不夠，才會產生動悸，中醫叫做血虛。『脈浮』因為脈的外面就是氣，你摸到是氣脈，沒有摸到血脈，陽就是氣，血就是陰，血不夠了，陽就浮上來，於是就會摸到脈很大很浮，實際上病人是血虛掉了。\n男子脈虛沉弦，無寒熱，短氣裏急，小便不利，面色白，時目瞑，兼衄，少腹滿，此為勞使之然。\n這裡提出勞症特有的幾種症狀，仲師將之分類出來。男子如有『脈虛沉弦』，虛脈就是你摸到脈的時候有一點點脈，稍微重按又沒有了，就叫做虛脈。或是脈很沉，要摸到骨邊才有，重按又沒有了。或是摸到脈細細一根，其狀如弦，這也是虛脈。也就是說虛、沉、弦三種脈，都代表裡面氣血兩虛了。第一個情形是，病人並沒有寒熱現象。你問他：『會不會冷啊？會不會熱？』他說：『沒有。』『短氣裏急』就是病人有時候走動一下",
+          "similarity": 0.5607293798316634,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 173,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 174",
+            "type": "regular",
+            "title": "Chunk 174"
+          }
+        },
+        {
+          "text": "的就是寒喘，每到冬天的時候都不能睡覺，都要坐著睡，吐出來的是白痰，肺寅大卯胃辰宮，每天晚上三點到五點的時候就開始喘，很準時，確定病人是寒喘，除了針之外還可以灸，針灸的穴道還是一樣的，也是虛證的治療，背後的「肺俞」、「脾俞」、「胃俞」，其他的穴道一樣，用土生金的方法來治療。寒喘的時候一定要加灸，灸的效果很快的，處方用小青龍湯來加減。\n     \n#SECTION\n\n六十九．發汗過多，其人叉手自冒心，心下悸欲得按者，「桂枝甘草湯」主之。\n     \n#SECTION\n\n七十．發汗後，其人臍下悸者，欲作「奔豚」，「茯苓桂枝甘草大棗湯」主之。\n    \n六十九條的發汗發太多的，一定是麻黃湯，麻黃湯把胸腔的水都發汗發掉了，並使肚臍下面，下焦的水往上衝，衝上來的力量太大的時候，病人就感覺到心下悸，為什麼「叉手自冒心」？就是很難過想壓下去，所以就是「心下悸」，按著就比較舒服。\n    \n六十九條和七十條，這兩條都是發汗以後，但是發汗的力量不一樣，六十九條是麻黃湯發汗以後，胸陽沒了，所以感覺到心下悸，七十條是桂枝湯發汗發太多，腸胃的津液沒了，水不夠，肚臍的地方就開始跳，就準備發奔豚了。中醫的心下悸，並",
+          "similarity": 0.5516788271638731,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 143,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 144",
+            "type": "regular",
+            "title": "Chunk 144"
+          }
+        },
+        {
+          "text": "很難過想壓下去，所以就是「心下悸」，按著就比較舒服。\n六十九條和七十條，這兩條都是發汗以後，但是發汗的力量不一樣，六十九條是麻黃湯發汗以後，胸陽沒了，所以感覺到心下悸，七十條是桂枝湯發汗發太多，腸胃的津液沒了，水不夠，肚臍的地方就開始跳，就準備發奔豚了。中醫的心下悸，並不是臨床上看到的心臟在慌，而是「中脘」的地方在跳動，因為天陽在上面乾掉了，把水硬往上吸，所以梗在「中脘」的地方，這時候就用「桂枝甘草湯」。\n諸位要有一個概念，肚臍中間屬脾，肚臍上方屬腎，肚臍以下屬心，肚臍左邊屬肝，肚臍右邊屬肺。舉例來說，如果肚臍上方有動悸，就要從腎臟下手去治療，其他依此類推。\n桂枝甘草湯方：\n桂枝四兩（去皮），甘草二兩（炙）。\n右二味，以水三升，煮取一升，去滓，頓服。\n桂枝如果四錢，甘草就用二錢，桂枝是甘草的兩倍，因為發汗發太過了，甘草到胃裏面去，把胃的津液補足，為什麼只用桂枝不用白芍？為什麼會動悸？平常喝水下去的時候，胃很熱，水到胃裏面的時候是氣化上來的，是成蒸氣不是水，今水停在「中脘」這裏，桂枝很熱，桂枝下去會蒸發水往上走，還有，心臟的外膜，有很多神經血脈在縱膈膜、橫膈膜，在血管裏面的是「血」，在神",
+          "similarity": 0.5486918986391266,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 127,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 128",
+            "type": "regular",
+            "title": "Chunk 128"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 9.775906085968018
+    },
+    {
+      "prompt": "病人，男，15歲，亞裔。季節性花粉熱，每年三月到六月，打噴嚏、流鼻水不停，偶而鼻塞。平時喜歡喝含糖冷飲，吃很多水果。",
+      "response": "1) **TCM Diagnostic Analysis:**\n   - **Symptom Analysis:** \n     - The patient experiences seasonal allergic rhinitis (花粉热) with prominent symptoms of sneezing (打喷嚏), continuous runny nose (流鼻水), and occasional nasal congestion (鼻塞). \n     - The symptoms are exacerbated during the spring months (三月到六月), indicating a possible relationship with external allergens, likely pollen.\n   - **Syndrome Differentiation (辨證論治):**\n     - The symptoms suggest a pattern of Wind-Heat (风热) invading the Lung (肺) and causing an obstruction in the nasal passages.\n     - The presence of sneezing and runny nose indicates that the pathogenic factor is likely residing in the upper respiratory tract, particularly affecting the nose. The patient's preference for cold and sweet foods might contribute to the accumulation of phlegm and dampness, further complicating the condition.\n     - Given the patient's age (15 years) and the nature of his symptoms, this is consistent with a youthful constitution that is susceptible to environmental changes, particularly in the presence of allergens.\n\n2) **Chinese Herbal Prescriptions:**\n   - **Prescription for Seasonal Allergic Rhinitis:**\n     - **Herbs:** \n       - 麻黄 (Ephedra) 3两 (approximately 9g)\n       - 桂枝 (Cinnamon Twig) 2两 (approximately 6g)\n       - 甘草 (Licorice) 1两 (approximately 3g)\n       - 白朮 (Atractylodes) 4两 (approximately 12g)\n       - 杏仁 (Apricot Kernel) 7十个 (approximately 70 pieces, or 10-15g depending on size)\n     - **Preparation:** \n       Combine the herbs with water (9升 or approximately 2.25 liters), first boiling 麻黄, reducing it by 2升 (approximately 0.5 liters), then adding the other herbs and boiling to obtain 2升半 (approximately 0.625 liters) of decoction.\n     - **Dosage:** \n       Take the decoction warm, approximately 8合 (about 300-400ml) to induce mild sweating.\n\n   - **Additional Treatment for Nasal Congestion:**\n     - **Nasal Powder (for direct administration):**\n       - 蒲灰 (Acorus) \n       - 细辛 (Asarum)\n       - 皂莢 (Soapberry)\n       - 麻黄 (Ephedra)\n     - **Preparation:**\n       Mix equal parts of the four herbs into a fine powder. Administer a small amount into the nostrils to alleviate nasal congestion.\n     \nThis treatment approach focuses on expelling the Wind-Heat and relieving nasal symptoms while addressing the underlying dampness associated with the patient's dietary habits.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:04:04.689960",
+      "prompt_number": 8,
+      "retrieved_chunks": [
+        {
+          "text": "是『面黃而喘，頭痛鼻塞而煩，其脈大自能飲食，腹中和無病。』這自能飲食，就表示腹中和，就是代表說中焦下焦沒有病，『病在頭中寒濕』。有這種症狀的話我們就知道，病人的濕是在腦和鼻子的中間，就是眼睛額頭之間，濕在這個地方就會產生鼻塞的現象。由於濕的性很黏膩，所以會把鼻子堵到，病人會喘得呼吸不過來，只好用嘴巴來呼吸。遇到這種情形時我們知道濕是存在鼻子裡面，類似西醫說的鼻竇炎，鼻蓄膿等等使用很多名詞。『內藥鼻中則愈。』仲師認為此時藥要直接放到鼻子裡面去，效果最好。因為病人只有濕累積在鼻子裡面，我們只需要去鼻子裡的濕就可以了。如果用嘴巴將藥喝下去，結果藥跑到肚子裡去，治療上就會慢許多，不如直接從鼻子將藥噴進去。所以我們在治療鼻竇炎時，除了下針之外，平常不需要使用內服處方，應該使用噴劑。如果我們用針治，穴道可以選用迎香穴，如果是鼻子有流膿，鼻水、鼻涕很多，我們就灸上星，這也是鼻科的大穴。百會、前頂都可以用來治療鼻病。背後的風池、肺俞等穴也可以治鼻病，因為肺開竅在鼻子。\n迎香穴這兩個穴道你針扎下去的時候，如果當場鼻塞的現象沒有通暢，表示沒有扎到迎香，所以如果針下去沒有感覺你不要懷疑針灸術不對，而是你太差",
+          "similarity": 0.5333499314592687,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 78,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 79",
+            "type": "regular",
+            "title": "Chunk 79"
+          }
+        },
+        {
+          "text": "病名是中風還是感冒，只要還是麻黃湯證，就用麻黃湯，這就是辨症論治。\n\n#SECTION     \n\n五十二．太陽病，脈浮緊，發熱，身無汗，自衄者愈。\n    \n這因本身的體能比剛剛的更強，剛才的陽氣還只是中級強，還需要麻黃湯來把寒發出來，這個不用麻黃湯，常見的是小孩子，而且是男孩子，很皮，跑來跑去，媽媽還在煮麻黃湯，小孩流鼻血好了，所以不用太緊張，血會自已停掉，一般容易發生在十四歲以下的孩童，因為是純陽之體，所以在針灸課程中講過，十四歲以下的孩童如果流鼻血，不需要治療。\n    \n人體溫度會因衄血而降低，故中醫謂之紅汗，故多血家之有腦充血象徵者，不但無害，反而有益。《內經》：『奪血者無汗，奪汗者無血。』就是平常容易流鼻血的都不會有汗的，還有平常流汗很多的人，就不會流鼻血。\n     \n#SECTION",
+          "similarity": 0.5129257426767143,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 116,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 117",
+            "type": "regular",
+            "title": "Chunk 117"
+          }
+        },
+        {
+          "text": "炎是因為開刀而開好的。許多病人在開完刀後，人都還躺在病床上，鼻子又塞了，沒有用的，主要原因是西醫不知道濕的源頭在哪裡。噴鼻藥能夠讓鼻竇部位變得很乾燥，因為麝香跟礬石的交互作用。而水菖蒲呢？過去在用水菖蒲的時候，是把菖蒲先風乾，曬乾，等到乾了以後就放在倉庫裡面儲存起來。大多是什麼時候用，大家你知道嗎？是用在水腫。病人水腫腫到皮膚都變透明的，整個皮膚都因此繃的很緊。這個時候我們把乾燥的水菖蒲拿出來，用火燒，菖蒲像稻草一樣，燒過以後會變成灰，再將灰混合些麻油塗在皮膚上。塗上去以後讓病人躺下，等一下病人就會開始小便，積水就會被排出來。\n（補）鼻塞方：\n蒲灰、細辛、皂莢、麻黃。\n右四味，等分為末，調和，納鼻中少許，嚏則愈。\n濕家，身煩疼，可與麻黃加朮湯，發其汗為宜，慎不可以火攻之。\n麻黃加朮湯方：\n麻黃三兩（去節），桂枝二兩，甘草一兩，白朮四兩，杏仁七十個（去皮尖）。\n右五味，以水九升，先煮麻黃，減二升，去上沬，內諸藥，煮取二升半，去滓，溫服八合，覆取微汗。\n麻黃加朮湯用在哪裡呢？當你檢查到病人的寒濕是停留在皮表上面的時候，就會用到麻黃加朮湯。『老師，如何查到寒濕在表？』這的確是個問題，仲師就講",
+          "similarity": 0.5090520274789522,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 80,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 81",
+            "type": "regular",
+            "title": "Chunk 81"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 12.656668901443481
+    },
+    {
+      "prompt": "病人，男，60歲，亞裔。後腰時不時有刺痛感，小便有灼熱感，有一次看到帶有紅色的尿液。",
+      "response": "1) **TCM Diagnostic Analysis:**\n\n根據病人的症狀（後腰刺痛、小便灼熱感及帶有紅色尿液），可以進行以下的辨證論治：\n\n- **症狀分析：**\n  - 後腰刺痛：可能與腎臟或膀胱相關。\n  - 小便灼熱感：表明膀胱有熱，可能是熱結於膀胱，導致氣化不利。\n  - 帶有紅色的尿液：可能指示血尿，與血瘀或膀胱內熱有關。\n\n- **綜合判斷：**\n  - 病人年齡60歲，屬於中老年人，腎精可能不足，容易出現虛火或實熱。\n  - 小便帶血及灼熱感，符合“熱結膀胱”之證，可能由於外熱侵襲或內熱積聚所致。\n\n**結論：** 病人的主要證型為“熱結膀胱”，伴有腎虛的可能性，需先清熱解毒、利尿通淋。\n\n2) **Specific Chinese Herbal Prescriptions:**\n\n根據上述分析，建議使用**桃核承氣湯**來治療病人的症狀。該方可清熱、活血，適合治療小便帶血及灼熱感。\n\n**桃核承氣湯**的組成及劑量如下：\n\n- 桃仁（桃核）: 10克\n- 大黃: 10克\n- 芒硝: 6克（如需使用，需根據病人的身體狀況調整）\n- 玄參（或用其他清熱解毒藥物如黃芩）: 10克\n- 甘草: 6克\n\n**用法：** 將上述藥材加水煎煮，取汁，分兩次服用。建議患者在服用期間多飲水，以促進尿液排出，並觀察小便情況。\n\n若症狀未見改善，或出現其他不適，請及時就診於專業醫療機構進行進一步檢查。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:04:12.989375",
+      "prompt_number": 9,
+      "retrieved_chunks": [
+        {
+          "text": "腹腔裏，病人表現的表證就是「肌膚甲錯」，在女孩子中見到很多，也就是在腿和腹部的地方，每到冬天就要蛻皮，皮膚就像蛇皮一樣，會乾掉，夏天就好好的，其實就是「乾血勞」。\n一三九．「太陽病」，身黃，脈沉結，少腹硬，小便不利者，為無血也。小便自利者，其人如狂者，血證諦也，「抵當湯」主之。\n這又分兩個，一個小便利，一個小便不利，來分有血、無血。如果沒有血的話，身黃，脈沉結，少腹硬，小便不利者，為無血也，後面會用茵陳蒿湯。茵陳蒿湯專門去膀胱的熱，火在下面燒，膀胱氣化之後，一部份不好的小便小掉，一部份好的水進入膽，分泌膽汁幫助消化，膽汁是黃色的，如果膀胱裏面太熱了，膽汁分泌太熱的時候，病人會身黃。不要小看血證，X光看不到血，結果病人發狂，這瘀氣有時候會跑到腦部去，有時候是大承氣湯，有時候是抵當湯，所以要看小便利不利，利就是用抵當湯，如果小便出來很黃，就是下焦很熱，大便又沒有了，就用大承氣湯去攻。\n一四○．「傷寒」，有熱，少腹滿，應小便不利，今反利者，為有血也，當下之，不可餘藥，宜「抵當丸」。\n熱結在膀胱應該小便不利，現在小便很正常，病人陳述少腹「中極」、「關元」一帶很痛，不通則痛，小便很好，就是血堵到",
+          "similarity": 0.5730519778154265,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 245,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 246",
+            "type": "regular",
+            "title": "Chunk 246"
+          }
+        },
+        {
+          "text": "有表熱沒好，桂枝湯、葛根湯、麻黃湯發表的時候沒有發出去，這病毒直接從經進入腑，從皮膚表面直接進入膀胱，腹部的前面是膀胱，中間是精宮，後面是大腸。正常小便出來的水是氣化出來的，氣化的時候，一部份的水再跑到膽裏面，水生木，變成膽汁，氣化本來就很熱了，當熱進入膀胱裏面，移熱到膀胱，足太陽膀胱經，經絡絡到膀胱裏面，熱再進來，太熱了血管會破裂，小便就會帶血出來，這是一種外證沒有好的時候傳到裏面的現象。還有一種是打架被踢或運動傷害傷到小便的地方，結果小便堵到了小不出來，裏面瘀血，也是一種外傷，用桃核承氣湯。熱結膀胱就是小便太熱了，小便帶血，桃核承氣湯是治療血證的第一個方子，很淺的方子。「其人如狂」，並不是發狂，只是情緒很煩躁不安，如已發狂的話，桃核承氣湯就來不及了，所以是接近狂還沒到發狂的狀態。「血自下，下者愈」，如果這個時候小便自己帶血出來，就沒有關係了，這血通了。「其外不解者，尚未可攻，當先解其外」，解外的時候，用小柴胡湯，因為碰到「腑」上的時候，一定經過中間的三焦。「外解已，但少腹急結者」，少腹就是在「中極」、「關元」一帶繃得很緊，病人感覺很痛、很難過，小便小不出來，看皮膚上也是繃得很緊，整",
+          "similarity": 0.5495995019300413,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 205,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 206",
+            "type": "regular",
+            "title": "Chunk 206"
+          }
+        },
+        {
+          "text": "候攻它，清出來後，津液自然會回來，張仲景說喝承氣湯後，病人會口渴，喝點水就好了。這條辨是說明明看到病人是下利，以為裏面沒有堵到，結果病人是因為裏面堵到而下利，因為堵得太實了。\n    \n熱病，腸中乾燥而大便不行，常以湯劑解之。以藥物之刺激與推動，固可通便，而水液亦為推蕩之一助，如多飲開水，其便亦通。若用丸劑，每多辛熱之品所成，祇有刺激腸蠕動之力，無清潤腸壁之力，故所下者，多剩餘之水份，所以西藥或甘油錠沒有辦法讓腸胃產生津液。\n     \n#SECTION\n\n一一九．「太陽病」不解，熱結膀胱，其人如狂，血自下，下者愈。其外不解者，尚未可攻，當先解其外。外解已，但少腹急結者，乃可攻之，宜「桃核承氣湯」。\n    \n「太陽病不解」，就是還有太陽病的表證，還有表熱沒好，桂枝湯、葛根湯、麻黃湯發表的時候沒有發出去，這病毒直接從經進入腑，從皮膚表面直接進入膀胱，腹部的前面是膀胱，中間是精宮，後面是大腸。正常小便出來的水是氣化出來的，氣化的時候，一部份的水再跑到膽裏面，水生木，變成膽汁，氣化本來就很熱了，當熱進入膀胱裏面，移熱到膀胱，足太陽膀胱經，經絡絡到膀胱裏面，熱再進來，太熱了血管會破裂，小便就",
+          "similarity": 0.540269810832385,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 232,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 233",
+            "type": "regular",
+            "title": "Chunk 233"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 8.299376010894775
+    },
+    {
+      "prompt": "病人，男，5歲，亞裔。挑食，喜歡吃零食，上課時注意力不佳，常常被老師叮嚀。喜歡亂敲打東西，出怪聲音，有妥瑞症的表現。",
+      "response": "### TCM Diagnostic Analysis\n\n#### Symptom Analysis:\n1. **挑食，喜歡吃零食**: This indicates a potential dysfunction in the Spleen and Stomach, leading to improper digestion and nutrient absorption. It suggests a weak Spleen Qi and possibly Spleen Yang deficiency, which can result in an inability to transform and transport nutrients effectively.\n2. **上課時注意力不佳**: This may reflect a deficiency in Heart Qi or Heart Blood, which is responsible for mental clarity and focus. In TCM, the Heart houses the Shen (spirit), and any deficiencies can lead to attention issues.\n3. **常常被老師叮嚀，喜歡亂敲打東西，出怪聲音**: These behaviors may indicate hyperactivity and restlessness, which can be associated with Liver Qi stagnation or Liver Yang rising. In children, this can manifest as a lack of control over emotions and behavior.\n4. **妥瑞症的表現**: This could be related to an underlying pattern of Liver Wind or Phlegm-Heat disturbing the Heart and mind, leading to involuntary movements and sounds.\n\n#### Syndrome Differentiation (辨證論治):\n- **Spleen Qi Deficiency**: Due to picky eating habits leading to inadequate nourishment.\n- **Heart Blood Deficiency**: Resulting in attention issues and potential Shen disturbance.\n- **Liver Qi Stagnation**: Leading to hyperactivity and impulsive behavior.\n- **Possible Phlegm-Heat**: Contributing to tics and involuntary movements.\n\n### Herbal Prescription\n\n**Formula Recommendation: Xiao Feng San (小風散)** - to harmonize the Liver and Spleen, nourish the Heart, and clear heat.\n\n#### Specific Herbs and Dosages:\n1. **Bai Zhu (白术)** - 9g: Strengthens Spleen Qi, aids digestion.\n2. **Fu Ling (茯苓)** - 9g: Helps with Spleen function and calms the mind.\n3. **Dang Shen (党参)** - 9g: Tonifies Qi and nourishes the Spleen.\n4. **Bai Shao (白芍)** - 9g: Nourishes Blood and softens the Liver.\n5. **Chuan Xiong (川芎)** - 6g: Invigorates blood and regulates Liver Qi.\n6. **Gou Qi Zi (枸杞子)** - 9g: Nourishes Liver and Kidney, benefits eyesight.\n7. **Zhi Gan Cao (炙甘草)** - 3g: Harmonizes the formula and tonifies Qi.\n\n#### Preparation and Dosage:\n- Combine the above herbs and decoct them in water. \n- Take the decoction twice daily, 1-2 doses per day, depending on the child's tolerance and response.\n\n### Treatment Principles\n- **Nourish the Spleen**: To improve digestion and nutrient absorption.\n- **Tonify the Heart**: To calm the mind and improve attention.\n- **Regulate Liver Qi**: To alleviate hyperactivity and emotional disturbances.\n- **Clear Heat**: If any signs of excess heat or phlegm are present, adjust the formula accordingly. \n\n### Conclusion\nThis herbal treatment, alongside dietary recommendations (reducing sugary snacks, improving overall nutrition), may help address the symptoms of attention issues and involuntary movements in the child. Regular follow-up and adjustments based on the child's response will be essential.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:04:23.983496",
+      "prompt_number": 10,
+      "retrieved_chunks": [
+        {
+          "text": "打嗝的時候更虛，有打嗝現象的時候，就是胃氣絕了，很危險了，如果再進去「手足躁擾，捻衣摸床。小便利者，其人可治」。捻衣摸床就是沿著床邊摸過去，這時候大便整個乾在腸子裏面了，如果小便還通利，代表他元陽還有，因為小便是氣化出來的，代表津液還有，如果小便都沒有了，就真的很危險了。\n    \n例如小孩感冒，麻黃湯證，一劑下去小孩發汗太過，燒退了就轉白虎湯證了，結果誤診，看他還發燒給大青龍湯，小孩一直在發汗，原來是太陽表證，立刻轉成陽明燥證，就捻衣摸床，這代表津竭了，而陽明燥熱證，對小孩摸脈不準，因為小孩的脈，正常時都跳得很快，摸肚子拒按，表示大便堵在裏面，陽明證應該考慮大承氣湯或白虎湯？結果因拒按而用大承氣湯，大承氣湯一下去，燒就退了，還有，這小孩從小就黃疸，大便不好，常常陽明燥熱，常常口渴，常常便秘，腦子反應慢，大承氣湯一攻都好了。\n    \n遜齋氏曰：『本條宜對證用藥，「黃疸病」用茵陳蒿湯，腹滿而喘、譫語、不大便用「承氣湯」。獨躁擾循摸一症為神經瀕絕之現象，法在不治。』這現象用「大承氣湯」。如果白虎湯證造成的壯熱，用犀角地黃湯可能會好，大便不通的，就不會好。\n     \n#SECTION",
+          "similarity": 0.4020493025934762,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 246,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 247",
+            "type": "regular",
+            "title": "Chunk 247"
+          }
+        },
+        {
+          "text": "，在太陽證的時候出去相抗，病會進入少陽就是抗不過才進來的，所以用汗法就是為了加強免疫系統。在津液不足的狀況下，這時候「兩耳無所聞」，因為耳朵靠津液來滋潤。「目赤」，眼睛是靠血上來滋潤的，血裏面的水不夠了，血就熱起來，熱就是炎，第一個就會看到眼睛紅赤腫痛。「胸中滿而煩者」，因為他本來就已經受邪了，過去看到胸滿，一般來說病在上焦採吐法，所以醫生使用吐法誤診了，因為不是哽到，不應該用吐的，因為津液已經不夠了，吐很多的話會傷到氣，所謂傷到氣就是傷到津液的源頭，因為吐出來很多黏液、食物。攻下的時候會傷到血，因為血是腸胃從小腸裏面生化出來的，本來食物應該化成血供給身體用的，在還沒化成血就被幹掉了，所以攻下會傷到血，病人元氣一傷到，造成裏虛的狀況有兩種有「小建中湯證」，另一「炙甘草湯證」，如果心臟動悸，就是上焦受損了，就是「炙甘草湯證」。「吐、下則悸而驚」，心和小腸相表裏，心是君主之官，心血不足的時候，病人容易受到驚嚇，受到驚嚇的時候給「柴胡加龍骨牡蠣湯」，這是驚，如果是悸，除了有動悸的現象，脈還可以看到結代，驚可以看到病人印堂、山根的地方有青紫色，小兒科中小孩可以看到大便變成綠色的，耳朵後有雞爪血",
+          "similarity": 0.37935652405784276,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 491,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 492",
+            "type": "regular",
+            "title": "Chunk 492"
+          }
+        },
+        {
+          "text": "黏起來了。「脅下痛，氣上衝咽喉」，因為吐下傷到了，胃氣本來應該下降的，就是食物進入胃，胃磨碎再進入小腸再到大腸，食物是往下走的，就是胃蠕動力是往下走的，因為吐很多了，胃氣往上走了，胃裏面又沒有東西，胃氣就往上衝到咽喉，病人就感覺到一直有一股氣往上衝，衝到咽喉。病人眩冒頭昏，因為血不夠了缺血，如果在這種狀況再發汗的話，血裏面的水更少更傷，血裏面的水一旦量不足的時候，病人會有高熱的現象，結果脈微了，病人「經脈動惕」，因為血不足了，不足以養筋，「久而成痿」，小兒麻痺就是這樣來的，很多初期都是發燒感冒處理不好，《內經》：『諸痿取陽明。』所有痿證、肌肉痿縮、痿靡無力、小兒麻痺的起源在這裏，要獨取陽明。\n一七六．「傷寒」，發汗，若吐，若下，解後，心下痞硬，噫氣不除者，「旋覆代赭石湯」主之。\n一個人傷寒，發汗，若吐，若下，只有心下痞硬，噫氣，沒有其他症狀，單純的噫氣。\n旋覆代赭石湯方：\n旋覆花三兩，人參二兩，生薑五兩（切），代赭石一兩，大棗十二枚（劈），甘草三兩（炙），半夏半斤（洗）。\n右七味，以水一斗，煮取六升，去滓，再煎，取三升，溫服一升，日三服。\n旋覆花用三，代赭石用一。\n旋覆代赭石湯通常用在",
+          "similarity": 0.37403312904427727,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 317,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 318",
+            "type": "regular",
+            "title": "Chunk 318"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.994027137756348
+    },
+    {
+      "prompt": "病人，女，42歲，亞裔。月經推遲，40～50天才來一次，月經來時經痛嚴重。",
+      "response": "1) **TCM Diagnostic Analysis:**\n\n   - **Symptom Analysis:**\n     - The patient is a 42-year-old female experiencing delayed menstruation, with cycles occurring every 40 to 50 days.\n     - She reports severe pain during menstruation.\n     - Given her age, she may be approaching perimenopause, which could influence her menstrual cycle.\n     - The symptoms suggest possible stagnation or deficiency in the body's Qi and blood.\n\n   - **Syndrome Differentiation (辨證論治):**\n     - The primary symptoms of delayed menstruation and severe menstrual pain indicate a potential disharmony involving blood stagnation and possibly cold accumulation in the uterus. \n     - The severity of the pain suggests that there may be an underlying condition of \"cold\" or \"stasis,\" which could be causing blockages in the flow of Qi and blood.\n     - Based on the context, this aligns with \"寒結子宮\" (cold accumulation in the uterus) leading to menstrual irregularities and pain.\n     - The patient's age also suggests that her condition may be influenced by declining kidney Qi or essence, which can lead to deficiencies affecting the menstrual cycle.\n\n2) **Specific Chinese Herbal Prescriptions:**\n   \n   - **Prescription: 温经汤 (Wen Jing Tang)**\n     - This formula is suitable considering the symptoms of menstrual pain, delayed menstruation, and potential cold accumulation.\n     - **Individual Herbs and Recommended Dosages:**\n       - 吴茱萸 (Wu Zhu Yu) - 3 liang (about 9g)\n       - 当归 (Dang Gui) - 2 liang (about 6g)\n       - 芎藭 (Xiong Zhi) - 2 liang (about 6g)\n       - 芍藥 (Shao Yao) - 2 liang (about 6g)\n       - 人參 (Ren Shen) - 2 liang (about 6g)\n       - 桂枝 (Gui Zhi) - 2 liang (about 6g)\n       - 阿膠 (A Jiao) - 2 liang (about 6g)\n       - 丹皮 (Dan Pi) - 2 liang (about 6g)\n       - 生薑 (Sheng Jiang) - 2 liang (about 6g)\n       - 甘草 (Gan Cao) - 2 liang (about 6g)\n       - 半夏 (Ban Xia) - 1/2 sheng (about 15g)\n       - 麦门冬 (Mai Men Dong) - 1 sheng (about 30g)\n\n   - **Preparation and Dosage:**\n     - Combine the above herbs and boil them in 1斗 (approximately 10 liters) of water until reduced to 3升 (approximately 3 liters).\n     - Divide the decoction into two warm doses to be taken daily.\n     \n   - This formula addresses the cold accumulation and blood stagnation while nourishing the blood and warming the uterus, which is critical in treating her symptoms effectively.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:04:34.865377",
+      "prompt_number": 11,
+      "retrieved_chunks": [
+        {
+          "text": "女孩子睡覺做個夢，第二天早上起來就結氣了，所以比較麻煩。\n問曰：婦人年五十，所病下利，數十日不止，暮即發熱，少腹裏急，腹滿，手掌煩熱，唇口乾燥，何也？師曰：此病屬帶下，何以故？曾經半產，瘀血在少腹不去。何以知之？其證唇口乾燥，故知之。當溫經湯主之。\n溫經湯方：\n吳茱萸三兩，當歸、芎藭、芍藥、人參、桂枝、阿膠、丹皮、生薑、甘草各二兩，半夏半升，麥門冬一升。\n右十二味，以水一斗，煮取三升，分溫二服，亦主婦人少腹寒，久不受胎；兼治崩中去血，或月水來過多，及至期不來。\n『問曰：婦人年五十』，就是女子更年期到了，現在專門講更年期，大家要將這個部份學好，免得以後麻煩很多。如果女孩子更年期到了出現『下利』時，此處的下利其實是下血。七七四十九癸竭天後，月經應該停止，如果到了五十歲以後月經還是不斷的來，就是下血『數十日不止』。『暮即發熱』，到了黃昏晚上就發熱。『少腹裏急』，如果肚子裡面如抽筋般的痛。『腹滿』，肚子脹滿。『手掌煩熱』，手掌是陰，手背是陽，此處的手掌熱是因為陰虛才產生的煩熱。病人『唇口乾燥』？為什麼月經停經了會變成還這樣子呢？張仲景說，這個病就是所謂『帶下』，對於婦人雜病，我們有一個統一的名",
+          "similarity": 0.5465958365517193,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 650,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 651",
+            "type": "regular",
+            "title": "Chunk 651"
+          }
+        },
+        {
+          "text": "掣痛，少腹惡寒，或引腰脊，下根氣街，氣衝急痛，膝脛疼煩，奄忽眩冒，狀如厥顛，或有憂慘，悲傷多嗔，此皆帶下，非有鬼神。久則羸瘦，脈虛多寒，三十六病，千變萬端，審脈陰陽，虛實緊弦，行其鍼藥，治危得安，其雖同病，脈各異源，子當辨記，勿謂不然。\n這一段諸位看看就可以了。『婦人之病』，一般女子的病有三個原因，一個是身體『虛』，一個是『積冷』，女孩子喜歡吃冰，因為女孩子身體比較虛熱，還有一個是『結氣』，心裡想不開，每天在生氣，也不曉得為什麼事情。『為諸經水斷絕，至有歷年』，於是造成月經停了一年或是兩年都沒來，結果『血寒積結胞門』，瘀血癥痼等積塊寒症，集結在子宮裡，嚴重時寒氣會傷及經絡，如果是『凝堅在上』，病人如果血寒凝結在上面，比較接近肝的位置，病人就會產生『嘔吐』還有『涎唾』，日積月累之下就成為『久成肺痿』。因為肝一半在膈上，一半在膈下，肝的絡直接絡在整個肺周圍，所以病人會有胸苦滿的現象，造成『形體損分』，病人身體越來越削瘦。『在中盤結，繞臍寒疝，或兩疼脇痛』，如果是橫在中焦，就是肝膽脾胃這一帶，就會造成繞臍痛與腹痛或是兩肋下方痛。『與藏相連，或結熱中，痛在關元』，如果與子宮相接觸或是結在任脈時",
+          "similarity": 0.5224323872483327,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 648,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 649",
+            "type": "regular",
+            "title": "Chunk 649"
+          }
+        },
+        {
+          "text": "後面的生薑、甘草這些都是行陽的藥，能夠讓陽氣旺盛起來，陽氣盛時血就會跟著走動，這是可以生陽又活血的藥物組合。阿膠是我們用止血補血的藥，因為病人有漏下，丹皮是要攻瘀的藥，因為女子寒血集中在胞門中。如果我們硬要去攻它，病人身體會跟著虛脫掉，所以我們必須要確定她有瘀血時，或是女孩子子宮太冷而不會懷孕時才會使用。一般來說西醫講的子宮內膜異位，就是溫經湯證。\n『右十二味藥』，以水來煮，煮完以後去渣喝湯。『婦人少腹寒』，『久不受胎，兼治崩中去血，或月水來過多，及至期不來。』只要婦人子宮冷，就無法受胎，有時月經來的太多，有時又到期不來，都可以使用溫經湯來治。久年不孕也可以利用溫經湯來助孕，所以溫經湯是個很好用的方子。\n帶下，經水不利，少腹滿痛，經一月再見者，土瓜根散主之。\n土瓜根散方：\n土瓜根、芍藥、桂枝、蟅蟲各三分。\n右四味杵為散，酒服方寸匕，日三服。\n『帶下』，只要講到帶下就是月經的病。如果病人『經水不利，少腹滿痛，經一月再見者，土瓜根散主之。』月經來了一個月，結果第二個月沒有了，到第三個月又來，中間會停經一個月，年紀輕輕的女子寒結子宮時，我們要用土瓜根散。土瓜根散中有土瓜根、芍藥、桂枝、蟅蟲等",
+          "similarity": 0.5159844881924954,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 652,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 653",
+            "type": "regular",
+            "title": "Chunk 653"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.881824016571045
+    },
+    {
+      "prompt": "病人，女，42歲，亞裔。月經準時28天來一次，可是每次都來10多天，前面兩三天血量正常，之後一直滴滴漏漏，到12～13天才完全停止出血。",
+      "response": "1) **詳細的中醫診斷分析：**\n\n根據病人的症狀，這位42歲的女性月經周期正常，但出血時間過長且持續滴漏，表現為月經前期正常，之後出現經血不斷，這可分析為「肝脾兩虛」的狀況。\n\n- **症狀分析：**\n  - 月經來潮時間正常，但持續出血超過10天，顯示出血的量和時間異常。\n  - 前幾天血量正常，之後出現滴滴漏漏，可能與肝脾無法有效運化血液有關。\n  - 可能有情緒因素影響，如工作壓力、思慮過重等，這些均可導致肝氣鬱結，影響脾的運化功能。\n  \n- **辨證論治：**\n  - **肝脾兩虛**：肝臟無法藏血，脾臟無法運化，導致經血外漏，且女性在此年齡段多因生理變化導致氣血虧虛。\n  - **失血之象**：病人可能面色黯然，顯示失血過多，精力不足，伴隨可能的疲勞感。\n  - **脈象**：可能出現細弱或遲緩的脈象，符合虛證的表現。\n\n2) **具體的中藥方劑及建議用藥劑量：**\n\n針對此情況，可以考慮使用「膠艾湯」作為治療方劑，因其能夠補血、止血、活血，並使經脈通暢。\n\n- **膠艾湯組成及劑量：**\n  - **阿膠**（止血，補血） - 10克\n  - **艾葉**（促進經絡通暢） - 10克\n  - **當歸**（補血，調經） - 10克\n  - **川芎**（活血，行氣） - 6克\n  - **乾地黃**（補血，滋陰） - 10克\n  - **白芍**（收斂止血，緩解腹痛） - 10克\n\n**用法：** 將上述藥材煎煮，服用時可加適量的水，分為早晚兩次服用，建議每日一劑，連續服用一個月，根據症狀變化調整。\n\n以上治療方案需根據患者的具體情況調整，若症狀持續或加重，建議及時就醫以進行進一步診斷和治療。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:04:44.287423",
+      "prompt_number": 12,
+      "retrieved_chunks": [
+        {
+          "text": "之臟，脾臟沒有辦法運化，肝臟本身又不藏血，於是血就漏下來，所以是肝脾兩虛之病。有的時候是因為喝酒喝太多或者是思慮太重，工作壓力太大，或是一個人在家裡面很孤單就會慌亂，這都會造成肝臟脾臟兩虛的狀況，所以有很多女孩子都會漏下。諸位學過漏下的脈了，就是寸脈以下，關脈以上的地方脈會兩邊跳，這就是月經在惡漏不止。\n第二是『有半產後因續下血都不絕者』，半產就是流產。病人流產過以後，結果月經不停止，一直來。第三是『妊娠下血者』，懷孕中間有流血，也有的人是生完小孩以後流血不止，此時病人臉色都是黯的，表示已經失血失很多。張仲景說：『這些所有的現象通通可以用膠艾湯。』膠艾湯是非常好用的方子，大家看膠艾湯裏有乾地黃，地黃本身補血，我們六味地黃丸本身是入腎，腎壯起來就可以把肝的血補足，所以乾地黃實際上是為了補肝、補血用的。川芎能夠活血，阿膠能夠止血，艾葉能夠使經脈通暢，所以我們的灸是用艾草來做灸。當歸能補血，芍藥能夠收斂止血又止腹痛。使用膠艾湯時最重要就是阿膠跟艾葉，所以才叫做『膠艾湯』，阿膠本身是止血用的。大家現在知道了，當胃出血時，我們要用柏葉，這是植物性的膠質來止血，如果是子宮出血或是其他地方出血，我們",
+          "similarity": 0.564423532692149,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 620,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 621",
+            "type": "regular",
+            "title": "Chunk 621"
+          }
+        },
+        {
+          "text": "胎兒用來成長的，結果突然沒有血了，於是就會流產，然後惡漏不止。一個月本來該來一次月經，結果來了四次、五次。有時來了三天就沒了，然後沒多久又來了，如此循環不已。\n男人遇到這種脈時就是『亡血失精』，因為男人的精與血是同源，男人的汗與血也是同源，男人的精就好像女人的乳汁一樣是白色的，女人的乳汁是靠心臟的熱去蒸化營養後再降下到子宮成為血出來，男人的精是靠小腸的熱蒸化營養而成的，而這兩個都是白色的。半產漏下與流產時的處理方式，後面我們會介紹給大家。男人亡血失精該怎麼處理呢？像用桂枝龍骨牡蠣湯等，但是這只是不讓你失精，如果壯陽的話桂枝龍骨牡蠣湯就沒有那麼厲害，我們要靠像天雄散之類。\n失血的人，如果被發汗，『即寒慄而振』，我前面剛講過的人體汗血同源，所以衄家、亡血家、瘡家等都不可以發汗，還有病人生了一大堆瘡在身上你也不可以給他發汗。\n病人胸滿唇痿、舌青口燥，但欲漱水，不欲嚥，無寒熱，脈微大來遲，腹不滿，其人言我滿，為有瘀血。\n『病人胸滿唇痿』，從這個條辨開始進入討論瘀血的辨證法則，我們要怎麼才知道病人身體裏有瘀血呢？由於瘀血的原因很多，有的人是生完小孩子宮穢物沒有完全被清出來，有的是內傷、跌打損傷造",
+          "similarity": 0.5536710883428092,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 526,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 527",
+            "type": "regular",
+            "title": "Chunk 527"
+          }
+        },
+        {
+          "text": "礙到胎兒生長。簡單講就是懷孕的前三個月月經很正常，等到懷孕後的第三個月如果有漏下不止，而流出來血是鮮色的話，代表是懷孕了，但是將會流產，不是癥痼造成漏下的。如果前三個月的月經就很不正常，加上又連續停了三個月月經沒來時，此時你不曉得她是有癥？還是有懷孕？結果第三個月後出現漏下黑血不止時，這就曉得是子宮裡面有癥痼了，不是懷孕。仲師是想告訴我們，一定要確定婦人不是懷孕，再開藥給她，千萬不要誤診，造成有孕在身的婦女，結果吃到桂枝茯苓丸，就有落胎的可能。『所以不止者』，為什麼她月經會漏下不止呢？就因為『癥不去故也，當下其癥。』現在我們臨床上使用桂枝茯苓丸時，對於所謂的子宮肌瘤或是卵巢瘤等效果較好。我在臨床上遇到過一位婦女的子宮瘤大到像個柚子那麼大，表面上摸到是很硬的。一般女子在七七四十九歲以後天癸就竭了，但是她到了五十四歲時月經照樣是準時來潮。這位太太很有意思，她的想法很特殊，她很早就知道她有子宮腫瘤，子宮瘤長這麼大，西醫建議她開刀她就是不要，她問西醫說：『這個會不會死人？』西醫說：『也有一點機率，不是一定會死的，可能千分之一。』她說：『我就賭這千分之一的機率，我就是不要開刀。』這個太太也是很異",
+          "similarity": 0.5502487423314899,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 614,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 615",
+            "type": "regular",
+            "title": "Chunk 615"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 9.42200779914856
+    },
+    {
+      "prompt": "病人，女，48歲，亞裔。這一年月經週期開始變亂，有時提前，有時延後。偶而下午會突然身體燥熱，心情也比較煩躁，容易生氣。偶而半夜醒來後，就無法再入睡。",
+      "response": "### TCM Diagnostic Analysis\n\n**Symptom Analysis:**\n1. **Menstrual Irregularities:** The patient, a 48-year-old woman, is experiencing menstrual irregularities which include changes in the cycle timing (early and delayed). This symptom is common during the perimenopausal phase, indicating a disruption in the balance of Yin and Yang and the functioning of the liver and kidney.\n   \n2. **Afternoon Heat Sensation:** The sudden body heat experienced in the afternoon suggests an internal heat condition, possibly due to Yin deficiency or Qi stagnation in the liver, leading to the heat rising.\n\n3. **Emotional Symptoms:** The patient reports feelings of irritability and anger, which are often associated with liver Qi stagnation. Emotional disturbances can also arise from imbalances in the heart and spleen.\n\n4. **Sleep Disturbance:** Difficulty returning to sleep after waking in the middle of the night points towards either Yin deficiency (which fails to anchor the spirit) or disruption of the heart and kidney communication.\n\n**Syndrome Differentiation (辨證論治):**\nBased on the symptoms, the patient appears to be suffering from:\n- **Liver Qi Stagnation with Liver Heat:** The irritability and afternoon heat indicate that the liver Qi is not moving smoothly and is generating heat.\n- **Kidney Yin Deficiency:** The irregular menstruation and sleep disturbances suggest a weakening of the kidney Yin, leading to the inability to nourish the heart and calm the spirit.\n- **Possible Heart Yin Deficiency:** Given the emotional symptoms, it is also possible that the heart Yin is involved, further contributing to the state of irritability and insomnia.\n\n### Herbal Prescription\n\n**Prescription: Xiao Yao San (逍遙散) with modifications**\nThis formula is traditionally used to soothe the liver, relieve stress, and nourish the blood and Yin, making it appropriate for the patient's symptoms.\n\n**Ingredients:**\n1. **Chai Hu (柴胡)** - 4g (for soothing liver Qi)\n2. **Bai Shao (白芍)** - 4g (for nourishing blood and calming the liver)\n3. **Dang Gui (當歸)** - 4g (for nourishing blood)\n4. **Ren Shen (人參)** - 3g (for tonifying Qi)\n5. **Ginger (生薑)** - 2 slices (for harmonizing the stomach and supporting digestion)\n6. **Bai Zhu (白術)** - 4g (for tonifying spleen Qi)\n7. **Fu Ling (茯苓)** - 4g (for strengthening the spleen and calming the spirit)\n8. **Zhi Gan Cao (炙甘草)** - 2g (to harmonize the formula)\n9. **Mai Men Dong (麥門冬)** - 3g (to nourish Yin and moisten the lungs)\n\n**Dosage and Preparation:**\n- Combine all herbs in approximately 600ml of water.\n- Boil down to 200ml and take in two divided doses, warm, preferably before meals.\n- Recommended course: 1-2 weeks, reassess symptoms.\n\nThis herbal formula aims to harmonize the liver, nourish the Yin, and address the emotional and physical symptoms presented by the patient.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:04:53.949316",
+      "prompt_number": 13,
+      "retrieved_chunks": [
+        {
+          "text": "女孩子睡覺做個夢，第二天早上起來就結氣了，所以比較麻煩。\n問曰：婦人年五十，所病下利，數十日不止，暮即發熱，少腹裏急，腹滿，手掌煩熱，唇口乾燥，何也？師曰：此病屬帶下，何以故？曾經半產，瘀血在少腹不去。何以知之？其證唇口乾燥，故知之。當溫經湯主之。\n溫經湯方：\n吳茱萸三兩，當歸、芎藭、芍藥、人參、桂枝、阿膠、丹皮、生薑、甘草各二兩，半夏半升，麥門冬一升。\n右十二味，以水一斗，煮取三升，分溫二服，亦主婦人少腹寒，久不受胎；兼治崩中去血，或月水來過多，及至期不來。\n『問曰：婦人年五十』，就是女子更年期到了，現在專門講更年期，大家要將這個部份學好，免得以後麻煩很多。如果女孩子更年期到了出現『下利』時，此處的下利其實是下血。七七四十九癸竭天後，月經應該停止，如果到了五十歲以後月經還是不斷的來，就是下血『數十日不止』。『暮即發熱』，到了黃昏晚上就發熱。『少腹裏急』，如果肚子裡面如抽筋般的痛。『腹滿』，肚子脹滿。『手掌煩熱』，手掌是陰，手背是陽，此處的手掌熱是因為陰虛才產生的煩熱。病人『唇口乾燥』？為什麼月經停經了會變成還這樣子呢？張仲景說，這個病就是所謂『帶下』，對於婦人雜病，我們有一個統一的名",
+          "similarity": 0.6274031185712469,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 650,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 651",
+            "type": "regular",
+            "title": "Chunk 651"
+          }
+        },
+        {
+          "text": "時候，腦神經就不是很正常，會胡言亂語。『脈弦，五六日譫語不止，當刺「期門」』，就是肝腫起來了，例如有個病人，整個嘴都乾裂掉了，臉上冒青春痘，開炮附子三錢，生附一枚，乾薑三錢，三帖，這病人平常喝水都不能止渴，因為是虛熱，這麼熱的藥下去後就不渴了，這病人的舌苔是白滑，所以是臟結，藥下去後，會大下，濕從大便排出來了。\n一五八．婦人「中風」，發熱惡寒，得之八九日，經水適來，熱除而脈遲身涼，胸脅下滿，如「結胸」狀，譫語者，此為「熱入血室」也，當剌「期門」，隨其實而瀉之。\n「婦人」，專講女人。「中風，發熱惡寒」，就是有表證了。「得之八九日」，剛好得了七八天以後，還沒好的時候，月經來了，「經水適來，熱除而脈遲身涼」，為什麼？平常胃裏面吸收營養造成的血，抵抗力在血中，一旦受了表邪，抵抗力會到皮表上去相抗，相抗的時候，正值月經來了，血往下走，熱也跟著一起下來了，這邪熱跟著一起進入子宮、肝臟，這「血室」二字到現在還在吵，有的人說是子宮，有的人說是肝臟，其實兩者都是血室，張仲景並沒有區分。「胸脅下滿」，因為淋巴系統是三焦，子宮算下焦，胸脅算中焦。「如結胸狀」，看起來像結胸。「譫語者」，如果有譫語，代表病人血",
+          "similarity": 0.558941556145954,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 279,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 280",
+            "type": "regular",
+            "title": "Chunk 280"
+          }
+        },
+        {
+          "text": "室，其血必結，故使如瘧狀，發作有時，小柴胡湯主之。』上次跟大家都介紹過，女子月經來潮，是因為奶水順著沖任二脈往下行，到了子宮裡面就成為月經。當女子得到感冒時正好遇到月經來潮，此時病毒就跟著奶水進入子宮裏，陰部只有肝經絡過，所以病會從子宮再進到到肝臟裏，肝本身又在橫膈上面，於是病人就會胸脇苦滿，病情發展的很快，此時小柴胡湯已經來不及，這時候要扎期門穴，而過去很多經方家是不會針灸的。此段是說如果太陽症已經進入子宮，張仲景說此時再用小柴胡湯已遲，『此為熱入血室』，來不及的話，我們可以針刺期門，如果還有往來寒熱的現象『如瘧狀』，就繼續用小柴胡湯，從這點可知張仲景認為子宮本來就是屬於三焦系統。\n婦人傷寒發熱，經水適來，晝日明了，暮則譫語，如見鬼狀者，此為熱入血室，治之，無犯胃氣及上二焦，必自愈。\n『婦人傷寒發熱，經水適來，晝日明了，暮則譫語』，白天很好，晚上到了黃昏太陽一下山開始『如見鬼狀』，『此為熱入血室，治之，無犯胃氣及上二焦，必自愈。』治療這種病用吐法、汗法、下法都是不對的，要用和解的方式才對，譬如說用小柴胡湯或是等病人自癒。\n婦人中風，發熱惡寒，經水適來，得之七八日，熱除，脈遲身涼和，胸",
+          "similarity": 0.5474660086981697,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 643,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 644",
+            "type": "regular",
+            "title": "Chunk 644"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 9.661854028701782
+    },
+    {
+      "prompt": "病人，男，35歲，白人。身材肥胖，肚子突出明顯。身上多處皮疹，太陽曬及洗熱水澡後更加嚴重，偶而會很癢，抓了以後會破皮，流出透明的組織液。",
+      "response": "### TCM Diagnostic Analysis\n\n#### Symptom Analysis:\n1. **Patient's Age and Demographics:**\n   - 35-year-old male, Caucasian.\n   \n2. **Physical Condition:**\n   - Obesity with a notably protruding abdomen.\n   \n3. **Skin Condition:**\n   - Multiple skin rashes that worsen upon sun exposure and after hot showers.\n   - Occasional itching, leading to scratching, resulting in broken skin and the excretion of clear tissue fluid.\n\n#### Syndrome Differentiation (辨證論治):\nBased on the provided symptoms, the patient is likely suffering from a combination of **Wind-Heat** and **Dampness** obstructing the skin, leading to skin rashes that are exacerbated by heat (sun exposure and hot water). The itching and consequent scratching suggest an underlying deficiency of the skin's protective Qi, allowing external pathogens to invade.\n\n1. **Wind-Heat**: The skin rashes and acute itching indicate the presence of Wind-Heat, which causes the rashes to flare up in response to heat (sun and hot water).\n   \n2. **Dampness**: The clear tissue fluid suggests Damp accumulation, which is often associated with obesity and can lead to skin conditions such as eczema or urticaria.\n\n3. **Qi Deficiency**: The fact that the skin is easily broken and excreting fluid points towards a deficiency in the skin's protective barrier, likely indicating underlying Qi deficiency.\n\n### Specific Herbal Prescription\n\n**Prescription: 麻黃加朮湯 (Mahuang Jiazhu Tang)** \n\n#### Individual Herbs and Recommended Dosages:\n1. **麻黃 (Mahuang, Ephedra)** - 6g\n   - Promotes sweating to release the exterior and alleviate Wind-Heat.\n\n2. **白朮 (Baizhu, Atractylodes)** - 9g\n   - Strengthens the Spleen and helps transform Dampness.\n\n3. **桂枝 (Guizhi, Cinnamon Twig)** - 6g\n   - Assists in harmonizing the Ying and Wei, promoting circulation.\n\n4. **甘草 (Gancao, Licorice)** - 3g\n   - Harmonizes the other herbs and alleviates itching and irritation.\n\n5. **生薑 (Shengjiang, Fresh Ginger)** - 3g\n   - Helps to warm the Yang and dispel cold from the surface.\n\n6. **大棗 (Dazao, Jujube)** - 3-5 pieces\n   - Nourishes Qi and Blood to support the skin's healing process.\n\n### Usage Instructions:\n- Boil the herbs in approximately 600ml of water for about 30 minutes.\n- Consume the decoction twice daily, preferably warm, until symptoms improve.\n\n### Additional Notes:\n- The patient should be advised to avoid hot showers and direct sunlight as much as possible to prevent exacerbation of symptoms.\n- Monitor the skin condition closely, and if the symptoms persist or worsen, consider reevaluation for potential underlying conditions or adjustments in the herbal formula.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:05:03.856358",
+      "prompt_number": 14,
+      "retrieved_chunks": [
+        {
+          "text": "了，乾在腹腔裏，病人表現的表證就是「肌膚甲錯」，在女孩子中見到很多，也就是在腿和腹部的地方，每到冬天就要蛻皮，皮膚就像蛇皮一樣，會乾掉，夏天就好好的，其實就是「乾血勞」。\n     \n#SECTION\n\n一三九．「太陽病」，身黃，脈沉結，少腹硬，小便不利者，為無血也。小便自利者，其人如狂者，血證諦也，「抵當湯」主之。\n    \n這又分兩個，一個小便利，一個小便不利，來分有血、無血。如果沒有血的話，身黃，脈沉結，少腹硬，小便不利者，為無血也，後面會用茵陳蒿湯。茵陳蒿湯專門去膀胱的熱，火在下面燒，膀胱氣化之後，一部份不好的小便小掉，一部份好的水進入膽，分泌膽汁幫助消化，膽汁是黃色的，如果膀胱裏面太熱了，膽汁分泌太熱的時候，病人會身黃。不要小看血證，X光看不到血，結果病人發狂，這瘀氣有時候會跑到腦部去，有時候是大承氣湯，有時候是抵當湯，所以要看小便利不利，利就是用抵當湯，如果小便出來很黃，就是下焦很熱，大便又沒有了，就用大承氣湯去攻。\n     \n#SECTION",
+          "similarity": 0.528107071404848,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 276,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 277",
+            "type": "regular",
+            "title": "Chunk 277"
+          }
+        },
+        {
+          "text": "，或在船艙裡面，還有落後的地方，也常常會看到。為什麼會造成這樣子？西醫到現在只知道這個病毒傳染的很快，世上比痲瘋病傳染的速度還要快的就是這個，被傳染到就是死。西醫到現在還不知道它真正的原因是什麼，但是看到這個病的時候，第一個動作就是趕快將病人隔離開來。斑疹病發起來的時候，是從肚子這邊開始發生，如果我們中醫看到斑疹是紅色的，十生一個死。如果看到這個斑疹是黑色的，十死一生，也就是說黑色的最危險。西醫知道此病的傳染力很強，沒有任何西藥可以治它。所以遇到這種狀況的時候，趕快就把病人所有觸碰過的東西通通集中起來，一把火燒掉。\n如果這個傳染病發現在戰爭的時候，久戰的士兵身上被傳染到的時候，這感染會漫延得到很快，發病時是從身體肚子部位一直蔓延到四肢上面，速度很快，之後一兩個禮拜人就走了，此時它就被叫做『戰爭傷寒』。如果發生在監牢裡面的時候就叫做『牢獄傷寒』。在船舶上：『船舶傷寒』。想想看這些地方的共同點。第一個，病人都是表不固，因為他們的飲食都不能很正常。第二個，都被侷限在一定的範圍，沒有很自由的活動空間，也因此大部分都會得到這種病。\n中醫過去一個叫陽毒，一個叫陰毒。陽毒，主要症候是『面赤斑斑如錦紋",
+          "similarity": 0.524511329387816,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 122,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 123",
+            "type": "regular",
+            "title": "Chunk 123"
+          }
+        },
+        {
+          "text": "邪相抗，所以從身體裡面出來的就是氣，中醫喜歡用氣這個字。所謂『風氣相摶』就是我們體內的陽氣跟外面的風邢（濾過性病毒）相抗，風強過陽氣時就會有癮疹，癮疹就是皮膚起一粒一粒很癢的紅疹。『身體為癢，癢者為泄』，癢的話自然就會去抓，一抓皮膚氣就泄出來了，於是就比較不癢。如果是持續的風癢，可以給病人吃麻黃加朮湯，麻黃加朮湯是麻黃湯加了白朮在裡面，其目的是想讓我們的皮膚發一點點表汗，不需要發太多就可以治好了。因為癢疹的起因就是我們身體本來要正常排汗時，卻被外面的風吹到，於是我們的汗孔被束到，使得汗液沒有辦法排出去。這個時後汗已經離開汗腺，但是又沒有離開毛孔，只好停在皮膚的下面，於是造成皮癢，並不是真正的皮膚病，所以只要利用麻黃加朮湯把這停積的汗水發出去，癢疹就好了。麻黃加朮湯設計的很好，此方剛好就可以發掉這一層汗水而不傷正常津液。如果遇到是肝病引起的腹水，你說：『老師，麻黃加朮湯可以發水。』這藥喝下去病人根本沒感覺的，因為是不一樣的積水，要確定水是停在皮膚下面才會用到麻黃加朮湯。如果你不曉得麻黃加朮湯專治這種癢疹，於是沒給病人吃，風疹在身上過久失治，終將成為痂癩、疥癬之類的乾癬等等這種頑固的皮膚病",
+          "similarity": 0.5182513990524285,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 435,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 436",
+            "type": "regular",
+            "title": "Chunk 436"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 9.907010078430176
+    },
+    {
+      "prompt": "病人，女，55歲，白人。小腿紫癜多年，其它部位也常瘀青，但是，病人覺得除了這些問題外，身體沒有什麼異常。",
+      "response": "1) **詳細的中醫診斷分析**：\n   - **症狀分析**：此病人有小腿紫癜多年，且其它部位也常有瘀青，這些症狀顯示體內有瘀血。根據提供的文獻，紫癜及瘀青的形成多因為內傷、血液循環不良或血液停滯所致。病人提到除了這些問題外，身體沒有其他異常，這可能意味著其內部的瘀血未引起其他臟腑的明顯不適，但仍然存在循環問題。\n   - **舌診**：雖然文中沒有提到病人的舌象，但若舌頭呈青色且乾燥，則更能支持有瘀血的診斷。\n   - **脈診**：若脈象微大而來遲，則可進一步確認有瘀血的情況。\n   - **證型鑑別**：根據上述症狀，病人主要表現為瘀血，且無寒熱表現，符合「瘀血內停」的證型。\n\n2) **具體的中藥處方**：\n   - **方劑**：可以考慮使用「活血化瘀湯」或「血府逐瘀湯」以改善瘀血情況。\n   - **具體藥材及用量**：\n     - 當歸（20克）\n     - 川芎（10克）\n     - 赤芍（15克）\n     - 牡丹皮（15克）\n     - 虎杖（15克）\n     - 鳥膽（10克）\n     - 甘草（6克）\n   - **用法**：將藥材加水煮沸後，文火煎煮30-40分鐘，取汁服用，建議每日一劑，分兩次服用，連續服用2-4周，根據病情調整用藥。\n\n這樣的處方旨在活血化瘀，改善血液循環，減輕紫癜及瘀青的情況。建議在臨床隨訪中持續觀察病情變化，並根據需要調整方劑。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:05:13.410186",
+      "prompt_number": 15,
+      "retrieved_chunks": [
+        {
+          "text": "整個舌頭青青的，而是在舌心的兩側，這是從臨床上看出來的，我看過很多。一般遇到有內傷的人，伸出舌頭一看兩側邊是青的，就是有內傷。還有病人嘴巴裡很乾燥，因為有瘀血阻到後，血已經離開血管，而停留在肌肉組織或者在臟腑之間，就會有這種症狀出現。病人『但欲漱水，不欲嚥』，就是心理上很想喝水，但是水到嘴巴時又不想喝下去，這些症候都是有瘀血的外症。我們臨床上看了很多婦女們，得到乳癌後做乳房開刀手術，開完刀以後，病人嘴巴就會很乾燥，喝水又喝不下去，喝下去又吐掉，就是體內有瘀血，無法化盡，造成血液循環不好，這個時候口會很渴，但是飲水即吐。\n『無寒熱』，就是你看病人舌頭乾乾的可能是陽明熱，我們摸脈時脈又沒有寒熱，又沒有表裏症，『無寒熱』就是連表症都沒有。『脈微大來遲』，瘀血的脈就是稍微大而來遲，這要靠大家臨床去摸來感覺了。病人『腹不滿，其人言我滿』，就是你看病人的肚子並沒有脹滿，但是病人卻一直說肚子裡面很脹悶，可是看外形又沒有脹，這也是有瘀血瘀在裡面，以上這些都是體內有瘀血的症狀。你說：『老師，今天碰到個啞巴，然後他頭髮又很長，臉又遮住了。』或者是摔傷了，臉上都是烏青我們看不到，你怎麼檢查呢？中醫檢查瘀血有",
+          "similarity": 0.47989869441256877,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 528,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 529",
+            "type": "regular",
+            "title": "Chunk 529"
+          }
+        },
+        {
+          "text": "身體裏有瘀血呢？由於瘀血的原因很多，有的人是生完小孩子宮穢物沒有完全被清出來，有的是內傷、跌打損傷造成，各種意外也都有可能造成體內瘀血。有幾個症狀可以幫助我們中醫做出診斷病人是否有瘀血在體內，第一是『病人胸滿』，病人感覺到胸口脹滿，然後『唇痿』，嘴唇乾而且縮小了。為什麼如此？等一下說明給大家聽，我們先記下有幾個重要症狀。第二是『舌青口燥』，就是嘴巴裡面乾燥，舌頭發青色。中醫的觀念是『心主血』，所以當有瘀血的時候血回流到心臟的力量不夠，於是病人就會有胸滿的現象。像我們使用桂枝湯時，如果遇到病人有胸滿的症狀，因為心臟有病的人會有胸滿，這個時候我們須要把白芍去掉。又如脾主運化，脾是土是黃色的，在我們體內營養的運送過程中脾臟非常的重要，當我們人體生血的過程中，如果遇到身體有瘀血堵到，這個瘀血可能在胃裡面，可能在腸裡面先不管它，有瘀血就代表血液循環有問題，如此將沒有辦法把正常的血液運送到四肢上去，而脾開竅在唇，這時就可以看到病人的嘴巴比較乾燥，比較枯萎，沒有潤澤的現象。舌頭色青，這個舌頭青色並不是整個舌頭青青的，而是在舌心的兩側，這是從臨床上看出來的，我看過很多。一般遇到有內傷的人，伸出舌頭一看",
+          "similarity": 0.47284048414773716,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 527,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 528",
+            "type": "regular",
+            "title": "Chunk 528"
+          }
+        },
+        {
+          "text": "腹腔裏，病人表現的表證就是「肌膚甲錯」，在女孩子中見到很多，也就是在腿和腹部的地方，每到冬天就要蛻皮，皮膚就像蛇皮一樣，會乾掉，夏天就好好的，其實就是「乾血勞」。\n一三九．「太陽病」，身黃，脈沉結，少腹硬，小便不利者，為無血也。小便自利者，其人如狂者，血證諦也，「抵當湯」主之。\n這又分兩個，一個小便利，一個小便不利，來分有血、無血。如果沒有血的話，身黃，脈沉結，少腹硬，小便不利者，為無血也，後面會用茵陳蒿湯。茵陳蒿湯專門去膀胱的熱，火在下面燒，膀胱氣化之後，一部份不好的小便小掉，一部份好的水進入膽，分泌膽汁幫助消化，膽汁是黃色的，如果膀胱裏面太熱了，膽汁分泌太熱的時候，病人會身黃。不要小看血證，X光看不到血，結果病人發狂，這瘀氣有時候會跑到腦部去，有時候是大承氣湯，有時候是抵當湯，所以要看小便利不利，利就是用抵當湯，如果小便出來很黃，就是下焦很熱，大便又沒有了，就用大承氣湯去攻。\n一四○．「傷寒」，有熱，少腹滿，應小便不利，今反利者，為有血也，當下之，不可餘藥，宜「抵當丸」。\n熱結在膀胱應該小便不利，現在小便很正常，病人陳述少腹「中極」、「關元」一帶很痛，不通則痛，小便很好，就是血堵到",
+          "similarity": 0.4607244319732071,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 245,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 246",
+            "type": "regular",
+            "title": "Chunk 246"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 9.55378270149231
+    },
+    {
+      "prompt": "病人，男，10歲，亞裔和白人混血。一週有四五個晚上會尿床，父母試著讓他晚餐後少喝水，依然沒有改善。病人父親陳述，他自己小時候也是尿床到十多歲，因此懷疑是不是遺傳的問題。",
+      "response": "1) **詳細的中醫診斷分析：**\n\n病人年齡10歲，常見於此年齡段的尿床問題，尤其在男孩中。根據病史，病人每週有四五個晚上尿床，父母嘗試透過限制晚餐後的水分攝入來改善情況，但效果不佳。父親的病史顯示其小時候也有類似問題，這可能與遺傳有關，但更可能是與脾腎虛弱、腎精不足等因素有關。\n\n**症狀分析：**\n- **尿床現象**：這通常與腎虛、膀胱氣化不利有關。\n- **父親的病史**：可能反映出家族性虛弱，特別是腎精方面的弱點。\n- **年齡特徵**：10歲的男孩仍在發育中，腎精的充足對於發育和夜間控制尿液至關重要。\n\n**證型辨證：**\n- 根據提供的文獻，病人可能表現為腎虛，尤其是“精氣清冷”，這意味著他的腎精不足，影響膀胱的氣化功能。\n- 還可能有脾虛的情況，因為脾虛可導致內部水液代謝不良，引起尿床。\n\n綜合以上分析，病人的主要證型為腎虛（腎精不足）及脾虛，可能伴隨有“筋肉無力”和“夜尿頻繁”的現象。\n\n2) **具體的中藥處方：**\n\n根據上述分析，以下是適合病人的中藥處方：\n\n**處方名稱：桂枝龍骨牡蠣湯**\n\n**組成及用量：**\n- 桂枝 (Cinnamomi Ramulus) 6克\n- 龍骨 (Os Draconis) 12克\n- 牡蠣 (Ostreae) 12克\n- 甘草 (Glycyrrhizae Radix) 6克\n- 白朮 (Atractylodis Macrocephalae Rhizoma) 9克\n- 茯苓 (Poria) 9克\n- 人參 (Ginseng) 6克\n- 五味子 (Schisandrae Fructus) 6克\n\n**用法：**\n將上述藥材加水煎煮，取汁服用，一日一劑，分兩次服用，連續服用一段時間，直至病情得到改善。\n\n**注意事項：**\n- 此方應在專業中醫師指導下使用，特別是考慮到病人的年齡。\n- 若服用一段時間後無明顯改善，建議尋求進一步的診療或調整處方。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:05:21.477589",
+      "prompt_number": 16,
+      "retrieved_chunks": [
+        {
+          "text": "白帶就會很多，一直滴漏出來，這也會造成人虛掉，這種現象發生時，會影響到晚上都不能睡覺。因為腎臟主骨，病人的腎精遺漏過多，骨頭就會有酸感。這裡所『痠削不能行』就是病人感覺到的是骨頭酸而不是肌肉酸，所以有人長年得到勞症沒有治好，到頭來就會變成遺精。這精一直出來，病人會受不了的，當然會很難過，每天精神萎靡，我們有中藥可以去固他的陽虛，也有中藥可以補足他的陰虛等等。\n男子脈浮弱而濇，為無子，精氣清冷。\n這裡說如果是『脈浮弱』浮脈代表氣脈，脈浮起來時表示氣上浮，就是意味病人的表虛掉了。濇脈代表血不足，也代表病人的精血不夠，代表裏虛掉了，有這種現象的病人一定不會生子，因為『精氣清冷』，這種男人不容易生小孩，也就是說有勞症的人不容易懷孕，而我們中藥裡有處方可治，諸位看下面這個方子，這個方子一劑知二劑已，有沒有效，你們自己去試看看就曉得了。所以如果十七、八歲的小孩居然面色薄白，這就是他在剛開始發育的期間，生理的反應造成晚上睡覺時他會夢遺。如果只是偶而遺個一、兩次是很正常的，沒有多大關係，因為滿則溢。但是如果很嚴重時，人就會虛掉，此時可見他臉上的氣色整個是薄白的，精神萎靡不振，這就是桂枝龍骨牡蠣湯證了。",
+          "similarity": 0.5063564825422343,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 176,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 177",
+            "type": "regular",
+            "title": "Chunk 177"
+          }
+        },
+        {
+          "text": "，因為睡覺的時候胃的蠕動會慢慢減緩下來，如果在睡覺前吃了許多食物到胃裡面去，胃因為有食物在裡面，胃又不能不動，於是在那邊壓擠。正常人晚上睡覺的時候胃火就下降，蠕動就減緩，結果你吃食物下去刺激它蠕動，於是變成人在睡覺胃在動，日久以後就造成血糖過高的情形。西醫說糖尿病會遺傳，這是斷章取義的說法，應該前面再加一句話『生活習慣』才對，並不是體質上會遺傳。今天胰臟變成脂肪，生個兒子胰臟也是塊脂肪，哪有這種事情？其實是因為生活上有共同的習慣，做爸爸的在工廠、公司做生意很忙，忙一天都沒有看到家裏老婆跟孩子，回到家裡面都很晚了，一回來就說：『你們通通起來，跟爸爸一起吃，爸爸要跟你們聊聊天。』於是大家一起吃宵夜，看看學校有沒有什麼事講給爸爸聽，聽完了就去睡覺，日日如此。父親的生活習慣不對，於是得到糖尿病，結果兒子也被父親感染到這種吃宵夜的習慣，於是兒子以後也是糖尿病，這就是生活習慣上的遺傳。男人在三十五歲到四十五歲這中間最容易遇到這種問題，一般人的事業於此時邁向巔峰，大家都拼命在向前衝事業，結果小孩子也養成吃宵夜的習慣。所以很多人到了五十幾歲錢是賺到了，當想要去享受時，卻被發現得到糖尿病，中國人的觀念是",
+          "similarity": 0.4503429725809197,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 410,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 411",
+            "type": "regular",
+            "title": "Chunk 411"
+          }
+        },
+        {
+          "text": "腹腔裏，病人表現的表證就是「肌膚甲錯」，在女孩子中見到很多，也就是在腿和腹部的地方，每到冬天就要蛻皮，皮膚就像蛇皮一樣，會乾掉，夏天就好好的，其實就是「乾血勞」。\n一三九．「太陽病」，身黃，脈沉結，少腹硬，小便不利者，為無血也。小便自利者，其人如狂者，血證諦也，「抵當湯」主之。\n這又分兩個，一個小便利，一個小便不利，來分有血、無血。如果沒有血的話，身黃，脈沉結，少腹硬，小便不利者，為無血也，後面會用茵陳蒿湯。茵陳蒿湯專門去膀胱的熱，火在下面燒，膀胱氣化之後，一部份不好的小便小掉，一部份好的水進入膽，分泌膽汁幫助消化，膽汁是黃色的，如果膀胱裏面太熱了，膽汁分泌太熱的時候，病人會身黃。不要小看血證，X光看不到血，結果病人發狂，這瘀氣有時候會跑到腦部去，有時候是大承氣湯，有時候是抵當湯，所以要看小便利不利，利就是用抵當湯，如果小便出來很黃，就是下焦很熱，大便又沒有了，就用大承氣湯去攻。\n一四○．「傷寒」，有熱，少腹滿，應小便不利，今反利者，為有血也，當下之，不可餘藥，宜「抵當丸」。\n熱結在膀胱應該小便不利，現在小便很正常，病人陳述少腹「中極」、「關元」一帶很痛，不通則痛，小便很好，就是血堵到",
+          "similarity": 0.4308864337068935,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 245,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 246",
+            "type": "regular",
+            "title": "Chunk 246"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 8.067288875579834
+    },
+    {
+      "prompt": "病人，男，70歲，白人。直腸癌二期，西醫都過手術，也做過化療及放療，暫時病情穩定，癌症未復發。但是，病人每天大便多次，大便很稀軟不成行，沒有血跡或黏液，西醫不認為是大腸炎或其它問題，目前只能靠止痢的藥物勉強減緩，病人依然每天大便氣七八次，偶而會來不及上廁所，無法控制，弄髒衣服，讓病人十分尷尬。",
+      "response": "### TCM Diagnostic Analysis\n\n1. **Symptom Analysis**:\n   - The patient is a 70-year-old male with a history of rectal cancer (stage II) who has undergone surgery, chemotherapy, and radiotherapy. Currently, he experiences frequent loose stools, described as watery and soft without blood or mucus. \n   - The symptoms include:\n     - Daily multiple bowel movements (7-8 times).\n     - Inability to control bowel movements, leading to embarrassment.\n     - No visible blood or mucus in the stools.\n\n2. **Syndrome Differentiation (辨證論治)**:\n   - **Syndrome of Spleen Deficiency with Dampness (脾虛濕盛)**: The frequent loose stools and inability to control bowel movements suggest a deficiency in the spleen's ability to transport and transform fluids, leading to dampness accumulation.\n   - **Liver Qi Stagnation (肝氣鬱結)**: Given the patient's history of cancer and psychological stress, there may also be an element of liver qi stagnation, which can further affect the spleen and cause digestive issues.\n   - The absence of blood or mucus indicates that there is no heat or excess conditions present, which points away from conditions like dysentery or acute enteritis.\n\n### Herbal Prescription\n\nBased on the analysis, the following herbal prescription is recommended:\n\n#### **Spleen and Qi Strengthening Formula**\n1. **Ren Shen (人參)** - Ginseng Root: 10g\n   - To tonify Qi and strengthen the spleen.\n   \n2. **Bai Zhu (白術)** - Atractylodes Macrocephala: 10g\n   - To strengthen the spleen and dry dampness.\n   \n3. **Fu Ling (茯苓)** - Poria: 15g\n   - To leach out dampness and strengthen the spleen.\n   \n4. **Chen Pi (陳皮)** - Aged Tangerine Peel: 6g\n   - To regulate Qi and harmonize the stomach.\n   \n5. **Sha Ren (砂仁)** - Amomum Fruit: 6g\n   - To warm the middle and promote digestion.\n   \n6. **Dang Gui (當歸)** - Angelica Sinensis: 6g\n   - To nourish blood and regulate Qi, especially important given the patient's age and cancer history.\n   \n7. **Mai Men Dong (麥門冬)** - Ophiopogon Root: 10g\n   - To nourish Yin and moisten dryness, also helpful if there is any dryness from treatment.\n   \n8. **Zhi Ban Xia (知母)** - Pinellia Tuber: 6g\n   - To dry dampness and resolve phlegm.\n\n**Preparation**: \n- Combine all the herbs and decoct them in water. Use approximately 600ml of water, simmer for 30 minutes, strain, and consume the decoction warm, 2-3 times a day.\n \n**Dosage and Duration**:\n- This formula should be taken for a duration of 1-2 weeks, after which the patient should be reassessed for symptom improvement.\n\n### Additional Recommendations\n- **Dietary Guidance**: Advise the patient to consume easily digestible foods, avoid greasy and spicy items, and include warm foods to support spleen function.\n- **Acupuncture**: Consider acupuncture at points such as \"Zhongwan\" (中脘), \"Shenque\" (神闕), and \"Sanyinjiao\" (三陰交) to help regulate the spleen and stomach functions.\n\n### Conclusion\nThe approach focuses on treating the underlying spleen deficiency and dampness, which is crucial for improving the patient's bowel control and overall digestive health. Regular follow-ups are essential to monitor progress and adjust treatment as needed.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:05:33.140905",
+      "prompt_number": 17,
+      "retrieved_chunks": [
+        {
+          "text": "有腹滿光嘔就是小柴胡湯證，為什麼？因為被攻下了，下利的藥太快了，病人水份都出來了，大便出來的都是水，結果大便沒有排出來，於是便堵在裏面。臨床上看到大腸癌的病人，一開始有些是承氣湯證，有些是大柴胡湯證，不是在陽明，就是介於少陽與陽明之間，陽明無死證，這種情況是不危險的。結果西醫治療過的病人，開刀以後，移轉肝癌或肺癌，症狀不是少陰證就是厥陰證，所以我們當然反對西醫開刀。如果是大腸癌的病人，還沒有給西醫開過刀，如果是在大腸的末端，也就是直腸附近堵到，我們要加芒硝來攻堅。我們遇到實證的便秘，病人有拒按、不會放屁，就考慮要用到芒硝了。\n大柴胡湯方：\n柴胡半斤，黃芩三兩，芍藥三兩，半夏半升（洗），生薑五兩（切），枳實四枚（炙），大棗十二枚（劈），大黃二兩。（半夏半升約二兩半）\n右八味，以水一斗二升，煮取六升，去滓，再煎，取三升，溫服一升，日三服。\n大黃，胖子用二錢，瘦的人用一錢就好了，柴胡、黃芩、半夏、生薑、大棗這是小柴胡湯的方子，少了人參、甘草，再放芍藥、枳實、大黃就大柴胡湯，枳實這藥也是能寬腸的藥，和厚朴一樣，枳實比較重於寬大腸，厚朴比較重於滋潤小腸，大腸和肺是表裏，所以大腸堵到的時候用枳實，",
+          "similarity": 0.5228147612359955,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 197,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 198",
+            "type": "regular",
+            "title": "Chunk 198"
+          }
+        },
+        {
+          "text": "痔出血；先血後便，這是內痔出血；血與便混合，這才是大腸炎下利。\n成無己曰：『《聖濟經》曰：「滑則氣脫，欲其收也，如開腸、洞泄、便溺、遺矢，澀劑所以收之。」此利由「下焦」不約，與「赤石脂禹餘糧湯」以濇洞泄。下焦主分清濁，下利者，水穀不分也，若服澀劑而利不止，當利小便以利其氣。\n臨床上也可以灸「大腸俞」、「腰俞」、「中極」、「關元」、「水道」、「水分」都可以。\n赤石脂禹餘糧方：\n赤石脂一斤（碎），禹餘糧一斤（碎）。\n右二味，以水六升，煮取二升，去滓，分溫三服。\n一七五．「傷寒」八九日，吐下後，虛煩，心下痞硬，脅下痛，氣上衝咽喉，眩冒，復發汗，脈甚微，經脈動惕者，久而成「痿」。\n傷寒八九日後，病人有吐下，吐很多以後腸胃裏面的食物沒了，所以吐多了以後，血會傷到，因為沒有了食物營養，血的源頭沒了，病人會虛煩，所以產生虛煩是因為心主血，血不夠了，胃裏面空掉了，胃裏面的津液也不夠了，結果病人「心下痞鞭」，病人感覺胃裏面硬硬的，如果壓到胃裏面有硬塊，就是有宿食，如果壓起來軟綿綿的，就是裏面沒有東西，胃壁黏起來了。「脅下痛，氣上衝咽喉」，因為吐下傷到了，胃氣本來應該下降的，就是食物進入胃，胃磨碎再進入小",
+          "similarity": 0.49505340616366694,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.docx",
+            "chunk_index": 316,
+            "total_chunks": 521,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 317",
+            "type": "regular",
+            "title": "Chunk 317"
+          }
+        },
+        {
+          "text": "裏面有堵到大便，只是堵到小腸或大腸，位置不一樣，所以處方也不一樣。\n     \n#SECTION\n\n二六五．「太陽病」，若吐，若下，若發汗，微煩，小便數，大便因硬者，與「小承氣湯」。\n    \n太陽病解表就好了，結果攻下，吐，發汗，就是津液傷到了，小承氣湯的腹滿一定在少腹，「關元」一帶。\n     \n#SECTION\n\n二六六．得病二三日，脈弱，無「太陽柴胡證」，煩躁，心下鞭，至四五日，雖能食，以「小承氣湯」少少與微和之，令小安。至五六日，與「小承氣湯」一升。若不大便，小便少者，雖不能食，但初頭硬，後必溏，未定成硬，攻之必溏。須小便利，矢定硬，乃可攻之，宜「大承氣湯」。\n    \n「脈弱」，代表表虛了。「無太陽柴胡證」，太陽證看不到了，少陽證也沒有了，代表邪入裏了，如果邪入少陽會往來寒熱。病人「煩躁，心下硬」，胃裏面脹滿，胃裏面硬硬的，會煩躁代表胃已經生燥了，傷寒的時候，在表上看到的是寒，這寒傳到腸胃來的時候，會變成熱，原來裏面就已經很熱了，再進入會更熱，津液就會喪失掉，病人就會煩躁。「至四五日，雖能食，以小承氣湯少少與微和之，令小安」，先去攻他的大便。「至五六日，與小承氣湯一升」，五",
+          "similarity": 0.4898358983430227,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 傷寒論.txt",
+            "chunk_index": 477,
+            "total_chunks": 601,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 478",
+            "type": "regular",
+            "title": "Chunk 478"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 11.6632661819458
+    },
+    {
+      "prompt": "病人，女，30歲，亞裔和白人混血。自述從新冠肺炎爆發在家工作時開始，感到焦慮，心情低落，對生活及工作沒有興趣，也沒有什麼耐心做完一件事，偶而有厭世的念頭，服用過抗憂鬱的精神科藥物，效果有限，因為導致胃腸不適而停止服用。",
+      "response": "1) **TCM Diagnostic Analysis:**\n根據病人的症狀，這位30歲的女性表現出焦慮、心情低落、對生活及工作缺乏興趣，以及偶爾出現厭世的念頭。這些症狀符合中醫對於「神經衰弱症」的描述。\n\n- **症狀分析**：\n  - **焦慮與心情低落**：可能與肝氣鬱結有關，肝主疏泄，當肝氣不暢時，容易引起情緒問題。\n  - **缺乏興趣和耐心**：反映出脾胃虛弱，脾為後天之本，影響氣血的生成，導致精力不足。\n  - **厭世念頭**：可能與心神不寧有關，心主神明，當心神受到影響時，容易產生消極情緒。\n  - **胃腸不適**：與服用抗憂鬱藥物後的反應有關，表明脾胃功能受損。\n\n- **辨證論治**：\n  - **證型**：肝氣鬱結、脾虛、心神不寧。\n  - **主要病機**：肝氣不疏導，脾胃虛弱，心神受到損害。\n\n2) **Specific Chinese Herbal Prescriptions**:\n根據上述辯證，建議使用具有疏肝解鬱、補脾益氣、安神的中藥方劑。\n\n**方劑**：**柴胡疏肝湯**（可作為基礎方劑）\n\n**組成及用量**：\n- 柴胡 (Chai Hu) 9克\n- 白芍 (Bai Shao) 9克\n- 甘草 (Gan Cao) 6克\n- 生薑 (Sheng Jiang) 3片\n- 大棗 (Da Zao) 3枚\n- 人參 (Ren Shen) 6克\n- 黃芪 (Huang Qi) 9克\n\n**用法**：將上述藥材加水煎煮，取汁飲用，建議每日1劑。\n\n**注意**：\n- 病人若在服用後出現任何不適，需及時調整方劑或考慮其他療法。\n- 建議結合適當的心理輔導和生活方式調整，以增強療效。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:05:41.697704",
+      "prompt_number": 18,
+      "retrieved_chunks": [
+        {
+          "text": "什麼呢？他講的是神經衰弱症。這個發生在很多的太太媽媽身上，她們時常製造出許多世界上原本不存在的問題，比方說，『媳婦重要還是媽媽重要？』可是這不能講出口，因為心知這是不對的，但是她還是要去表現出很多動作。兒子一回家，兩個人拿兩雙拖鞋在那邊，看兒子會穿誰拿的。日久以後，就有憂，而憂能傷到肺。每天在那邊想一些有的沒有，我常講，世界上的問題本來都很簡單，可是被人想複雜了。所以很多人有神經衰弱，因此常常生病，生完病以後還是沒好。然後你給他吃小柴胡湯，他吃下去也吐，吃什麼藥都不好。如果病比較深時，病人小完便就會頭痛，但是六十天後慢慢會好。這是病比較深的，因為憂能傷肺，肺主魄、肺藏魄。我們的血裡面有兩樣東西，一個是魄，一個是魂。憂能傷肺，魄就沒有辦法存在血裡面。所以『如有神靈者』就是肺魄不守。魂不能歸肝，就是當肝血傷到後，人會虛弱，在肺氣肝血兩虛的狀態下，這種虛又不是真虛，你真的開補氣、補血的藥給他，他身體又不接受，吃完後又將藥物吐掉，怎麼做都沒有辦法幫助他。當魂不守的時候，病人就不能睡覺。我們人的睡眠是魂要歸肝，人才能睡著。神經衰弱、歇斯底里的人，如果是比較嚴重的，他小便一小完『哇！頭很痛啊！』為",
+          "similarity": 0.46100893273685667,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 105,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 106",
+            "type": "regular",
+            "title": "Chunk 106"
+          }
+        },
+        {
+          "text": "，其脈微數。每溺時頭痛者，六十日乃愈；若溺時頭不痛，淅淅然者，四十日愈；若溺快然，但頭眩者，二十日愈。其證或未病而預見，或病四五日而出，或病二十日或一月後見者，各隨證治之。\n什麼叫百合病？你看他上面寫『其病也。意欲食，復不能食』，就是想吃都不行，既吃不下，又不想吃。『常默默然』病人都是安安靜靜的都不講話。『欲臥不能臥』，想睡覺又睡不好，想要走路又沒有力氣。『飲食或有美時，或有不欲聞食臭時』，有的時候很想吃，聞到食物的味道後又不想吃。『如寒』看起來好像很冷，你問他冷，他又說沒有。『如熱無熱，口苦，小便赤』，嘴巴又有點苦，小便是黃色的，看似熱症其實又不是。『諸藥不能治，得藥則劇吐利』服用各類的藥又不舒適。有時候『如有神靈者』就是突然看到什麼神仙怪物之類的異象。摸他的脈，稍微有一點數。每次小便的時候就會頭痛，『六十日乃愈』，這須要六十天才會好。『若溺時頭不痛，淅淅然者，四十日愈；若溺快然，但頭眩者，二十日愈。其證或未病而預見，或病四五日而出，或病二十日或一月後見者，各隨證治之。』你說仲師講的是什麼呢？他講的是神經衰弱症。這個發生在很多的太太媽媽身上，她們時常製造出許多世界上原本不存在的問題，",
+          "similarity": 0.4352344959341162,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 104,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 105",
+            "type": "regular",
+            "title": "Chunk 105"
+          }
+        },
+        {
+          "text": "是開處方的，多半不會用針灸。『予嘗患右臂痠痛』，曹穎甫以前患手臂痛，從肩到尺澤，在我看來很簡單，對側的太淵穴扎一針就會好了，但是他女兒昭華給他吃毛薑什麼來的薰洗，洗了一個月才好。我們針灸一針下去就好啦，如果是剛開始的痛，屬於實症，只要在病患對側的尺澤穴上下針，針下去就好了，他們都不會用針。過去的中醫是針家歸針家，經方家歸經方家，很勞累病人的，拿藥洗治療肩痛一個月是笑話，尺澤一針當場就好了，可能你還沒去煮藥，還在抓藥時，這邊病就已經好了，只因為不會用針。\n病人常以手指臂腫動，此人身體者，藜蘆甘草湯主之。\n藜蘆甘草湯方：\n方闕。\n這個是精神病人的症狀，如果有一個人站在你家門口，每天這樣開門關門的，站在那邊一個小時，都是做一樣的動作時，這會把你嚇到，看似著魔，這就是『手指臂腫動』，一個動作持續的做，就是精神病患。對於精神病患的診斷，中醫觀念裡面認為絕大多數都是痰涎壅塞、痰迷心竅等造成。這裡為什麼手臂不能控制呢？中醫認為痰迷除了在胸腔以外，年深日久的痰都已經滲到經脈裡面，滲到肌肉組織、關節裡去了，不單單只是在胸腔，痰都滲到肢體上。如果痰在胸腔裡面就很簡單，我們只要把它吐出來或是把痰化掉，就",
+          "similarity": 0.42165479691761126,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 601,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 602",
+            "type": "regular",
+            "title": "Chunk 602"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 8.556726694107056
+    },
+    {
+      "prompt": "病人，女，30歲，亞裔。在高科技公司工作，壓力很大。強迫症，每次碰了什麼東西以後，都得洗手十幾次，不然擔心會被病菌感染。雖然理智上知道那並不合理，心理上卻無法克服恐懼。",
+      "response": "### TCM Diagnostic Analysis\n\n**Symptom Analysis:**\n1. **强迫症 (Obsessive-Compulsive Disorder):** Patient exhibits compulsive behavior (e.g., repeated hand washing) driven by irrational fears of contamination.\n2. **心理压力 (Psychological Stress):** The patient works in a high-pressure environment, likely contributing to her symptoms.\n3. **恐惧感 (Fear):** Despite understanding the irrationality of her fears, she cannot overcome them, indicating a deep-seated psychological issue.\n4. **生理症状未明确:** The context provided does not mention physical symptoms directly related to her compulsive behavior but suggests a connection to phlegm obstructing the mind.\n\n**Syndrome Differentiation (辨證論治):**\n- The underlying issue appears to be **痰涎壅塞 (Phlegm-Heat Obstruction)** affecting the mind, which can lead to symptoms such as anxiety, fear, and obsessive thoughts.\n- Additionally, the stress from her work environment may lead to **肝氣鬱結 (Liver Qi Stagnation)**, which can further exacerbate her condition.\n- The combination of **心脾兩虛 (Heart and Spleen Deficiency)** may also be present, as her mental state could be affecting her overall vitality and capacity to manage emotions.\n\n### Herbal Prescription\n\n**Prescription:**\n1. **小柴胡湯 (Xiao Chai Hu Tang)** - This formula is often used to harmonize the liver and spleen and can help relieve stress and emotional disturbances.\n   - **Components:**\n     - 柴胡 (Chai Hu) - 10g\n     - 黃芩 (Huang Qin) - 10g\n     - 人參 (Ren Shen) - 6g\n     - 薑 (Sheng Jiang) - 6g\n     - 大棗 (Da Zao) - 4 pieces\n     - 甘草 (Gan Cao) - 3g\n\n2. **藜蘆甘草湯 (Li Lu Gan Cao Tang)** - This formula can help to clear phlegm and calm the spirit, suitable for conditions involving phlegm obstructing the mind.\n   - **Components:**\n     - 藜蘆 (Li Lu) - 3g\n     - 甘草 (Gan Cao) - 6g\n\n**Dosage Recommendations:**\n- **Xiao Chai Hu Tang:** Prepare as a decoction, taking daily for a period of 10-14 days.\n- **Li Lu Gan Cao Tang:** Prepare as a decoction, taking daily for a period of 7-10 days.\n\n### Conclusion\nThe combination of these two herbal prescriptions addresses both the psychological and physical aspects of the patient’s condition, aiming to relieve her compulsive behaviors and underlying fears while promoting overall mental well-being. Regular follow-ups should be conducted to assess her response to the treatment and adjust the herbal formula as needed.",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:05:51.901095",
+      "prompt_number": 19,
+      "retrieved_chunks": [
+        {
+          "text": "是開處方的，多半不會用針灸。『予嘗患右臂痠痛』，曹穎甫以前患手臂痛，從肩到尺澤，在我看來很簡單，對側的太淵穴扎一針就會好了，但是他女兒昭華給他吃毛薑什麼來的薰洗，洗了一個月才好。我們針灸一針下去就好啦，如果是剛開始的痛，屬於實症，只要在病患對側的尺澤穴上下針，針下去就好了，他們都不會用針。過去的中醫是針家歸針家，經方家歸經方家，很勞累病人的，拿藥洗治療肩痛一個月是笑話，尺澤一針當場就好了，可能你還沒去煮藥，還在抓藥時，這邊病就已經好了，只因為不會用針。\n病人常以手指臂腫動，此人身體者，藜蘆甘草湯主之。\n藜蘆甘草湯方：\n方闕。\n這個是精神病人的症狀，如果有一個人站在你家門口，每天這樣開門關門的，站在那邊一個小時，都是做一樣的動作時，這會把你嚇到，看似著魔，這就是『手指臂腫動』，一個動作持續的做，就是精神病患。對於精神病患的診斷，中醫觀念裡面認為絕大多數都是痰涎壅塞、痰迷心竅等造成。這裡為什麼手臂不能控制呢？中醫認為痰迷除了在胸腔以外，年深日久的痰都已經滲到經脈裡面，滲到肌肉組織、關節裡去了，不單單只是在胸腔，痰都滲到肢體上。如果痰在胸腔裡面就很簡單，我們只要把它吐出來或是把痰化掉，就",
+          "similarity": 0.4424063448548013,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 601,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 602",
+            "type": "regular",
+            "title": "Chunk 602"
+          }
+        },
+        {
+          "text": "什麼呢？他講的是神經衰弱症。這個發生在很多的太太媽媽身上，她們時常製造出許多世界上原本不存在的問題，比方說，『媳婦重要還是媽媽重要？』可是這不能講出口，因為心知這是不對的，但是她還是要去表現出很多動作。兒子一回家，兩個人拿兩雙拖鞋在那邊，看兒子會穿誰拿的。日久以後，就有憂，而憂能傷到肺。每天在那邊想一些有的沒有，我常講，世界上的問題本來都很簡單，可是被人想複雜了。所以很多人有神經衰弱，因此常常生病，生完病以後還是沒好。然後你給他吃小柴胡湯，他吃下去也吐，吃什麼藥都不好。如果病比較深時，病人小完便就會頭痛，但是六十天後慢慢會好。這是病比較深的，因為憂能傷肺，肺主魄、肺藏魄。我們的血裡面有兩樣東西，一個是魄，一個是魂。憂能傷肺，魄就沒有辦法存在血裡面。所以『如有神靈者』就是肺魄不守。魂不能歸肝，就是當肝血傷到後，人會虛弱，在肺氣肝血兩虛的狀態下，這種虛又不是真虛，你真的開補氣、補血的藥給他，他身體又不接受，吃完後又將藥物吐掉，怎麼做都沒有辦法幫助他。當魂不守的時候，病人就不能睡覺。我們人的睡眠是魂要歸肝，人才能睡著。神經衰弱、歇斯底里的人，如果是比較嚴重的，他小便一小完『哇！頭很痛啊！』為",
+          "similarity": 0.40199608303418843,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 105,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 106",
+            "type": "regular",
+            "title": "Chunk 106"
+          }
+        },
+        {
+          "text": "，其脈微數。每溺時頭痛者，六十日乃愈；若溺時頭不痛，淅淅然者，四十日愈；若溺快然，但頭眩者，二十日愈。其證或未病而預見，或病四五日而出，或病二十日或一月後見者，各隨證治之。\n什麼叫百合病？你看他上面寫『其病也。意欲食，復不能食』，就是想吃都不行，既吃不下，又不想吃。『常默默然』病人都是安安靜靜的都不講話。『欲臥不能臥』，想睡覺又睡不好，想要走路又沒有力氣。『飲食或有美時，或有不欲聞食臭時』，有的時候很想吃，聞到食物的味道後又不想吃。『如寒』看起來好像很冷，你問他冷，他又說沒有。『如熱無熱，口苦，小便赤』，嘴巴又有點苦，小便是黃色的，看似熱症其實又不是。『諸藥不能治，得藥則劇吐利』服用各類的藥又不舒適。有時候『如有神靈者』就是突然看到什麼神仙怪物之類的異象。摸他的脈，稍微有一點數。每次小便的時候就會頭痛，『六十日乃愈』，這須要六十天才會好。『若溺時頭不痛，淅淅然者，四十日愈；若溺快然，但頭眩者，二十日愈。其證或未病而預見，或病四五日而出，或病二十日或一月後見者，各隨證治之。』你說仲師講的是什麼呢？他講的是神經衰弱症。這個發生在很多的太太媽媽身上，她們時常製造出許多世界上原本不存在的問題，",
+          "similarity": 0.3821365332764526,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 104,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 105",
+            "type": "regular",
+            "title": "Chunk 105"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.203356981277466
+    },
+    {
+      "prompt": "病人，女，華人，三十五歲。一個月會有一週左右發生肌肉痛、無力、嘔吐、意識不清、腫脹、心律不整的現象，西醫診斷為横纹肌溶解症，使用藥物暫時壓制住症狀，但一陣子後又再度發作，認為是基因遺傳缺陷導致的。病人平時生活有壓迫感，發病後更為焦慮。病人體型偏腫胖，每次發作時，除了上述的症狀外，還有明顯水腫及血糖飆高。",
+      "response": "1) **TCM Diagnostic Analysis:**\n\n根據病人的症狀分析及辨證，病人出現的肌肉痛、無力、嘔吐、意識不清、腫脹及心律不整等現象，符合「水腫」及「脾腎虛」的表現。病人有腫脹及血糖飆高的情況，顯示出脾胃功能受損，無法正常運化水液和食物，導致水液內停，形成水腫。同時，病人感受到的壓迫感及焦慮，可能與心腎不交有關，心陽不足、腎陽虛弱可能導致心神不安，進而引起焦慮的情緒反應。\n\n根據描述，病人脈象可能浮大，顯示陽氣脫失，並且伴隨腎陽虛、脾虛的情況。腫脹及水腫的表現，不僅反映出水病的特徵，也表明內臟功能的衰退及虛症的存在。需要特別注意的是，病人有意識不清的情況，這可能與腎精不足及心神不寧有關，屬於危險的症狀。\n\n**Syndrome Differentiation (辨證論治):**\n- 水腫（腎陽虛+脾虛）\n- 脾胃失調（氣虛+水濕內停）\n- 心腎不交（心陽不足）\n\n2) **Herbal Prescription:**\n\n根據上述的辨證，建議以下中藥處方：\n\n**方劑名稱：腎陽虛水腫方**\n- 附子 (Aconiti Radix) 6g - 壯腎陽，助心陽。\n- 肉桂 (Cinnamomi Cortex) 4g - 溫通經脈，助陽氣。\n- 白術 (Atractylodis Macrocephalae Rhizoma) 10g - 健脾運化，消除水濕。\n- 茯苓 (Poria) 15g - 利水滲濕，健脾。\n- 甘草 (Glycyrrhizae Radix) 6g - 調和諸藥，益氣。\n- 菊花 (Chrysanthemi Flos) 6g - 清肝明目，舒解焦慮。\n- 薏苡仁 (Coicis Semen) 15g - 利水消腫，健脾。\n\n**使用方法：**\n將上述中藥材放入適量水中，煎煮約30-60分鐘，取汁分2-3次服用。根據病情需要，持續用藥，並隨時調整劑量。建議在專業中醫師指導下進行治療。",
+      "model": "RAG_Local",
+      "timestamp": "2025-09-05T20:06:02.508275",
+      "prompt_number": 20,
+      "retrieved_chunks": [
+        {
+          "text": "面浮腫，肩息，其脈浮大，不治，又加利，尤甚。\n這根本已經是死症。為什麼是死症呢？臉孔浮腫起來，代表我們講的『陽已虛』。陽虛掉後陽氣就會整個往上走，到了肺上面還無治療時，陽氣就會整個衝到頭面上來，造成臉浮腫起來。『肩息』代表病人的呼吸系統已經不行了，心肺即將衰竭，必須要搖動肩膀才能夠深吸一口氣，因為呼吸變困難了。如果此時病人脈變成很浮、很大、很壯的時候，就代表陽脫了。我們人體裡的動能與人體的精神即將要離開身體時就會出現這些現象，這都是不治之症。如果『又加利』，病人大小便都失禁，表示陰又虛掉了，陽虛掉後造成陰再虛掉，當然就是死症。所以當我們看到一個病人陽氣在上面，臉都紅紅的，下面還是在下利，這都是很危險的症狀，代表五臟六腑已經不受食物或是藥物。為什麼說這種一定死症？因為此時所有的動能都往上走，病人連腸胃的蠕動都沒有了，這個時候病人喝東西下去立刻就下出去，你想這樣子可不可怕？這不是快死掉了嗎？心肺、脾胃通通衰竭下去，都已經沒有功能了。\n上氣喘而躁者，此為肺脹，欲作風水，發汗則愈。\n如果病人出現『喘而燥』，就稱為『肺脹』。中醫所謂的肺脹臨床看就是西醫講的肺氣腫。肺氣腫的原因很多，比如我們居住在",
+          "similarity": 0.5139146925520739,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 221,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 222",
+            "type": "regular",
+            "title": "Chunk 222"
+          }
+        },
+        {
+          "text": "非常好用的利尿劑，它同時能夠壯腎陽，又可以去除肺寒。所以第二條講的是水病已成，病走入裏，病會走裏，都是因為表水沒有被治好，才會慢慢入裏的。\n脈得諸沉者，當責有水，身體腫重，水病脈出者死。\n所有水腫病人的脈，都是摸到骨邊才摸得到脈。因為我們的水很盛的時候，會把我們的血脈壓在底下，造成血脈很低，這是正常發病的脈證。『脈出者死』，脈不沈反浮，就是脈症不符，這是真陽要脫出的危證。因為水病太久沒去掉，整個肌膚和肌肉都會壞死掉，這是很危險的症候。中醫的觀念裡面認為脈症不符就是危險，你看病人瘦乾乾的，連元氣都沒有，結果你摸脈他的脈居然這麼大，就表示病人很危險了。如果病人很瘦很虛弱你摸他的脈也很微細，就是脈症合，這種症候不會死人的。同樣的你看癌症病人都沒有力氣，東西都吃不下去時，結果你摸他的脈是一息九下、十下，這就是死症。有的人看來很壯很強悍，你摸他脈時卻很細又無力，這也是脈症不合，表示此人就已經快死了還不知道。\n夫水病人，目下有臥蠶，面目鮮澤，脈伏，其人消渴病水。腹大，小便不利，其脈沉絕者，有水，可下之。\n水病人有幾種特徵，第一個是『目下有臥蠶』，就是眼睛下面的眼袋浮腫起來，有點半透明的現象，表示此",
+          "similarity": 0.5097461297136084,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 448,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 449",
+            "type": "regular",
+            "title": "Chunk 449"
+          }
+        },
+        {
+          "text": "並沒有寒熱現象。你問他：『會不會冷啊？會不會熱？』他說：『沒有。』『短氣裏急』就是病人有時候走動一下就會呼吸很難過，然後肚子常常脹痛，『小便不利』小便次數多，量很少。『面色白』，蒼白的氣色。常常頭會昏眩，還有『兼衄』就是時常會流鼻血。一般來說，像小便不利，這是腎臟功能出現問題了。臉色白的話，代表脾臟功能有問題，因為我們臉上的氣色是從脾胃功能來的。像流鼻血，是肝本身有問題。我們為什麼要討論這些症狀呢？主要原因就是要告訴諸位，一般出現這種情況時，就表示此人的肝心脾肺腎五臟都虛掉了，可是你看他時又好像都很正常，但卻是五臟同時都虛掉了，這就是勞症，『此為勞使之然』。這是肝心脾肺腎同時出現虛症時就會有這些症狀。\n勞之為病，其脈浮大，手足煩，春夏劇，秋冬差，陰寒精自出，痠削不能行。\n『勞之為病』有勞症的病人，得到病的時候『脈浮大』，加上『手足煩』，手足會同時有煩燥的現象。『春夏劇，秋冬差』這種煩燥在春夏時節症狀會加重，而到了秋冬就好了，主因是因為有勞症的人，本身就有陰虛，一般陽會浮起來。當春夏時氣候比較熱，於是身體裡面的虛熱跟外面的天陽的熱碰在一起，病人就覺得很難過，冬天的話會比較好，因為外面冷，",
+          "similarity": 0.5047606517073606,
+          "metadata": {
+            "file_path": "docs/倪海廈人紀電子書 - 金匱要略.docx",
+            "chunk_index": 174,
+            "total_chunks": 666,
+            "chunking_method": "regular",
+            "chunk_type": "regular",
+            "chunk_title": "Chunk 175",
+            "type": "regular",
+            "title": "Chunk 175"
+          }
+        }
+      ],
+      "num_chunks_used": 3,
+      "processing_time": 10.607144355773926
+    }
+  ]
+}

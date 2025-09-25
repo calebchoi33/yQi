@@ -1,0 +1,78 @@
+{
+  "database_schema": {
+    "table_name": "tcm_knowledge_base",
+    "vector_columns": {
+      "symptoms_vector": {
+        "description": "Embeddings for symptoms and clinical manifestations",
+        "embedding_model": "text-embedding-3-large",
+        "extraction_prompt": "Extract all symptoms, clinical signs, and manifestations from this TCM text:"
+      },
+      "organs_vector": {
+        "description": "Embeddings for organ systems and zang-fu theory",
+        "embedding_model": "text-embedding-3-large", 
+        "extraction_prompt": "Extract all organ systems, zang-fu references, and anatomical terms from this TCM text:"
+      },
+      "formulas_vector": {
+        "description": "Embeddings for herbal formulas and prescriptions",
+        "embedding_model": "text-embedding-3-large",
+        "extraction_prompt": "Extract all herbal formulas, prescriptions, and medicinal ingredients from this TCM text:"
+      },
+      "patterns_vector": {
+        "description": "Embeddings for syndrome patterns and diagnostic principles",
+        "embedding_model": "text-embedding-3-large",
+        "extraction_prompt": "Extract all syndrome patterns, diagnostic principles, and TCM theory from this TCM text:"
+      },
+      "full_content_vector": {
+        "description": "Embeddings for complete section content",
+        "embedding_model": "text-embedding-3-large",
+        "extraction_prompt": "Full text content for general semantic search"
+      }
+    },
+    "metadata_columns": {
+      "book_name": "string",
+      "book_id": "string", 
+      "chapter_index": "integer",
+      "chapter_title": "string",
+      "section_index": "integer", 
+      "section_title": "string",
+      "page_index": "integer",
+      "subsection_index": "integer",
+      "content_type": "string",
+      "word_count": "integer",
+      "char_count": "integer",
+      "created_at": "timestamp",
+      "source_file": "string"
+    }
+  },
+  "content_structure": {
+    "books": [
+      {
+        "book_id": "shanghan_lun",
+        "book_name": "傷寒論 (Treatise on Cold Damage)",
+        "documents_directory": "../data/documents",
+        "structure_markers": {
+          "chapter_pattern": "第[一二三四五六七八九十百千]+章|《[^》]+》",
+          "section_pattern": "[一二三四五六七八九十百千]+、|\\d+\\.",
+          "formula_pattern": "#FORMULA|【方劑】|【處方】",
+          "case_pattern": "#CASE|【醫案】|【病例】"
+        }
+      }
+    ]
+  },
+  "retrieval_settings": {
+    "default_top_k": 5,
+    "adjacent_expansion": {
+      "enabled": true,
+      "max_adjacent_sections": 2,
+      "max_adjacent_pages": 5,
+      "expand_to_chapter": true
+    },
+    "vector_weights": {
+      "symptoms_vector": 0.3,
+      "organs_vector": 0.2,
+      "formulas_vector": 0.2,
+      "patterns_vector": 0.2,
+      "full_content_vector": 0.1
+    }
+  }
+}

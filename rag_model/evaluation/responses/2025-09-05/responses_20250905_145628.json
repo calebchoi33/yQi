@@ -1,0 +1,166 @@
+{
+  "timestamp": "2025-09-05T14:55:19.770132",
+  "total_prompts": 20,
+  "responses": [
+    {
+      "prompt_number": 1,
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) **中醫診斷的思路分析**\n\n- **症狀分析**: 患者出現疲勞、肩頸痠痛、怕冷、頭痛、發燒、咳嗽、咽喉疼痛、白痰等症狀。這些症狀提示外感風寒，尤其是怕冷、無汗、咳嗽有白痰及肩頸痠痛，表明外邪束表，肺氣不宣。\n\n- **證型判斷**: 根據症狀，該患者的病情可診斷為「風寒束表證」。主要症狀包括怕冷、發熱、咳嗽、白痰、頭痛、無汗、鼻塞或流清鼻涕等。風寒外襲，肺失宣降，營衛失和，故見上述表現。\n\n2) **建議的中藥處方**\n\n- **荊防敗毒散**（經典方劑，適用於外感風寒濕邪）\n\n  - 荊芥 6克\n  - 防風 6克\n  - 羌活 6克\n  - 獨活 6克\n  - 川芎 6克\n  - 柴胡 6克\n  - 桔梗 6克\n  - 前胡 6克\n  - 枳殼 6克\n  - 茯苓 6克\n  - 甘草 3克\n\n  - **劑量和用法**: 將上述藥物加水煎煮，頭煎和二煎合併後分兩次服用，每日一劑，連續服用三至五天，或直到症狀改善。\n\n- 若患者出現咽喉疼痛較為明顯，可加**板藍根** 10克、**牛蒡子** 6克以清熱解毒。\n\n- 若患者痰多且咳嗽明顯，可加用**杏仁** 6克、**浙貝母** 6克以化痰止咳。\n\n上述處方需根據",
+      "tokens_used": 711,
+      "timestamp": "2025-09-05T14:55:57.289549",
+      "batch_index": 1
+    },
+    {
+      "prompt_number": 2,
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。昨天上午退燒了，但下午開始拉肚子，排泄物黃臭，噁心，食慾很差。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) **中醫診斷的思路分析**\n\n症狀分析：\n- 初期症狀：疲勞、肩頸痠痛、怕冷，表現為外感風寒。\n- 隨後出現頭痛、發燒、咳嗽、咽喉疼痛、有白痰，提示風寒束表，肺氣失宣。\n- 發燒退後出現拉肚子，排泄物黃臭，伴隨噁心、食慾差，說明邪氣內傳，影響脾胃功能。\n\n證型判斷：\n- 初期，病人以風寒表證為主，風寒侵犯，肺失宣降。\n- 發燒後，病邪入裏，影響脾胃，化熱下注，形成濕熱內蘊的情況。\n- 綜合考慮，病人從風寒表證轉化為濕熱內蘊，脾胃失調的證型。\n\n2) **建議的中藥處方**\n\n考慮到病人目前的症狀，應該採用清熱解毒，祛風散寒，化濕健脾的治療原則。\n\n處方建議：\n- **銀翹散合葛根芩連湯加減**\n  - 銀花 (金銀花) 15克\n  - 連翹 15克\n  - 薄荷 6克\n  - 牛蒡子 10克\n  - 桔梗 10克\n  - 甘草 6克\n  - 淡竹葉 10克\n  - 葛根 15克\n  - 黃芩 10克\n  - 黃連 6克\n  - 白芍 10克\n  - 生薑 3片\n  - 大棗 3枚\n\n用法：\n- 每日一劑，水煎服，分兩次溫服。\n\n解釋：\n- 銀花、連翹清熱解毒；\n- 薄荷、牛蒡子疏風散熱，宣肺利咽；\n- 桔梗、甘草、淡竹",
+      "tokens_used": 741,
+      "timestamp": "2025-09-05T14:55:57.290628",
+      "batch_index": 1
+    },
+    {
+      "prompt_number": 3,
+      "prompt": "病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰。昨天咳嗽加重，胸口壓力大，躺下來咳嗽更嚴重，無法躺平睡覺，得用兩個枕頭墊高睡覺。舌苔白厚，但很乾。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n根據患者的症狀，這是一個典型的風寒束表，痰熱內蘊的表裡同病證。\n\n- 症狀分析：\n  - 疲勞、肩頸痠痛、怕冷：這些症狀提示外感風寒。\n  - 頭痛、發燒：這些症狀進一步確認風寒表證。\n  - 咳嗽、咽喉疼痛、有白痰：這些症狀提示肺系受到影響，白痰表示寒邪或濕邪。\n  - 舌苔白厚而乾：提示內有濕邪，且可能有熱邪內蘊。\n\n- 證型判斷：\n  - 初期屬於風寒表證，隨著病情發展，表寒不解，化熱入裡，導致痰熱阻肺。這是一個風寒外束，痰熱內蘊的證型。\n\n2) 建議的中藥處方：\n\n處方應以辛溫解表，宣肺化痰為主，並佐以清熱藥物以治痰熱。\n\n- 麻黃9克（辛溫解表，發汗解肌）\n- 杏仁9克（止咳平喘，潤肺化痰）\n- 石膏15克（清熱瀉火，除煩止渴）\n- 生薑3片（溫中散寒，和胃止嘔）\n- 桔梗9克（宣肺祛痰，利咽）\n- 甘草6克（和中緩急，調和諸藥）\n- 白芍9克（養血斂陰，柔肝止痛）\n- 銀花12克（清熱解毒，疏散風熱）\n\n用法：每日一劑，水煎服，分早晚兩次溫服。\n\n此方中麻黃配杏仁、石膏、生薑以發汗解表，宣肺清熱；桔梗潤肺化痰；甘草調和諸藥；白",
+      "tokens_used": 772,
+      "timestamp": "2025-09-05T14:55:57.290730",
+      "batch_index": 1
+    },
+    {
+      "prompt_number": 4,
+      "prompt": "病人，女，40歲，白人。胃口不好，但吃了不多後，就覺得胃脹。便秘，三四天大便一次，大便乾硬，小粒狀。平時容易疲勞，常常感冒。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "Error: <!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-js ie8 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\" lang=\"en-US\"> <!--<![endif]-->\n<head>\n\n\n<title>api.openai.com | 520: Web server is returning an unknown error</title>\n<meta charset=\"UTF-8\" />\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\" />\n<meta name=\"robots\" content=\"noindex, nofollow\" />\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\n<link rel=\"stylesheet\" id=\"cf_styles-css\" href=\"/cdn-cgi/styles/main.css\" />\n\n\n</head>\n<body>\n<div id=\"cf-wrapper\">\n    <div id=\"cf-error-details\" class=\"p-0\">\n        <header class=\"mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8\">\n            <h1 class=\"inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2\">\n              <span class=\"inline-block\">Web server is returning an unknown error</span>\n              <span class=\"code-label\">Error code 520</span>\n            </h1>\n            <div>\n               Visit <a href=\"https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com\" target=\"_blank\" rel=\"noopener noreferrer\">cloudflare.com</a> for more information.\n            </div>\n            <div class=\"mt-3\">2025-09-05 21:55:57 UTC</div>\n        </header>\n        <div class=\"my-8 bg-gradient-gray\">\n            <div class=\"w-240 lg:w-full mx-auto\">\n                <div class=\"clearfix md:px-8\">\n                  \n<div id=\"cf-browser-status\" class=\" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center\">\n  <div class=\"relative mb-10 md:m-0\">\n    \n    <span class=\"cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat\"></span>\n    <span class=\"cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4\"></span>\n    \n  </div>\n  <span class=\"md:block w-full truncate\">You</span>\n  <h3 class=\"md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3\">\n    \n    Browser\n    \n  </h3>\n  <span class=\"leading-1.3 text-2xl text-green-success\">Working</span>\n</div>\n\n<div id=\"cf-cloudflare-status\" class=\" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center\">\n  <div class=\"relative mb-10 md:m-0\">\n    <a href=\"https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <span class=\"cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat\"></span>\n    <span class=\"cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4\"></span>\n    </a>\n  </div>\n  <span class=\"md:block w-full truncate\">San Jose</span>\n  <h3 class=\"md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3\">\n    <a href=\"https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n    Cloudflare\n    </a>\n  </h3>\n  <span class=\"leading-1.3 text-2xl text-green-success\">Working</span>\n</div>\n\n<div id=\"cf-host-status\" class=\"cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center\">\n  <div class=\"relative mb-10 md:m-0\">\n    \n    <span class=\"cf-icon-server block md:hidden h-20 bg-center bg-no-repeat\"></span>\n    <span class=\"cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4\"></span>\n    \n  </div>\n  <span class=\"md:block w-full truncate\">api.openai.com</span>\n  <h3 class=\"md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3\">\n    \n    Host\n    \n  </h3>\n  <span class=\"leading-1.3 text-2xl text-red-error\">Error</span>\n</div>\n\n                </div>\n            </div>\n        </div>\n\n        <div class=\"w-240 lg:w-full mx-auto mb-8 lg:px-8\">\n            <div class=\"clearfix\">\n                <div class=\"w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed\">\n                    <h2 class=\"text-3xl font-normal leading-1.3 mb-4\">What happened?</h2>\n                    <p>There is an unknown connection issue between Cloudflare and the origin web server. As a result, the web page can not be displayed.</p>\n                </div>\n                <div class=\"w-1/2 md:w-full float-left leading-relaxed\">\n                    <h2 class=\"text-3xl font-normal leading-1.3 mb-4\">What can I do?</h2>\n                          <h3 class=\"text-15 font-semibold mb-2\">If you are a visitor of this website:</h3>\n      <p class=\"mb-6\">Please try again in a few minutes.</p>\n\n      <h3 class=\"text-15 font-semibold mb-2\">If you are the owner of this website:</h3>\n      <p><span>There is an issue between Cloudflare's cache and your origin web server. Cloudflare monitors for these errors and automatically investigates the cause. To help support the investigation, you can pull the corresponding error log from your web server and submit it our support team.  Please include the Ray ID (which is at the bottom of this error page).</span> <a rel=\"noopener noreferrer\" href=\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-520/\">Additional troubleshooting resources</a>.</p>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300\">\n  <p class=\"text-13\">\n    <span class=\"cf-footer-item sm:block sm:mb-1\">Cloudflare Ray ID: <strong class=\"font-semibold\">97a8f8625e4b67dd</strong></span>\n    <span class=\"cf-footer-separator sm:hidden\">&bull;</span>\n    <span id=\"cf-footer-item-ip\" class=\"cf-footer-item hidden sm:block sm:mb-1\">\n      Your IP:\n      <button type=\"button\" id=\"cf-footer-ip-reveal\" class=\"cf-footer-ip-reveal-btn\">Click to reveal</button>\n      <span class=\"hidden\" id=\"cf-footer-ip\">108.211.109.135</span>\n      <span class=\"cf-footer-separator sm:hidden\">&bull;</span>\n    </span>\n    <span class=\"cf-footer-item sm:block sm:mb-1\"><span>Performance &amp; security by</span> <a rel=\"noopener noreferrer\" href=\"https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_520&utm_campaign=api.openai.com\" id=\"brand_link\" target=\"_blank\">Cloudflare</a></span>\n    \n  </p>\n  <script>(function(){function d(){var b=a.getElementById(\"cf-footer-item-ip\"),c=a.getElementById(\"cf-footer-ip-reveal\");b&&\"classList\"in b&&(b.classList.remove(\"hidden\"),c.addEventListener(\"click\",function(){c.classList.add(\"hidden\");a.getElementById(\"cf-footer-ip\").classList.remove(\"hidden\")}))}var a=document;document.addEventListener&&a.addEventListener(\"DOMContentLoaded\",d)})();</script>\n</div><!-- /.error-footer -->\n\n\n    </div>\n</div>\n</body>\n</html>",
+      "tokens_used": 0,
+      "timestamp": "2025-09-05T14:55:57.296223",
+      "batch_index": 1
+    },
+    {
+      "prompt_number": 5,
+      "prompt": "病人，女，40歲，白人。胃口不錯，但吃了不多後，就覺得胃脹，有點泛酸、噁心的感覺。吃油膩的食物，容易拉肚子。偶而右下肋隱痛，早上起床口苦。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 胃脹、泛酸、噁心：這些症狀提示胃失和降，胃氣上逆。\n- 吃油膩食物後容易拉肚子：這可能與脾虛濕困有關，脾虛不能運化水濕，濕濁下注。\n- 右下肋隱痛：提示肝鬱氣滯，可能影響膽，肝膽不和。\n- 早上起床口苦：多與肝膽濕熱有關。\n\n證型判斷：\n根據上述症狀，患者的主要問題可能是「肝膽濕熱、脾胃失和」。肝膽濕熱可影響脾胃的運化功能，導致胃氣上逆和腸道運化失調，從而出現胃脹、泛酸、噁心及容易腹瀉等症狀。\n\n2) 建議的中藥處方：\n\n處方：柴胡疏肝散合加味平胃散\n- 柴胡 (Chai Hu) 10克：疏肝解鬱，和解少陽\n- 白芍 (Bai Shao) 10克：柔肝止痛，養血和營\n- 枳實 (Zhi Shi) 10克：破氣消積，除脹滿\n- 陳皮 (Chen Pi) 6克：理氣健脾，燥濕化痰\n- 蒼術 (Cang Zhu) 10克：燥濕健脾，祛風散寒\n- 厚朴 (Hou Po) 10克：行氣除滿，燥濕消痰\n- 茯苓 (Fu Ling) 12克：利水滲濕，健脾安神\n- 薑半夏 (Jiang Ban Xia) 10克：燥濕化痰，降逆止嘔\n- 生薑 (Sheng Jiang) 3片：溫中止嘔，和中健胃\n- 大棗 (Da Zao",
+      "tokens_used": 720,
+      "timestamp": "2025-09-05T14:55:57.296392",
+      "batch_index": 1
+    },
+    {
+      "prompt_number": 6,
+      "prompt": "病人，女，65歲，白人。偶而心悸，覺得有人抓住她的心臟，感覺心跳大力，但測量下只稍微跳快一些。平時吃素，不吃肉。每週做熱瑜伽兩次。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 心悸：患者描述心悸，感覺心跳被抓住，這提示可能有心神不寧或血液循環失調。\n- 心跳稍微加快：這可能提示心陰虛或心血不足。\n- 素食習慣：長期素食可能導致氣血生成不足，進一步加重心血不足。\n- 熱瑜伽：每週兩次熱瑜伽可能導致體內陰液耗損，特別是在老年女性中，更容易發生陰虛。\n\n證型判斷：\n根據上述症狀，患者可能患有心血不足，伴隨心陰虛的症狀。心血不足導致心神失養，因此出現心悸；心陰虛導致心火偏亢，心跳加速。這與長期素食導致的氣血不足以及熱瑜伽的陰液耗損有關。\n\n2) 建議的中藥處方：\n\n為調理心血不足、心陰虛的症狀，建議使用以下中藥：\n\n- 生地黃 (Sheng Di Huang) 15克：滋陰清熱，養血生津。\n- 當歸 (Dang Gui) 10克：補血活血，調經止痛。\n- 白芍 (Bai Shao) 12克：養血斂陰，柔肝止痛。\n- 酸棗仁 (Suan Zao Ren) 12克：養心安神。\n- 柏子仁 (Bai Zi Ren) 10克：養心安神，潤腸通便。\n- 丹參 (Dan Shen) 12克：活血祛瘀，清心除煩。\n- 五味子 (Wu Wei Zi) 6克：斂肺滋腎，生津斂汗，寧心安神。\n\n煎服方法：\n每日一劑，水煎服。建議早晚各一次，飯後服用。在服藥期間，患者應注意避免過度運動，保持良好的作息和飲食習",
+      "tokens_used": 714,
+      "timestamp": "2025-09-05T14:56:08.004137",
+      "batch_index": 2
+    },
+    {
+      "prompt_number": 7,
+      "prompt": "病人，女，65歲，白人。偶而心悸，胸悶，覺得有人抓住她的心臟，感覺心跳大力，但測量下只稍微跳快一些，偶而覺得心臟跳跳停一下。手腳非常冰冷，半夜盜汗，出汗後覺得身體冷。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 心悸、胸悶：提示心系問題，可能與心陽不足或心氣虛弱相關。\n- 覺得心臟被抓住、心跳大力但不明顯增快、心跳停頓：提示心陽不振，心血不足，可能有心脈不暢。\n- 手腳冰冷：提示陽氣不足，可能是心陽虛或腎陽虛。\n- 半夜盜汗、出汗後覺得冷：提示陰陽失調，可能是陰虛導致虛熱，汗出則陽氣耗損，進一步表現為陽虛。\n\n證型判斷：\n綜合以上症狀，初步判斷為「心陽不振，心腎陽虛兼有陰虛」之證。心陽不足導致心悸、胸悶及手足冰冷，腎陽虛則加重全身陽氣不足的表現，陰虛則導致盜汗。\n\n2) 建議的中藥處方：\n\n以溫陽益氣、養心安神為主，佐以滋陰固攝。\n\n- 桂枝 (Gui Zhi) 9克：溫陽通脈，改善心陽不足。\n- 附子 (Fu Zi) 6克：溫腎助陽，加強全身陽氣。\n- 人參 (Ren Shen) 10克：補氣安神，增強心氣。\n- 炙甘草 (Zhi Gan Cao) 6克：益氣和中，協調諸藥。\n- 五味子 (Wu Wei Zi) 6克：斂汗安神，養心氣。\n- 熟地黃 (Shu Di Huang) 12克：滋陰養血，以防止陰虛加重。\n- 麥冬 (Mai Dong) 9克：養陰生津，緩解陰虛。\n- 黃芪 (Huang Qi) 10克：益氣固表，防止虛汗。\n\n每日一劑，水煎服，早晚各一次。\n\n注意事項：需定期",
+      "tokens_used": 734,
+      "timestamp": "2025-09-05T14:56:08.004911",
+      "batch_index": 2
+    },
+    {
+      "prompt_number": 8,
+      "prompt": "病人，男，15歲，亞裔。季節性花粉熱，每年三月到六月，打噴嚏、流鼻水不停，偶而鼻塞。平時喜歡喝含糖冷飲，吃很多水果。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1. 中醫診斷的思路分析：\n\n症狀分析：\n- 病人每年三月至六月出現打噴嚏、流鼻水、偶爾鼻塞的症狀，這與季節性花粉熱（過敏性鼻炎）相符。\n- 症狀屬於風邪侵犯，尤其是風熱或風寒。\n- 喜歡喝含糖冷飲，可能導致脾胃虛弱和濕邪內生。\n- 吃很多水果，水果多性寒，可能加重脾胃的寒濕。\n- 鼻塞、流鼻水的症狀表明肺氣不宣。\n\n證型判斷：\n- 風熱犯肺證：主要表現為季節性打噴嚏、流鼻水，偶有鼻塞，鼻涕清稀，且病人偏愛冷飲及水果，可能導致內生寒濕，加重症狀。\n- 脾肺氣虛，兼有風邪外侵。\n\n2. 建議的中藥處方：\n\n基於風熱犯肺及脾肺氣虛的診斷，應採用疏風清熱，益氣固表的治療原則。以下是建議的中藥處方：\n\n- 桑葉（Sang Ye） 10克：疏風清熱。\n- 菊花（Ju Hua） 10克：清熱解毒，疏風。\n- 防風（Fang Feng） 10克：祛風解表。\n- 白術（Bai Zhu） 12克：健脾益氣，固表止汗。\n- 茯苓（Fu Ling） 12克：健脾祛濕。\n- 黃芪（Huang Qi） 15克：益氣固表。\n- 石膏（Shi Gao） 15克：清熱瀉火（如有明顯熱象）。\n- 薄荷（Bo He） 6克：疏風清熱。\n- 荊芥（Jing Jie） 10克：解表散風。\n\n煎服建議：\n每日一劑，水煎服，分早晚兩次服",
+      "tokens_used": 703,
+      "timestamp": "2025-09-05T14:56:08.005157",
+      "batch_index": 2
+    },
+    {
+      "prompt_number": 9,
+      "prompt": "病人，男，60歲，亞裔。後腰時不時有刺痛感，小便有灼熱感，有一次看到帶有紅色的尿液。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 後腰刺痛：可能提示腎臟問題，或涉及膀胱經脈的問題。\n- 小便灼熱感：屬於尿路中有濕熱。\n- 尿中帶紅：提示有血尿的情況，可能是膀胱濕熱或腎陰虛火旺導致的血絡損傷。\n\n證型判斷：\n根據病人的症狀，這位病人很可能屬於“膀胱濕熱”證。此證以濕熱蘊於下焦，膀胱氣化不利為特徵，常表現為小便短赤、尿道灼熱刺痛，小腹脹滿，或見血尿、腰痛。\n\n2) 建議的中藥處方：\n\n針對膀胱濕熱證，應以清熱利濕、涼血止血為治療原則。可選擇以下中藥組方：\n\n- 瞿麥 (Qu Mai) 10克：清熱利濕，通淋。\n- 扁蓄 (Bian Xu) 10克：清熱利濕，促進尿液排出。\n- 木通 (Mu Tong) 6克：清熱利濕，通利小便。\n- 滑石 (Hua Shi) 15克：利水通淋，清熱。\n- 車前子 (Che Qian Zi) 10克：利尿通淋，清熱。\n- 石韋 (Shi Wei) 10克：利尿通淋，止血。\n- 生地黃 (Sheng Di Huang) 12克：清熱涼血，滋陰。\n- 小蓟 (Xiao Ji) 10克：涼血止血。\n\n以上藥物可煎湯服用，每日一劑，分兩次服用。若病情持續或加重，建議及時就醫以排除嚴重的泌尿系統疾病。",
+      "tokens_used": 666,
+      "timestamp": "2025-09-05T14:56:08.005272",
+      "batch_index": 2
+    },
+    {
+      "prompt_number": 10,
+      "prompt": "病人，男，5歲，亞裔。挑食，喜歡吃零食，上課時注意力不佳，常常被老師叮嚀。喜歡亂敲打東西，出怪聲音，有妥瑞症的表現。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 中醫診斷分析\n\n#### 症狀分析：\n- **挑食、喜歡吃零食**：這可能顯示脾胃失調，食積內停。\n- **上課注意力不佳**：提示心脾兩虛或肝風內動。\n- **常被老師叮嚀，喜歡亂敲打東西，出怪聲音**：這些症狀可能與肝風內動相關，亦考慮肝陽上亢。\n- **妥瑞症的表現**：通常涉及肝風內動，可能與心肝火旺或痰熱擾心有關。\n\n#### 證型判斷：\n- **肝風內動，心肝火旺**：這與妥瑞症狀的表現相符。\n- **脾虛肝旺，心神不寧**：挑食及注意力不佳可能是由於脾失健運，導致心神不安。\n\n### 建議的中藥處方\n\n#### 處方：\n1. **釣鉤藤散加減**（主要平肝息風，安神定志）\n   - 釣鉤藤（Gou Teng） 10克\n   - 天麻（Tian Ma） 6克\n   - 石決明（Shi Jue Ming） 15克\n   - 白芍（Bai Shao） 10克\n   - 菊花（Ju Hua） 6克\n   - 甘草（Gan Cao） 3克\n\n2. **歸脾湯加減**（健脾益氣，養心安神）\n   - 人參（Ren Shen） 6克\n   - 黃芪（Huang Qi） 12克\n   - 白術（Bai Zhu） 9克\n   - 當歸（Dang Gui） 6克\n   - 酸棗仁（Suan Zao Ren） 10克\n   - 遠志（Yuan Zhi） 6克\n   - 茯神（Fu Shen） 9克\n\n#### 用法：\n- 煎煮：每日一劑，分兩次",
+      "tokens_used": 707,
+      "timestamp": "2025-09-05T14:56:08.005373",
+      "batch_index": 2
+    },
+    {
+      "prompt_number": 11,
+      "prompt": "病人，女，42歲，亞裔。月經推遲，40～50天才來一次，月經來時經痛嚴重。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1. **中醫診斷思路分析**\n\n- **症狀分析**：\n  - 月經推遲，40～50天才來一次：這提示可能存在月經後期，通常與氣血不足、寒凝血瘀或肝氣鬱結有關。\n  - 經痛嚴重：經痛（痛經）可能由於氣滯血瘀、寒凝血脈或氣血虛弱引起。\n  \n- **證型判斷**：\n  - 綜合考慮月經推遲及經痛嚴重，可能的證型為「寒凝血瘀」或「氣滯血瘀」。\n  - 若患者伴有畏寒、四肢冰冷等症狀，則更偏向「寒凝血瘀」。\n  - 若患者情緒抑鬱、易怒，則可能偏向「肝氣鬱結，氣滯血瘀」。\n\n2. **建議的中藥處方**\n\n- **主要方劑**：溫經湯加減\n  - 桂枝 (Gui Zhi) 9克\n  - 白芍 (Bai Shao) 12克\n  - 當歸 (Dang Gui) 12克\n  - 川芎 (Chuan Xiong) 6克\n  - 牡丹皮 (Mu Dan Pi) 9克\n  - 阿膠 (E Jiao) 9克\n  - 麥冬 (Mai Dong) 9克\n  - 人參 (Ren Shen) 6克\n  - 甘草 (Gan Cao) 6克\n  - 生薑 (Sheng Jiang) 3片\n  - 半夏 (Ban Xia) 9克\n\n- **加減**：\n  - 若寒象明顯，增加艾葉 (Ai Ye) 9克 及 小茴香 (Xiao Hui Xiang) 6克。\n  - 如肝氣鬱結明顯，增加柴胡 (Chai Hu) 9克 和 香附 (Xiang Fu) 9克。\n  - 若痛經劇烈，可加延胡索 (Yan Hu Suo) 9克 和",
+      "tokens_used": 684,
+      "timestamp": "2025-09-05T14:56:19.026628",
+      "batch_index": 3
+    },
+    {
+      "prompt_number": 12,
+      "prompt": "病人，女，42歲，亞裔。月經準時28天來一次，可是每次都來10多天，前面兩三天血量正常，之後一直滴滴漏漏，到12～13天才完全停止出血。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：患者月經周期準時，但經期延長，出現持續滴漏出血。這種情況通常表現為月經過長（經期延長，非經量過多）。前兩三天血量正常，之後長時間滴漏，提示可能有氣虛的表現。患者年齡42歲，屬於中年階段，可能也有腎虛的因素。\n\n證型判斷：經期延長且滴滴漏漏，常見的證型包括氣虛不攝（如脾氣虛）和腎虛不固。這裡的滴漏不止，且出血時間較長，提示氣虛脾虛的可能性較大，可能還伴隨著腎虛不固的情況。因此，判斷為「脾腎兩虛」的證型。\n\n2) 建議的中藥處方：\n\n方劑：補中益氣湯合固經湯加減\n- 黃芪 (Huang Qi, Astragali Radix) 15克：補氣升陽\n- 黨參 (Dang Shen, Codonopsis Radix) 10克：補中益氣\n- 白術 (Bai Zhu, Atractylodis Macrocephalae Rhizoma) 10克：健脾益氣\n- 甘草 (Gan Cao, Glycyrrhizae Radix) 6克：補脾益氣，調和諸藥\n- 當歸 (Dang Gui, Angelicae Sinensis Radix) 10克：補血活血\n- 熟地黃 (Shu Di Huang, Rehmanniae Radix Praeparata) 12克：滋陰補腎\n- 山藥 (Shan Yao, Dioscoreae Rhizoma) 15克：補腎益脾\n- 芡實 (Qian Shi, Euryales Semen) 10克：固腎澀精\n- 白芍 (Bai Shao, Paeoniae Radix Alba) 10克：養血斂陰\n-",
+      "tokens_used": 705,
+      "timestamp": "2025-09-05T14:56:19.027084",
+      "batch_index": 3
+    },
+    {
+      "prompt_number": 13,
+      "prompt": "病人，女，48歲，亞裔。這一年月經週期開始變亂，有時提前，有時延後。偶而下午會突然身體燥熱，心情也比較煩躁，容易生氣。偶而半夜醒來後，就無法再入睡。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 月經週期不規律：有提前或延後的情況，提示腎氣不足或肝郁氣滯。\n- 下午身體燥熱：這可能是陰虛內熱的表現，尤其是午後發生，提示陰虛。\n- 心情煩躁、容易生氣：可能與肝氣鬱結有關，肝鬱化火亦可導致情緒不穩。\n- 半夜醒來後難以入睡：可能是心腎不交，或者陰虛火旺所致。\n\n證型判斷：\n- 綜合以上症狀，該患者可能屬於「肝腎陰虛，肝鬱化火」證。\n- 肝腎陰虛：月經不調，午後燥熱，夜間失眠。\n- 肝鬱化火：煩躁易怒。\n\n2) 建議的中藥處方：\n\n方劑：知柏地黃湯加減\n\n- 生地黃 (Sheng Di Huang) 15克：滋陰清熱\n- 熟地黃 (Shu Di Huang) 15克：滋腎補血\n- 山藥 (Shan Yao) 12克：補脾益腎\n- 山茱萸 (Shan Zhu Yu) 10克：補肝腎\n- 牡丹皮 (Mu Dan Pi) 10克：清熱涼血\n- 澤瀉 (Ze Xie) 10克：利水滲濕\n- 茯苓 (Fu Ling) 12克：健脾安神\n- 知母 (Zhi Mu) 10克：滋陰清熱\n- 黃柏 (Huang Bai) 10克：清熱燥濕\n- 柴胡 (Chai Hu) 6克：疏肝解鬱\n- 白芍 (Bai Shao) 12克：柔肝養血\n\n用法：將上述藥材加水煎煮，取汁300毫升，分兩次於早晚飯後溫服",
+      "tokens_used": 714,
+      "timestamp": "2025-09-05T14:56:19.027336",
+      "batch_index": 3
+    },
+    {
+      "prompt_number": 14,
+      "prompt": "病人，男，35歲，白人。身材肥胖，肚子突出明顯。身上多處皮疹，太陽曬及洗熱水澡後更加嚴重，偶而會很癢，抓了以後會破皮，流出透明的組織液。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 患者為35歲男性，身材肥胖，肚子突出明顯，這提示可能存在脾虛或痰濕內盛的情況。\n- 皮疹在太陽曝曬及熱水澡後加重，且伴有瘙癢，這提示熱邪可能加重了皮膚表現。\n- 抓破後流出透明組織液，這樣的情況提示體內濕熱較重。\n\n證型判斷：\n綜合以上症狀，考慮此患者屬於「濕熱蘊結」型皮膚病。肥胖提示脾虛導致水濕內停，而皮疹加重於熱環境則提示熱邪擾動肌膚，濕熱蘊結於肌膚之間，故表現為皮疹、瘙癢、抓破後流出透明液體。\n\n2) 建議的中藥處方：\n\n處方：龍膽瀉肝湯合五味消毒飲加減\n- 龍膽草 6克（清肝火，瀉下焦濕熱）\n- 黃芩 9克（清熱燥濕）\n- 梔子 9克（清熱除煩）\n- 木通 6克（清熱利濕）\n- 澤瀉 9克（利水滲濕）\n- 車前子 9克（利水清熱）\n- 當歸 9克（養血活血）\n- 生地黃 12克（清熱涼血）\n- 柴胡 6克（疏肝解鬱）\n- 甘草 6克（調和諸藥）\n- 金銀花 12克（清熱解毒）\n- 蒲公英 12克（清熱解毒）\n- 紫花地丁 12克（清熱解毒）\n- 野菊花 9克（清熱解毒）\n\n用法：每日一劑，水煎服，早晚各一次。根據病情可連續服用一至兩",
+      "tokens_used": 719,
+      "timestamp": "2025-09-05T14:56:19.027445",
+      "batch_index": 3
+    },
+    {
+      "prompt_number": 15,
+      "prompt": "病人，女，55歲，白人。小腿紫癜多年，其它部位也常瘀青，但是，病人覺得除了這些問題外，身體沒有什麼異常。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷思路分析：\n\n症狀分析：\n- 小腿紫癜多年：可能與血瘀有關，血液循環不暢，血液滯留導致皮下出血。\n- 其它部位常瘀青：提示血絡脆弱，血不歸經，可能與脾不統血有關。\n- 病人無其它明顯異常症狀：可能表明病情較局限於血分問題，而不影響氣分或臟腑功能。\n\n證型判斷：\n根據症狀分析，患者可能屬於「脾不統血」和「血瘀」的綜合症候。脾氣虛弱無法統攝血液，導致血液逸出脈外，加之血行不暢，形成血瘀。因此，治療上需健脾益氣，活血化瘀。\n\n2) 建議的中藥處方：\n\n- 黃芪（Huang Qi, Radix Astragali）15克：益氣健脾，補氣升陽，協助脾統攝血液。\n- 白術（Bai Zhu, Rhizoma Atractylodis Macrocephalae）12克：健脾燥濕，助脾統血。\n- 當歸（Dang Gui, Radix Angelicae Sinensis）10克：補血活血，調經止痛。\n- 川芎（Chuan Xiong, Rhizoma Chuanxiong）10克：活血行氣，祛瘀止痛。\n- 丹參（Dan Shen, Radix Salviae Miltiorrhizae）15克：活血化瘀，清心安神。\n- 三七（San Qi, Radix et Rhizoma Notoginseng）6克：化瘀止血，消腫止痛。\n- 白芍（Bai Shao, Radix Paeoniae Alba）12克：養血和營，緩急止痛。\n\n以上藥物每日一劑，水煎服，分兩次溫服。建議病人配合飲食調理，如避免生冷食物",
+      "tokens_used": 695,
+      "timestamp": "2025-09-05T14:56:19.027525",
+      "batch_index": 3
+    },
+    {
+      "prompt_number": 16,
+      "prompt": "病人，男，10歲，亞裔和白人混血。一週有四五個晚上會尿床，父母試著讓他晚餐後少喝水，依然沒有改善。病人父親陳述，他自己小時候也是尿床到十多歲，因此懷疑是不是遺傳的問題。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 病人主要症狀為夜間遺尿，且症狀一週發生四到五次。\n- 父親有類似病史，提示可能有體質遺傳因素。\n- 父母已嘗試讓病人晚餐後少喝水，但症狀無改善。\n\n證型判斷：\n- 基於病人年齡和症狀，從中醫角度考慮腎氣不固證。腎主水，司二便，小兒腎氣未充，易致遺尿。\n- 可能合併脾肺氣虛，因脾主運化，肺主氣，若脾肺氣虛，則無力固攝津液。\n\n2) 建議的中藥處方：\n\n主方：縮泉丸（配合補腎固氣的方劑）\n- 益智仁 (10克)：溫腎固氣，止遺尿。\n- 烏藥 (10克)：行氣散寒，協助固腎。\n- 山藥 (12克)：補脾益腎，固澀止遺。\n\n加減：\n- 若見脾氣虛弱，疲倦乏力，食欲不振，可加黨參 (10克) 和白術 (10克) 以健脾益氣。\n- 若見肺氣虛，易感冒咳嗽，可加黃芪 (12克) 以補氣固表。\n\n劑量及服用方法：\n- 每日一劑，水煎服，分早晚兩次溫服。\n- 煎藥時加水適量，先泡30分鐘，然後武火煮沸後改文火煎煮30分鐘，取汁約200毫升。\n\n建議持續服用2-3週，觀察症狀改善情況，並結合其他生活調理，如加強腹部及會陰部鍛煉。若症狀無改善，建議進一步調整處方或其他治療方法。",
+      "tokens_used": 714,
+      "timestamp": "2025-09-05T14:56:28.657259",
+      "batch_index": 4
+    },
+    {
+      "prompt_number": 17,
+      "prompt": "病人，男，70歲，白人。直腸癌二期，西醫都過手術，也做過化療及放療，暫時病情穩定，癌症未復發。但是，病人每天大便多次，大便很稀軟不成行，沒有血跡或黏液，西醫不認為是大腸炎或其它問題，目前只能靠止痢的藥物勉強減緩，病人依然每天大便氣七八次，偶而會來不及上廁所，無法控制，弄髒衣服，讓病人十分尷尬。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷的思路分析：\n\n症狀分析：\n- 病人年齡較大，70歲，屬於老年人群。\n- 病史顯示有直腸癌，經歷過手術、化療及放療，這些治療方法對氣血津液都有較大消耗，容易導致脾胃功能的損傷。\n- 每日大便多次，稀軟不成形，無血跡或黏液，提示脾虛失運，不能固攝或是腎陽不足，無法溫煦，導致大便不成形。\n- 偶有失禁現象，可能與中氣下陷或腎氣不固有關。\n\n證型判斷：\n- 根據以上分析，病人可能屬於「脾腎陽虛」證型。這主要是因為脾虛導致運化失常，腎陽不足則導致固攝無力，表現為大便稀軟頻數，偶有失禁。\n\n2) 建議的中藥處方：\n\n處方名稱：健脾溫腎止瀉方\n\n- 人參（或黨參） 10克：補中益氣，健脾益肺。\n- 白術 15克：健脾燥濕，助運化。\n- 茯苓 15克：健脾滲濕，助運化。\n- 炙甘草 6克：甘溫益氣，調和諸藥。\n- 附子 10克：溫陽助火，散寒止痛。\n- 肉桂 6克：溫腎助陽，補火助氣。\n- 山藥 15克：補脾固腎，滋養精微。\n- 芡實 15克：固腎澀精，補脾止瀉。\n- 蓮子 15克：補脾止瀉，養心安神。\n- 益智仁 10克：溫脾暖腎，固氣止瀉。\n\n用法：每日一劑，水煎服，早",
+      "tokens_used": 796,
+      "timestamp": "2025-09-05T14:56:28.657645",
+      "batch_index": 4
+    },
+    {
+      "prompt_number": 18,
+      "prompt": "病人，女，30歲，亞裔和白人混血。自述從新冠肺炎爆發在家工作時開始，感到焦慮，心情低落，對生活及工作沒有興趣，也沒有什麼耐心做完一件事，偶而有厭世的念頭，服用過抗憂鬱的精神科藥物，效果有限，因為導致胃腸不適而停止服用。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) 中醫診斷思路分析：\n\n症狀分析：\n- 焦慮、心情低落，對生活及工作無興趣，缺乏耐心，偶有厭世念頭：這些情緒上的症狀提示心神不寧，與心神相關。\n- 使用抗憂鬱藥物後出現胃腸不適，提示脾胃功能可能較弱。\n- 患者為混血，可能體質偏寒或偏熱，需要進一步確認。\n\n證型判斷：\n根據患者的症狀，初步考慮為「肝鬱氣滯」、「心脾兩虛」的證型。\n- 肝鬱氣滯：焦慮、情志不寧，肝主疏泄，情志不舒，肝氣鬱結。\n- 心脾兩虛：心情低落，興趣缺乏，耐心不足，心神不安，脾虛則氣血生化不足，影響心神。\n\n2) 建議的中藥處方：\n\n考慮使用疏肝解鬱、補益心脾的方劑：\n- 柴胡疏肝散合歸脾湯加減。\n\n柴胡疏肝散組成及劑量（每日劑量）：\n- 柴胡 9克：疏肝解鬱\n- 白芍 9克：柔肝緩急\n- 枳實 6克：行氣除滿\n- 炙甘草 6克：調和諸藥\n- 香附 9克：疏肝解鬱\n- 陳皮 6克：理氣和胃\n- 川芎 6克：活血行氣\n\n歸脾湯組成及劑量（每日劑量）：\n- 人參 9克：補氣健脾\n- 白术 9克：健脾益氣\n- 茯苓 9克：健脾滲濕\n- 炙甘草 6克：補中益氣\n- 当归 9克：補血和",
+      "tokens_used": 752,
+      "timestamp": "2025-09-05T14:56:28.657753",
+      "batch_index": 4
+    },
+    {
+      "prompt_number": 19,
+      "prompt": "病人，女，30歲，亞裔。在高科技公司工作，壓力很大。強迫症，每次碰了什麼東西以後，都得洗手十幾次，不然擔心會被病菌感染。雖然理智上知道那並不合理，心理上卻無法克服恐懼。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "1) **中醫診斷的思路分析**\n\n**症狀分析**：\n- 強迫性洗手：顯示精神焦慮不安，可能涉及心神不寧。\n- 高壓工作環境：長期壓力影響肝氣疏泄功能，容易導致肝氣鬱結。\n- 理智上知道不合理但無法克服：提示心神失調，無法有效控制情緒和行為。\n\n**證型判斷**：\n- 根據患者的症狀和情況，這名病人可能屬於「肝氣鬱結，心神不寧」證。長期精神壓力導致肝失疏泄，氣機鬱滯，進而影響心神，使其無法安定。\n\n2) **建議的中藥處方**\n\n- **柴胡疏肝散**合**天王補心丹**加減：\n\n  - 柴胡 (Chai Hu) 10克：疏肝解鬱，調和氣機。\n  - 白芍 (Bai Shao) 12克：養血柔肝，緩急止痛。\n  - 香附 (Xiang Fu) 10克：疏肝理氣。\n  - 枳實 (Zhi Shi) 10克：理氣寬中，破氣消積。\n  - 陳皮 (Chen Pi) 6克：理氣健脾。\n  - 當歸 (Dang Gui) 10克：養血活血。\n  - 酸棗仁 (Suan Zao Ren) 15克：養心安神。\n  - 柏子仁 (Bai Zi Ren) 10克：養心安神。\n  - 茯苓 (Fu Ling) 12克：健脾安神。\n  - 五味子 (Wu Wei Zi) 6克：斂肺滋腎，寧心安神。\n\n**用法**：每日一劑，水煎服，分早晚兩次服用。\n\n**說明**：此方以疏肝解鬱為主，兼顧養血安神，適合因肝",
+      "tokens_used": 727,
+      "timestamp": "2025-09-05T14:56:28.657845",
+      "batch_index": 4
+    },
+    {
+      "prompt_number": 20,
+      "prompt": "病人，女，華人，三十五歲。一個月會有一週左右發生肌肉痛、無力、嘔吐、意識不清、腫脹、心律不整的現象，西醫診斷為横纹肌溶解症，使用藥物暫時壓制住症狀，但一陣子後又再度發作，認為是基因遺傳缺陷導致的。病人平時生活有壓迫感，發病後更為焦慮。病人體型偏腫胖，每次發作時，除了上述的症狀外，還有明顯水腫及血糖飆高。請提供：1) 中醫診斷的思路分析（包括症狀分析、證型判斷） 2) 建議的中藥處方（包括具體藥物和劑量）",
+      "response": "### 中醫診斷思路分析\n\n1. **症狀分析**：\n   - 肌肉痛、無力：提示氣血不足或痰濕阻滯經絡。\n   - 嘔吐、意識不清：可能與痰濁上擾清竅或胃氣上逆有關。\n   - 腫脹：提示水濕停聚。\n   - 心律不整：可能涉及心氣虛或心陽不足。\n   - 水腫、血糖飆高：可能與脾虛濕盛及熱象相關。\n\n2. **證型判斷**：\n   - 綜合上述症狀，病人可能為「痰濕阻滯，脾腎陽虛」之證。主要病機為脾虛失運，水濕內停；痰濕化熱，上擾清竅，且可能涉及腎陽不足，無法溫煦全身，導致水濕泛濫。\n\n### 建議的中藥處方\n\n考慮到病人的多重症狀，應以健脾利濕、溫陽化痰為主要治療原則，並兼顧清熱化痰。\n\n1. **藥方**：\n   - 白術 (Bai Zhu) 10克：健脾益氣，利水滲濕。\n   - 茯苓 (Fu Ling) 15克：健脾滲濕。\n   - 陳皮 (Chen Pi) 6克：理氣燥濕。\n   - 半夏 (Ban Xia) 10克：燥濕化痰，降逆止嘔。\n   - 生薑 (Sheng Jiang) 3片：溫中散寒，和胃止嘔。\n   - 桂枝 (Gui Zhi) 6克：溫通經絡，助陽化氣。\n   - 澤瀉 (Ze Xie) 10克：利水滲濕，清熱。\n   - 車前子 (Che Qian Zi) 9克：利水滲濕，清熱利尿。\n   - 益母草 (Yi Mu",
+      "tokens_used": 808,
+      "timestamp": "2025-09-05T14:56:28.657935",
+      "batch_index": 4
+    }
+  ]
+}
