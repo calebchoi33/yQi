@@ -45,51 +45,66 @@ yQi/
 
 ## 🚀 Quick Start
 
-### 1. Create Vector Database
-```bash
-# Create regular vector database
-python3 create_vdb.py --config config/create_vdb_config.json
+### Prerequisites
+- Python 3.8+
+- OpenAI API key
+- Required packages: `pip install openai streamlit python-dotenv`
 
-# Create semantic vector database (recommended)
-python3 create_semantic_vdb.py --config config/create_vdb_config_semantic.json
+### Environment Setup
+```bash
+export OPENAI_API_KEY="your-openai-api-key"
 ```
 
-### 2. Run Evaluation
-```bash
-# Run bilingual RAG evaluation
-python3 run_eval.py --config config/eval_config_semantic.json --output evaluation/results/my_test.json
+## 📊 Subprojects
 
-# Run with mock data for testing
-python3 run_eval.py --config config/eval_config_semantic.json --output evaluation/results/mock_test.json
+### Vector RAG System
+Standard RAG implementation with semantic search and bilingual responses.
+
+**Features:**
+- Multiple chunking strategies
+- Vector embeddings with OpenAI
+- Interactive evaluation UI
+- Batch processing
+
+**Usage:**
+```bash
+cd vector_rag
+python run_eval.py --config eval_config_semantic.json
 ```
 
-### 3. Launch Evaluation UI
+### Structured RAG System  
+Advanced RAG with multi-vector structured database for specialized TCM knowledge retrieval.
+
+**Features:**
+- Multi-vector columns (symptoms, organs, formulas, patterns)
+- Chapter/section organization
+- Adjacent content expansion
+- Weighted vector search
+
+**Usage:**
 ```bash
-cd evaluation
-streamlit run app.py
+cd structured_rag
+python create_vdb.py --config structured_vdb_config.json
+python test_structured_rag.py
 ```
 
-## 🔧 Features
+## 🔧 Key Features
 
-### Enhanced Document Processing
-- **Multi-format support**: `.txt`, `.docx`, `.doc`, `.pdf`
-- **TCM-aware chunking**: Chapter, section, and formula-based chunking
-- **Modular architecture**: Pluggable text extractors and chunking strategies
-- **Metadata enrichment**: Chapter titles, section titles, chunk types
+- **Bilingual Responses**: Chinese first, then English
+- **Multiple RAG Approaches**: Standard vector search vs. structured multi-vector
+- **TCM-Specific**: Optimized for Traditional Chinese Medicine content
+- **Evaluation Tools**: Interactive UI and batch processing
+- **Flexible Configuration**: JSON-based configuration system
 
-### RAG System
-- **OpenAI Integration**: Uses `text-embedding-3-large` for embeddings, `gpt-4o-mini` for generation
-- **Bilingual Support**: Generates responses in both Chinese and English
-- **Vector Database**: Pickle-based storage with cosine similarity search
-- **Adjacent Chunk Retrieval**: Enhanced context with neighboring chunks
-- **Mock Mode**: Testing capability with predefined retrieval data
-- **Translated Chunks**: Automatic translation of retrieved Chinese text to English
+## 📝 Getting Started
 
-### Evaluation Platform
-- **Streamlit UI**: Interactive evaluation interface
-- **Batch Processing**: Command-line evaluation for automation
-- **Result Tracking**: JSON export with timestamps and metadata
-- **Model Comparison**: Support for multiple RAG configurations
+1. Choose your RAG approach (vector_rag or structured_rag)
+2. Navigate to the subproject directory
+3. Follow the README instructions for that subproject
+4. Set your OpenAI API key
+5. Run the evaluation or testing scripts
+
+Each subproject is self-contained with its own documentation and can be run independently.
 
 ## 📋 Configuration
 
