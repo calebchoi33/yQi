@@ -1,8 +1,6 @@
 import json
 from typing import Any, Dict, List
 
-from tagging import TaggingSystem
-
 
 def build_tools_schema() -> List[Dict[str, Any]]:
     """Build per-category tool schemas for the tagging system."""
@@ -63,7 +61,7 @@ def build_tools_schema() -> List[Dict[str, Any]]:
     ]
 
 
-def make_tool_dispatch(tagging_system: TaggingSystem):
+def make_tool_dispatch(tag_writer: Any):
     """Make the tool dispatch for the tagging system."""
 
     def _validate_args(args: Dict[str, Any]) -> None:
@@ -82,7 +80,7 @@ def make_tool_dispatch(tagging_system: TaggingSystem):
         def fn(args: Dict[str, Any]) -> str:
             _validate_args(args)
 
-            tagging_system.create_or_update_tagged_section(
+            tag_writer.add_tags(
                 args["chapter_idx"],
                 args["chapter_title"],
                 args["section_idx"],

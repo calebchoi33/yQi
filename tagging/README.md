@@ -24,47 +24,28 @@ Prerequisites
 - Packages: `openai`, `python-dotenv`
 - OpenAI API key in environment or `.env`
 
-Install dependencies:
-
-```bash
-pip install openai python-dotenv
-```
-
-Set environment (one of):
-
-```bash
-# Bash / Git Bash / WSL
-export OPENAI_API_KEY="your-api-key"
-# optional, defaults to gpt-4.1
-export OPENAI_MODEL="gpt-4.1"
-```
-
-```powershell
-$env:OPENAI_API_KEY = "your-api-key"
-$env:OPENAI_MODEL = "gpt-4.1"
-```
-
-You can also create a `.env` file in this `tagging/` directory with:
-
-```
-OPENAI_API_KEY=your-api-key
-OPENAI_MODEL=gpt-4.1
-```
-
 Prepare the book
 ----------------
-Place your source text at `tagging/data/book.txt` formatted with chapter and section markers:
+Format your traditional Chinese medicine source text with chapter and section markers:
 
 ```text
-#CHAPTER Chapter 1 Title
-#SECTION Section 1 Title
+#CHAPTER
+Chapter 1 Title
+<chapter 1 description>
+
+#SECTION
+Section 1 Title
 <section 1 text>
 
-#SECTION Section 2 Title
+#SECTION
+Section 2 Title
 <section 2 text>
 
-#CHAPTER Chapter 2 Title
-#SECTION Section 1 Title
+#CHAPTER
+Chapter 2 Title
+
+#SECTION
+Section 1 Title
 <section text>
 ```
 
@@ -72,60 +53,31 @@ Run the tagger
 --------------
 
 ```bash
-cd tagging
-python tag_book.py
-```
-
-Common options:
-
-```bash
-# Process only the next 2 chapters
-python tag_book.py --chapters 2
-
-# Increase max tool-call rounds per section (default 10)
-python tag_book.py --max-tool-rounds 12
-
-# Start fresh from chapter 0, ignoring existing checkpoint
-python tag_book.py --reset
-
-# Custom checkpoint file/dir
-python tag_book.py --checkpoint checkpoints/checkpoint_latest.json --checkpoint-dir checkpoints
+$ python tagging/tag_book.py --book-paths books/tcm_book1.txt books/tcm_book2.txt
 ```
 
 Outputs
 -------
-- Checkpoints directory: `tagging/checkpoints/`
-  - `checkpoint_latest.json` – resumable progress pointer
-  - `checkpoint_YYYYMMDD_HHMMSS.json` – timestamped snapshots
-  - `tags.json` – consolidated tags across all processed sections
+- Checkpoints: `tagging/checkpoints/<book_name>_checkpoint_latest.json`
+- Final tags: `tagging/output/<book_name>_tags.json`
+- Parsed book JSON: `<same directory as the book>/<book_name>_parsed.json`
 
-Data shape (example)
---------------------
-Each section entry in `checkpoints/tags.json` looks like:
+Flatten per-book unique tag lists
+---------------------------------
+After tagging, create a per-book unique list of items per category:
 
-```json
-{
-  "chapter_idx": 0,
-  "chapter_title": "Chapter 1 Title",
-  "section_idx": 1,
-  "section_title": "Section 2 Title",
-  "symptoms": [
-    {"name_zh": "頭痛", "name_en": "headache"}
-  ],
-  "formulas": [
-    {"name_zh": "桂枝湯", "name_en": "Cinnamon Twig Decoction"}
-  ]
-}
+```bash
+$ python tagging/flatten_tags.py --output-dir tagging/output
 ```
 
-Troubleshooting
----------------
-- Missing API key: set `OPENAI_API_KEY` (env or `.env`).
-- Book file not found: ensure `tagging/data/book.txt` exists.
-- Rate limits/temporary errors: the script retries with backoff automatically.
-- Model selection: set `OPENAI_MODEL` if you need a different model; default is `gpt-4.1`.
+This writes `tagging/output/<book_name>_tags_categories_list.json` containing de-duplicated items per category.
 
-Notes
------
-- The script processes sections one by one, saving after each chapter. You can safely stop and re-run to resume.
-- Categories are recorded only when explicitly mentioned in the text, with both Chinese (`name_zh`) and English (`name_en`) names.
+Parse books
+---------------------
+If you only want to build the parsed JSON for one or more books without tagging:
+
+```bash
+$ python tagging/parse_books.py --book-paths books/tcm_book1.txt books/tcm_book2.txt
+```
+
+This will create the parsed book JSON: `<same directory as the book>/<book_name>_parsed.json`
