@@ -1,0 +1,30 @@
+{
+  "workflow": "chunk_rag",
+  "prompts": [
+    {
+      "id": "case_001",
+      "description": "Patient with digestive issues",
+      "content": "A 45-year-old male patient presents with chronic stomach pain, bloating after meals, and irregular bowel movements for the past 3 months. He reports feeling tired and has a pale complexion. His tongue appears pale with a thin white coating, and his pulse is weak and slow. What is your TCM diagnosis and treatment recommendation?"
+    },
+    {
+      "id": "case_002", 
+      "description": "Patient with sleep and emotional issues",
+      "content": "A 32-year-old female patient complains of insomnia, frequent dreams, palpitations, and anxiety for the past 2 months. She has been under significant work stress. Her tongue is red with little coating, and her pulse is rapid and thin. She also experiences night sweats and feels restless. Provide TCM diagnosis and treatment approach."
+    },
+    {
+      "id": "case_003",
+      "description": "Patient with respiratory symptoms", 
+      "content": "A 28-year-old patient has been experiencing chronic cough with white phlegm, shortness of breath, and fatigue for 6 weeks. The symptoms worsen in cold weather. The patient has a pale tongue with white coating and a slow, deep pulse. There's also a sensation of cold in the chest. What is your TCM assessment?"
+    },
+    {
+      "id": "case_004",
+      "description": "Patient with headache and neck tension",
+      "content": "A 38-year-old office worker presents with frequent headaches, neck stiffness, and shoulder tension. The headaches are worse in the afternoon and are accompanied by irritability and dry eyes. The tongue is slightly red with yellow coating, and the pulse is wiry. The patient also reports irregular menstruation. Please provide TCM diagnosis."
+    },
+    {
+      "id": "case_005",
+      "description": "Patient with joint pain and stiffness",
+      "content": "A 55-year-old patient complains of joint pain and stiffness in the knees and lower back, worse in damp weather and in the morning. The pain improves with movement and warmth. The patient has a thick, greasy tongue coating and a slow, slippery pulse. There's also a feeling of heaviness in the limbs. What is your TCM diagnosis and treatment strategy?"
+    }
+  ]
+}

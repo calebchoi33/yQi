@@ -1,0 +1,15 @@
+{
+  "database_type": "structured_vector_db",
+  "total_records": 1407,
+  "vector_columns": [
+    "symptoms_vector",
+    "organs_vector",
+    "formulas_vector",
+    "patterns_vector",
+    "full_content_vector"
+  ],
+  "books": [
+    "傷寒論 (Treatise on Cold Damage)"
+  ],
+  "created_at": "2025-09-24T21:06:36.669311"
+}
