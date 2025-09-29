@@ -5,7 +5,7 @@ import re
 from typing import Any, Dict, List
 
 
-def parse_book(path: str) -> None:
+def parse_book(path: str) -> List[Dict[str, Any]]:
     """
     Parses the book into chapters and sections.
     Save the parsed book to a JSON file in the output directory.
@@ -25,28 +25,9 @@ def parse_book(path: str) -> None:
         file_content = f.read()
 
     # PARSE THE BOOK BY CHAPTERS AND SECTIONS
-    parsed_book: List[Dict[str, Any]] = []
+    parsed_book = []
     ch_blocks = re.split(r"^#CHAPTER\s*", file_content, flags=re.MULTILINE)
-    book_title_and_preface = ch_blocks[0].strip()
-    if book_title_and_preface:
-        book_title = book_title_and_preface.splitlines()[0].strip()
-        book_preface = "\n".join(book_title_and_preface.splitlines()[1:]).strip()
-        parsed_book.append(
-            {
-                "chapter_idx": -1,
-                "chapter_title": book_title,
-                "sections": [
-                    {
-                        "section_idx": 0,
-                        "section_title": "<Book preface>",
-                        "section_text": book_preface,
-                    }
-                ],
-            }
-        )
-
-    for ch_idx, ch_block in enumerate(ch_blocks[1:]):
-        ch_block = ch_block.strip()
+    for ch_idx, ch_block in enumerate(ch_blocks):
         if not ch_block:
             continue
 
@@ -56,7 +37,7 @@ def parse_book(path: str) -> None:
         ch_text = "\n".join(lines[1:])
 
         # Split sections within the chapter
-        sections: List[Dict[str, Any]] = []
+        sections = []
         sec_blocks = re.split(r"^#SECTION\s*", ch_text, flags=re.MULTILINE)
 
         # Case 1: No #SECTION in chapter. Treat entire chapter text as a single, untitled section
@@ -116,17 +97,12 @@ def parse_book(path: str) -> None:
             }
         )
 
-    # Save the parsed book to a JSON file
-    book_dir = os.path.dirname(path)
-    book_name = os.path.splitext(os.path.basename(path))[0]
-    parsed_book_path = f"{book_name}_parsed.json"
-    with open(os.path.join(book_dir, parsed_book_path), "w", encoding="utf-8") as f:
-        json.dump(parsed_book, f, ensure_ascii=False, indent=4)
+    return parsed_book
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Parse a book(s) into chapters and sections"
+        description="Parse a book(s) into chapters and sections and save the result to a json."
     )
     parser.add_argument(
         "--book-paths",
@@ -138,4 +114,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     for book_path in args.book_paths:
-        parse_book(book_path)
+        parsed_book = parse_book(book_path)
+
+        # Save the parsed book to a JSON file
+        book_dir = os.path.dirname(book_path)
+        book_name = os.path.splitext(os.path.basename(book_path))[0]
+        parsed_book_path = os.path.join(book_dir, f"{book_name}_parsed.json")
+        with open(parsed_book_path, "w", encoding="utf-8") as f:
+            json.dump(parsed_book, f, ensure_ascii=False, indent=4)

@@ -1,17 +1,17 @@
 [
     {
-        "chapter_idx": -1,
+        "chapter_idx": 0,
         "chapter_title": "《人紀傷寒論》",
         "sections": [
             {
                 "section_idx": 0,
-                "section_title": "<Book preface>",
+                "section_title": "<Chapter description>",
                 "section_text": "倪海廈"
             }
         ]
     },
     {
-        "chapter_idx": 0,
+        "chapter_idx": 1,
         "chapter_title": "《傷寒論》序言",
         "sections": [
             {
@@ -22,7 +22,7 @@
         ]
     },
     {
-        "chapter_idx": 1,
+        "chapter_idx": 2,
         "chapter_title": "前言",
         "sections": [
             {
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "chapter_idx": 2,
+        "chapter_idx": 3,
         "chapter_title": "辨太陽病脈證並治法上篇",
         "sections": [
             {
@@ -264,7 +264,7 @@
         ]
     },
     {
-        "chapter_idx": 3,
+        "chapter_idx": 4,
         "chapter_title": "辨太陽病脈證並治法中篇",
         "sections": [
             {
@@ -705,7 +705,7 @@
         ]
     },
     {
-        "chapter_idx": 4,
+        "chapter_idx": 5,
         "chapter_title": "辨太陽病脈證並治法下篇",
         "sections": [
             {
@@ -1011,7 +1011,7 @@
         ]
     },
     {
-        "chapter_idx": 5,
+        "chapter_idx": 6,
         "chapter_title": "辨陽明病脈證並治法",
         "sections": [
             {
@@ -1427,7 +1427,7 @@
         ]
     },
     {
-        "chapter_idx": 6,
+        "chapter_idx": 7,
         "chapter_title": "辨少陽病脈症並治法",
         "sections": [
             {
@@ -1493,7 +1493,7 @@
         ]
     },
     {
-        "chapter_idx": 7,
+        "chapter_idx": 8,
         "chapter_title": "辨太陰病脈證並治法",
         "sections": [
             {
@@ -1544,7 +1544,7 @@
         ]
     },
     {
-        "chapter_idx": 8,
+        "chapter_idx": 9,
         "chapter_title": "辨少陰病脈證並治法",
         "sections": [
             {
@@ -1780,7 +1780,7 @@
         ]
     },
     {
-        "chapter_idx": 9,
+        "chapter_idx": 10,
         "chapter_title": "辨厥陰病脈證並治",
         "sections": [
             {
