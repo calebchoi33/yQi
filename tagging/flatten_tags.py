@@ -5,18 +5,18 @@ from typing import Dict, List, Tuple
 
 
 CATEGORIES: List[str] = [
-    "symptoms",
-    "herbs",
-    "formulas",
-    "pulses",
-    "tongues",
-    "syndromes",
-    "pathogens",
-    "treatments",
-    "meridians",
-    "organs",
-    "acupoints",
-    "elements",
+    "symptoms_tags",
+    "herbs_tags",
+    "formulas_tags",
+    "pulses_tags",
+    "tongues_tags",
+    "syndromes_tags",
+    "pathogens_tags",
+    "treatments_tags",
+    "meridians_tags",
+    "organs_tags",
+    "acupoints_tags",
+    "elements_tags",
 ]
 
 
@@ -30,14 +30,11 @@ def _flatten_sections(sections: List[Dict]) -> Dict[str, List[Dict[str, str]]]:
         for category in CATEGORIES:
             tags = section.get(category, [])
             for tag in tags:
-                name_zh = (tag["name_zh"]).strip()
-                name_en = (tag["name_en"]).strip()
+                # Every tag should have a name_zh
+                if "name_zh" not in tag:
+                    raise ValueError(f"name_zh not found in tag: {tag}")
 
-                if name_zh not in flattened[category]:
-                    flattened[category][name_zh] = {
-                        "name_zh": name_zh,
-                        "name_en": name_en,
-                    }
+                flattened[category][tag["name_zh"]] = tag
 
     # Convert inner dicts to ordered lists and drop empty categories
     result: Dict[str, List[Dict[str, str]]] = {}

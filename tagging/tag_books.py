@@ -9,19 +9,13 @@ from dotenv import load_dotenv
 
 from endpoint import chat_with_retry
 from parse_books import parse_book
-from tooling import build_tools_schema, make_tool_dispatch
+from tools import TOOLS
 
 
 def parse_arguments() -> argparse.Namespace:
     """Parse the arguments."""
     parser = argparse.ArgumentParser(
         description="Tag TCM books sections by symptoms, syndromes, etc."
-    )
-    parser.add_argument(
-        "--max-tool-rounds",
-        type=int,
-        default=10,
-        help="Max tool-call rounds per section",
     )
     parser.add_argument(
         "--book-paths",
@@ -39,7 +33,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="output",
+        default="tagging/output",
         help="Output directory for the tagged books",
     )
     return parser.parse_args()
@@ -75,29 +69,29 @@ class TCMBookTaggingSystem:
     """
 
     SYSTEM_INSTRUCTIONS = (
-        "You are analyzing a section of a Traditional Chinese Medicine book to identify various TCM categories within that section. "
-        "Your task is to tag this section with relevant items from the following 12 categories:\n\n"
+        "You are analyzing a section of a Traditional Chinese Medicine book to identify occurences of various TCM categories within the section. "
+        "Your task is to tag the section, which means identifying the occurences of the following 12 categories in this section:\n\n"
         "CATEGORIES TO IDENTIFY:\n"
-        "• symptom 症狀 - Objective symptoms and subjective experience described by patients (e.g. 頭痛、發燒、面色蒼白)\n"
-        "• herb 中藥 - Single medicinal substances, including plant, mineral, or animal material (e.g. 桂枝、白芍)\n"
-        "• formula 方劑 - Herbal prescriptions made up of multiple herbs (e.g. 桂枝湯、小青龍湯)\n"
-        "• pulse 脈診 - Pulse qualities (e.g. 浮、沉、遲、數、弦、滑)\n"
-        "• tongue 舌診 - Tongue body and coating descriptions (e.g. 舌頭胖大、舌淡、苔黃膩)\n"
-        "• syndrome 證候 - Patterns of disharmony (e.g. 太陽證、陽明證、太陽中風、太陽溫病)\n"
-        "• pathogen 病因 - Causes of disease (e.g. 風寒、氣滯、血瘀、陰虛、外傷)\n"
-        "• treatment 治法 - Treatment strategies (e.g. 攻下、發汗、和解少陽、溫補脾腎)\n"
-        "• meridian 經絡 - Regular and special meridians (e.g. 手太陰肺經, 督脈)\n"
-        "• organ 臟腑 - Organs (e.g. 心、小腸、胃、腎)\n"
-        "• acupoint 穴位 - Acupuncture points (e.g. 合谷、足三里)\n"
-        "• element 五行 - Five elements (e.g. 木、火、土、金、水)\n\n"
+        "• symptoms 症狀 - Objective symptoms and subjective experience described by patients (e.g. 頭痛、發燒、面色蒼白)\n"
+        "• herbs 中藥 - Single medicinal substances, including plant, mineral, or animal material (e.g. 桂枝、白芍)\n"
+        "• formulas 方劑 - Herbal prescriptions made up of multiple herbs (e.g. 桂枝湯、小青龍湯)\n"
+        "• pulses 脈診 - Pulse qualities (e.g. 浮、沉、遲、數、弦、滑)\n"
+        "• tongues 舌診 - Tongue body and coating descriptions (e.g. 舌頭胖大、舌淡、苔黃膩)\n"
+        "• syndromes 證候 - Patterns of disharmony (e.g. 太陽證、陽明證、太陽中風、太陽溫病)\n"
+        "• pathogens 病因 - Causes of disease (e.g. 風寒、氣滯、血瘀、陰虛、外傷)\n"
+        "• treatments 治法 - Treatment strategies (e.g. 攻下、發汗、和解少陽、溫補脾腎)\n"
+        "• meridians 經絡 - Regular and special meridians (e.g. 手太陰肺經, 督脈)\n"
+        "• organs 臟腑 - Organs (e.g. 心、小腸、胃、腎)\n"
+        "• acupoints 穴位 - Acupuncture points (e.g. 合谷、足三里)\n"
+        "• elements 五行 - Five elements (e.g. 木、火、土、金、水)\n\n"
         "INSTRUCTIONS:\n"
-        "- Read the section carefully and identify all items from these categories\n"
-        "- For each item, provide the original Chinese text (name_zh) and an English translation (name_en)\n"
+        "- Read the section carefully and identify all occurences of the above categories\n"
+        "- For each occurence, provide the original Chinese text (name_zh) and an English translation (name_en)\n"
         "- Use commonly understood English medical terms\n"
         "- Be specific but concise - avoid overly broad or vague terms\n"
-        "- If the section mentions multiple items from the same category, tag all of them\n"
-        "- If no items from a category are mentioned, omit that category from your response\n"
-        "- Only include items that are explicitly mentioned in the text\n\n"
+        "- If the section mentions multiple occurences of the same category, tag all of them\n"
+        "- If no occurences of a category are mentioned, return an empty list for that category\n"
+        "- Only include occurences that are explicitly mentioned in the text\n\n"
         "EXAMPLES:\n"
         "Text: '患者出現頭痛、發燒，脈象浮數，舌苔黃膩，診為太陽中風證，用桂枝湯治療。'\n"
         "Tags:\n"
@@ -106,14 +100,13 @@ class TCMBookTaggingSystem:
         "- tongues: [{'name_zh': '舌苔黃膩', 'name_en': 'yellow greasy tongue coating'}]\n"
         "- syndromes: [{'name_zh': '太陽中風證', 'name_en': 'Taiyang wind syndrome'}]\n"
         "- formulas: [{'name_zh': '桂枝湯', 'name_en': 'Cinnamon Twig Decoction'}]\n\n"
-        "For each category, use the appropriate tag_section_<category> tools to record your findings for this section."
     )
 
     def __init__(self, book_path: str, output_dir: str) -> None:
         self.book_path = book_path
         book_name = os.path.splitext(os.path.basename(book_path))[0]
         self.checkpoint_path = os.path.join(
-            "checkpoints", f"{book_name}_checkpoint_latest.json"
+            "tagging/checkpoints", f"{book_name}_checkpoint_latest.json"
         )
         self.output_path = os.path.join(output_dir, f"{book_name}_tags.json")
         self.parsed_book_path = os.path.join(
@@ -130,8 +123,7 @@ class TCMBookTaggingSystem:
         chapter_title: str,
         section_idx: int,
         section_title: str,
-        category: str,
-        tags: List[Dict[str, str]],
+        args: Dict[str, Any],
     ) -> None:
         """Add tags to a section in the tagging system.
 
@@ -140,21 +132,40 @@ class TCMBookTaggingSystem:
             chapter_title: The title of the chapter.
             section_idx: The index of the section.
             section_title: The title of the section.
-            category: The category of the tags.
-            tags: The list of tags for this category.
+            args: Dict containing tags by category.
         """
 
-        # Create the section if it doesn't exist
-        if (chapter_idx, section_idx) not in self.tags_dict:
-            self.tags_dict[(chapter_idx, section_idx)] = {
-                "chapter_idx": chapter_idx,
-                "chapter_title": chapter_title,
-                "section_idx": section_idx,
-                "section_title": section_title,
-            }
+        # Ensure all the categories are present
+        required_args = [
+            "symptom_tags",
+            "herb_tags",
+            "formula_tags",
+            "pulse_tags",
+            "tongue_tags",
+            "syndrome_tags",
+            "pathogen_tags",
+            "treatment_tags",
+            "meridian_tags",
+            "organ_tags",
+            "acupoint_tags",
+            "element_tags",
+        ]
+        for arg in required_args:
+            if arg not in args:
+                raise ValueError(f"{arg} is required")
+
+        # Create the section
+        self.tags_dict[(chapter_idx, section_idx)] = {
+            "chapter_idx": chapter_idx,
+            "chapter_title": chapter_title,
+            "section_idx": section_idx,
+            "section_title": section_title,
+        }
 
         # Update the section tags
-        self.tags_dict[(chapter_idx, section_idx)][category] = tags
+        for category, tags in args.items():
+            if tags:
+                self.tags_dict[(chapter_idx, section_idx)][category] = tags
 
     def to_tags_list(self) -> Dict[str, Any]:
         """Convert the tagging system to a JSON list of tagged sections."""
@@ -172,25 +183,26 @@ class TCMBookTaggingSystem:
             checkpoint = json.load(f)
 
         # Restore the tags dictionary
-        tags = checkpoint.get("tags", {}).get("sections", [])
+        tags = checkpoint["tags"]["sections"]
         self.tags_dict = {(tag["chapter_idx"], tag["section_idx"]): tag for tag in tags}
 
         # Restore the duration
-        self.duration_secs = checkpoint.get("duration_secs", 0.0)
+        self.duration_secs = checkpoint["duration_secs"]
 
-        next_chapter_idx = checkpoint.get("next_chapter_idx", 0)
+        next_chapter_idx = checkpoint["next_chapter_idx"]
         print(f"Loaded checkpoint with {len(self.tags_dict)} tagged sections")
-        print(f"Next chapter index: {next_chapter_idx + 1}")
+        print(f"Next chapter index: {next_chapter_idx}")
 
         return next_chapter_idx
 
     def save_checkpoint(self, next_chapter_idx: int) -> None:
         """Save the tags checkpoint file."""
 
+        tags = self.to_tags_list()
         with open(self.checkpoint_path, "w", encoding="utf-8") as f:
             checkpoint = {
                 "next_chapter_idx": next_chapter_idx,
-                "tags": self.to_tags_list(),
+                "tags": tags,
                 "updated_at": datetime.now().strftime("%Y%m%d_%H%M%S"),
                 "duration_secs": self.duration_secs,
             }
@@ -203,7 +215,7 @@ class TCMBookTaggingSystem:
         with open(self.output_path, "w", encoding="utf-8") as f:
             json.dump(tags, f, ensure_ascii=False, indent=4)
 
-    def tag_book(self, reset: bool, max_tool_rounds: int) -> None:
+    def tag_book(self, reset: bool) -> None:
         """Tag the book."""
 
         # Initialize progress from checkpoint
@@ -211,100 +223,60 @@ class TCMBookTaggingSystem:
         if not reset:
             next_chapter_idx = self.load_checkpoint()
 
-        # Parse the book if it doesn't exist
-        if not os.path.exists(self.parsed_book_path):
-            parse_book(self.book_path)
-
-        # Load the parsed book
-        with open(self.parsed_book_path, "r", encoding="utf-8") as f:
-            parsed_book = json.load(f)
-
+        # Parse the book
+        parsed_book = parse_book(self.book_path)
         total_chapters = len(parsed_book)
-
-        # Build tools schema and dispatch
-        tools_schema = build_tools_schema()
-        dispatch = make_tool_dispatch(self)
 
         # Iterate chapters
         for ch_idx in range(next_chapter_idx, total_chapters):
             chapter_start_time = time.time()
 
-            print(f"Processing chapter {ch_idx + 1} out of {total_chapters}")
+            print(f"Processing chapter {ch_idx} out of {total_chapters}")
             chapter = parsed_book[ch_idx]
             sects = chapter["sections"]
 
             # Iterate sections
             for s_idx, section in enumerate(sects):
-                print(f"Processing section {s_idx + 1} out of {len(sects)}")
+                print(f"Processing section {s_idx} out of {len(sects)}")
 
                 # Create the initial message for the section
-                msgs: List[Dict[str, Any]] = [
+                input_msgs = [
                     {"role": "system", "content": self.SYSTEM_INSTRUCTIONS},
                     {
                         "role": "user",
                         "content": (
                             f"Please analyze the following section and identify any and all traditional Chinese medicine categories mentioned.\n"
-                            f"When you find items, call the appropriate tool among: \n"
-                            f"- tag_section_symptoms, tag_section_herbs, tag_section_formulas, tag_section_pulses, tag_section_tongues,\n"
-                            f"  tag_section_syndromes, tag_section_pathogens, tag_section_treatments, tag_section_meridians,\n"
-                            f"  tag_section_organs, tag_section_acupoints, tag_section_elements.\n"
-                            f"Provide both Chinese and English names for each item.\n\n"
+                            f"Use the tag_section tool to tag the section with the following categories: symptom, herb, formula, pulse, tongue, syndrome, pathogen, treatment, meridian, organ, acupoint, element.\n"
+                            "If no tags for a category are found, return an empty list for that category.\n"
+                            "Only include items that are explicitly mentioned in the text.\n\n"
                             f"TEXT:{section['section_title']}\n{section['section_text']}\n"
                         ),
                     },
                 ]
 
                 # Process the section with the LLM tool calls
-                rounds = 0
-                while rounds < max_tool_rounds:
-                    resp = chat_with_retry(msgs, tools=tools_schema, tool_choice="auto")
-                    assistant_msg = resp.choices[0].message
-                    msgs.append(
-                        {
-                            "role": "assistant",
-                            "content": assistant_msg.content or "",
-                            "tool_calls": [
-                                tc.model_dump()
-                                for tc in (assistant_msg.tool_calls or [])
-                            ],
-                        }
-                    )
+                resp = chat_with_retry(input_msgs, tools=TOOLS)
+                assistant_msg = resp.choices[0].message
 
-                    # Break if no tool calls
-                    if not assistant_msg.tool_calls:
-                        break
+                # If no tool calls, raise an error
+                if not assistant_msg.tool_calls:
+                    raise ValueError("No tool calls")
 
-                    # Execute tool calls immediately after assistant tool_calls
-                    for tc in assistant_msg.tool_calls or []:
+                # There should be exactly one tool call
+                if len(assistant_msg.tool_calls) != 1:
+                    raise ValueError("Expected exactly one tool call")
 
-                        # Get the tool name and arguments
-                        name = tc.function.name
-                        args = json.loads(tc.function.arguments)
-
-                        # Execute the tool
-                        tool_function = dispatch.get(name)
-                        print(f"Calling tool {name}: {args}")
-
-                        # Add the chapter_idx, chapter_title, section_idx, section_title to the args
-                        args["chapter_idx"] = ch_idx
-                        args["chapter_title"] = chapter["chapter_title"]
-                        args["section_title"] = section["section_title"]
-                        args["section_idx"] = section["section_idx"]
-
-                        # Execute the tool
-                        result = tool_function(args)
-
-                        # Add the tool result to the messages
-                        msgs.append(
-                            {
-                                "role": "tool",
-                                "tool_call_id": tc.id,
-                                "name": name,
-                                "content": str(result),
-                            }
-                        )
-
-                    rounds += 1
+                # Execute the tool
+                tc = assistant_msg.tool_calls[0]
+                function_args = json.loads(tc.function.arguments)
+                print(f"Adding tags: {function_args}")
+                self.add_tags(
+                    chapter["chapter_idx"],
+                    chapter["chapter_title"],
+                    section["section_idx"],
+                    section["section_title"],
+                    function_args,
+                )
 
                 # Pause briefly between sections to reduce request pressure
                 time.sleep(1)
@@ -318,13 +290,11 @@ class TCMBookTaggingSystem:
         self.save_tags()
 
 
-def orchestrate_tagging(
-    book_paths: List[str], reset: bool, max_tool_rounds: int, output_dir: str
-) -> None:
+def orchestrate_tagging(book_paths: List[str], reset: bool, output_dir: str) -> None:
     """Orchestrate the tagging of the books."""
     for book_path in book_paths:
         tagging_system = TCMBookTaggingSystem(book_path, output_dir)
-        tagging_system.tag_book(reset, max_tool_rounds)
+        tagging_system.tag_book(reset)
 
         # Pause briefly between books to reduce request pressure
         time.sleep(10)
@@ -335,7 +305,5 @@ if __name__ == "__main__":
 
     print("Starting TCM Book Tagging System...")
     args = parse_arguments()
-    orchestrate_tagging(
-        args.book_paths, args.reset, args.max_tool_rounds, args.output_dir
-    )
+    orchestrate_tagging(args.book_paths, args.reset, args.output_dir)
     print("TCM Book Tagging System completed.")

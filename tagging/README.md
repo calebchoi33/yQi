@@ -60,7 +60,6 @@ Outputs
 -------
 - Checkpoints: `tagging/checkpoints/<book_name>_checkpoint_latest.json`
 - Final tags: `tagging/output/<book_name>_tags.json`
-- Parsed book JSON: `<same directory as the book>/<book_name>_parsed.json`
 
 Flatten per-book unique tag lists
 ---------------------------------
@@ -74,7 +73,7 @@ This writes `tagging/output/<book_name>_tags_categories_list.json` containing de
 
 Parse books
 ---------------------
-If you only want to build the parsed JSON for one or more books without tagging:
+If you only want to build and store the parsed JSON for one or more books without tagging:
 
 ```bash
 $ python tagging/parse_books.py --book-paths books/tcm_book1.txt books/tcm_book2.txt
