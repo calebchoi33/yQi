@@ -258,15 +258,27 @@ class TCMBookTaggingSystem:
                 resp = chat_with_retry(input_msgs, tools=TOOLS)
                 assistant_msg = resp.choices[0].message
 
-                # If no tool calls, raise an error
-                if not assistant_msg.tool_calls:
-                    raise ValueError("No tool calls")
+                # Give the LLM 3 chances to call the tool properly
+                retries = 0
+                while len(assistant_msg.tool_calls) != 1 and retries < 2:
+                    print(f"Retrying {retries + 1} times...")
+                    input_msgs[1]["content"] += (
+                        "Please call the tool properly. The tag_section tool should be called exactly once."
+                        "If there are no tags for every category, return an empty list for each category."
+                    )
+                    time.sleep(1)
+                    resp = chat_with_retry(input_msgs, tools=TOOLS)
+                    assistant_msg = resp.choices[0].message
+                    retries += 1
 
-                # There should be exactly one tool call
+                # Skip tool call if LLM still didn't do tool call properly
                 if len(assistant_msg.tool_calls) != 1:
-                    raise ValueError("Expected exactly one tool call")
+                    print("WARNING:")
+                    print("LLM didn't do tool call properly after 3 tries... :(")
+                    time.sleep(1)
+                    continue
 
-                # Execute the tool
+                # Execute tool
                 tc = assistant_msg.tool_calls[0]
                 function_args = json.loads(tc.function.arguments)
                 print(f"Adding tags: {function_args}")
