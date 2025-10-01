@@ -1,87 +1,79 @@
-# Tag RAG Proper System
+# Tag RAG Proper System (SQLite + sqlite-vec)
 
-A clean, efficient tag-based Retrieval-Augmented Generation (RAG) system for Traditional Chinese Medicine (TCM) knowledge retrieval using SQLite with vector search capabilities.
+A clean, efficient tag-based Retrieval-Augmented Generation (RAG) system for Traditional Chinese Medicine (TCM) knowledge retrieval using SQLite with vector search (sqlite-vec).
 
 ## Overview
 
 This system implements a structured approach to semantic search over TCM clinical data by:
 
-1. **Categorizing tags** into semantic families (symptoms, pulse patterns, general terms)
-2. **Creating separate vector indexes** for each tag family
-3. **Enabling targeted search** by specific medical domains
+1. **Discovering tag keys** from the JSON sections (e.g., formulas, syndromes, treatments) at schema setup time
+2. **Creating a single sqlite-vec table** with multiple vector columns (one per discovered tag key) and metadata columns
+3. **Enabling targeted search** by matching against a specific vector column
 4. **Using normalized embeddings** for consistent similarity scoring
 
 ## Architecture
 
 ### Core Components
 
-- **`config.py`**: Configuration settings including embedding model and tag families
-- **`database.py`**: SQLite database with vector search capabilities
-- **`embeddings.py`**: OpenAI embedding service and tag processing utilities
-- **`ingestion.py`**: Data pipeline for processing and storing tag data
-- **`query_engine.py`**: Query interface for semantic search
-- **`test_system.py`**: Comprehensive test suite
+- `database.py`: SQLite database with vector search (sqlite-vec) and a simple schema
+- `embeddings.py`: OpenAI embedding utilities and tag processing helpers
+- `ingestion.py`: Data pipeline for processing and writing vectors/metadata
+- `query_engine.py`: Query helpers (single-family and multi-family)
+- `test_system.py`: Smoke tests for ingestion, structure, and querying
 
 ### Database Schema
 
-**sections table:**
-- Metadata: `book_name`, `chapter_index`, `chapter_title`, `section_index`, `section_title`, `page_index`
-- Tag JSON: `symptoms_json`, `pulse_json`, `general_json` (raw tag data)
-- Vectors: `symptoms_vec`, `pulse_vec`, `general_vec` (normalized embeddings)
+The schema is intentionally minimal and fast:
 
-**Vector indexes:**
-- `symptoms_index`: Vector index for symptom-related tags
-- `pulse_index`: Vector index for pulse pattern tags  
-- `general_index`: Vector index for general TCM terms
+- Single sqlite-vec virtual table `vec_joined` created via `USING vec0(...)` that includes:
+  - Metadata columns: `book_name` (TEXT), `chapter_index` (TEXT), `section_index` (TEXT), `page_index` (INTEGER)
+  - One vector column per discovered tag key (e.g., `formulas float[1536]`, `symptoms float[1536]`, ...)
+  - If a section has no tags for a given key, that vector column is stored as NULL
 
 ## Setup
 
-### 1. Install Dependencies
+### 1) Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Set OpenAI API Key
+### 2) Set OpenAI API Key
 
 ```bash
 export OPENAI_API_KEY="your-api-key-here"
 ```
 
-### 3. Install SQLite Vector Extension
+### 3) sqlite-vec
 
-The system supports `sqlite-vss` for optimized vector search. If not available, it falls back to manual cosine similarity.
+The Python package `sqlite-vec` is included in `requirements.txt` and registers the vector extension automatically upon import.
 
 ## Usage
 
 ### Data Ingestion
 
-Process and store the tag data:
+Process and store the tag data into the single joined table:
 
 ```python
-from ingestion import DataIngestionPipeline
+from ingestion import ingest_all_sections
 
-with DataIngestionPipeline("tag_rag.db") as pipeline:
-    count = pipeline.ingest_all_sections()
-    print(f"Ingested {count} sections")
+# Requires OPENAI_API_KEY in the environment
+count = ingest_all_sections()
+print(f"Ingested {count} sections")
 ```
 
 ### Querying
 
-Search by specific tag family:
+Search by specific tag key (vector column), or across multiple keys:
 
 ```python
-from query_engine import TagRAGQueryEngine
+from query_engine import query, multi_key_query
 
-with TagRAGQueryEngine("tag_rag.db") as engine:
-    # Search symptoms
-    results = engine.query("fever and headache", "symptoms", k=5)
-    
-    # Search pulse patterns
-    results = engine.query("floating pulse", "pulse", k=3)
-    
-    # Multi-family search
-    multi_results = engine.multi_family_query("floating pulse with fever", k=3)
+# Single tag key
+results = query("fever and headache", "symptoms", k=5)
+
+# Multiple tag keys
+multi = multi_key_query("大陷胸湯 nourish yin", ["formulas", "treatments"], k=3)
 ```
 
 ### Query Response Format
@@ -89,57 +81,64 @@ with TagRAGQueryEngine("tag_rag.db") as engine:
 Each result contains:
 - `book_name`: Source book
 - `chapter_index`: Chapter identifier
-- `chapter_title`: Chapter name
 - `section_index`: Section identifier  
-- `section_title`: Section content
 - `page_index`: Page number (if available)
-- `tag_family`: Which semantic field matched
-- `similarity_score`: Cosine similarity score
+- `tag_key`: Which tag key matched (e.g., "formulas", "symptoms")
+- `similarity_score`: Distance-based similarity score
 
-## Tag Families
+## Tag Keys
 
-The system categorizes tags into three families:
+Tag keys are discovered from the JSON data at schema setup (before ingestion). Common keys include:
+- `formulas`: TCM formulas and prescriptions
+- `syndromes`: Pattern identifications
+- `treatments`: Treatment methods
+- `symptoms`: Clinical manifestations
+- `organs`: Organ systems
+- `herbs`: Medicinal materials
+- `pulses`: Pulse patterns
+- `acupoints`: Acupuncture points
+- `meridians`: Channel pathways
+- `elements`: Five element associations
+- `tongues`: Tongue diagnostics
+- `pathogens`: Pathogenic factors
 
-1. **symptoms**: Clinical manifestations, signs, symptoms
-2. **pulse**: Pulse patterns and characteristics
-3. **general**: General TCM terms, theories, concepts
+The system creates vector columns inside `vec_joined` for each discovered tag key during schema setup.
 
 ## Testing
 
-Run the comprehensive test suite:
+Run the smoke tests:
 
 ```bash
 python test_system.py
 ```
 
 This will:
-1. Test data ingestion pipeline
-2. Verify database structure
-3. Test query functionality across all tag families
-4. Provide performance metrics
+1) Test data ingestion pipeline
+2) Verify database structure (single `vec_joined` table with metadata + per-tag vector columns)
+3) Test query functionality across discovered tag keys
 
 ## Configuration
 
-Key settings in `config.py`:
+Key settings in `embeddings.py`:
 
 - **EMBEDDING_MODEL**: `text-embedding-3-small` (1536 dimensions)
-- **TAG_FAMILIES**: Semantic categories for tag classification
+- **EMBEDDING_DIMENSION**: 1536
+- **TAGS_JSON_PATH**: Path to the tagged TCM text JSON file
 - **DEFAULT_TOP_K**: Default number of results (5)
-- **SIMILARITY_THRESHOLD**: Minimum similarity for results (0.7)
 
-## Performance Features
+## Key Features
 
-- **Normalized embeddings** for consistent cosine similarity
-- **Separate vector indexes** for targeted search
-- **Batch embedding processing** for efficient ingestion
-- **Fallback similarity search** when vector extensions unavailable
-- **Connection pooling** and proper resource management
+- **Tag key discovery at schema setup** from JSON sections (no hardcoded schemas)
+- **Normalized embeddings** for consistent similarity scoring
+- **Single vec table** with multiple vector columns for targeted search by tag
+- **NULL handling**: If a section lacks a tag key, that vector column is stored as NULL
+- **Simple, readable codebase** with minimal abstractions
 
 ## Data Source
 
-The system processes data from `../../tagging/tags.json` which contains:
-- TCM clinical sections with metadata
-- Bilingual tags (Chinese and English)
-- Hierarchical book/chapter/section structure
+The system processes `《人紀傷寒論》_tags.json` which contains:
+- TCM clinical sections with metadata (book_name, chapter_idx, section_idx)
+- Tag arrays per section (e.g., formulas, syndromes, symptoms)
+- Bilingual tags with `name_zh` and `name_en` fields
 
-This implementation follows the exact specifications provided, creating a clean and efficient tag-based RAG system optimized for TCM knowledge retrieval.
+The system discovers which tag keys exist in the data and creates corresponding vector columns in `vec_joined` accordingly.

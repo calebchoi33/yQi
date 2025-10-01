@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# Use system Python 3.9+ for better compatibility
 """Setup script for Tag RAG Proper system."""
 
 import os
@@ -40,7 +39,7 @@ def check_data_file():
 def run_ingestion():
     """Run the data ingestion process."""
     print("\n4. Running data ingestion...")
-    setup_database()  # Setup PostgreSQL database and tables
+    setup_database()
     api_key = os.getenv('OPENAI_API_KEY')
     count = ingest_all_sections(api_key)
     print(f"✓ Successfully ingested {count} sections")
@@ -50,25 +49,23 @@ def main():
     """Main setup function."""
     print("Tag RAG Proper System Setup")
     print("=" * 40)
-    
-    # Check prerequisites
+
     checks = [
         ("Installing requirements", install_requirements),
         ("Checking API key", check_api_key),
         ("Checking data file", check_data_file)
     ]
-    
+
     all_passed = True
     for check_name, check_func in checks:
         print(f"\n{check_name}...")
         if not check_func():
             all_passed = False
-    
+
     if not all_passed:
         print("\n⚠️  Some checks failed. Please resolve the issues above before proceeding.")
         return
-    
-    # Run ingestion
+
     print(f"\n{'='*40}")
     run_ingestion()
     print("\n🎉 Setup completed successfully!")
@@ -76,9 +73,9 @@ def main():
     print("\n1. Basic query:")
     print("   from query_engine import query")
     print("   results = query('fever and headache', 'symptoms', k=5, api_key=api_key)")
-    print("\n2. Multi-family query:")
-    print("   from query_engine import multi_family_query")
-    print("   multi_results = multi_family_query('floating pulse with fever', k=3, api_key=api_key)")
+    print("\n2. Multi-key query:")
+    print("   from query_engine import multi_key_query")
+    print("   multi_results = multi_key_query('floating pulse with fever', ['symptoms', 'pulses'], k=3, api_key=api_key)")
     print("\n3. Run tests:")
     print("   python test_system.py")
 

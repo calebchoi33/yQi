@@ -1,143 +1,185 @@
-"""PostgreSQL database with pgvector for Tag RAG system."""
+"""SQLite database with sqlite-vec for Tag RAG system (single joined table)."""
 
-import psycopg2
-import psycopg2.extras
+import json
+import sqlite3
+from pathlib import Path
+from typing import List, Dict, Any, Set
+
 import numpy as np
-from typing import List, Dict, Any, Optional, Tuple
-import logging
+import sqlite_vec
 
-from embeddings import TAG_FAMILIES, EMBEDDING_DIMENSION, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD
+from embeddings import EMBEDDING_DIMENSION, TAGS_JSON_PATH
 
-logger = logging.getLogger(__name__)
+_table_info_cache = None
 
-def setup_database() -> psycopg2.extensions.connection:
-    conn = psycopg2.connect(
-        host=DB_HOST,
-        port=DB_PORT,
-        database=DB_NAME,
-        user=DB_USER,
-        password=DB_PASSWORD
-    )
-    with conn.cursor() as cur:
-        cur.execute("CREATE EXTENSION IF NOT EXISTS vector")
-    conn.commit()
-    
-    create_schema(conn)
-    create_vector_indexes(conn)
+def connect(db_path: str = "tag_rag_vec.db") -> sqlite3.Connection:
+    """Open a SQLite connection and load sqlite-vec extension.
+    Requires the `sqlite-vec` Python package (bundles the vec0 extension).
+    """
+    conn = sqlite3.connect(db_path)
+    conn.execute("PRAGMA journal_mode=WAL;")
+    conn.execute("PRAGMA synchronous=NORMAL;")
+    conn.execute("PRAGMA temp_store=MEMORY;")
     return conn
 
-def create_schema(conn: psycopg2.extensions.connection):
-    # Create main sections table
-    create_table_sql = f"""
-    CREATE TABLE IF NOT EXISTS sections (
-        id SERIAL PRIMARY KEY,
-        book_name TEXT,
-        chapter_index TEXT,
-        section_index TEXT,
-        page_index INTEGER,
-        
-        -- Vector columns for all tag families
-        formulas_vec VECTOR({EMBEDDING_DIMENSION}),
-        syndromes_vec VECTOR({EMBEDDING_DIMENSION}),
-        treatments_vec VECTOR({EMBEDDING_DIMENSION}),
-        pathogens_vec VECTOR({EMBEDDING_DIMENSION}),
-        organs_vec VECTOR({EMBEDDING_DIMENSION}),
-        herbs_vec VECTOR({EMBEDDING_DIMENSION}),
-        symptoms_vec VECTOR({EMBEDDING_DIMENSION}),
-        pulses_vec VECTOR({EMBEDDING_DIMENSION}),
-        acupoints_vec VECTOR({EMBEDDING_DIMENSION}),
-        meridians_vec VECTOR({EMBEDDING_DIMENSION}),
-        elements_vec VECTOR({EMBEDDING_DIMENSION}),
-        tongues_vec VECTOR({EMBEDDING_DIMENSION}),
-        
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+def setup_database(db_path: str = "tag_rag_vec.db") -> sqlite3.Connection:
+    """Create database connection and ensure single-table schema exists.
+
+    This function discovers tag keys from the JSON and creates the `vec_joined`
+    virtual table with metadata columns and one vector column per tag key.
+    """
+    conn = connect(db_path)
+    cur = conn.cursor()
+
+    cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='vec_joined'")
+    if cur.fetchone():
+        return conn
+
+    p = Path(TAGS_JSON_PATH)
+    tag_keys: List[str] = []
+    if p.exists():
+        with p.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        sections = data.get("sections", [])
+        discovered: Set[str] = set()
+        exclude = {"book_name", "chapter_idx", "chapter_index", "chapter_title", "section_idx", "section_index", "section_title", "page_index"}
+        for sec in sections:
+            if isinstance(sec, dict):
+                for k, v in sec.items():
+                    if k not in exclude and isinstance(v, list):
+                        discovered.add(k)
+        tag_keys = sorted(discovered)
+
+    # Build CREATE VIRTUAL TABLE statement
+    meta_cols = [
+        "book_name TEXT",
+        "chapter_index TEXT",
+        "section_index TEXT",
+        "page_index INTEGER",
+    ]
+    vec_cols = [f"{k} float[{EMBEDDING_DIMENSION}]" for k in tag_keys]
+    column_defs = ", ".join(meta_cols + vec_cols) if vec_cols else ", ".join(meta_cols)
+
+    cur.execute(f"CREATE VIRTUAL TABLE IF NOT EXISTS vec_joined USING vec0({column_defs});")
+    conn.commit()
+    global _table_info_cache
+    _table_info_cache = None
+    return conn
+
+
+def _to_f32_blob(vector: np.ndarray) -> memoryview:
+    """Convert a numpy float32 vector to a BLOB acceptable by sqlite-vec."""
+    if vector.dtype != np.float32:
+        vector = vector.astype(np.float32)
+    return memoryview(vector.tobytes())
+
+
+def _get_table_columns(conn: sqlite3.Connection) -> List[str]:
+    """Get cached table columns or fetch if not cached."""
+    global _table_info_cache
+    if _table_info_cache is None:
+        cur = conn.cursor()
+        cur.execute("PRAGMA table_info(vec_joined)")
+        _table_info_cache = [row[1] for row in cur.fetchall()]
+    return _table_info_cache
+
+def insert_section(conn: sqlite3.Connection, section_data: Dict[str, Any], tag_vectors: Dict[str, np.ndarray]) -> int:
+    """Insert a section row into the single joined vec table with metadata + vectors.
+
+    Args:
+        conn: Database connection.
+        section_data: Metadata dict with book_name, chapter_idx/ chapter_index, section_idx/ section_index, page_index.
+        tag_vectors: Dict mapping tag keys (e.g., 'formulas') to numpy embedding arrays. If a tag key is missing or None, it will be stored as NULL.
+
+    Returns:
+        The rowid of the inserted record (serves as the section id).
+    """
+    cur = conn.cursor()
+
+    cols = _get_table_columns(conn)
+
+    # Prepare column list and values
+    meta_book = section_data.get("book_name", "")
+    meta_chap = section_data.get("chapter_index", section_data.get("chapter_idx", ""))
+    meta_sect = section_data.get("section_index", section_data.get("section_idx", ""))
+    meta_page = section_data.get("page_index", 0)
+
+    col_names: List[str] = ["book_name", "chapter_index", "section_index", "page_index"]
+    values: List[Any] = [meta_book, meta_chap, meta_sect, meta_page]
+
+    # Add vector columns in deterministic order present in table
+    for c in cols:
+        if c in ("book_name", "chapter_index", "section_index", "page_index"):
+            continue
+        vec = tag_vectors.get(c)
+        if vec is None:
+            values.append(None)
+        else:
+            values.append(_to_f32_blob(vec))
+        col_names.append(c)
+
+    placeholders = ", ".join(["?"] * len(col_names))
+    col_list = ", ".join(col_names)
+
+    cur.execute(
+        f"INSERT INTO vec_joined ({col_list}) VALUES ({placeholders})"
+        , values,
     )
+    rowid = cur.lastrowid
+    return rowid
+
+
+def search_by_tag_key(conn: sqlite3.Connection, query_vector: np.ndarray, tag_key: str, k: int = 5) -> List[Dict[str, Any]]:
+    """Search nearest sections by a tag key using the single joined vec table.
+
+    Args:
+        conn: Database connection.
+        query_vector: Query embedding.
+        tag_key: Tag key to search (e.g., 'formulas', 'syndromes'). Must match a column in vec_joined.
+        k: Max results to return.
+
+    Returns:
+        List of section metadata dicts with similarity scores.
     """
-    
-    with conn.cursor() as cur:
-        cur.execute(create_table_sql)
-    conn.commit()
+    cur = conn.cursor()
 
-def create_vector_indexes(conn: psycopg2.extensions.connection):
-    with conn.cursor() as cur:
-        for family_name, family_config in TAG_FAMILIES.items():
-            vector_column = family_config["vector_column"]
-            index_name = f"idx_{vector_column}_hnsw"
-            
-            create_index_sql = f"""
-            CREATE INDEX IF NOT EXISTS {index_name} 
-            ON sections USING hnsw ({vector_column} vector_cosine_ops)
-            """
-            cur.execute(create_index_sql)
-    
-    conn.commit()
+    cols = set(_get_table_columns(conn))
+    if tag_key not in cols:
+        return []
 
-def insert_section(conn: psycopg2.extensions.connection, section_data: Dict[str, Any], tag_vectors: Dict[str, np.ndarray]) -> int:
-    vector_columns = [TAG_FAMILIES[family]["vector_column"] for family in TAG_FAMILIES.keys()]
-    columns_str = "book_name, chapter_index, section_index, page_index, " + ", ".join(vector_columns)
-    placeholders = ", ".join(["%s"] * (4 + len(vector_columns)))
-    
-    insert_sql = f"""
-    INSERT INTO sections ({columns_str})
-    VALUES ({placeholders})
-    RETURNING id
-    """
-    
-    vector_values = []
-    for family in TAG_FAMILIES.keys():
-        vector = tag_vectors.get(family)
-        vector_values.append(vector.tolist() if vector is not None else None)
-    
-    with conn.cursor() as cur:
-        cur.execute(insert_sql, (
-            section_data.get("book_name", ""),
-            section_data.get("chapter_idx", ""),
-            section_data.get("section_idx", ""),
-            section_data.get("page_index", 0),
-            *vector_values
-        ))
-        section_id = cur.fetchone()[0]
-    
-    conn.commit()
-    return section_id
+    qblob = _to_f32_blob(query_vector)
+
+    # Query distances directly from vec_joined and return metadata columns
+    cur.execute(
+        f"""
+        SELECT rowid, distance, book_name, chapter_index, section_index, page_index
+        FROM vec_joined
+        WHERE {tag_key} MATCH ?
+        ORDER BY distance ASC
+        LIMIT ?
+        """,
+        (qblob, k),
+    )
+    rows = cur.fetchall()
+
+    results: List[Dict[str, Any]] = []
+    for row in rows:
+        rowid, distance, book_name, chapter_index, section_index, page_index = row
+        results.append(
+            {
+                "id": rowid,
+                "book_name": book_name,
+                "chapter_index": chapter_index,
+                "section_index": section_index,
+                "page_index": page_index,
+                "similarity": float(1.0 / (1.0 + float(distance))),
+            }
+        )
+
+    return results
 
 
-def search_by_tag_family(conn: psycopg2.extensions.connection, query_vector: np.ndarray, tag_family: str, k: int = 5) -> List[Dict[str, Any]]:
-    if tag_family not in TAG_FAMILIES:
-        raise ValueError(f"Unknown tag family: {tag_family}")
-    
-    vector_column = TAG_FAMILIES[tag_family]["vector_column"]
-    
-    search_sql = f"""
-    SELECT 
-        id,
-        book_name,
-        chapter_index,
-        section_index,
-        page_index,
-        1 - ({vector_column} <=> %s::vector) as similarity
-    FROM sections
-    WHERE {vector_column} IS NOT NULL
-    ORDER BY {vector_column} <=> %s::vector
-    LIMIT %s
-    """
-    
-    with conn.cursor() as cur:
-        query_list = query_vector.tolist()
-        cur.execute(search_sql, (query_list, query_list, k))
-        results = []
-        for row in cur.fetchall():
-            results.append({
-                "id": row[0],
-                "book_name": row[1],
-                "chapter_index": row[2],
-                "section_index": row[3],
-                "page_index": row[4],
-                "similarity": row[5]
-            })
-        return results
-
-def get_section_columns(conn: psycopg2.extensions.connection) -> List[str]:
-    with conn.cursor() as cur:
-        cur.execute("SELECT column_name FROM information_schema.columns WHERE table_name = 'sections'")
-        return [row[0] for row in cur.fetchall()]
+def get_section_columns(conn: sqlite3.Connection) -> List[str]:
+    """Return column names of the joined vec table (metadata + vector columns)."""
+    return _get_table_columns(conn)
