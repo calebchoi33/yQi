@@ -18,7 +18,7 @@ This system implements a structured approach to semantic search over TCM clinica
 - `database.py`: SQLite database with vector search (sqlite-vec) and a simple schema
 - `embeddings.py`: OpenAI embedding utilities and tag processing helpers
 - `ingestion.py`: Data pipeline for processing and writing vectors/metadata
-- `query_engine.py`: Query helpers (single-family and multi-family)
+- `query_engine.py`: Query and RAG pipeline (retrieval + generation)
 - `test_system.py`: Smoke tests for ingestion, structure, and querying
 
 ### Database Schema
@@ -62,47 +62,39 @@ count = ingest_all_sections()
 print(f"Ingested {count} sections")
 ```
 
-### Querying
+### RAG Pipeline (Retrieval + Generation)
 
-Search by specific tag key (vector column), or across multiple keys:
+Complete diagnosis in one call:
+
+```python
+from query_engine import diagnose
+
+result = diagnose(
+    patient_case="患者發熱惡寒，頭痛身痛...",
+    tag_keys=["symptoms", "syndromes", "formulas"],
+    k=3
+)
+
+print(result["diagnosis"])          # LLM-generated diagnosis
+print(result["formatted_context"])  # Retrieved TCM knowledge
+```
+
+### Lower-Level Query Functions
+
+For retrieval only (without LLM generation):
 
 ```python
 from query_engine import query, multi_key_query
 
-# Single tag key
 results = query("fever and headache", "symptoms", k=5)
-
-# Multiple tag keys
-multi = multi_key_query("大陷胸湯 nourish yin", ["formulas", "treatments"], k=3)
+multi = multi_key_query("大陷胸湯", ["formulas", "treatments"], k=3)
 ```
-
-### Query Response Format
-
-Each result contains:
-- `book_name`: Source book
-- `chapter_index`: Chapter identifier
-- `section_index`: Section identifier  
-- `page_index`: Page number (if available)
-- `tag_key`: Which tag key matched (e.g., "formulas", "symptoms")
-- `similarity_score`: Distance-based similarity score
 
 ## Tag Keys
 
-Tag keys are discovered from the JSON data at schema setup (before ingestion). Common keys include:
-- `formulas`: TCM formulas and prescriptions
-- `syndromes`: Pattern identifications
-- `treatments`: Treatment methods
-- `symptoms`: Clinical manifestations
-- `organs`: Organ systems
-- `herbs`: Medicinal materials
-- `pulses`: Pulse patterns
-- `acupoints`: Acupuncture points
-- `meridians`: Channel pathways
-- `elements`: Five element associations
-- `tongues`: Tongue diagnostics
-- `pathogens`: Pathogenic factors
+Tag keys are discovered from the JSON data at schema setup. Common keys: formulas, syndromes, treatments, symptoms, organs, herbs, pulses, acupoints, meridians, elements, tongues, pathogens.
 
-The system creates vector columns inside `vec_joined` for each discovered tag key during schema setup.
+The system creates vector columns inside `vec_joined` for each discovered tag key.
 
 ## Testing
 
@@ -128,11 +120,11 @@ Key settings in `embeddings.py`:
 
 ## Key Features
 
-- **Tag key discovery at schema setup** from JSON sections (no hardcoded schemas)
-- **Normalized embeddings** for consistent similarity scoring
-- **Single vec table** with multiple vector columns for targeted search by tag
-- **NULL handling**: If a section lacks a tag key, that vector column is stored as NULL
-- **Simple, readable codebase** with minimal abstractions
+- Dynamic tag key discovery from JSON (no hardcoded schemas)
+- Single `vec_joined` table with multiple vector columns for targeted search
+- Normalized embeddings for consistent similarity scoring
+- Complete RAG pipeline: `diagnose()` handles retrieval + LLM generation
+- NULL handling for sparse tag data
 
 ## Data Source
 
