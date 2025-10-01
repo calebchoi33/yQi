@@ -1,10 +1,5 @@
 {
-  "_comment_file": "Simplified configuration file for TCM Diagnosis Inference Router",
-  "_comment_usage": "Specify the workflow type and list of prompts to process",
-  
   "workflow": "chunk_rag",
-  "_comment_workflow": "Workflow type to use. Options: 'no_rag', 'chunk_rag', 'tag_rag'",
-  
   "prompts": [
     {
       "id": "case_001",
@@ -31,6 +26,5 @@
       "description": "Patient with joint pain and stiffness",
       "content": "A 55-year-old patient complains of joint pain and stiffness in the knees and lower back, worse in damp weather and in the morning. The pain improves with movement and warmth. The patient has a thick, greasy tongue coating and a slow, slippery pulse. There's also a feeling of heaviness in the limbs. What is your TCM diagnosis and treatment strategy?"
     }
-  ],
-  "_comment_prompts": "List of patient cases/prompts to process through the selected workflow. Each prompt should have an id, description, and content."
+  ]
 }

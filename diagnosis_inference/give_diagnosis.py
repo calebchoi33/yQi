@@ -14,6 +14,7 @@ import time
 import argparse
 from typing import Dict, Any, List, Optional, Union
 from pathlib import Path
+from dataclasses import dataclass
 
 sys.path.append(str(Path(__file__).parent / "workflows"))
 sys.path.append(str(Path(__file__).parent / "workflows" / "chunk_rag" / "vector_rag"))
@@ -31,10 +32,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# Workflow types
-WORKFLOW_TYPES = ["no_rag", "chunk_rag", "tag_rag"]
-
-
 def load_config(config_path: str) -> Dict[str, Any]:
     """Load configuration from JSON file."""
     with open(config_path, 'r', encoding='utf-8') as f:
@@ -44,17 +41,6 @@ def load_config(config_path: str) -> Dict[str, Any]:
     return config
 
 
-def create_no_rag_workflow():
-    """Create no-RAG workflow (direct LLM)."""
-    def process_no_rag(request: Dict[str, Any]) -> Dict[str, Any]:
-        """Process diagnosis using direct LLM inference."""
-        # TODO: Implement direct OpenAI API call
-        return {
-            "diagnosis": f"[NO-RAG] Direct LLM diagnosis for: {request['patient_case'][:100]}...",
-            "confidence_score": 0.7,
-            "metadata": {"workflow": "no_rag", "method": "direct_llm"}
-        }
-    return process_no_rag
 
 
 def create_chunk_rag_workflow():
@@ -126,64 +112,110 @@ def create_diagnosis_response(diagnosis: str, workflow_used: str, confidence_sco
 
 def process_all_prompts(config: Dict[str, Any]) -> List[Dict[str, Any]]:
     """Process all prompts from the configuration file."""
-    workflow_type = config["workflow"]
-    workflow_func = initialize_workflow(workflow_type)
-    
     results = []
     prompts = config["prompts"]
     
-    logger.info(f"Processing {len(prompts)} prompts using {workflow_type} workflow")
+    logger.info(f"Processing {len(prompts)} prompts using {config['workflow']} workflow")
     
     for i, prompt_data in enumerate(prompts, 1):
-        start_time = time.time()
+        result = give_diagnosis(config, prompt_data["content"])
         
-        # Create request from prompt data
-        request = create_diagnosis_request(prompt_data["content"], workflow_type)
+        # Add prompt metadata to the result
+        result.metadata.update({
+            "prompt_id": prompt_data.get("id", f"prompt_{i}"),
+            "prompt_description": prompt_data.get("description", ""),
+            "prompt_index": i
+        })
         
-        result = workflow_func(request)
-        processing_time = time.time() - start_time
-        
-        response = create_diagnosis_response(
-            diagnosis=result["diagnosis"],
-            workflow_used=workflow_type,
-            confidence_score=result.get("confidence_score"),
-            retrieved_context=result.get("retrieved_context"),
-            processing_time=processing_time,
-            metadata={
-                **result.get("metadata", {}),
-                "prompt_id": prompt_data.get("id", f"prompt_{i}"),
-                "prompt_description": prompt_data.get("description", ""),
-                "prompt_index": i
-            }
-        )
-        
-        results.append(response)
+        results.append(result)
         logger.info(f"Processed prompt {i}/{len(prompts)}: {prompt_data.get('id', f'prompt_{i}')}")
     
     return results
 
 
-def give_diagnosis(config: Dict[str, Any], patient_case: str) -> Dict[str, Any]:
+def give_diagnosis(config: Dict[str, Any], patient_case: str) -> DiagnosisOutput:
     """Process a single diagnosis request."""
     workflow_type = config["workflow"]
-    workflow_func = initialize_workflow(workflow_type)
     
-    # Create request
-    request = create_diagnosis_request(patient_case, workflow_type)
-    
-    # Execute diagnosis
+    # Execute diagnosis based on workflow type
     start_time = time.time()
-    result = workflow_func(request)
-    processing_time = time.time() - start_time
     
-    return create_diagnosis_response(
-        diagnosis=result["diagnosis"],
-        workflow_used=workflow_type,
-        confidence_score=result.get("confidence_score"),
-        retrieved_context=result.get("retrieved_context"),
-        processing_time=processing_time,
-        metadata=result.get("metadata", {})
-    )
+    if workflow_type == "no_rag":
+        # Direct LLM approach
+        from openai import OpenAI
+        api_key = os.getenv('OPENAI_API_KEY')
+        
+        client = OpenAI(api_key=api_key)
+        system_prompt = """You are an expert Traditional Chinese Medicine (TCM) practitioner. 
+        Analyze the patient case and provide a comprehensive TCM diagnosis including:
+        1. Syndrome differentiation (辨證)
+        2. Treatment principles (治則)
+        3. Recommended herbal formula with specific herbs and dosages
+        4. Lifestyle recommendations
+        
+        Respond in both Chinese and English where appropriate."""
+        
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": patient_case}
+            ],
+            temperature=0.3
+        )
+        
+        processing_time = time.time() - start_time
+        return DiagnosisOutput(
+            diagnosis=response.choices[0].message.content,
+            metadata={
+                "workflow": "no_rag",
+                "model": "gpt-4o-mini",
+                "processing_time": processing_time
+            }
+        )
+    
+    elif workflow_type == "chunk_rag":
+        # Chunk-based RAG approach
+        rag_system = RAGSystem()
+        retrieved_chunks = rag_system.retrieve(patient_case)
+        diagnosis = rag_system.generate_response(patient_case, retrieved_chunks)
+        
+        processing_time = time.time() - start_time
+        return DiagnosisOutput(
+            diagnosis=diagnosis,
+            metadata={
+                "workflow": "chunk_rag",
+                "retrieved_chunks": len(retrieved_chunks),
+                "processing_time": processing_time
+            }
+        )
+    
+    elif workflow_type == "tag_rag":
+        # Structured tag-based RAG approach
+        # Initialize structured RAG system (would need proper config paths)
+        structured_rag = StructuredRAGSystem(
+            config_path="config/structured_config.json",
+            db_path="data/structured_db.pkl"
+        )
+        
+        search_results = structured_rag.search(patient_case)
+        response = structured_rag.generate_response(patient_case, search_results)
+        
+        processing_time = time.time() - start_time
+        return DiagnosisOutput(
+            diagnosis=response.get("response", "No response generated"),
+            metadata={
+                "workflow": "tag_rag",
+                "search_results": len(search_results),
+                "processing_time": processing_time
+            }
+        )
+    
+    else:
+        return DiagnosisOutput(
+            diagnosis="Error: Unknown workflow type",
+            metadata={"workflow": workflow_type, "error": "unknown_workflow"}
+        )
 
 
 def main():
@@ -206,19 +238,13 @@ def main():
         # Process single case
         response = give_diagnosis(config, args.case)
         
-        print(f"\n=== TCM Diagnosis ({response['workflow_used']}) ===")
+        print(f"\n=== TCM Diagnosis ({response.metadata.get('workflow', 'unknown')}) ===")
         print(f"Case: {args.case[:100]}...")
-        print(f"Diagnosis: {response['diagnosis']}")
-        print(f"Confidence: {response['confidence_score']}")
-        print(f"Processing Time: {response['processing_time']:.2f}s")
+        print(f"Diagnosis: {response.diagnosis}")
+        print(f"Processing Time: {response.metadata.get('processing_time', 0):.2f}s")
         
-        if response['retrieved_context']:
-            print(f"\nRetrieved Context:")
-            for i, context in enumerate(response['retrieved_context'], 1):
-                print(f"  {i}. {context}")
-        
-        if args.verbose and response['metadata']:
-            print(f"\nMetadata: {json.dumps(response['metadata'], indent=2)}")
+        if args.verbose and response.metadata:
+            print(f"\nMetadata: {json.dumps(response.metadata, indent=2)}")
             
         results = [response]
     else:
@@ -229,27 +255,32 @@ def main():
         print(f"Processed {len(results)} prompts\n")
         
         for i, response in enumerate(results, 1):
-            prompt_id = response['metadata'].get('prompt_id', f'prompt_{i}')
-            description = response['metadata'].get('prompt_description', '')
+            prompt_id = response.metadata.get('prompt_id', f'prompt_{i}')
+            description = response.metadata.get('prompt_description', '')
             
             print(f"--- Case {i}: {prompt_id} ---")
             if description:
                 print(f"Description: {description}")
-            print(f"Diagnosis: {response['diagnosis']}")
-            print(f"Confidence: {response['confidence_score']}")
-            print(f"Processing Time: {response['processing_time']:.2f}s")
+            print(f"Diagnosis: {response.diagnosis}")
+            print(f"Processing Time: {response.metadata.get('processing_time', 0):.2f}s")
             
-            if args.verbose and response['retrieved_context']:
-                print(f"Retrieved Context:")
-                for j, context in enumerate(response['retrieved_context'], 1):
-                    print(f"  {j}. {context}")
+            if args.verbose and response.metadata:
+                print(f"Metadata: {json.dumps(response.metadata, indent=2)}")
             
             print()
     
     # Save results to file if requested
     if args.output:
+        # Convert DiagnosisOutput objects to dictionaries for JSON serialization
+        results_dict = []
+        for result in results:
+            results_dict.append({
+                "diagnosis": result.diagnosis,
+                "metadata": result.metadata
+            })
+        
         with open(args.output, 'w', encoding='utf-8') as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
+            json.dump(results_dict, f, indent=2, ensure_ascii=False)
         
         print(f"Results saved to {args.output}")
 
