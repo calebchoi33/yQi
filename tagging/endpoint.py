@@ -1,14 +1,8 @@
 import os
+import time
 from typing import Any, Dict, List, Optional
 
-try:
-    # OpenAI Python SDK v1.x
-    from openai import OpenAI
-except Exception as e:  # pragma: no cover
-    raise RuntimeError(
-        "The `openai` package is required. Install with: pip install openai"
-    ) from e
-
+from openai import OpenAI
 
 _CLIENT: Optional[OpenAI] = None
 
@@ -17,11 +11,7 @@ def _get_client() -> OpenAI:
     """Return a singleton OpenAI client using OPENAI_API_KEY."""
     global _CLIENT
     if _CLIENT is None:
-        api_key = os.environ.get("OPENAI_API_KEY")
-        if not api_key:
-            raise EnvironmentError(
-                "Missing API key. Set OPENAI_API_KEY in your environment."
-            )
+        api_key = os.environ["OPENAI_API_KEY"]
         _CLIENT = OpenAI(api_key=api_key)
     return _CLIENT
 
@@ -49,7 +39,7 @@ def call_chat(
     """
 
     client = _get_client()
-    model = model or os.environ.get("OPENAI_MODEL", "gpt-4.1")
+    model = model or os.environ["OPENAI_MODEL"]
 
     kwargs: Dict[str, Any] = {
         "model": model,
@@ -59,7 +49,46 @@ def call_chat(
 
     if tools:
         kwargs["tools"] = tools
-        if tool_choice is not None:
+        if tool_choice:
             kwargs["tool_choice"] = tool_choice
 
     return client.chat.completions.create(**kwargs)
+
+
+def chat_with_retry(
+    messages: List[Dict[str, Any]],
+    *,
+    tools: Optional[List[Dict[str, Any]]] = None,
+    tool_choice: Optional[str] = "auto",
+    model: Optional[str] = None,
+    temperature: float = 0.0,
+    max_retries: int = 3,
+):
+    """Call chat API with exponential backoff retry.
+
+    Retries up to max_retries on exceptions (e.g., rate limits), waiting 1, 2, 4 ... seconds.
+    """
+    attempt = 0
+    while True:
+        try:
+            return call_chat(
+                messages,
+                tools=tools,
+                tool_choice=tool_choice,
+                model=model,
+                temperature=temperature,
+            )
+        except Exception as e:
+            if attempt >= max_retries:
+                raise e
+
+            delay = 2**attempt
+
+            print(f"--------------------------------")
+            print(f"Error: {e}")
+            print(f"Attempt {attempt + 1}/{max_retries}")
+            print(f"Retrying in {delay} seconds...")
+            print(f"--------------------------------")
+
+            time.sleep(delay)
+            attempt += 1
