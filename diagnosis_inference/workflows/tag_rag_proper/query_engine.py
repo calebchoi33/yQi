@@ -5,7 +5,7 @@ import os
 from typing import List, Dict, Any
 
 from database import setup_database, search_by_tag_key
-from embeddings import get_embedding, DEFAULT_TOP_K
+from embeddings import get_embedding, DEFAULT_TOP_K, _get_client
 
 logger = logging.getLogger(__name__)
 
@@ -87,6 +87,85 @@ def multi_key_query(query_text: str, tag_keys: List[str], k: int = DEFAULT_TOP_K
     
     conn.close()
     return results
+
+def _format_retrieved_context(results: Dict[str, List[Dict[str, Any]]]) -> str:
+    """Format retrieved context from multiple tag keys into a readable string."""
+    if not results:
+        return "No relevant context found."
+    
+    formatted_parts = []
+    for tag_key, entries in results.items():
+        if entries:
+            formatted_parts.append(f"\n=== {tag_key.upper()} ===")
+            for i, entry in enumerate(entries, 1):
+                book = entry.get('book_name', 'Unknown')
+                chapter = entry.get('chapter_index', 'N/A')
+                section = entry.get('section_index', 'N/A')
+                score = entry.get('similarity_score', 0)
+                formatted_parts.append(
+                    f"{i}. {book}, Chapter {chapter}, Section {section} (similarity: {score:.3f})"
+                )
+    
+    return "\n".join(formatted_parts)
+
+def _generate_diagnosis(patient_case: str, retrieved_context: str, api_key: str = None) -> str:
+    """Generate diagnosis using LLM based on patient case and retrieved context."""
+    client = _get_client(api_key)
+    
+    system_prompt = """You are an expert Traditional Chinese Medicine (TCM) practitioner. 
+    Based on the patient case and relevant TCM knowledge from classical texts, provide a comprehensive diagnosis.
+    Include pattern identification (辨證), treatment principles (治則), and recommended formulas if applicable.
+    Respond in both Chinese and English."""
+    
+    user_prompt = f"""Patient Case:
+{patient_case}
+
+Relevant TCM Knowledge:
+{retrieved_context}
+
+Please provide a TCM diagnosis based on the above information."""
+    
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ],
+        temperature=0.7
+    )
+    
+    return response.choices[0].message.content
+
+def diagnose(patient_case: str, tag_keys: List[str], k: int = DEFAULT_TOP_K, api_key: str = None) -> Dict[str, Any]:
+    """Retrieve relevant context and generate TCM diagnosis for a patient case.
+    
+    This is the main public function that combines retrieval and generation.
+    
+    Args:
+        patient_case: Patient case description in natural language.
+        tag_keys: List of tag keys to search (e.g., ['symptoms', 'syndromes', 'formulas']).
+        k: Number of results to retrieve per tag key.
+        api_key: OpenAI API key.
+    
+    Returns:
+        Dict containing diagnosis, retrieved_context, and metadata.
+    """
+    retrieved_results = multi_key_query(patient_case, tag_keys, k, api_key)
+    
+    formatted_context = _format_retrieved_context(retrieved_results)
+    
+    diagnosis = _generate_diagnosis(patient_case, formatted_context, api_key)
+    
+    return {
+        "diagnosis": diagnosis,
+        "retrieved_context": retrieved_results,
+        "formatted_context": formatted_context,
+        "metadata": {
+            "tag_keys_searched": tag_keys,
+            "results_per_key": k,
+            "total_results": sum(len(v) for v in retrieved_results.values())
+        }
+    }
 
 def main():
     """Example usage of the query engine."""

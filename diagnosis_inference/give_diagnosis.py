@@ -11,11 +11,17 @@ import sys
 import json
 import logging
 import time
+import argparse
 from typing import Dict, Any, List, Optional, Union
 from pathlib import Path
 
-# Add workflows to path
 sys.path.append(str(Path(__file__).parent / "workflows"))
+sys.path.append(str(Path(__file__).parent / "workflows" / "chunk_rag" / "vector_rag"))
+sys.path.append(str(Path(__file__).parent / "workflows" / "tag_rag" / "structured_rag"))
+sys.path.append(str(Path(__file__).parent / "workflows" / "tag_rag_proper"))
+
+from query_engine import query, multi_key_query, diagnose
+from database import setup_database
 
 # Configure logging
 logging.basicConfig(
@@ -53,7 +59,6 @@ def create_no_rag_workflow():
 
 def create_chunk_rag_workflow():
     """Create chunk-based RAG workflow."""
-    sys.path.append(str(Path(__file__).parent / "workflows" / "chunk_rag" / "vector_rag"))
     # from rag_system import RAGSystem
     
     def process_chunk_rag(request: Dict[str, Any]) -> Dict[str, Any]:
@@ -70,7 +75,6 @@ def create_chunk_rag_workflow():
 
 def create_tag_rag_workflow():
     """Create tag-based structured RAG workflow."""
-    sys.path.append(str(Path(__file__).parent / "workflows" / "tag_rag" / "structured_rag"))
     # from structured_rag_system import StructuredRAGSystem
     
     def process_tag_rag(request: Dict[str, Any]) -> Dict[str, Any]:
@@ -184,8 +188,6 @@ def give_diagnosis(config: Dict[str, Any], patient_case: str) -> Dict[str, Any]:
 
 def main():
     """CLI interface for diagnosis router."""
-    import argparse
-    
     parser = argparse.ArgumentParser(description="TCM Diagnosis Inference Router")
     parser.add_argument("--config", "-f", required=True, help="Path to configuration file (required)")
     parser.add_argument("--case", "-c", help="Single patient case description (optional, overrides config prompts)")
