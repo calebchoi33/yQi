@@ -11,18 +11,18 @@ import sys
 import json
 import logging
 import time
+import argparse
 from typing import Dict, Any, List, Optional, Union
 from pathlib import Path
 from dataclasses import dataclass
 
-from workflows.chunk_rag.vector_rag.rag_system import RAGSystem
-from workflows.tag_rag.structured_rag.structured_rag_system import StructuredRAGSystem
+sys.path.append(str(Path(__file__).parent / "workflows"))
+sys.path.append(str(Path(__file__).parent / "workflows" / "chunk_rag" / "vector_rag"))
+sys.path.append(str(Path(__file__).parent / "workflows" / "tag_rag" / "structured_rag"))
+sys.path.append(str(Path(__file__).parent / "workflows" / "tag_rag_proper"))
 
-@dataclass
-class DiagnosisOutput:
-    """Output class for diagnosis results."""
-    diagnosis: str
-    metadata: Dict[str, Any]
+from query_engine import query, multi_key_query, diagnose
+from database import setup_database
 
 # Configure logging
 logging.basicConfig(
@@ -43,7 +43,74 @@ def load_config(config_path: str) -> Dict[str, Any]:
 
 
 
-def process_all_prompts(config: Dict[str, Any]) -> List[DiagnosisOutput]:
+def create_chunk_rag_workflow():
+    """Create chunk-based RAG workflow."""
+    # from rag_system import RAGSystem
+    
+    def process_chunk_rag(request: Dict[str, Any]) -> Dict[str, Any]:
+        """Process diagnosis using chunk-based RAG."""
+        # TODO: Implement chunk RAG system integration
+        return {
+            "diagnosis": f"[CHUNK-RAG] Chunk-based diagnosis for: {request['patient_case'][:100]}...",
+            "confidence_score": 0.8,
+            "retrieved_context": ["Sample retrieved chunk 1", "Sample retrieved chunk 2"],
+            "metadata": {"workflow": "chunk_rag", "method": "vector_similarity"}
+        }
+    return process_chunk_rag
+
+
+def create_tag_rag_workflow():
+    """Create tag-based structured RAG workflow."""
+    # from structured_rag_system import StructuredRAGSystem
+    
+    def process_tag_rag(request: Dict[str, Any]) -> Dict[str, Any]:
+        """Process diagnosis using structured tag-based RAG."""
+        # TODO: Implement structured RAG system integration
+        return {
+            "diagnosis": f"[TAG-RAG] Structured diagnosis for: {request['patient_case'][:100]}...",
+            "confidence_score": 0.9,
+            "retrieved_context": ["Structured context 1", "Structured context 2"],
+            "metadata": {"workflow": "tag_rag", "method": "multi_vector_search"}
+        }
+    return process_tag_rag
+
+
+def initialize_workflow(workflow_type: str):
+    """Initialize and return a workflow function."""
+    if workflow_type == "no_rag":
+        return create_no_rag_workflow()
+    elif workflow_type == "chunk_rag":
+        return create_chunk_rag_workflow()
+    elif workflow_type == "tag_rag":
+        return create_tag_rag_workflow()
+    else:
+        return None
+
+
+def create_diagnosis_request(patient_case: str, workflow_type: str = "chunk_rag") -> Dict[str, Any]:
+    """Create a diagnosis request dictionary."""
+    return {
+        "patient_case": patient_case,
+        "workflow_type": workflow_type,
+        "language": "bilingual"
+    }
+
+
+def create_diagnosis_response(diagnosis: str, workflow_used: str, confidence_score: float = None, 
+                            retrieved_context: List[str] = None, processing_time: float = None, 
+                            metadata: Dict[str, Any] = None) -> Dict[str, Any]:
+    """Create a diagnosis response dictionary."""
+    return {
+        "diagnosis": diagnosis,
+        "workflow_used": workflow_used,
+        "confidence_score": confidence_score,
+        "retrieved_context": retrieved_context or [],
+        "processing_time": processing_time,
+        "metadata": metadata or {}
+    }
+
+
+def process_all_prompts(config: Dict[str, Any]) -> List[Dict[str, Any]]:
     """Process all prompts from the configuration file."""
     results = []
     prompts = config["prompts"]
@@ -153,8 +220,6 @@ def give_diagnosis(config: Dict[str, Any], patient_case: str) -> DiagnosisOutput
 
 def main():
     """CLI interface for diagnosis router."""
-    import argparse
-    
     parser = argparse.ArgumentParser(description="TCM Diagnosis Inference Router")
     parser.add_argument("--config", "-f", required=True, help="Path to configuration file (required)")
     parser.add_argument("--case", "-c", help="Single patient case description (optional, overrides config prompts)")
