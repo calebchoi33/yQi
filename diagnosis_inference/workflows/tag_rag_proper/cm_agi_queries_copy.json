@@ -1,0 +1,10 @@
+{
+  "workflow": "tag_rag",
+  "prompts": [
+    {
+      "id": "cm_agi_1",
+      "description": "CM AGI question",
+      "content": "（1） 病人，男，25歲，亞裔。三天前開始感覺疲勞，肩頸痠痛，怕冷。之後開始頭痛，發燒39攝氏度，咳嗽，咽喉疼痛，有白痰"
+    }
+  ]
+}

@@ -1,33 +1,54 @@
-"""SQLite database with sqlite-vec for Tag RAG system (single joined table)."""
+"""SQLite database with sqlite-vec for Tag RAG system (single joined table).
 
-import json
+Schema uses a fixed set of vector columns for readability, sourced from
+`embeddings.TAG_KEYS`.
+
+This module performs a preflight check to ensure the `sqlite-vec` package
+is available and that the `vec0` virtual table can be created. If loading
+or verification fails, a clear RuntimeError is raised with remediation
+instructions.
+"""
+
 import sqlite3
-from pathlib import Path
-from typing import List, Dict, Any, Set
+from typing import List, Dict, Any
 
 import numpy as np
+
 import sqlite_vec
 
-from embeddings import EMBEDDING_DIMENSION, TAGS_JSON_PATH
+from embeddings import EMBEDDING_DIMENSION, TAG_KEYS
 
 _table_info_cache = None
 
+def _load_sqlite_vec(conn: sqlite3.Connection) -> None:
+    """Load sqlite-vec and verify vec0 is available on this connection."""
+    if hasattr(conn, "enable_load_extension"):
+        conn.enable_load_extension(True)
+    sqlite_vec.load(conn)
+    cur = conn.cursor()
+    cur.execute("CREATE VIRTUAL TABLE IF NOT EXISTS temp._vec_verify USING vec0(x float[4]);")
+    cur.execute("DROP TABLE IF EXISTS temp._vec_verify;")
+
 def connect(db_path: str = "tag_rag_vec.db") -> sqlite3.Connection:
-    """Open a SQLite connection and load sqlite-vec extension.
+    """Open a SQLite connection and load+verify sqlite-vec (vec0) extension.
+
     Requires the `sqlite-vec` Python package (bundles the vec0 extension).
+    Raises RuntimeError with guidance if loading/verification fails.
     """
     conn = sqlite3.connect(db_path)
     conn.execute("PRAGMA journal_mode=WAL;")
     conn.execute("PRAGMA synchronous=NORMAL;")
     conn.execute("PRAGMA temp_store=MEMORY;")
+
+    _load_sqlite_vec(conn)
     return conn
 
 
 def setup_database(db_path: str = "tag_rag_vec.db") -> sqlite3.Connection:
     """Create database connection and ensure single-table schema exists.
 
-    This function discovers tag keys from the JSON and creates the `vec_joined`
-    virtual table with metadata columns and one vector column per tag key.
+    This function creates the `vec_joined` virtual table with metadata columns
+    and one vector column per tag key defined in `embeddings.TAG_KEYS`.
     """
     conn = connect(db_path)
     cur = conn.cursor()
@@ -36,22 +57,8 @@ def setup_database(db_path: str = "tag_rag_vec.db") -> sqlite3.Connection:
     if cur.fetchone():
         return conn
 
-    p = Path(TAGS_JSON_PATH)
-    tag_keys: List[str] = []
-    if p.exists():
-        with p.open("r", encoding="utf-8") as f:
-            data = json.load(f)
-        sections = data.get("sections", [])
-        discovered: Set[str] = set()
-        exclude = {"book_name", "chapter_idx", "chapter_index", "chapter_title", "section_idx", "section_index", "section_title", "page_index"}
-        for sec in sections:
-            if isinstance(sec, dict):
-                for k, v in sec.items():
-                    if k not in exclude and isinstance(v, list):
-                        discovered.add(k)
-        tag_keys = sorted(discovered)
+    tag_keys: List[str] = sorted(TAG_KEYS)
 
-    # Build CREATE VIRTUAL TABLE statement
     meta_cols = [
         "book_name TEXT",
         "chapter_index TEXT",
@@ -59,7 +66,8 @@ def setup_database(db_path: str = "tag_rag_vec.db") -> sqlite3.Connection:
         "page_index INTEGER",
     ]
     vec_cols = [f"{k} float[{EMBEDDING_DIMENSION}]" for k in tag_keys]
-    column_defs = ", ".join(meta_cols + vec_cols) if vec_cols else ", ".join(meta_cols)
+    flag_cols = [f"{k}_has_data INTEGER" for k in tag_keys]
+    column_defs = ", ".join(meta_cols + vec_cols + flag_cols) if vec_cols else ", ".join(meta_cols)
 
     cur.execute(f"CREATE VIRTUAL TABLE IF NOT EXISTS vec_joined USING vec0({column_defs});")
     conn.commit()
@@ -99,22 +107,27 @@ def insert_section(conn: sqlite3.Connection, section_data: Dict[str, Any], tag_v
 
     cols = _get_table_columns(conn)
 
-    # Prepare column list and values
-    meta_book = section_data.get("book_name", "")
-    meta_chap = section_data.get("chapter_index", section_data.get("chapter_idx", ""))
-    meta_sect = section_data.get("section_index", section_data.get("section_idx", ""))
+    meta_book = str(section_data.get("book_name", ""))
+    meta_chap = str(section_data.get("chapter_index", section_data.get("chapter_idx", "")))
+    meta_sect = str(section_data.get("section_index", section_data.get("section_idx", "")))
     meta_page = section_data.get("page_index", 0)
 
     col_names: List[str] = ["book_name", "chapter_index", "section_index", "page_index"]
     values: List[Any] = [meta_book, meta_chap, meta_sect, meta_page]
 
-    # Add vector columns in deterministic order present in table
     for c in cols:
-        if c in ("book_name", "chapter_index", "section_index", "page_index"):
+        if c in ("book_name", "chapter_index", "section_index", "page_index", "id", "rowid"):
+            continue
+        if c.endswith("_has_data"):
+            base = c[: -len("_has_data")]
+            vec = tag_vectors.get(base)
+            values.append(1 if vec is not None else 0)
+            col_names.append(c)
             continue
         vec = tag_vectors.get(c)
         if vec is None:
-            values.append(None)
+            zero = np.zeros((EMBEDDING_DIMENSION,), dtype=np.float32)
+            values.append(_to_f32_blob(zero))
         else:
             values.append(_to_f32_blob(vec))
         col_names.append(c)
@@ -130,7 +143,13 @@ def insert_section(conn: sqlite3.Connection, section_data: Dict[str, Any], tag_v
     return rowid
 
 
-def search_by_tag_key(conn: sqlite3.Connection, query_vector: np.ndarray, tag_key: str, k: int = 5) -> List[Dict[str, Any]]:
+def search_by_tag_key(
+    conn: sqlite3.Connection,
+    query_vector: np.ndarray,
+    tag_key: str,
+    k: int = 5,
+    distance_threshold: float = 0.99,
+) -> List[Dict[str, Any]]:
     """Search nearest sections by a tag key using the single joined vec table.
 
     Args:
@@ -150,14 +169,14 @@ def search_by_tag_key(conn: sqlite3.Connection, query_vector: np.ndarray, tag_ke
 
     qblob = _to_f32_blob(query_vector)
 
-    # Query distances directly from vec_joined and return metadata columns
     cur.execute(
         f"""
         SELECT rowid, distance, book_name, chapter_index, section_index, page_index
         FROM vec_joined
-        WHERE {tag_key} MATCH ?
+        WHERE {tag_key}_has_data = 1
+          AND {tag_key} MATCH ?
+          AND k = ?
         ORDER BY distance ASC
-        LIMIT ?
         """,
         (qblob, k),
     )

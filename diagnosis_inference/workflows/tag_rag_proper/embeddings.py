@@ -3,20 +3,17 @@
 import os
 import numpy as np
 from typing import Dict, List, Any, Optional
-import logging
 from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-
-logger = logging.getLogger(__name__)
 
 _client_cache = None
 
 EMBEDDING_MODEL = "text-embedding-3-small"
 EMBEDDING_DIMENSION = 1536
 
-TAGS_JSON_PATH = "《人紀傷寒論》_tags.json"
+TAGS_JSON_PATH = "../../../tagging/output/《人紀傷寒論》_tags.json"
 
 TAG_KEYS = [
     "formulas",
@@ -32,7 +29,26 @@ TAG_KEYS = [
     "elements"
 ]
 
-DEFAULT_TOP_K = 5
+DEFAULT_TOP_K = 15
+
+# Map keys coming from the tagging JSON (e.g., "symptom_tags")
+# to the canonical schema keys used as vector columns (e.g., "symptoms").
+# Only keys present in TAG_KEYS will be embedded and inserted.
+KEY_MAP = {
+    # core
+    "symptom_tags": "symptoms",
+    "syndrome_tags": "syndromes",
+    "formula_tags": "formulas",
+    "treatment_tags": "treatments",
+    # others
+    "pathogen_tags": "pathogens",
+    "organ_tags": "organs",
+    "herb_tags": "herbs",
+    "pulse_tags": "pulses",
+    "acupoint_tags": "acupoints",
+    "meridian_tags": "meridians",
+    "element_tags": "elements",
+}
 
 def _get_client(api_key: str = None) -> OpenAI:
     """Get or create cached OpenAI client."""
@@ -80,22 +96,34 @@ def create_tag_text(tags: List[Dict[str, str]]) -> str:
     return " ".join(sorted(terms))
 
 def process_section_tags(section_data: Dict[str, Any], api_key: str = None) -> Dict[str, Any]:
-    """Process section data and return embeddings for each tag key."""
-    tag_texts = {}
-    embeddings = {}
-    
-    for key, value in section_data.items():
-        if isinstance(value, list) and key not in ["chapter_idx", "section_idx"]:
-            tag_text = create_tag_text(value)
-            tag_texts[key] = tag_text
-            
-            if tag_text:
-                embedding = get_embedding(tag_text, api_key)
-                embeddings[key] = embedding
-            else:
-                embeddings[key] = None
-    
+    """Process section data and return embeddings keyed by schema TAG_KEYS.
+
+    This function normalizes incoming tag family keys from the JSON (e.g.,
+    "symptom_tags") into the canonical schema keys defined by TAG_KEYS
+    (e.g., "symptoms"). Unknown keys are ignored. For known keys that have
+    no terms, we emit None so the DB layer can handle placeholders.
+    """
+    tag_texts: Dict[str, str] = {}
+    embeddings_out: Dict[str, Optional[np.ndarray]] = {}
+
+    # Initialize all expected keys with None to make downstream handling simple
+    for k in TAG_KEYS:
+        embeddings_out[k] = None
+
+    for raw_key, value in section_data.items():
+        if not isinstance(value, list):
+            continue
+        mapped_key = KEY_MAP.get(raw_key)
+        if not mapped_key or mapped_key not in TAG_KEYS:
+            continue
+        tag_text = create_tag_text(value)
+        tag_texts[mapped_key] = tag_text
+        if tag_text:
+            embeddings_out[mapped_key] = get_embedding(tag_text, api_key)
+        else:
+            embeddings_out[mapped_key] = None
+
     return {
         "tag_texts": tag_texts,
-        "embeddings": embeddings
+        "embeddings": embeddings_out,
     }
