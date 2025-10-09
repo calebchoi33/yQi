@@ -11,18 +11,24 @@ import sys
 import json
 import logging
 import time
+import argparse
 from typing import Dict, Any, List, Optional, Union
 from pathlib import Path
 from dataclasses import dataclass
+from openai import OpenAI
 
-from workflows.chunk_rag.vector_rag.rag_system import RAGSystem
-from workflows.tag_rag.structured_rag.structured_rag_system import StructuredRAGSystem
+# Simple import path for tag_rag_proper
+sys.path.append(str(Path(__file__).parent / "workflows" / "tag_rag_proper"))
+from query_engine import diagnose
+from embeddings import TAG_KEYS, DEFAULT_TOP_K
+
 
 @dataclass
 class DiagnosisOutput:
-    """Output class for diagnosis results."""
+    """Output format for diagnosis results."""
     diagnosis: str
     metadata: Dict[str, Any]
+
 
 # Configure logging
 logging.basicConfig(
@@ -43,7 +49,58 @@ def load_config(config_path: str) -> Dict[str, Any]:
 
 
 
-def process_all_prompts(config: Dict[str, Any]) -> List[DiagnosisOutput]:
+def create_chunk_rag_workflow():
+    """Create chunk-based RAG workflow."""
+    # from rag_system import RAGSystem
+    
+    def process_chunk_rag(request: Dict[str, Any]) -> Dict[str, Any]:
+        """Process diagnosis using chunk-based RAG."""
+        # TODO: Implement chunk RAG system integration
+        return {
+            "diagnosis": f"[CHUNK-RAG] Chunk-based diagnosis for: {request['patient_case'][:100]}...",
+            "confidence_score": 0.8,
+            "retrieved_context": ["Sample retrieved chunk 1", "Sample retrieved chunk 2"],
+            "metadata": {"workflow": "chunk_rag", "method": "vector_similarity"}
+        }
+    return process_chunk_rag
+
+
+
+
+def initialize_workflow(workflow_type: str):
+    """Initialize and return a workflow function."""
+    if workflow_type == "no_rag":
+        return create_no_rag_workflow()
+    elif workflow_type == "chunk_rag":
+        return create_chunk_rag_workflow()
+    else:
+        return None
+
+
+def create_diagnosis_request(patient_case: str, workflow_type: str = "chunk_rag") -> Dict[str, Any]:
+    """Create a diagnosis request dictionary."""
+    return {
+        "patient_case": patient_case,
+        "workflow_type": workflow_type,
+        "language": "bilingual"
+    }
+
+
+def create_diagnosis_response(diagnosis: str, workflow_used: str, confidence_score: float = None, 
+                            retrieved_context: List[str] = None, processing_time: float = None, 
+                            metadata: Dict[str, Any] = None) -> Dict[str, Any]:
+    """Create a diagnosis response dictionary."""
+    return {
+        "diagnosis": diagnosis,
+        "workflow_used": workflow_used,
+        "confidence_score": confidence_score,
+        "retrieved_context": retrieved_context or [],
+        "processing_time": processing_time,
+        "metadata": metadata or {}
+    }
+
+
+def process_all_prompts(config: Dict[str, Any]) -> List[Dict[str, Any]]:
     """Process all prompts from the configuration file."""
     results = []
     prompts = config["prompts"]
@@ -57,7 +114,8 @@ def process_all_prompts(config: Dict[str, Any]) -> List[DiagnosisOutput]:
         result.metadata.update({
             "prompt_id": prompt_data.get("id", f"prompt_{i}"),
             "prompt_description": prompt_data.get("description", ""),
-            "prompt_index": i
+            "prompt_index": i,
+            "prompt_content": prompt_data.get("content", ""),
         })
         
         results.append(result)
@@ -75,7 +133,6 @@ def give_diagnosis(config: Dict[str, Any], patient_case: str) -> DiagnosisOutput
     
     if workflow_type == "no_rag":
         # Direct LLM approach
-        from openai import OpenAI
         api_key = os.getenv('OPENAI_API_KEY')
         
         client = OpenAI(api_key=api_key)
@@ -124,22 +181,36 @@ def give_diagnosis(config: Dict[str, Any], patient_case: str) -> DiagnosisOutput
         )
     
     elif workflow_type == "tag_rag":
-        # Structured tag-based RAG approach
-        # Initialize structured RAG system (would need proper config paths)
-        structured_rag = StructuredRAGSystem(
-            config_path="config/structured_config.json",
-            db_path="data/structured_db.pkl"
+        # Tag-based RAG using tag_rag_proper system
+        api_key = os.getenv('OPENAI_API_KEY')
+
+        # Allow tag keys and k to be provided in config; default to full TAG_KEYS and DEFAULT_TOP_K
+        config_tag_keys = config.get("tag_keys")
+        tag_keys = config_tag_keys if isinstance(config_tag_keys, list) and config_tag_keys else list(TAG_KEYS)
+        k = int(config.get("k", DEFAULT_TOP_K))
+
+        # Use tag_rag_proper's diagnose function
+        result = diagnose(
+            patient_case=patient_case,
+            tag_keys=tag_keys,
+            k=k,
+            api_key=api_key
         )
-        
-        search_results = structured_rag.search(patient_case)
-        response = structured_rag.generate_response(patient_case, search_results)
-        
+
+        # Compute counts from returned structure
+        retrieved_ctx = result.get("retrieved_context", {})
+        total_retrieved = sum(len(v) for v in retrieved_ctx.values()) if isinstance(retrieved_ctx, dict) else 0
+        meta = result.get("metadata", {})
+
         processing_time = time.time() - start_time
         return DiagnosisOutput(
-            diagnosis=response.get("response", "No response generated"),
+            diagnosis=result.get("diagnosis", "No diagnosis generated"),
             metadata={
                 "workflow": "tag_rag",
-                "search_results": len(search_results),
+                "retrieved_sections": total_retrieved,
+                "tag_keys_used": meta.get("tag_keys_searched", tag_keys),
+                "results_per_key": meta.get("results_per_key", k),
+                "formatted_context": result.get("formatted_context", ""),
                 "processing_time": processing_time
             }
         )
@@ -153,8 +224,6 @@ def give_diagnosis(config: Dict[str, Any], patient_case: str) -> DiagnosisOutput
 
 def main():
     """CLI interface for diagnosis router."""
-    import argparse
-    
     parser = argparse.ArgumentParser(description="TCM Diagnosis Inference Router")
     parser.add_argument("--config", "-f", required=True, help="Path to configuration file (required)")
     parser.add_argument("--case", "-c", help="Single patient case description (optional, overrides config prompts)")
@@ -209,9 +278,25 @@ def main():
         # Convert DiagnosisOutput objects to dictionaries for JSON serialization
         results_dict = []
         for result in results:
+            # Exclude certain metadata fields from the saved JSON
+            exclude_keys = {
+                "tag_keys_used",
+                "processing_time",
+                "prompt_description",
+                "prompt_id",
+                "prompt_index",
+                "retrieved_sections",
+                "workflow",
+                "results_per_key",
+                "prompt_content",
+            }
+            metadata_clean = {k: v for k, v in (result.metadata or {}).items() if k not in exclude_keys}
+            prompt_text = (result.metadata or {}).get("prompt_content", "")
+            # Place 'prompt' before 'diagnosis' for readability
             results_dict.append({
+                "prompt": prompt_text,
                 "diagnosis": result.diagnosis,
-                "metadata": result.metadata
+                "metadata": metadata_clean
             })
         
         with open(args.output, 'w', encoding='utf-8') as f:
