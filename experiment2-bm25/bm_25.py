@@ -115,14 +115,15 @@ def bm25_retrieve_k(queries: List[str], parsed_book: List[Dict[str, Any]], k: in
         print("Tokenizing queries...")
         tokenized_queries = [list(jieba.cut(query)) for query in queries]
     else:
-        temp = []
+        # this was also something i just tried out, but it didn't work well so it was abandoned
+        # temp = []
         print(f"Using provided tokenized queries.")
-        for query_symptoms in tokenized_queries:
-            query_list = []
-            for symptom in query_symptoms:
-                query_list.extend(list(jieba.cut(symptom)))
-            temp.append(query_list)
-        tokenized_queries = temp
+        # for query_symptoms in tokenized_queries:
+        #     query_list = []
+        #     for symptom in query_symptoms:
+        #         query_list.extend(list(jieba.cut(symptom)))
+        #     temp.append(query_list)
+        # tokenized_queries = temp
 
     # Create BM25 index
     print("Creating BM25 index...")
