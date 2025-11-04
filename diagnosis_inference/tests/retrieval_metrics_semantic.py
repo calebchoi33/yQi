@@ -86,7 +86,7 @@ def evaluate_patient_cases(cases: List[Dict], ks: List[int], verbose: bool = Fal
             preview = content if len(content) <= 100 else content[:100] + "..."
             print(f"[Eval] Case {i}/{total} (Gold Ch {gold_ch} Sec {gold_sec_display}) query len={len(content)}")
             print(f"[Eval] Query preview: {preview}")
-        rows = score(content, top_k=max_k, api_key=os.getenv("OPENAI_API_KEY"), tau=0.3, verbose=verbose)
+        rows = score(content, top_k=max_k, api_key=os.getenv("OPENAI_API_KEY"), verbose=verbose)
         if verbose and rows:
             r0 = rows[0]
             print(f"[Eval] Top-1 => Ch {r0.get('chapter_index')} Sec {r0.get('section_index')} score={r0.get('score'):.4f} term='{r0.get('best_term','')}' sim={r0.get('sim',0.0):.3f}")
@@ -110,7 +110,7 @@ def dump_patient_case_results(cases: List[Dict], ks: List[int]) -> None:
         content = c.get("content", "").strip()
         preview = content if len(content) <= 120 else content[:120] + "..."
         print(f"\nCase #{idx} (Gold: Chapter {gold[0]} Sec {gold[1]}): {preview}")
-        rows = score(content, top_k=max_k, api_key=os.getenv("OPENAI_API_KEY"), tau=0.3)
+        rows = score(content, top_k=max_k, api_key=os.getenv("OPENAI_API_KEY"))
         for i, r in enumerate(rows[:5], 1):
             book = r.get("book_name", "")
             ch = r.get("chapter_index", "")

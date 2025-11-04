@@ -24,17 +24,41 @@ def _to_f32_blob(vector: np.ndarray) -> memoryview:
         vector = vector.astype(np.float32)
     return memoryview(vector.tobytes())
 
-
 def _cos_from_distance(d: float) -> float:
     if d is None:
         return 0.0
-    s = 1.0 - float(d)
-    if s < 0.0:
-        return 0.0
-    if s > 1.0:
-        return 1.0
+    # Mongo Atlas-style normalization: score = (1 + cosine) / 2
+    # sqlite-vec returns cosine distance d, where cosine = 1 - d
+    # Therefore score = (1 + (1 - d)) / 2 = 1 - d/2, mapped to [0, 1]
+    s = 1.0 - (float(d) / 2.0)
     return s
 
+
+def _soft_idf(num_sections: int, sims: List[float], df_threshold: float = 0.5) -> float:
+    # Only count similarities above threshold to avoid inflating DF with mid-sim sections
+    n_t_sem = float(sum(s for s in sims if s > df_threshold))
+    idf = float(np.log((num_sections - n_t_sem + 0.5) / (n_t_sem + 0.5)))
+    return idf
+
+
+def _tf_sem(freq_sim_max: float, c_len: int, avg_len: float, k1: float, b: float) -> float:
+    denom = freq_sim_max + k1 * (1 - b + b * (c_len / max(1.0, avg_len)))
+    return (freq_sim_max / denom) if denom > 0 else 0.0
+
+
+def _per_section_best(
+    conn,
+    sections: List[Dict[str, Any]],
+    tblob: memoryview,
+) -> List[Tuple[Dict[str, Any], float, str, int]]:
+    out: List[Tuple[Dict[str, Any], float, str, int]] = []
+    for s in sections:
+        bm = best_match_for_section(conn, s, tblob)
+        sim = _cos_from_distance(bm["distance"])
+        best_term = bm.get("term", "")
+        freq = count_term_in_section(conn, s, best_term) if best_term else 0
+        out.append((s, sim, best_term, freq))
+    return out
 
 def score(
     query_text: str,
@@ -42,7 +66,6 @@ def score(
     api_key: str = None,
     k1: float = 1.2,
     b: float = 0.75,
-    tau: float = 0.3,
     verbose: bool = False,
 ) -> List[Dict[str, Any]]:
     conn = setup_database()
@@ -76,24 +99,14 @@ def score(
     for t, tv in term_vecs.items():
         tblob = _to_f32_blob(tv)
 
-        per_section: List[Tuple[Dict[str, Any], float, str, int]] = []
-        for s in sections:
-            bm = best_match_for_section(conn, s, tblob)
-            sim = _cos_from_distance(bm["distance"])
-            best_term = bm.get("term", "")
-            freq = count_term_in_section(conn, s, best_term) if best_term else 0
-            per_section.append((s, sim, best_term, freq))
-
-        n_t_sem = float(sum(sim for (_, sim, _, _) in per_section))
-        idf_sem = float(np.log((N - n_t_sem + 0.5) / (n_t_sem + 0.5)))
-        if idf_sem < 0.0:
-            idf_sem = 0.0
+        per_section = _per_section_best(conn, sections, tblob)
+        sims = [sim for (_, sim, _, _) in per_section]
+        idf_sem = _soft_idf(N, sims)
 
         for (s, sim, best_term, freq) in per_section:
             c_len = max(1, int(s.get("length", 0)))
             freq_sim_max = sim * float(freq) if freq > 0 else 0.0
-            denom = freq_sim_max + k1 * (1 - b + b * (c_len / avg_len))
-            tf_sem = (freq_sim_max / denom) if denom > 0 else 0.0
+            tf_sem = _tf_sem(freq_sim_max, c_len, avg_len, k1, b)
             sc_inc = idf_sem * tf_sem
 
             key = (
