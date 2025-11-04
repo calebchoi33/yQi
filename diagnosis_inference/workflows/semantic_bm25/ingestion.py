@@ -66,7 +66,7 @@ def ingest_all_sections(api_key: str = None, textbook_path: str = "books/《人�
             "chapter_index": ch,
             "section_index": sec,
             "page_index": 0,
-            "length": len(items),
+            "length": sum(int(it.get("freq", 1)) for it in items),
         }
         terms = [str(it.get("term", "")).strip() for it in items if str(it.get("term", "")).strip()]
         vecs = get_embeddings_batch_texts(terms, api_key)
