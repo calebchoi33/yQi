@@ -42,7 +42,6 @@ def ingest_all_sections(textbook_path: str = "books/《人紀傷寒論》.txt") 
                 "book_name": "《人紀傷寒論》",
                 "chapter_index": chapter_idx,
                 "section_index": section_idx,
-                "page_index": 0,
                 "length": sum(symptom_freqs.values()),
             }
             term_rows = []

@@ -43,7 +43,6 @@ def setup_database(db_path: str = "semantic_bm25_vec.db") -> sqlite3.Connection:
             book_name TEXT,
             chapter_index TEXT,
             section_index TEXT,
-            page_index INTEGER,
             length INTEGER,
             term TEXT,
             freq INTEGER,
@@ -65,7 +64,6 @@ def reset_database(db_path: str = "semantic_bm25_vec.db") -> sqlite3.Connection:
             book_name TEXT,
             chapter_index TEXT,
             section_index TEXT,
-            page_index INTEGER,
             length INTEGER,
             term TEXT,
             freq INTEGER,
@@ -84,14 +82,13 @@ def insert_section_terms(conn: sqlite3.Connection, section_data: Dict[str, Any],
         vec = row["embedding"]
         cur.execute(
             """
-            INSERT INTO terms_joined (book_name, chapter_index, section_index, page_index, length, term, freq, v)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO terms_joined (book_name, chapter_index, section_index, length, term, freq, v)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             [
                 str(section_data.get("book_name", "")),
                 str(section_data.get("chapter_index", section_data.get("chapter_idx", ""))),
                 str(section_data.get("section_index", section_data.get("section_idx", ""))),
-                int(section_data.get("page_index", 0)),
                 int(section_data.get("length", 0)),
                 str(row.get("term", "")),
                 int(row.get("freq", 1)),
@@ -106,9 +103,9 @@ def get_all_sections(conn: sqlite3.Connection) -> List[Dict[str, Any]]:
     cur = conn.cursor()
     cur.execute(
         """
-        SELECT book_name, chapter_index, section_index, page_index, MAX(length) as length
+        SELECT book_name, chapter_index, section_index, MAX(length) as length
         FROM terms_joined
-        GROUP BY book_name, chapter_index, section_index, page_index
+        GROUP BY book_name, chapter_index, section_index
         """
     )
     rows = cur.fetchall()
@@ -118,8 +115,7 @@ def get_all_sections(conn: sqlite3.Connection) -> List[Dict[str, Any]]:
             "book_name": r[0],
             "chapter_index": r[1],
             "section_index": r[2],
-            "page_index": r[3],
-            "length": r[4],
+            "length": r[3],
         })
     return out
 
@@ -131,7 +127,7 @@ def avg_section_length(conn: sqlite3.Connection) -> float:
         SELECT AVG(x.len) FROM (
             SELECT MAX(length) AS len
             FROM terms_joined
-            GROUP BY book_name, chapter_index, section_index, page_index
+            GROUP BY book_name, chapter_index, section_index
         ) x
         """
     )
@@ -143,9 +139,9 @@ def best_match_for_section(conn: sqlite3.Connection, section: Dict[str, Any], qb
     cur = conn.cursor()
     cur.execute(
         """
-        SELECT distance, term
+        SELECT distance, term, freq
         FROM terms_joined
-        WHERE book_name = ? AND chapter_index = ? AND section_index = ? AND page_index = ?
+        WHERE book_name = ? AND chapter_index = ? AND section_index = ?
           AND v MATCH ?
           AND k = 1
         ORDER BY distance ASC
@@ -154,29 +150,12 @@ def best_match_for_section(conn: sqlite3.Connection, section: Dict[str, Any], qb
             str(section.get("book_name", "")),
             str(section.get("chapter_index", "")),
             str(section.get("section_index", "")),
-            int(section.get("page_index", 0)),
             qblob,
         ),
     )
     row = cur.fetchone()
     if not row:
-        return {"distance": None, "term": ""}
-    return {"distance": float(row[0]), "term": row[1]}
+        return {"distance": None, "term": "", "freq": 0}
+    return {"distance": float(row[0]), "term": row[1], "freq": int(row[2])}
 
 
-def count_term_in_section(conn: sqlite3.Connection, section: Dict[str, Any], term: str) -> int:
-    cur = conn.cursor()
-    cur.execute(
-        """
-        SELECT COALESCE(SUM(freq), 0) FROM terms_joined
-        WHERE book_name = ? AND chapter_index = ? AND section_index = ? AND page_index = ? AND term = ?
-        """,
-        (
-            str(section.get("book_name", "")),
-            str(section.get("chapter_index", "")),
-            str(section.get("section_index", "")),
-            int(section.get("page_index", 0)),
-            term,
-        ),
-    )
-    return int(cur.fetchone()[0])

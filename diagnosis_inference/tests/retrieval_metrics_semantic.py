@@ -27,6 +27,7 @@ if str(_SB_PATH) not in sys.path:
     sys.path.append(str(_SB_PATH))
 from query_engine import score  # type: ignore
 from database import setup_database, get_all_sections  # type: ignore
+from embeddings import extract_query_symptoms  # type: ignore
 
 load_dotenv()
 
@@ -71,7 +72,7 @@ def load_patient_cases(path: str) -> List[Dict]:
     return _parse_patient_cases_txt(txt)
 
 
-def evaluate_patient_cases(cases: List[Dict], ks: List[int], verbose: bool = False) -> Dict[int, int]:
+def evaluate_patient_cases(cases: List[Dict], ks: List[int]) -> Dict[int, int]:
     if not cases:
         return {k: 0 for k in ks}
     max_k = max(ks)
@@ -82,14 +83,7 @@ def evaluate_patient_cases(cases: List[Dict], ks: List[int], verbose: bool = Fal
         gold_ch = int(c.get("chapter_index", -1))
         gold_sec_display = int(c.get("section_index", -1))
         gold_comp = (gold_ch, gold_sec_display)
-        if verbose:
-            preview = content if len(content) <= 100 else content[:100] + "..."
-            print(f"[Eval] Case {i}/{total} (Gold Ch {gold_ch} Sec {gold_sec_display}) query len={len(content)}")
-            print(f"[Eval] Query preview: {preview}")
-        rows = score(content, top_k=max_k, api_key=os.getenv("OPENAI_API_KEY"), verbose=verbose)
-        if verbose and rows:
-            r0 = rows[0]
-            print(f"[Eval] Top-1 => Ch {r0.get('chapter_index')} Sec {r0.get('section_index')} score={r0.get('score'):.4f} term='{r0.get('best_term','')}' sim={r0.get('sim',0.0):.3f}")
+        rows = score(content, top_k=max_k, api_key=os.getenv("OPENAI_API_KEY"))
         ranking_ids = [
             (int(r.get("chapter_index", -1)), int(r.get("section_index", -1))) for r in rows
         ]
@@ -110,6 +104,9 @@ def dump_patient_case_results(cases: List[Dict], ks: List[int]) -> None:
         content = c.get("content", "").strip()
         preview = content if len(content) <= 120 else content[:120] + "..."
         print(f"\nCase #{idx} (Gold: Chapter {gold[0]} Sec {gold[1]}): {preview}")
+        # Extract LLM-derived symptoms for display
+        llm_symptoms = extract_query_symptoms(content)
+        print(f"    LLM symptoms: {llm_symptoms}")
         rows = score(content, top_k=max_k, api_key=os.getenv("OPENAI_API_KEY"))
         for i, r in enumerate(rows[:5], 1):
             book = r.get("book_name", "")
@@ -149,7 +146,6 @@ def main():
     ap.add_argument("--patient-cases", required=True, help="Path to Patient Cases .docx or .txt")
     ap.add_argument("--k", nargs="*", type=int, default=[1, 3, 5, 10])
     ap.add_argument("--details", action="store_true")
-    ap.add_argument("--verbose", action="store_true", help="Print progress and debug info", default=False)
     ap.add_argument("--check-index", action="store_true", help="Only check index alignment and exit", default=False)
     args = ap.parse_args()
 
@@ -159,7 +155,7 @@ def main():
     if args.check_index:
         index_alignment_report(cases)
         return
-    hits = evaluate_patient_cases(cases, ks, verbose=args.verbose)
+    hits = evaluate_patient_cases(cases, ks)
 
     print("RESULTS (Semantic BM25, Patient Cases gold):")
     print(f"Total # cases = {len(cases)}")

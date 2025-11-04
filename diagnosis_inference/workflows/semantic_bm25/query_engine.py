@@ -8,15 +8,15 @@ import numpy as np
 from embeddings import (
     get_batch_embeddings,
     extract_query_symptoms,
-    DEFAULT_TOP_K,
 )
 from database import (
     setup_database,
     get_all_sections,
     best_match_for_section,
     avg_section_length,
-    count_term_in_section,
 )
+
+DEFAULT_TOP_K = 5
 
 
 def _to_f32_blob(vector: np.ndarray) -> memoryview:
@@ -34,7 +34,7 @@ def _cos_from_distance(d: float) -> float:
     return s
 
 
-def _soft_idf(num_sections: int, sims: List[float], df_threshold: float = 0.6) -> float:
+def _soft_idf(num_sections: int, sims: List[float], df_threshold: float = 0.69) -> float:
     # Only count similarities above threshold to avoid inflating DF with mid-sim sections
     n_t_sem = float(sum(s for s in sims if s > df_threshold))
     idf = float(np.log((num_sections - n_t_sem + 0.5) / (n_t_sem + 0.5)))
@@ -56,7 +56,7 @@ def _per_section_best(
         bm = best_match_for_section(conn, s, tblob)
         sim = _cos_from_distance(bm["distance"])
         best_term = bm.get("term", "")
-        freq = count_term_in_section(conn, s, best_term) if best_term else 0
+        freq = int(bm.get("freq", 0)) if best_term else 0
         out.append((s, sim, best_term, freq))
     return out
 
@@ -92,9 +92,9 @@ def score(
         print("[SemanticBM25] Sections:", N, "AvgLen:", f"{avg_len:.2f}")
         print("[SemanticBM25] Query symptoms (", len(query_terms), "):", query_terms[:20])
 
-    scores: Dict[Tuple[str, str, str, int], float] = {}
-    meta: Dict[Tuple[str, str, str, int], Dict[str, Any]] = {}
-    diag_best: Dict[Tuple[str, str, str, int], Tuple[float, str]] = {}
+    scores: Dict[Tuple[str, str, str], float] = {}
+    meta: Dict[Tuple[str, str, str], Dict[str, Any]] = {}
+    diag_best: Dict[Tuple[str, str, str], Tuple[float, str]] = {}
 
     for t, tv in term_vecs.items():
         tblob = _to_f32_blob(tv)
@@ -113,7 +113,6 @@ def score(
                 str(s.get("book_name", "")),
                 str(s.get("chapter_index", "")),
                 str(s.get("section_index", "")),
-                int(s.get("page_index", 0)),
             )
             scores[key] = scores.get(key, 0.0) + float(sc_inc)
             if key not in meta:
@@ -121,7 +120,6 @@ def score(
                     "book_name": key[0],
                     "chapter_index": key[1],
                     "section_index": key[2],
-                    "page_index": key[3],
                 }
             prev = diag_best.get(key)
             if prev is None or sim > prev[0]:
@@ -135,7 +133,6 @@ def score(
             "book_name": s_meta["book_name"],
             "chapter_index": s_meta["chapter_index"],
             "section_index": s_meta["section_index"],
-            "page_index": s_meta["page_index"],
             "score": float(sc),
             "sim": float(best[0]),
             "best_term": best[1],
