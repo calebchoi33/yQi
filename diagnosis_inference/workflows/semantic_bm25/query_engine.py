@@ -6,7 +6,7 @@ from typing import List, Dict, Any, Tuple
 import numpy as np
 
 from embeddings import (
-    get_embeddings_batch_texts,
+    get_batch_embeddings,
     extract_query_symptoms,
     DEFAULT_TOP_K,
 )
@@ -34,7 +34,7 @@ def _cos_from_distance(d: float) -> float:
     return s
 
 
-def _soft_idf(num_sections: int, sims: List[float], df_threshold: float = 0.5) -> float:
+def _soft_idf(num_sections: int, sims: List[float], df_threshold: float = 0.6) -> float:
     # Only count similarities above threshold to avoid inflating DF with mid-sim sections
     n_t_sem = float(sum(s for s in sims if s > df_threshold))
     idf = float(np.log((num_sections - n_t_sem + 0.5) / (n_t_sem + 0.5)))
@@ -78,12 +78,12 @@ def score(
     avg_len = avg_section_length(conn) or 1.0
 
     # LLM-based extraction of symptoms directly from the query
-    query_terms: List[str] = extract_query_symptoms(query_text, api_key=api_key)
+    query_terms: List[str] = extract_query_symptoms(query_text)
     if not query_terms:
         conn.close()
         return []
     # Batch embed extracted symptoms
-    term_vecs = get_embeddings_batch_texts(query_terms, api_key)
+    term_vecs = get_batch_embeddings(query_terms)
     if not term_vecs:
         conn.close()
         return []
